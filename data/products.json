@@ -35,9 +35,9 @@
          "weight:2.30 kg"  
         ],
       "photos": [
-        "/assets/laptop.jpg",
-        "/assets/laptop.jpg",
-        "/assets/box.jpg"
+        "assets/laptop1.jpg",
+        "assets/laptop1.jpg",
+        "assets/box.jpg"
       ]
     },
     {
