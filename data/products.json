@@ -35,7 +35,7 @@
          "weight:2.30 kg"  
         ],
       "photos": [
-        "https://asteriskRonit.github.io/ComputerSource/assets/Laptop1.jpg",
+        "/assets/Laptop1.jpg",
         "assets/Laptop1.jpg",
         " assets/box.jpg"
       ]
