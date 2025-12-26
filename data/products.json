@@ -36,8 +36,8 @@
         ],
       "photos": [
         "/assets/Laptop1.jpg",
-        "assets/Laptop1.jpg",
-        " assets/box.jpg"
+        "/assets/Laptop1.jpg",
+        "/assets/box.jpg"
       ]
     },
     {
