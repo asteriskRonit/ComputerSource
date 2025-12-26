@@ -1,0 +1,951 @@
+{
+  "laptop": [
+    {
+      "brand": "ASUS",
+      "modelName": "ASUS ROG Strix G15",
+      "modelNumber": "G513RM",
+      "category": "laptop",
+    
+      "specs": {
+        "os": "Windows 11 Home",
+        "processor": "AMD Ryzen 7 7435HS (8 cores / 16 threads)",
+        "display": "15.6 inch Full HD (1920 x 1080), 144 Hz",
+        "memory": "16 GB DDR5 RAM",
+        "storage": "512 GB PCIe SSD",
+        "graphics": "NVIDIA GeForce RTX 2050 4 GB",
+        "battery": "48 Wh, 3-cell Li-Ion",
+        "audio": "DTS and Dolby audio enhancements",
+        "warranty": "1 year standard warranty",        
+        "ports": [
+          "USB Type-C",
+          "USB Type-A",
+          "HDMI",
+          "RJ-45 Ethernet",
+          "3.5 mm Audio Jack"
+        ]
+      },
+      "colors": ["Graphite Black", "Eclipse Gray", "Electro Punk","Deep White"],
+      "price": "60000",
+      "expandable ram" : "64GB",
+      "expandable storage": "1TB NVME",
+      "ram frequency": "5200MHZ",
+      "others": [
+         "Brightness : 250 NITS",
+         "Expandalble : warranty",
+         "weight:2.30 kg"  
+        ],
+      "photos": [
+        "/assets/laptop.jpg",
+        "/assets/laptop.jpg",
+        "/assets/box.jpg"
+      ]
+    },
+    {
+      "brand": "ASUS",
+      "modelName": "ASUS TUF Gaming F15",
+      "modelNumber": "FX507ZC4",
+      "category": "laptop",
+    
+      "specs": {
+        "os": "Windows 11 Home",
+        "processor": "Intel Core i5-12500H (12 cores / 16 threads)",
+        "display": "15.6 inch Full HD (1920 x 1080), 144 Hz",
+        "memory": "16 GB DDR4 RAM",
+        "storage": "512 GB PCIe SSD",
+        "graphics": "NVIDIA GeForce RTX 3050 4 GB",
+        "battery": "56 Wh, 4-cell Li-Ion",
+        "audio": "DTS:X Ultra Audio",
+        "warranty": "1 year standard warranty",
+        "ports": [
+          "USB Type-C",
+          "USB Type-A",
+          "HDMI",
+          "RJ-45 Ethernet",
+          "3.5 mm Audio Jack"
+        ]
+      },
+    
+      "colors": ["Graphite Black", "Mecha Gray"],
+      "price": "72000",
+      "expandable ram": "32GB",
+      "expandable storage": "2TB NVMe",
+      "ram frequency": "3200MHz",
+      "others": [
+        "Brightness : 250 NITS",
+        "MIL-STD-810H Certified",
+        "Weight : 2.20 kg"
+      ],
+      "photos": [
+        "/assets/laptop.jpg",
+        "/assets/laptop.jpg",
+        "/assets/box.jpg"
+      ]
+    }
+    
+    ,{
+      "brand": "ASUS",
+      "modelName": "ASUS Vivobook 15",
+      "modelNumber": "X1502ZA",
+      "category": "laptop",
+    
+      "specs": {
+        "os": "Windows 11 Home",
+        "processor": "Intel Core i5-12450H (8 cores / 12 threads)",
+        "display": "15.6 inch Full HD (1920 x 1080), 60 Hz",
+        "memory": "16 GB DDR4 RAM",
+        "storage": "512 GB PCIe SSD",
+        "graphics": "Intel UHD Graphics",
+        "battery": "42 Wh, 3-cell Li-Ion",
+        "audio": "SonicMaster Audio",
+        "warranty": "1 year standard warranty",
+        "ports": [
+          "USB Type-C",
+          "USB Type-A",
+          "HDMI",
+          "MicroSD Card Reader",
+          "3.5 mm Audio Jack"
+        ]
+      },
+    
+      "colors": ["Indie Black", "Transparent Silver", "Quiet Blue"],
+      "price": "56000",
+      "expandable ram": "24GB",
+      "expandable storage": "1TB NVMe",
+      "ram frequency": "3200MHz",
+      "others": [
+        "Brightness : 250 NITS",
+        "Backlit Keyboard",
+        "Weight : 1.7 kg"
+      ],
+      "photos": [
+        "/assets/laptop.jpg",
+        "/assets/laptop.jpg",
+        "/assets/box.jpg"
+      ]
+    },  
+    {
+      "brand": "ASUS",
+      "modelName": "ASUS Zenbook 14 OLED",
+      "modelNumber": "UX3402ZA",
+      "category": "laptop",
+    
+      "specs": {
+        "os": "Windows 11 Home",
+        "processor": "Intel Core i7-1260P (12 cores / 16 threads)",
+        "display": "14 inch OLED 2.8K (2880 x 1800), 90 Hz",
+        "memory": "16 GB LPDDR5 RAM",
+        "storage": "1 TB PCIe SSD",
+        "graphics": "Intel Iris Xe Graphics",
+        "battery": "75 Wh, 4-cell Li-Ion",
+        "audio": "Harman Kardon Certified Audio",
+        "warranty": "1 year international warranty",
+        "ports": [
+          "Thunderbolt 4",
+          "USB Type-A",
+          "HDMI",
+          "MicroSD Card Reader",
+          "3.5 mm Audio Jack"
+        ]
+      },
+    
+      "colors": ["Ponder Blue", "Aqua Celadon"],
+      "price": "89000",
+      "expandable ram": "Not Expandable",
+      "expandable storage": "1TB NVMe",
+      "ram frequency": "LPDDR5",
+      "others": [
+        "Brightness : 550 NITS",
+        "OLED Display",
+        "Weight : 1.39 kg"
+      ],
+      "photos": [
+        "/assets/laptop.jpg",
+        "/assets/laptop.jpg",
+        "/assets/box.jpg"
+      ]
+    },  
+    {
+      "brand": "HP",
+      "modelName": "HP Victus 15 Gaming Laptop",
+      "modelNumber": "15-fb3004AX",
+      "category": "laptop",
+    
+      "specs": {
+        "os": "Windows 11 Home",
+        "processor": "AMD Ryzen 5 8645HS",
+        "display": "15.6 inch Full HD (1920 x 1080), 144 Hz",
+        "memory": "16 GB DDR5-5600 RAM",
+        "storage": "512 GB PCIe SSD",
+        "graphics": "NVIDIA GeForce RTX 2050 4 GB",
+        "battery": "Integrated Lithium-Ion",
+        "audio": "HP Audio Boost",
+        "warranty": "1 year standard warranty",
+        "ports": [
+          "USB Type-C",
+          "USB Type-A",
+          "HDMI",
+          "RJ-45 Ethernet",
+          "3.5 mm Audio Jack"
+        ]
+      },
+    
+      "colors": ["Blue", "Silver"],
+      "price": "62999",
+      "expandable ram": "32GB",
+      "expandable storage": "1TB NVMe",
+      "ram frequency": "5600MHz",
+      "others": [
+        "144 Hz high refresh display",
+        "Backlit keyboard",
+        "Wide Vision HD camera"
+      ],
+      "photos": [
+        "/assets/victus.jpg",
+        "/assets/victus2.jpg",
+        "/assets/victus3.jpg",
+        "/assets/victus4.jpg"
+      ]
+    },      
+    {
+      "brand": "HP",
+      "modelName": "HP 15s",
+      "modelNumber": "15-fd0466TU",
+      "category": "laptop",
+    
+      "specs": {
+        "os": "Windows 11 Home",
+        "processor": "Intel Core i5 13th Gen",
+        "display": "15.6 inch Full HD (1920 x 1080)",
+        "memory": "8 GB DDR4-3200 RAM",
+        "storage": "512 GB PCIe SSD",
+        "graphics": "Intel UHD Graphics",
+        "battery": "Integrated Lithium-Ion",
+        "audio": "HP True Vision Audio",
+        "warranty": "1 year standard warranty",
+        "ports": [
+          "USB Type-A",
+          "USB Type-C",
+          "HDMI",
+          "3.5 mm Audio Jack"
+        ]
+      },
+    
+      "colors": ["Silver"],
+      "price": "54999",
+      "expandable ram": "16GB",
+      "expandable storage": "1TB NVMe",
+      "ram frequency": "3200MHz",
+      "others": [
+        "Full-size keyboard",
+        "True Vision 1080p FHD webcam",
+        "Lightweight design"
+      ],
+      "photos": [
+        "/assets/laptop.jpg",
+        "/assets/laptop.jpg",
+        "/assets/box.jpg"
+      ]
+    },
+    {
+      "brand": "HP",
+      "modelName": "HP Pavilion Plus 14",
+      "modelNumber": "14-ew1112TU",
+      "category": "laptop",
+    
+      "specs": {
+        "os": "Windows 11 Home",
+        "processor": "Intel Core Ultra 5 125H",
+        "display": "14 inch WQXGA (2560 x 1600), 48-120 Hz",
+        "memory": "16 GB LPDDR5x RAM",
+        "storage": "512 GB PCIe SSD",
+        "graphics": "Intel Arc Graphics",
+        "battery": "Integrated Lithium-Ion",
+        "audio": "B&O Audio",
+        "warranty": "1 year standard warranty",
+        "ports": [
+          "USB Type-C",
+          "USB Type-A",
+          "HDMI",
+          "3.5 mm Audio Jack"
+        ]
+      },
+    
+      "colors": ["Blue"],
+      "price": "84999",
+      "expandable ram": "Not Expandable",
+      "expandable storage": "1TB NVMe",
+      "ram frequency": "LPDDR5x",
+      "others": [
+        "High refresh display",
+        "Backlit keyboard",
+        "Turbo Boost support"
+      ],
+      "photos": [
+        "/assets/laptop.jpg",
+        "/assets/laptop.jpg",
+        "/assets/box.jpg"
+      ]
+    }
+  ],
+  "desktop": [
+    {
+      "brand": "Lenovo",
+      "modelName": "IdeaCentre 3",
+      "modelNumber": "90SM003DIN",
+      "processor": "AMD Ryzen 5 5600G",
+      "generation": "5000 Series",
+      "ram": "8GB DDR4",
+      "storage": "512GB SSD",
+      "gpu": "Integrated Radeon Graphics",
+      "warranty": "1 Year",
+      "others": "Compact tower, Wireless Keyboard & Mouse",
+      "photo": "https://via.placeholder.com/300x180?text=Lenovo+Desktop"
+    }
+  ],
+  "speaker": [
+    {
+      "brand": "Portronics",
+      "modelName": "SoundDrum",
+      "modelNumber": "POR-1579",
+      "category": "speaker",
+    
+      "specs": {
+        "powerOutput": "20W",
+        "connectivity": "Bluetooth 5.0",
+        "drivers": "Dual 10W dynamic drivers",
+        "playbackModes": [
+          "Bluetooth",
+          "AUX",
+          "USB",
+          "TF Card"
+        ],
+        "twsSupport": "Yes (True Wireless Stereo)",
+        "microphone": "Built-in mic for hands-free calling",
+        "lighting": "RGB LED lights",
+        "waterResistance": "IPX6 water resistant",
+        "battery": "4000mAh",
+        "charging": "USB Type-C",
+        "compatibility": [
+          "Android",
+          "iOS",
+          "Windows",
+          "Laptops"
+        ],
+        "portability": "Portable cylindrical design with carry strap"
+      },
+      "color": null,
+      "weight": null,
+      "warranty": "1 Year",
+      "price": 2000,
+    
+      "photos": [
+        "/assets/sound_drum.jpg"
+      ]
+    },
+    {
+      "brand": "Portronics",
+      "modelName": "SoundDrum",
+      "modelNumber": "POR-1579",
+      "category": "speaker",
+    
+      "specs": {
+        "powerOutput": "20W",
+        "connectivity": "Bluetooth 5.0",
+        "drivers": "Dual 10W dynamic drivers",
+        "playbackModes": [
+          "Bluetooth",
+          "AUX",
+          "USB",
+          "TF Card"
+        ],
+        "twsSupport": "Yes (True Wireless Stereo)",
+        "microphone": "Built-in microphone for hands-free calling",
+        "lighting": "RGB LED lights",
+        "waterResistance": "IPX6 water resistant",
+        "battery": "4000mAh",
+        "charging": "USB Type-C",
+        "compatibility": [
+          "Android",
+          "iOS",
+          "Windows",
+          "Laptops"
+        ],
+        "portability": "Portable cylindrical design with carry strap"
+      },
+    
+      "color": "Black",
+      "weight": "1.2 kg",
+      "warranty": "1 Year",
+      "price": 2000,
+    
+      "photos": [
+        "/assets/sound_drum.jpg"
+      ]
+    }
+    
+    ,
+    {
+      "brand": "Portronics",
+      "modelName": "SoundDrum 1",
+      "modelNumber": "SoundDrum1",
+      "category": "speaker",
+    
+      "specs": {
+        "powerOutput": "10W",
+        "connectivity": "Bluetooth 5.0",
+        "drivers": "Single dynamic driver",
+        "playbackModes": [
+          "Bluetooth",
+          "AUX",
+          "USB",
+          "TF Card"
+        ],
+        "twsSupport": "No",
+        "microphone": "Built-in mic",
+        "lighting": "No",
+        "waterResistance": "Splash resistant",
+        "battery": "2000mAh",
+        "charging": "Micro USB",
+        "compatibility": [
+          "Android",
+          "iOS",
+          "Windows"
+        ],
+        "portability": "Compact portable design"
+      },
+      "color": null,
+      "weight": null,
+      "warranty": "1 Year",
+      "price": 1200,
+    
+      "photos": [
+        "/assets/box.jpg"
+      ]
+    },
+    {
+      "brand": "iBall",
+      "modelName": "Musi Rock",
+      "modelNumber": "MusiRock10W",
+      "category": "speaker",
+    
+      "specs": {
+        "powerOutput": "10W",
+        "connectivity": "Bluetooth",
+        "drivers": "Dual passive radiators",
+        "playbackModes": [
+          "Bluetooth",
+          "AUX",
+          "USB"
+        ],
+        "twsSupport": "No",
+        "microphone": "Built-in mic for calls",
+        "lighting": "No",
+        "waterResistance": "No",
+        "battery": "2200mAh",
+        "charging": "Micro USB",
+        "compatibility": [
+          "Android",
+          "iOS",
+          "Windows",
+          "Laptops"
+        ],
+        "portability": "Portable rectangular design"
+      },
+      "color": null,
+      "weight": null,
+      "warranty": "1 Year",
+      "price": 1400,
+    
+      "photos": [
+        "/assets/box.jpg"
+      ]
+    },
+    {
+      "brand": "iBall",
+      "modelName": "Musi GearPlay BT",
+      "modelNumber": "GearPlayBT12W",
+      "category": "speaker",
+    
+      "specs": {
+        "powerOutput": "12W",
+        "connectivity": "Bluetooth 5.0",
+        "drivers": "Dual dynamic drivers",
+        "playbackModes": [
+          "Bluetooth",
+          "AUX",
+          "USB",
+          "FM Radio"
+        ],
+        "twsSupport": "No",
+        "microphone": "Built-in mic",
+        "lighting": "RGB LED lights",
+        "waterResistance": "No",
+        "battery": "3000mAh",
+        "charging": "Micro USB",
+        "compatibility": [
+          "Android",
+          "iOS",
+          "Windows"
+        ],
+        "portability": "Portable box-style design"
+      },
+      "color": null,
+      "weight": null,
+      "warranty": "1 Year",
+      "price": 1800,
+    
+      "photos": [
+        "/assets/box.jpg"
+      ]
+    },
+    {
+      "brand": "HP",
+      "modelName": "HP LaserJet Pro MFP M126nw Printer",
+      "modelNumber": "M126nw",
+      "category": "printer",
+    
+      "specs": {
+        "printer type": "Monochrome Laser Printer",
+        "functions": "Print, Scan, Copy",
+        "print speed": "Up to 20 ppm",
+        "print resolution": "600 x 600 dpi",
+        "scan type": "Flatbed",
+        "connectivity": [
+          "USB 2.0",
+          "Ethernet",
+          "Wi-Fi"
+        ],
+        "supported paper sizes": [
+          "A4",
+          "A5",
+          "A6",
+          "B5"
+        ],
+        "duty cycle": "Up to 8,000 pages per month",
+        "compatible os": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "warranty": "1 year onsite warranty"
+      },
+    
+      "colors": ["White"],
+      "price": "28999",
+      "toner type": "HP 88A Black Toner",
+      "print technology": "Laser",
+      "others": [
+        "Compact design",
+        "Energy efficient",
+        "Easy wireless setup",
+        "Ideal for home and small office"
+      ]
+      
+    }
+  ],
+  "Keyboard":[
+    {
+      "brand": "Redragon",
+      "modelName": "Redragon K552 Mechanical Keyboard",
+      "modelNumber": "K552",
+      "category": "keyboard",
+    
+      "specs": {
+        "keyboard type": "Mechanical",
+        "switch type": "Outemu Blue",
+        "backlight": "RGB",
+        "connection": "USB Wired",
+        "layout": "Tenkeyless"
+      },
+    
+      "price": "2599",
+      "warranty": "1 Year",
+      "others": [
+        "Anti-ghosting keys",
+        "Metal top plate"
+      ],
+      "photos": [
+        "/assets/keyboard/k552.jpg"
+      ]
+    }
+    
+  ],
+  "Mouse":[
+    {
+      "brand": "Logitech",
+      "modelName": "Logitech G102 Gaming Mouse",
+      "modelNumber": "G102",
+      "category": "mouse",
+    
+      "specs": {
+        "sensor": "Optical",
+        "dpi": "8000 DPI",
+        "buttons": "6 Programmable Buttons",
+        "connection": "USB Wired",
+        "lighting": "RGB"
+      },
+    
+      "price": "1699",
+      "warranty": "2 Years",
+      "others": [
+        "Lightweight design",
+        "High precision tracking"
+      ],
+      "photos": [
+        "/assets/mouse/g102.jpg"
+      ]
+    }
+    
+  ],
+  "printer":[
+      {
+        "brand": "HP",
+        "modelName": "HP LaserJet Pro MFP M126nw Printer",
+        "modelNumber": "M126nw",
+        "category": "printer",
+      
+        "specs": {
+          "printertype": "Monochrome Laser Printer",
+          "functions": "Print, Scan, Copy",
+          "print speed": "Up to 20 ppm",
+          "print resolution": "600 x 600 dpi",
+          "scan type": "Flatbed",
+          "connectivity": [
+            "USB 2.0",
+            "Ethernet",
+            "Wi-Fi"
+          ],
+          "supported paper sizes": [
+            "A4",
+            "A5",
+            "A6",
+            "B5"
+          ],
+          "dutycycle": "Up to 8,000 pages per month",
+          "compatible os": [
+            "Windows",
+            "macOS",
+            "Linux"
+          ],
+          "warranty": "1 year onsite warranty"
+        },
+      
+        "colors": ["White"],
+        "price": "21999",
+        "toner type": "HP 88A Black Toner",
+        "print technology": "Laser",
+        "others": [
+          "Compact design",
+          "Energy efficient",
+          "Easy wireless setup",
+          "Ideal for home and small office"
+        ],
+        "photos": [
+          "/assets/laserjet.jpg",
+          "/assets/laserjet2.jpg",
+          "/assets/laserjet3.jpg"
+        ]
+      },
+      {
+        "brand": "Epson",
+        "modelName": "Epson EcoTank L3250 All-in-One Inkjet Printer",
+        "modelNumber": "L3250",
+        "category": "printer",
+      
+        "specs": {
+          "printertype": "Ink Tank Printer",
+          "functions": "Print, Scan, Copy",
+          "print technology": "Inkjet",
+          "print speed": "Up to 10 ipm (black), 5 ipm (color)",
+          "print resolution": "5760 x 1440 dpi",
+          "scan type": "Flatbed Color Image Scanner",
+          "connectivity": [
+            "USB",
+            "Wi-Fi",
+            "Wi-Fi Direct"
+          ],
+          "supported paper sizes": [
+            "A4",
+            "A5",
+            "A6",
+            "B5",
+            "Legal"
+          ],
+          "ink bottles": [
+            "Black 003",
+            "Cyan 003",
+            "Magenta 003",
+            "Yellow 003"
+          ],
+          "compatible os": [
+            "Windows",
+            "macOS"
+          ],
+          "warranty": "1 year onsite warranty"
+        },
+      
+        "colors": ["Black"],
+        "price": "15499",
+        "ink type": "Epson 003 Ink Bottle",
+        "paper input capacity": "100 sheets",
+        "others": [
+          "Ultra-low-cost printing",
+          "High yield ink bottles",
+          "Ideal for home and office use",
+          "Compact and lightweight design"
+        ],
+        "photos": [
+          "/assets/epson.jpg",
+          "/assets/epson2.jpg",
+          "/assets/epson3.jpg"
+        ]
+      }
+      
+  ],
+  "RAM": [
+    {
+      "brand": "Corsair",
+      "modelName": "Corsair Vengeance LPX DDR4 Desktop RAM",
+      "modelNumber": "CMK16GX4M2B3200C16",
+      "category": "ram",
+    
+      "specs": {
+        "ram type": "Desktop RAM",
+        "memory type": "DDR4",
+        "capacity": "16 GB",
+        "configuration": "2 x 8 GB",
+        "speed": "3200 MHz",
+        "latency": "CL16",
+        "voltage": "1.35 V",
+        "form factor": "DIMM",
+        "pin count": "288-pin",
+        "ecc support": "No",
+        "buffered": "Unbuffered",
+        "compatibility": [
+          "Intel Core i5/i7/i9",
+          "Intel 300 / 400 / 500 Series",
+          "AMD Ryzen 3000 / 5000"
+        ],
+        "warranty": "Limited Lifetime Warranty"
+      },
+    
+      "colors": ["Black"],
+      "price": "4899",
+      "others": [
+        "XMP 2.0 Support",
+        "Low-profile heat spreader",
+        "Optimized for high performance",
+        "Ideal for gaming and professional use"
+      ],
+      "photos": [
+        "/assets/ram/corsair_lpx_1.jpg",
+        "/assets/ram/corsair_lpx_2.jpg"
+      ]
+    }
+  ],
+  "Monitor": [
+    {
+      "brand": "LG",
+      "modelName": "LG UltraGear Gaming Monitor",
+      "modelNumber": "24GN650-B",
+      "category": "monitor",
+    
+      "specs": {
+        "screen size": "24 inch",
+        "panel type": "IPS",
+        "resolution": "1920 x 1080 (Full HD)",
+        "aspect ratio": "16:9",
+        "refresh rate": "144 Hz",
+        "brightness": "400 nits",
+        "contrast ratio": "1000:1",
+        "viewing angle": "178° / 178°",
+        "color gamut": "99% sRGB",
+        "hdr support": "HDR10",
+        "ports": [
+          "2 x HDMI",
+          "1 x DisplayPort",
+          "1 x Headphone Out"
+        ],
+        "mount type": "VESA 100 x 100",
+        "power consumption": "32 W"
+      },
+     
+      "colors": ["Black"],
+      "price": "14999",
+      "warranty": "3 Years",
+    
+      "others": [
+        "response time : 1 ms (MBR)",
+        "AMD FreeSync Premium",
+        "NVIDIA G-Sync Compatible",
+        "Gaming optimized display",
+        "Ultra-smooth motion",
+        "Borderless design",
+        "Eye comfort mode"
+      ],
+    
+      "photos": [
+        "/assets/monitor/lg_ultragear_1.jpg",
+        "/assets/monitor/lg_ultragear_2.jpg"
+      ]
+    }
+    
+  ],
+  "Motherboard":[
+    {
+      "brand": "ASUS",
+      "modelName": "ASUS TUF Gaming B550-PLUS",
+      "modelNumber": "B550-PLUS",
+      "category": "motherboard",
+    
+      "specs": {
+        "chipset": "AMD B550",
+        "socket": "AM4",
+        "form factor": "ATX",
+        "memory support": "DDR4 up to 128GB",
+        "memory speed": "Up to 4400 MHz (OC)",
+        "pci slots": [
+          "PCIe 4.0 x16",
+          "PCIe 3.0 x1"
+        ],
+        "storage support": [
+          "2 x M.2",
+          "6 x SATA 6Gb/s"
+        ],
+        "networking": "Realtek 2.5Gb Ethernet",
+        "usb ports": "USB 3.2 Gen 2"
+      },
+    
+      "price": "14999",
+      "warranty": "3 Years",
+      "others": [
+        "Military-grade components",
+        "Enhanced power delivery",
+        "Gaming optimized"
+      ],
+      "photos": [
+        "/assets/motherboard/b550_1.jpg",
+        "/assets/motherboard/b550_2.jpg"
+      ]
+    }
+    
+  ],
+  "Power Supply":[
+    {
+      "brand": "Corsair",
+      "modelName": "Corsair CV550 Power Supply",
+      "modelNumber": "CV550",
+      "category": "power supply",
+    
+      "specs": {
+        "wattage": "550W",
+        "certification": "80 Plus Bronze",
+        "modular": "Non-Modular",
+        "input voltage": "100-240V",
+        "fan size": "120mm",
+        "protection": [
+          "OVP",
+          "UVP",
+          "OPP",
+          "SCP"
+        ]
+      },
+    
+      "price": "3999",
+      "warranty": "3 Years",
+      "others": [
+        "Stable power delivery",
+        "Quiet operation"
+      ],
+      "photos": [
+        "/assets/psu/cv550.jpg"
+      ]
+    }
+    
+  ],
+  "Storage":[
+    {
+      "brand": "Samsung",
+      "modelName": "Samsung 980 NVMe SSD",
+      "modelNumber": "MZ-V8V500",
+      "category": "storage",
+    
+      "specs": {
+        "capacity": "500GB",
+        "interface": "PCIe 3.0 x4",
+        "form factor": "M.2 2280",
+        "read speed": "3500 MB/s",
+        "write speed": "3000 MB/s"
+      },
+    
+      "price": "4999",
+      "warranty": "5 Years",
+      "others": [
+        "High-speed performance",
+        "Reliable storage"
+      ],
+      "photos": [
+        "/assets/storage/samsung_980.jpg"
+      ]
+    }    
+  ],
+  "Cabinet fan":[
+    {
+      "brand": "Cooler Master",
+      "modelName": "Cooler Master SickleFlow 120",
+      "modelNumber": "MFX-B2DN-18NPA-R1",
+      "category": "cabinet fan",
+    
+      "specs": {
+        "fan size": "120mm",
+        "speed": "1800 RPM",
+        "airflow": "62 CFM",
+        "noise level": "27 dBA",
+        "bearing type": "Rifle Bearing",
+        "lighting": "ARGB"
+      },
+    
+      "price": "1199",
+      "warranty": "2 Years",
+      "others": [
+        "High airflow",
+        "Low noise operation"
+      ],
+      "photos": [
+        "/assets/fan/sickleflow.jpg"
+      ]
+    }
+    
+  ],
+  "Graphics Card":[
+    {
+      "brand": "NVIDIA",
+      "modelName": "ZOTAC GeForce RTX 3060 Twin Edge",
+      "modelNumber": "RTX3060-12GB",
+      "category": "graphics card",
+    
+      "specs": {
+        "gpu chipset": "NVIDIA RTX 3060",
+        "vram": "12GB GDDR6",
+        "memory interface": "192-bit",
+        "boost clock": "1777 MHz",
+        "ports": [
+          "3 x DisplayPort",
+          "1 x HDMI"
+        ],
+        "power requirement": "550W PSU"
+      },
+    
+      "price": "27999",
+      "warranty": "3 Years",
+      "others": [
+        "Ray tracing support",
+        "DLSS technology",
+        "High-end gaming performance"
+      ],
+      "photos": [
+        "/assets/gpu/rtx3060.jpg"
+      ]
+    }    
+  ]
+}

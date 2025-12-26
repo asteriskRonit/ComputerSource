@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us - Computer Source</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <!-- FAVICON -->
+ <link rel="icon" type="image/png" href="assets/logo5.png">
+ <link rel="apple-touch-icon" href="assets/logo5.png">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #00112e;
+      color: #fff;
+    }
+
+    /* ------------------------ NAVBAR ------------------------ */
+
+    .navbar {
+      background: linear-gradient(to right, #0a1128, #001f54);
+      padding: 0.5rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      width: 100%;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+
+    .nav-container {
+      max-width: 1400px;
+      margin: auto;
+      padding: 0 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .brand img {
+      height: 40px;
+      width: 45px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .brand h1 {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 1.9rem;
+      color: white;
+      margin: 0;
+      line-height: 1;
+    }
+
+    .nav-links a {
+      color: #cfd8e3;
+      margin-left: 1rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: #00d1ff;
+    }
+
+    /* ------------------ HAMBURGER MENU ------------------ */
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 4px;
+    }
+
+    .hamburger span {
+      width: 28px;
+      height: 3px;
+      background: white;
+      border-radius: 3px;
+    }
+
+    /* Mobile Menu */
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      background: #001b3a;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .mobile-menu a {
+      color: #dbe7ff;
+      text-decoration: none;
+      padding: 0.7rem 0;
+      font-size: 1.1rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .mobile-menu a:hover {
+      color: #00d1ff;
+    }
+
+    @media(max-width: 900px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+    }
+
+    /* ------------------ CONTACT SECTION ------------------ */
+
+    .contact-container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #021c3f;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(255,255,255,0.1);
+      color: #fff;
+    }
+
+    .contact-container h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .info-block {
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+      gap: 10px;
+    }
+
+    .info-block i {
+      color: #00d1ff;
+    }
+
+    .social-icons {
+      margin-top: 20px;
+      display: flex;
+      gap: 15px;
+    }
+
+    .social-icons a {
+      font-size: 24px;
+      color: #00d1ff;
+    }
+
+    .hours {
+      margin-top: 20px;
+      color: #ddd;
+      line-height: 1.6;
+    }
+
+    .map {
+      width: 100%;
+      height: 400px;
+      margin-top: 20px;
+      border: none;
+      border-radius: 8px;
+    }
+
+    /* ===== FOOTER BASE ===== */
+.footer {
+  background: linear-gradient(180deg, #0a1128, #050b1a);
+  color: #cfd8e3;
+  margin-top: 4rem;
+}
+
+/* CONTAINER */
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 3rem 1.5rem;
+}
+
+/* BRAND */
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  white-space: nowrap;
+}
+
+.footer-brand img {
+  height: 42px;
+}
+
+.footer-brand h2 {
+  font-size: 1.7rem;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1;
+}
+
+/* DESCRIPTION */
+.footer-desc {
+  max-width: 700px;
+  margin: 1rem 0 2.5rem;
+  font-size: 0.95rem;
+  color: #9fb3c8;
+}
+
+/* GRID */
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.footer-col h4 {
+  color: #00d1ff;
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col li,
+.footer-col p {
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+/* SOCIAL */
+.footer-socials {
+  display: flex;
+  gap: 14px;
+  font-size: 1.4rem;
+}
+
+.footer-socials a {
+  text-decoration: none;
+  color: #00d1ff;
+  transition: 0.25s;
+}
+
+.footer-socials a:hover {
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+/* BOTTOM BAR */
+.footer-bottom {
+  text-align: center;
+  padding: 14px;
+  font-size: 0.85rem;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+/* ===== MOBILE FOOTER ===== */
+/* ===== MOBILE FOOTER ===== */
+.footer-mobile {
+  display: none;
+  background: linear-gradient(180deg, #050b18, #0b1f3f);
+  padding: 2rem 1.2rem;
+  text-align: center;
+}
+
+/* BRAND */
+.mobile-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+.mobile-brand img {
+  width: 34px;
+}
+
+.mobile-brand h3 {
+  font-size: 1.35rem;
+  margin: 0;
+  color: #fff;
+}
+
+/* DESCRIPTION */
+.mobile-desc {
+  margin: 0.8rem 0 1rem;
+  font-size: 0.9rem;
+  color: #cfd8e3;
+}
+
+/* POINTS */
+.mobile-points p {
+  font-size: 0.9rem;
+  color: #9fb3c8;
+  margin: 6px 0;
+}
+
+/* CONTACT */
+.mobile-contact {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #cfd8e3;
+}
+
+.mobile-contact p {
+  margin: 4px 0;
+}
+
+/* SOCIAL */
+.mobile-social {
+  margin-top: 1.2rem;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  font-size: 1.4rem;
+}
+
+.mobile-social a {
+  text-decoration: none;
+  color: #00d1ff;
+  transition: 0.25s ease;
+}
+
+.mobile-social a:hover {
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* MOBILE ONLY */
+@media (max-width: 900px) {
+  .footer-container {
+    display: none;
+  }
+
+  .footer-mobile {
+    display: block;
+  }
+}
+@media(max-width: 600px){
+  .brand h1 {
+    font-size: 1.7rem;
+    
+}
+.brand img {
+    height: 32px;
+    width: 32px;
+}
+}
+
+/* ===== MOBILE SLIDE MENU ===== */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 260px;
+  height: 100vh;
+  background: linear-gradient(180deg, #001b3a, #000c22);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  transform: translateX(100%);
+  transition: transform 0.35s ease;
+  z-index: 2000;
+}
+
+.mobile-menu.active {
+  transform: translateX(0);
+}
+
+.mobile-menu a {
+  color: #e6f0ff;
+  text-decoration: none;
+  font-size: 1.15rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding-bottom: 8px;
+}
+
+.mobile-menu a:hover {
+  color: #00d1ff;
+}
+
+.mobile-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 22px;
+  color: white;
+  cursor: pointer;
+}
+
+/* MOBILE ONLY */
+@media (max-width: 900px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+}
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR (Copied 100% from About Page) -->
+  <header class="navbar">
+      <div class="nav-container">
+
+          <div class="brand">
+              <img src="assets/logo5.png" alt="Logo">
+              <h1>Computer Source</h1>
+          </div>
+          <nav class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="product.html">Products</a>
+            <a href="service.html">Services</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+      
+
+          <!-- Hamburger -->
+          <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+      </div>
+
+      <!-- MOBILE MENU -->
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="product.html">Products</a>
+        <a href="service.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </div>
+  </header>
+
+  <!-- CONTACT SECTION -->
+  <div class="contact-container">
+
+    <h2>Contact Us</h2>
+
+    <div class="contact-info">
+
+      <div class="info-block">
+        <i class="fas fa-phone-alt"></i>
+        <span>+91 98765 43210</span>
+      </div>
+
+      <div class="info-block">
+        <i class="fas fa-envelope"></i>
+        <span>info@computersource.com</span>
+      </div>
+
+      <div class="info-block">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>123 Tech Street, Agartala, Tripura</span>
+      </div>
+
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+
+      <div class="hours">
+        <h3>Opening Hours:</h3>
+        <p><strong>Mon - Fri:</strong> 10:00 AM – 8:00 PM</p>
+        <p><strong>Saturday:</strong> 10:00 AM – 6:00 PM</p>
+        <p><strong>Sunday:</strong> Closed</p>
+      </div>
+
+      <iframe class="map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3648.931051585167!2d91.27395431498225!3d23.831457784553726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3753f3b24f6483cf%3A0xf0d0636a7a93a4d2!2sAgartala%2C%20Tripura!5e0!3m2!1sen!2sin!4v1689612746596!5m2!1sen!2sin"
+        loading="lazy"
+        allowfullscreen>
+      </iframe>
+
+    </div>
+  </div>
+  <footer class="footer">
+
+    <div class="footer-container">
+  
+      <!-- BRAND -->
+      <div class="footer-brand">
+        <img src="assets/logo5.png" alt="Computer Source Logo">
+        <h2>Computer Source</h2>
+      </div>
+  
+      <p class="footer-desc">
+        Trusted electronics retailer and distributor delivering genuine laptops,
+        desktops, accessories, and audio solutions for gaming, office, and students.
+      </p>
+  
+      <!-- DESKTOP GRID -->
+      <div class="footer-grid">
+  
+        <div class="footer-col">
+          <h4>What We Offer</h4>
+          <ul>
+            <li>Laptops & Desktops</li>
+            <li>Gaming Systems</li>
+            <li>Computer Accessories</li>
+            <li>Speakers & Audio</li>
+          </ul>
+        </div>
+  
+        <div class="footer-col">
+          <h4>Why Choose Us</h4>
+          <ul>
+            <li>✔ Genuine Products</li>
+            <li>✔ Competitive Pricing</li>
+            <li>✔ Expert Guidance</li>
+            <li>✔ Trusted Local Store</li>
+          </ul>
+        </div>
+  
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <p>📍 Agartala, Tripura</p>
+          <p>📞 +91 8787625423</p>
+          <p>📞 +91 9436125176</p>
+          <p>🕒 Mon – Sat • 10AM – 8PM</p>
+        </div>
+  
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <div class="footer-socials">
+            <a href="#">🌐</a>
+            <a href="#">📘</a>
+            <a href="#">📸</a>
+            <a href="#">▶️</a>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  
+    <!-- MOBILE FOOTER -->
+    <div class="footer-mobile">
+  
+      <div class="mobile-brand">
+        <img src="assets/logo5.png" alt="Computer Source Logo">
+        <h3>Computer Source</h3>
+      </div>
+  
+      <p class="mobile-desc">
+        Trusted electronics retailer and distributor.
+      </p>
+  
+      <div class="mobile-points">
+        <p>✔ Genuine products with official warranty</p>
+        <p>✔ Expert guidance & after-sales support</p>
+      </div>
+  
+      <div class="mobile-contact">
+        <p>📍 Agartala, Tripura</p>
+        <p>📞 +91 8787625423</p>
+        <p>📞 +91 9436125176</p>
+      </div>
+  
+      <div class="mobile-social">
+        <a href="#">🌐</a>
+        <a href="#">📘</a>
+        <a href="#">📸</a>
+        <a href="#">▶️</a>
+      </div>
+  
+    </div>
+  
+    <div class="footer-bottom">
+      © <span id="year"></span> Computer Source • All Rights Reserved
+    </div>
+  
+  </footer>
+
+  <script>
+function toggleMenu() {
+  document.getElementById("mobileMenu").classList.toggle("active");
+}
+  document.getElementById("year").innerText = new Date().getFullYear();
+
+
+  </script>
+
+</body>
+</html>

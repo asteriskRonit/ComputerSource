@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Our Services - Computer Source</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <!-- FAVICON -->
+ <link rel="icon" type="image/png" href="assets/logo5.png">
+ <link rel="apple-touch-icon" href="assets/logo5.png">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Bebas+Neue&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: #0d1625;
+        color: white;
+        scroll-behavior: smooth;
+    }
+
+    /* ===== Animation Added ===== */
+    @keyframes fadeUp {
+        0% { 
+            opacity: 0; 
+            transform: translateY(25px); 
+        }
+        100% { 
+            opacity: 1; 
+            transform: translateY(0); 
+        }
+    }
+
+    .animate {
+        opacity: 0;
+        animation: fadeUp 0.9s ease forwards;
+    }
+
+    /* NAVBAR */
+    .navbar {
+        background: linear-gradient(to right, #0a1128, #001f54);
+        padding: 0.5rem 0;
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        box-shadow: 0 4px 18px rgba(0,0,0,0.45);
+    }
+
+    .nav-container {
+        max-width: 1400px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .brand-logo {
+        height: 45px;
+        width: auto;
+        object-fit: contain;
+    }
+
+    .brand {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .brand img {
+        height: 40px;
+        width: 45px;
+        object-fit: contain;
+        display: block;
+    }
+
+    .brand h1 {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 1.9rem;
+        color: white;
+        margin: 0;
+        line-height: 1;
+    }
+    .nav-links a {
+        color: #cfd8e3;
+        margin-left: 1rem;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .nav-links a:hover {
+        color: #00d1ff;
+    }
+
+    /* PAGE TITLE */
+    .services-header {
+        text-align: center;
+        padding: 3rem 1rem 1.5rem;
+        color: #00d1ff;
+        font-family: 'Bebas Neue';
+        font-size: 2.8rem;
+        letter-spacing: 2px;
+    }
+
+    /* TOP ARROW */
+    .go-to-form {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .go-to-form button {
+        background: #001f54;
+        color: #00d1ff;
+        font-size: 1.2rem;
+        padding: 12px 25px;
+        border-radius: 8px;
+        border: 2px solid #00d1ff;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .go-to-form button:hover {
+        background: #00d1ff;
+        color: #001f54;
+        font-weight: 600;
+    }
+
+    /* SERVICE SECTION */
+    .service-box {
+        max-width: 1100px;
+        margin: 2.5rem auto;
+        background: #132033;
+        border-radius: 14px;
+        padding: 1.5rem;
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+        transition: 0.3s;
+    }
+
+    .service-box:hover {
+        transform: translateY(-5px);
+        background: #0f1a2d;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+    }
+
+    .service-img {
+        flex: 1;
+    }
+
+    .service-img img {
+        width: 100%;
+        height: 230px;
+        object-fit: cover;
+        border-radius: 12px;
+        background: white;
+    }
+
+    .service-info {
+        flex: 1.3;
+    }
+
+    .service-info h2 {
+        margin: 0;
+        color: #00d1ff;
+        font-size: 1.7rem;
+    }
+
+    .service-info p {
+        margin-top: 10px;
+        color: #d6e3f2;
+        line-height: 1.6;
+    }
+
+    /* BOOKING FORM */
+    #service-form {
+        max-width: 900px;
+        background: #132033;
+        margin: 4rem auto;
+        padding: 2rem;
+        border-radius: 14px;
+        box-shadow: 0 0 18px rgba(0,0,0,0.5);
+    }
+
+    #service-form h2 {
+        text-align: center;
+        color: #00d1ff;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        font-family: 'Bebas Neue';
+    }
+
+    .form-group {
+        margin-bottom: 1.2rem;
+    }
+
+    label {
+        display: block;
+        font-size: 1rem;
+        margin-bottom: 6px;
+        color: #d0e1f5;
+    }
+
+    input, select, textarea {
+        width: 100%;
+        padding: 12px;
+        border-radius: 8px;
+        border: none;
+        background: #0f1a2d;
+        color: #d8e5f7;
+        font-size: 1rem;
+    }
+
+    textarea {
+        resize: vertical;
+        min-height: 120px;
+    }
+
+    input[type="file"] {
+        padding: 8px;
+        background: #0f1a2d;
+    }
+
+    .submit-btn {
+        width: 100%;
+        padding: 14px;
+        background: #00d1ff;
+        color: #001f54;
+        font-size: 1.2rem;
+        border-radius: 8px;
+        cursor: pointer;
+        border: none;
+        font-weight: 600;
+    }
+
+    .submit-btn:hover {
+        background: #00a2cc;
+    }
+
+    /* MOBILE */
+    @media(max-width: 860px) {
+        .service-box {
+            flex-direction: column;
+            text-align: center;
+        }
+        .nav-links { display: none; }
+    }
+    .footer {
+  background: linear-gradient(180deg, #0a1128, #050b1a);
+  color: #cfd8e3;
+  margin-top: 4rem;
+}
+
+/* CONTAINER */
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 3rem 1.5rem;
+}
+
+/* BRAND */
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  white-space: nowrap;
+}
+
+.footer-brand img {
+  height: 42px;
+}
+
+.footer-brand h2 {
+  font-size: 1.7rem;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1;
+}
+
+/* DESCRIPTION */
+.footer-desc {
+  max-width: 700px;
+  margin: 1rem 0 2.5rem;
+  font-size: 0.95rem;
+  color: #9fb3c8;
+}
+
+/* GRID */
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.footer-col h4 {
+  color: #00d1ff;
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col li,
+.footer-col p {
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+/* SOCIAL */
+.footer-socials {
+  display: flex;
+  gap: 14px;
+  font-size: 1.4rem;
+}
+
+.footer-socials a {
+  text-decoration: none;
+  color: #00d1ff;
+  transition: 0.25s;
+}
+
+.footer-socials a:hover {
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+/* BOTTOM BAR */
+.footer-bottom {
+  text-align: center;
+  padding: 14px;
+  font-size: 0.85rem;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+/* ===== MOBILE FOOTER ===== */
+/* ===== MOBILE FOOTER ===== */
+.footer-mobile {
+  display: none;
+  background: linear-gradient(180deg, #050b18, #0b1f3f);
+  padding: 2rem 1.2rem;
+  text-align: center;
+}
+
+/* BRAND */
+.mobile-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+.mobile-brand img {
+  width: 34px;
+}
+
+.mobile-brand h3 {
+  font-size: 1.35rem;
+  margin: 0;
+  color: #fff;
+}
+
+/* DESCRIPTION */
+.mobile-desc {
+  margin: 0.8rem 0 1rem;
+  font-size: 0.9rem;
+  color: #cfd8e3;
+}
+
+/* POINTS */
+.mobile-points p {
+  font-size: 0.9rem;
+  color: #9fb3c8;
+  margin: 6px 0;
+}
+
+/* CONTACT */
+.mobile-contact {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #cfd8e3;
+}
+
+.mobile-contact p {
+  margin: 4px 0;
+}
+
+/* SOCIAL */
+.mobile-social {
+  margin-top: 1.2rem;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  font-size: 1.4rem;
+}
+
+.mobile-social a {
+  text-decoration: none;
+  color: #00d1ff;
+  transition: 0.25s ease;
+}
+
+.mobile-social a:hover {
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* MOBILE ONLY */
+@media (max-width: 900px) {
+  .footer-container {
+    display: none;
+  }
+
+  .footer-mobile {
+    display: block;
+  }
+} 
+
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* MOBILE MENU */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 260px;
+  height: 100%;
+  background: #0a1322;
+  padding: 1.5rem;
+  box-shadow: -5px 0 15px rgba(0,0,0,0.4);
+  transform: translateX(100%);
+  transition: transform 0.35s ease;
+  z-index: 2000;
+}
+
+.mobile-menu.active {
+  transform: translateX(0);
+}
+
+.mobile-menu h3 {
+  color: #00d1ff;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.mobile-menu a {
+  display: block;
+  padding: 12px 0;
+  border-bottom: 1px solid #1e2c37;
+  color: #cfd8e3;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.mobile-menu a:hover {
+  color: #00d1ff;
+}
+
+/* CLOSE ICON */
+.mobile-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 22px;
+  color: white;
+  cursor: pointer;
+}
+
+/* BODY LOCK */
+body.menu-open {
+  overflow: hidden;
+}
+
+/* RESPONSIVE */
+@media (max-width: 860px) {
+  .nav-links {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+    padding-right: 15px;
+  }
+}
+
+/* BRAND LOGO + NAME */
+.brand h1 {
+  font-size: 1.6rem; /* desktop default */
+}
+
+/* MOBILE VIEW FIX */
+@media (max-width: 600px) {
+  .brand h1 {
+    font-size: 1.5rem;   /* smaller & balanced */
+    line-height: 1.2;
+  }
+
+  .brand img {
+    width: 30px;        /* scale logo properly */
+    height: auto;
+  }
+
+  .brand {
+    gap: 8px;           /* spacing between logo & name */
+  }
+}
+
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="nav-container">
+      <div class="brand">
+        <img src="assets/logo5.png" alt="Logo">
+        <h1>Computer Source</h1>
+      </div>
+  
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="product.html">Products</a>
+        <a href="service.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+  
+      <!-- HAMBURGER -->
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </div>
+  </header>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-close" onclick="toggleMenu()">✕</div>
+  
+    <h3>Menu</h3>
+  
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="product.html">Products</a>
+    <a href="service.html">Services</a>
+    <a href="contact.html">Contact</a>
+  </div>
+    
+
+<!-- PAGE TITLE -->
+<h1 class="services-header animate">OUR SERVICES</h1>
+
+<!-- TOP ARROW BUTTON -->
+<div class="go-to-form animate" style="animation-delay:0.2s;">
+    <button onclick="document.getElementById('service-form').scrollIntoView({behavior:'smooth'});">
+        📩 Book Your Service ↓
+    </button>
+</div>
+
+<!-- SERVICE BOXES -->
+<div class="service-box animate" style="animation-delay:0.25s;">
+    <div class="service-img">
+        <img src="assets/printer_maintanance.png" alt="Printer Maintenance">
+    </div>
+    <div class="service-info">
+        <h2>Printer Maintenance</h2>
+        <p>Expert servicing for inkjet, laser & thermal printers.</p>
+    </div>
+</div>
+
+<div class="service-box animate" style="animation-delay:0.35s;">
+    <div class="service-img">
+        <img src="assets/assembling.png" alt="Desktop Assembling">
+    </div>
+    <div class="service-info">
+        <h2>Desktop Assembling</h2>
+        <p>Custom-built systems for gaming & office use.</p>
+    </div>
+</div>
+
+<div class="service-box animate" style="animation-delay:0.45s;">
+    <div class="service-img">
+        <img src="assets/networking.png" alt="Network Setup">
+    </div>
+    <div class="service-info">
+        <h2>LAN & Network Setup</h2>
+        <p>Router setup, cable installation & secure networking.</p>
+    </div>
+</div>
+
+<div class="service-box animate" style="animation-delay:0.55s;">
+    <div class="service-img">
+        <img src="assets/pc_service.png" alt="Desktop Maintenance">
+    </div>
+    <div class="service-info">
+        <h2>Desktop Maintenance</h2>
+        <p>Cleaning, OS installation & performance optimization.</p>
+    </div>
+</div>
+
+<div class="service-box animate" style="animation-delay:0.65s;">
+    <div class="service-img">
+        <img src="assets/onsite.png" alt="IT Services">
+    </div>
+    <div class="service-info">
+        <h2>IT Support & Services</h2>
+        <p>On-site & remote IT assistance for businesses.</p>
+    </div>
+</div>
+
+<div class="service-box animate" style="animation-delay:0.75s;">
+    <div class="service-img">
+        <img src="assets/laptop_service.png" alt="Laptop Service">
+    </div>
+    <div class="service-info">
+        <h2>Laptop Servicing</h2>
+        <p>Screen replacement, SSD upgrade & motherboard repair.</p>
+    </div>
+</div>
+
+<!-- BOOKING FORM -->
+<div id="service-form" class="animate" style="animation-delay:0.85s;">
+    <h2>Book Your Service</h2>
+
+    <form>
+        <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" placeholder="Enter your name" required>
+        </div>
+
+        <div class="form-group">
+            <label>Your Phone Number</label>
+            <input type="tel" placeholder="Enter phone number" required>
+        </div>
+
+        <div class="form-group">
+            <label>Your Email</label>
+            <input type="email" placeholder="Enter email address" required>
+        </div>
+
+        <div class="form-group">
+            <label>Select Service</label>
+            <select required>
+                <option value="">Choose service</option>
+                <option>Printer Maintenance</option>
+                <option>Desktop Assembling</option>
+                <option>Network Setup</option>
+                <option>Desktop Maintenance</option>
+                <option>IT Support</option>
+                <option>Laptop Servicing</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Describe Your Issue</label>
+            <textarea placeholder="Explain the problem..." required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>Upload Photo (optional)</label>
+            <input type="file" accept="image/*">
+        </div>
+
+        <button class="submit-btn">Submit</button>
+    </form>
+</div>
+<footer class="footer">
+
+    <div class="footer-container">
+  
+      <!-- BRAND -->
+      <div class="footer-brand">
+        <img src="assets/logo5.png" alt="Computer Source Logo">
+        <h2>Computer Source</h2>
+      </div>
+  
+      <p class="footer-desc">
+        Trusted electronics retailer and distributor delivering genuine laptops,
+        desktops, accessories, and audio solutions for gaming, office, and students.
+      </p>
+  
+      <!-- DESKTOP FOOTER GRID -->
+      <div class="footer-grid">
+  
+        <div class="footer-col">
+          <h4>What We Offer</h4>
+          <ul>
+            <li>Laptops & Desktops</li>
+            <li>Gaming Systems</li>
+            <li>Computer Accessories</li>
+            <li>Speakers & Audio</li>
+          </ul>
+        </div>
+  
+        <div class="footer-col">
+          <h4>Why Choose Us</h4>
+          <ul>
+            <li>✔ Genuine Products</li>
+            <li>✔ Competitive Pricing</li>
+            <li>✔ Expert Guidance</li>
+            <li>✔ Trusted Local Store</li>
+          </ul>
+        </div>
+  
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <p>📍 Tripura, India</p>
+          <p>📞 +91 8787625423</p>
+          <p>📞 +91 9436125176</p>
+          <p>🕒 Mon – Sat • 10AM – 8PM</p>
+        </div>
+  
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <div class="footer-socials">
+            <a href="#">🌐</a>
+            <a href="#">📘</a>
+            <a href="#">📸</a>
+            <a href="#">▶️</a>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  
+  <!-- MOBILE FOOTER -->
+  <!-- MOBILE FOOTER -->
+  <div class="footer-mobile">
+  
+    <!-- BRAND -->
+    <div class="mobile-brand">
+      <img src="assets/logo5.png" alt="Computer Source Logo">
+      <h3>Computer Source</h3>
+    </div>
+  
+    <!-- DESCRIPTION -->
+    <p class="mobile-desc">
+      Trusted electronics retailer and distributor.
+    </p>
+  
+    <!-- HIGHLIGHTS -->
+    <div class="mobile-points">
+      <p>✔ Genuine products with official warranty</p>
+      <p>✔ Expert guidance & after-sales support</p>
+    </div>
+  
+    <!-- CONTACT -->
+    <div class="mobile-contact">
+      <p>📍 Agartala, Tripura</p>
+      <p>📞 +91 9XXXXXXXXX</p>
+      <p>✉️ support@computersource.in</p>
+    </div>
+  
+    <!-- SOCIAL -->
+    <div class="mobile-social">
+      <a href="#" aria-label="Website">🌐</a>
+      <a href="#" aria-label="Facebook">📘</a>
+      <a href="#" aria-label="Instagram">📸</a>
+      <a href="#" aria-label="YouTube">▶️</a>
+    </div>
+  
+  </div>
+    <div class="footer-bottom">
+      © <span id="year"></span> Computer Source • All Rights Reserved
+    </div>
+  
+  </footer>
+
+  <script>
+      function toggleMenu() {
+      const menu = document.getElementById("mobileMenu");
+      menu.classList.toggle("active");
+      document.body.classList.toggle("menu-open");
+    }
+    document.getElementById("year").innerText = new Date().getFullYear();
+  </script>
+  
+</body>
+</html>

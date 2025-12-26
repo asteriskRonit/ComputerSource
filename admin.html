@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Panel - Computer Source</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Admin Panel</h1>
+    <form id="product-form">
+      <input type="text" id="name" placeholder="Product Name" required>
+      <input type="text" id="brand" placeholder="Brand" required>
+      <input type="number" id="price" placeholder="Price (Rs.)" required>
+      <select id="category" required>
+        <option value="">Select Category</option>
+        <option>Laptops</option>
+        <option>Peripherals</option>
+        <option>Audio Accessories</option>
+        <option>Printers & Scanners</option>
+        <option>Networking Devices</option>
+        <option>Software & Security</option>
+        <option>Projectors</option>
+        <option>Cables & Accessories</option>
+      </select>
+      <button type="submit">Add Product</button>
+    </form>
+  </div>
+  <script src="js/admin.js"></script>
+</body>
+</html>

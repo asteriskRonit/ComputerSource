@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Build Your PC | Computer Source</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+    :root{
+      --bg:#0b1220;
+      --surface:#111827;
+      --card:#1f2937;
+      --accent:#38bdf8;
+      --green:#22c55e;
+      --danger:#ef4444;
+      --muted:#9ca3af;
+    }
+    
+    *{box-sizing:border-box}
+    
+    body{
+      margin:0;
+      font-family:Poppins,sans-serif;
+      background:var(--bg);
+      color:#fff;
+    }
+    .navbar {
+  width: 100%;
+  background: #0b1220;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  overflow: visible; /* FIX: allows dropdown to show */
+}
+
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0.8rem 1rem;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+}
+
+.brand {
+  grid-column: 2;
+  text-align: center;
+}
+
+
+.brand {
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #00d1ff;
+  white-space: nowrap;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #e5e7eb;
+  font-weight: 500;
+}
+
+.nav-links li a:hover {
+  color: #00d1ff;
+}
+
+/* HAMBURGER */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #0b1220;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    padding: 1rem 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    padding: 0.5rem 0;
+  }
+}
+    
+    /* ===== LAYOUT ===== */
+    .wrapper{
+      display:flex;
+      min-height:100vh;
+      margin-top: 10px;
+    }
+/* Mobile tap feedback */
+@media(max-width:1024px){
+  .sidebar button{
+    transition:transform .15s ease, background .2s ease;
+  }
+
+  .sidebar button:active{
+    transform:scale(0.95);
+    background:rgba(56,189,248,0.25);
+  }
+}
+
+    
+    /* ===== CATEGORY BAR ===== */
+/* ===== MODERN CATEGORY BAR (GLASS UI) ===== */
+.sidebar{
+  width:240px;
+  padding:16px;
+  background:rgba(17,24,39,0.55); /* glass */
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-right:1px solid rgba(255,255,255,0.08);
+  box-shadow: inset -1px 0 0 rgba(255,255,255,0.04);
+}
+
+/* Title */
+.sidebar h2{
+  font-size:18px;
+  font-weight:600;
+  letter-spacing:0.5px;
+  text-align:center;
+  color:var(--accent);
+  margin-bottom:18px;
+}
+
+/* Category buttons */
+.sidebar button{
+  width:100%;
+  padding:12px 16px;
+  margin-bottom:10px;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,0.08);
+  background:rgba(31,41,55,0.6);
+  color:#e5e7eb;
+  font-weight:500;
+  cursor:pointer;
+  text-align:left;
+  transition:all .25s ease;
+  position:relative;
+  overflow:hidden;
+}
+
+/* Hover effect */
+.sidebar button:hover{
+  background:rgba(56,189,248,0.15);
+  color:#fff;
+  transform:translateX(4px);
+}
+
+/* Active category */
+.sidebar button.active{
+  background:linear-gradient(
+    135deg,
+    rgba(56,189,248,0.9),
+    rgba(14,165,233,0.85)
+  );
+  color:#020617;
+  font-weight:600;
+  border:none;
+  box-shadow:0 10px 25px rgba(56,189,248,0.35);
+}
+
+/* Small glow line on active */
+.sidebar button.active::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  bottom:0;
+  width:4px;
+  background:#020617;
+  border-radius:0 6px 6px 0;
+}
+
+    
+    /* ===== CONTENT ===== */
+    .content{
+      flex:1;
+      padding:20px;
+    }
+    
+    /* ===== PRODUCT GRID ===== */
+    .products{
+      display:grid;
+      grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+      gap:18px;
+    }
+    
+/* ===== PRODUCT CARD – NEW DESIGN ===== */
+/* put this LAST in your CSS file */
+.card{
+  background:linear-gradient(145deg,#ff0066,#7c00ff);
+  border-radius:22px;
+  padding:16px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  border:2px solid #ffefefc5;
+}
+
+
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 18px 40px rgba(0,0,0,0.45);
+}
+
+/* Image wrapper */
+.card img{
+  width:100%;
+  height:150px;
+  object-fit:contain;
+  background:#ffffff;
+  border:1px solid rgba(231, 12, 12, 0.08);
+  border-radius:14px;
+  padding:10px;
+}
+
+/* Title */
+.card h3{
+  font-size:14px;
+  font-weight:600;
+  line-height:1.3;
+  margin:0;
+}
+
+/* Capacity badge */
+.card .badge{
+  display:inline-block;
+  font-size:11px;
+  padding:4px 10px;
+  border-radius:999px;
+  background:rgba(23, 185, 254, 0.15);
+  color:var(--accent);
+  width:max-content;
+}
+
+/* Price row */
+.price{
+  font-size:16px;
+  font-weight:700;
+  color:var(--green);
+}
+
+/* Add button */
+.card button{
+  margin-top:auto;
+  padding:12px;
+  border:none;
+  border-radius:14px;
+  background:linear-gradient(135deg,#0068fa,#ca0d0d);
+  color:#ffffff;
+  font-weight:700;
+  cursor:pointer;
+  transition:transform .15s ease, box-shadow .15s ease;
+}
+
+.card button:active{
+  transform:scale(0.96);
+}
+
+/* Added state */
+.card button.added{
+  background:#374151;
+  color:#9ca3af;
+  cursor:not-allowed;
+}
+
+
+.card button.added::after{
+  margin-left:6px;
+  font-weight:700;
+  color:#22c55e;
+}
+
+/* Button click animation */
+.card button.animate{
+  animation:pop .25s ease;
+}
+
+@keyframes pop{
+  0%{transform:scale(1)}
+  50%{transform:scale(0.92)}
+  100%{transform:scale(1)}
+}
+
+    
+    /* ===== BUILD PANEL ===== */
+    .build{
+      width:300px;
+      background:var(--surface);
+      padding:16px;
+      border-left:1px solid #1f2937;
+      display:flex;
+      flex-direction:column;
+      position:relative;
+    }
+    
+    .build h2{
+      text-align:center;
+      color:var(--accent);
+      margin-bottom:12px;
+    }
+    
+    .build-list{
+      flex:1;
+      overflow-y:auto;
+    }
+    
+    .build-item{
+      background:#1f2937;
+      padding:10px;
+      border-radius:12px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-bottom:8px;
+    }
+    
+    .build-item span{
+      font-size:13px;
+    }
+    
+    .remove{
+      background:var(--danger);
+      border:none;
+      color:#fff;
+      padding:6px 10px;
+      border-radius:999px;
+      cursor:pointer;
+    }
+    
+    .total-box{
+  position:sticky;
+  bottom:0;
+  background:linear-gradient(180deg, rgba(17,24,39,0.95), #111827);
+  padding:14px;
+  text-align:center;
+  border-top:1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+  z-index:10;
+}
+
+.total-box h3{
+  margin:0;
+  font-size:18px;
+  color:#22c55e;
+  font-weight:700;
+}
+
+    
+    /* ===== MODAL ===== */
+/* ===== MODERN PRODUCT MODAL ===== */
+.modal{
+  position:fixed;
+  inset:0;
+  background:rgba(2,6,23,0.85);
+  backdrop-filter: blur(6px);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+}
+
+/* Modal box */
+.modal-content{
+  width:92%;
+  max-width:720px;
+  max-height:90vh;
+  background:linear-gradient(180deg,#020617,#0f172a);
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:0 30px 80px rgba(0,0,0,0.6);
+  display:flex;
+  flex-direction:column;
+}
+
+/* Header */
+.modal-header{
+  position:sticky;
+  top:0;
+  background:rgba(15,23,42,0.9);
+  backdrop-filter: blur(12px);
+  padding:16px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-bottom:1px solid rgba(255,255,255,0.08);
+  z-index:5;
+}
+
+.modal-header h3{
+  margin:0;
+  font-size:18px;
+  font-weight:600;
+  color:var(--accent);
+}
+
+/* Close button */
+.close-modal{
+  background:rgba(255,255,255,0.1);
+  border:none;
+  color:#fff;
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  font-size:18px;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:background .2s ease, transform .15s ease;
+}
+
+.close-modal:hover{
+  background:rgba(239,68,68,0.8);
+}
+
+.close-modal:active{
+  transform:scale(0.9);
+}
+
+/* Body */
+.modal-body{
+  padding:20px;
+  overflow-y:auto;
+}
+
+/* Section */
+.modal-section{
+  margin-bottom:18px;
+}
+
+.modal-section h4{
+  margin:0 0 8px;
+  font-size:14px;
+  color:#94a3b8;
+  text-transform:uppercase;
+  letter-spacing:0.5px;
+}
+
+/* Specs list */
+.modal-section ul{
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+
+.modal-section li{
+  padding:10px 12px;
+  border-radius:12px;
+  background:rgba(31,41,55,0.6);
+  margin-bottom:8px;
+  font-size:14px;
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+}
+
+.modal-section li span{
+  color:#9ca3af;
+}
+
+/* Mobile full screen */
+@media(max-width:480px){
+  .modal-content{
+    width:100%;
+    height:100%;
+    max-height:100%;
+    border-radius:0;
+  }
+}
+
+    /* ===== MOBILE ===== */
+    @media(max-width:1024px){
+      .wrapper{
+        flex-direction:column;
+      }
+    
+      .sidebar{
+        width:100%;
+        display:flex;
+        gap:10px;
+        overflow-x:auto;
+      }
+    
+      .sidebar h2{
+        display:none;
+      }
+    
+      .sidebar button{
+        min-width:130px;
+        white-space:nowrap;
+      }
+    
+      .build{
+        position:fixed;
+        bottom:0;
+        left:0;
+        right:0;
+        width:100%;
+        max-height:40vh;
+        border-left:none;
+        border-top:2px solid var(--accent);
+        z-index:99;
+      }
+    
+      .content{
+        padding-bottom:45vh;
+      }
+    }
+    @media(max-width:1024px){
+  .sidebar{
+    width:100%;
+    display:flex;
+    gap:12px;
+    padding:14px;
+    overflow-x:auto;
+    background:rgba(11,18,32,0.6);
+    backdrop-filter: blur(12px);
+    border-right:none;
+    border-bottom:1px solid rgba(255,255,255,0.08);
+  }
+
+  .sidebar::-webkit-scrollbar{
+    height:6px;
+  }
+
+  .sidebar::-webkit-scrollbar-thumb{
+    background:rgba(255,255,255,0.15);
+    border-radius:999px;
+  }
+
+  .sidebar h2{
+    display:none;
+  }
+
+  .sidebar button{
+    min-width:150px;
+    margin-bottom:0;
+    border-radius:999px;
+    text-align:center;
+    transform:none;
+  }
+
+  .sidebar button:hover{
+    transform:none;
+  }
+}
+
+    @media(max-width:480px){
+      .products{
+        grid-template-columns:1fr;
+      }
+    
+      .modal-content{
+        width:100%;
+        height:100%;
+        border-radius:0;
+      }
+    }
+    /* ===== MOBILE PRODUCT WINDOW ===== */
+    .mobile-products{
+        padding-top:18px;
+        position:fixed;
+        inset:0;
+        background:#020617;
+        z-index:2000; /* MUST be higher than navbar */
+        display:none;
+        flex-direction:column;
+}
+
+
+.mobile-header{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:14px 16px;
+  background:rgba(15,23,42,0.85);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+/* Back button */
+.mobile-header button{
+  background:transparent;
+  border:none;
+  color:#fff;
+  font-size:22px;
+  cursor:pointer;
+}
+
+/* Title */
+.mobile-header span{
+  font-weight:600;
+  font-size:16px;
+  color:var(--accent);
+}
+
+
+.mobile-body{
+  padding:16px;
+  overflow-y:auto;
+  flex:1;
+}
+@keyframes slideUp {
+  from{
+    transform:translateY(100%);
+    opacity:0;
+  }
+  to{
+    transform:translateY(0);
+    opacity:1;
+  }
+}
+
+.mobile-products{
+  animation:slideUp .3s ease;
+}
+
+/* Hide desktop product grid on mobile */
+@media(max-width:1024px){
+  .content{
+    display:none;
+  }
+}
+
+/* Desktop unaffected */
+@media(min-width:1025px){
+  .mobile-products{
+    display:none !important;
+  }
+}
+/* Mobile tap feedback */
+@media(max-width:1024px){
+  .sidebar button{
+    transition:transform .15s ease, background .2s ease;
+  }
+
+  .sidebar button:active{
+    transform:scale(0.95);
+    background:rgba(56,189,248,0.25);
+  }
+}
+.back-btn{
+  font-size:20px;
+  font-weight:600;
+  color:#fff;
+  background:rgba(255,255,255,0.08);
+  border:none;
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  transition:background .2s ease, transform .15s ease;
+}
+
+.back-btn:active{
+  transform:scale(0.9);
+  background:rgba(56,189,248,0.25);
+}
+#mobileProductList .card,
+#productList .card{
+  background:linear-gradient(180deg,#1f2937,#111827);
+  border-radius:18px;
+}
+
+.download-btn{
+  margin:12px 0;
+  padding:14px;
+  border:none;
+  border-radius:16px;
+  background:linear-gradient(135deg,#22c55e,#16a34a);
+  color:#020617;
+  font-weight:700;
+  cursor:pointer;
+  width:100%;
+  transition:transform .15s ease, box-shadow .15s ease;
+}
+
+.download-btn:hover{
+  box-shadow:0 10px 25px rgba(34,197,94,0.35);
+}
+
+.download-btn:active{
+  transform:scale(0.96);
+}
+.build-footer{
+  position: sticky;
+  bottom: 0;
+  background:linear-gradient(180deg, rgba(17,24,39,0.95), #111827);
+  padding-top:10px;
+  z-index:20;
+}
+.total-box{
+  padding:14px;
+  text-align:center;
+  border-top:1px solid rgba(255,255,255,0.08);
+}
+.nav-back{
+  background:rgba(255,255,255,0.08);
+  border:none;
+  color:#fff;
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  font-size:20px;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:background .2s ease, transform .15s ease;
+}
+
+.nav-back:hover{
+  background:rgba(56,189,248,0.25);
+}
+
+.nav-back:active{
+  transform:scale(0.9);
+}
+
+
+</style>
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+      
+          <!-- BACK BUTTON -->
+          <button class="nav-back" id="navBack">←</button>
+      
+          <!-- BRAND -->
+          <div class="brand">Computer Source</div>
+      
+          <!-- EMPTY RIGHT SLOT (for symmetry) -->
+          <div></div>
+      
+        </div>
+      </nav>
+      
+<div class="wrapper">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h2>Build PC</h2>
+    <div id="categoryList"></div>
+  </div>
+
+  <!-- PRODUCTS -->
+  <div class="content">
+    <div class="products" id="productList"></div>
+  </div>
+
+  <!-- BUILD SUMMARY -->
+  <div class="build">
+    <h2>Your Build</h2>
+  
+    <div class="build-list" id="buildList">
+      <p style="text-align:center;color:#94a3b8">No components selected</p>
+    </div>
+  
+    <div class="build-footer">
+        <button id="downloadBuild" class="download-btn">
+          Download Build (PDF)
+        </button>
+      
+        <div class="total-box">
+          <h3>₹ <span id="total">0</span></h3>
+        </div>
+      </div>
+      
+  </div>
+  
+
+<!-- MODAL -->
+<div class="modal" id="productModal">
+    <div class="modal-content">
+
+        <div class="modal-header">
+          <h3 id="modalTitle"></h3>
+          <button class="close-modal" id="closeModal">✕</button>
+        </div>
+      
+        <div class="modal-body" id="modalBody"></div>
+      
+      </div>
+      
+</div>
+<!-- MOBILE PRODUCT WINDOW -->
+<div class="mobile-products" id="mobileProducts">
+    <div class="mobile-header">
+        <button id="closeMobile" class="back-btn">←</button>
+        <span id="mobileTitle">Products</span>
+      </div>
+      
+    <div class="mobile-body">
+      <div class="products" id="mobileProductList"></div>
+    </div>
+  </div>
+  
+
+  <script src="https://unpkg.com/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+
+
+<script >
+let PRODUCTS={}
+let selected={}
+let total=0
+
+const categoryList=document.getElementById("categoryList")
+const productList=document.getElementById("productList")
+const buildList=document.getElementById("buildList")
+const totalEl=document.getElementById("total")
+
+const modal=document.getElementById("productModal")
+const modalTitle=document.getElementById("modalTitle")
+const modalBody=document.getElementById("modalBody")
+const closeModal=document.getElementById("closeModal")
+
+fetch("data/products.json")
+.then(r=>r.json())
+.then(data=>{
+  PRODUCTS={
+    monitor:data.Monitor||[],
+    motherboard:data.Motherboard||[],
+    ram:data.RAM||[],
+    storage:data.Storage||[],
+    graphics:data["Graphics Card"]||[],
+    psu:data["Power Supply"]||[],
+    Fan:data["Cabinet fan"]||[],
+    keyboard:data.Keyboard||[],
+    mouse:data.Mouse||[],
+    printer:data.printer||[] // added printer category
+  }
+  buildCategories()
+  loadProducts(Object.keys(PRODUCTS)[0])
+})
+
+function buildCategories(){
+  categoryList.innerHTML=""
+  Object.keys(PRODUCTS).forEach((cat,i)=>{
+    const b=document.createElement("button")
+    b.textContent=cat.toUpperCase()
+    if(i===0)b.classList.add("active")
+    b.onclick=()=>{
+      document.querySelectorAll(".sidebar button").forEach(x=>x.classList.remove("active"))
+      b.classList.add("active")
+      loadProducts(cat)
+    }
+    categoryList.appendChild(b)
+  })
+}
+function loadProducts(cat){
+  // Highlight active category
+  document.querySelectorAll(".sidebar button").forEach(b=>b.classList.remove("active"));
+  [...document.querySelectorAll(".sidebar button")]
+    .find(b=>b.textContent===cat.toUpperCase())
+    ?.classList.add("active");
+
+  const isMobile = window.innerWidth <= 1024;
+
+  const targetList = isMobile
+    ? document.getElementById("mobileProductList")
+    : productList;
+
+  targetList.innerHTML = "";
+
+  PRODUCTS[cat].forEach(p=>{
+    const c = document.createElement("div");
+    c.className = "card";
+
+
+    const img = p.photos ? p.photos[0] : "https://via.placeholder.com/300";
+
+    let extra = "";
+if((cat.toLowerCase()==="ram" || cat.toLowerCase()==="storage") && p.capacity){
+  extra = `<span class="badge">${p.capacity}</span>`;
+}
+
+
+    c.innerHTML = `
+      <img src="${img}">
+      <h3>${p.brand} ${p.modelName}</h3>
+      ${extra}
+      <div class="price">₹${p.price}</div>
+      <button>Add to Build</button>
+    `;
+
+    const btn = c.querySelector("button");
+
+    /* ===== DISABLE IF ALREADY SELECTED ===== */
+    if(selected[cat] && selected[cat].modelName === p.modelName){
+      btn.classList.add("added");
+      btn.textContent = "Added";
+      btn.disabled = true;
+    }
+
+    /* ===== ADD TO BUILD ACTION ===== */
+    btn.onclick = (e) => {
+      e.stopPropagation();
+
+      addItem(cat, p);
+
+      btn.classList.add("added", "animate");
+      btn.textContent = "Added";
+      btn.disabled = true;
+
+      setTimeout(()=>btn.classList.remove("animate"), 250);
+    };
+
+    /* ===== OPEN MODAL ON CARD CLICK ===== */
+    c.onclick = (e)=>{
+      if(e.target.tagName.toLowerCase()==="button") return;
+      showModal(p);
+    };
+
+    targetList.appendChild(c);
+  });
+
+  /* ===== OPEN MOBILE PRODUCT WINDOW ===== */
+  if(isMobile){
+    document.getElementById("mobileTitle").textContent = cat.toUpperCase();
+    document.getElementById("mobileProducts").style.display = "flex";
+  }
+}
+
+function addItem(cat,p){
+  if(selected[cat]) total-=Number(selected[cat].price)
+  selected[cat]=p
+  total+=Number(p.price)
+  renderBuild()
+}
+
+function removeItem(cat){
+  total-=Number(selected[cat].price)
+  delete selected[cat]
+
+  // Refresh product list to re-enable button
+  const activeCat = document.querySelector(".sidebar button.active")?.textContent.toLowerCase()
+  if(activeCat) loadProducts(activeCat)
+
+  renderBuild()
+}
+
+
+function renderBuild(){
+  buildList.innerHTML=""
+  if(Object.keys(selected).length===0){
+    buildList.innerHTML='<p style="text-align:center;color:#94a3b8">No components selected</p>'
+  }
+  Object.keys(selected).forEach(cat=>{
+    const p=selected[cat]
+    const d=document.createElement("div")
+    d.className="build-item"
+    d.innerHTML=`
+      <span>${p.modelName}</span>
+      <button class="remove">Remove</button>
+    `
+    d.querySelector("button").onclick=()=>removeItem(cat)
+    buildList.appendChild(d)
+  })
+  totalEl.textContent=total
+}
+
+// Modal functions
+function showModal(product) {
+  modalTitle.textContent = `${product.brand} ${product.modelName}`;
+  modalBody.innerHTML = "";
+
+  for (const key in product) {
+    if (key === "photos" || key === "price") continue;
+
+    const value = product[key];
+
+    let sectionHTML = `
+      <div class="modal-section">
+        <h4>${key.replace(/_/g, " ").toUpperCase()}</h4>
+        <ul>
+    `;
+
+    // ARRAY (eg: colors, supported OS)
+    if (Array.isArray(value)) {
+      value.forEach(v => {
+        sectionHTML += `<li>${v}</li>`;
+      });
+    }
+
+    // OBJECT (eg: specs)
+    else if (typeof value === "object" && value !== null) {
+      for (const subKey in value) {
+        const subVal = value[subKey];
+
+        if (Array.isArray(subVal)) {
+          sectionHTML += `
+            <li>
+              <strong>${subKey.replace(/_/g, " ")}</strong>
+              <ul>
+                ${subVal.map(v => `<li>${v}</li>`).join("")}
+              </ul>
+            </li>
+          `;
+        } else {
+          sectionHTML += `
+            <li>
+              <strong>${subKey.replace(/_/g, " ")}</strong>
+              <span>${subVal}</span>
+            </li>
+          `;
+        }
+      }
+    }
+
+    // STRING / NUMBER
+    else {
+      sectionHTML += `<li>${value}</li>`;
+    }
+
+    sectionHTML += `
+        </ul>
+      </div>
+    `;
+
+    modalBody.innerHTML += sectionHTML;
+  }
+
+  modal.style.display = "flex";
+}
+
+
+closeModal.onclick=()=>modal.style.display="none"
+window.onclick=e=>{if(e.target==modal) modal.style.display="none"}
+document.getElementById("closeMobile").addEventListener("click",()=>{
+  document.getElementById("mobileProducts").style.display="none";
+  document.querySelector(".sidebar").scrollIntoView({behavior:"smooth"});
+});
+
+document.getElementById("downloadBuild").addEventListener("click", generatePDF);
+
+function generatePDF() {
+  if (!window.jspdf) {
+    alert("jsPDF not loaded");
+    return;
+  }
+
+  if (Object.keys(selected).length === 0) {
+    alert("No components selected");
+    return;
+  }
+
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF();
+
+  let y = 20;
+  const gstRate = 0.18;
+
+  // ===== HEADER =====
+  doc.setFont("veranda", "bold");
+  doc.setFontSize(20);
+  doc.text("COMPUTER SOURCE", 105, y, { align: "center" });
+
+  y += 8;
+  doc.setFontSize(11);
+  doc.setFont("helvetica", "normal");
+  doc.text("Custom PC Build Invoice Quotation(All the prices are negotiable)", 105, y, { align: "center" });
+
+  y += 12;
+  doc.line(14, y, 196, y);
+  y += 8;
+
+  // ===== TABLE HEADER =====
+  doc.setFont("helvetica", "bold");
+  doc.setFontSize(10);
+
+  doc.text("Category", 14, y);
+  doc.text("Product Details", 45, y);
+  doc.text("Model No.", 120, y);
+  doc.text("Price (₹)", 195, y, { align: "right" });
+
+  y += 5;
+  doc.line(14, y, 196, y);
+  y += 7;
+
+  doc.setFont("Veranda", "normal");
+
+  let subtotal = 0;
+
+  // ===== TABLE BODY =====
+  for (const cat in selected) {
+    const p = selected[cat];
+
+    const price = Number(p.price) || 0;
+    subtotal += price;
+
+    doc.text(cat.toUpperCase(), 14, y);
+    doc.text(`${p.brand} ${p.modelName}`, 45, y);
+    doc.text(p.modelNumber || "-", 120, y);
+    doc.text(`₹${price}`, 195, y, { align: "right" });
+
+    y += 8;
+
+    // Page break
+    if (y > 270) {
+      doc.addPage();
+      y = 20;
+    }
+  }
+
+  // ===== TOTAL SECTION =====
+  y += 5;
+  doc.line(14, y, 196, y);
+  y += 10;
+
+  const gstAmount = Math.round(subtotal * gstRate);
+  const grandTotal = subtotal + gstAmount;
+
+  doc.setFont("helvetica", "bold");
+  doc.setFontSize(11);
+
+  doc.text("Subtotal:", 140, y);
+  doc.text(`₹${subtotal}`, 195, y, { align: "right" });
+
+  y += 7;
+  doc.text("GST (18%):", 140, y);
+  doc.text(`₹${gstAmount}`, 195, y, { align: "right" });
+
+  y += 7;
+  doc.line(140, y, 196, y);
+  y += 7;
+
+  doc.setFontSize(13);
+  doc.text("Grand Total:", 140, y);
+  doc.text(`₹${grandTotal}`, 195, y, { align: "right" });
+
+  // ===== FOOTER =====
+  doc.setFontSize(9);
+  doc.setFont("helvetica", "normal");
+  doc.text(
+    "Thank you for choosing Computer Source",
+    105,
+    290,
+    { align: "center" }
+  );
+
+  // ===== SAVE =====
+  doc.save("Computer_Source_PC_Build.pdf");
+}
+
+document.getElementById("navBack").addEventListener("click", () => {
+    window.location.href = "product.html";
+});
+
+
+</script>
+
+
+
+</body>
+</html>
