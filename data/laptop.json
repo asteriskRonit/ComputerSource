@@ -1,0 +1,1144 @@
+[
+    {
+    "brand": "ASUS",
+    "modelName": "ASUS Vivobook Go 15",
+    "modelNumber": "E1504FA-BQ2321WS",
+    "category": "laptop",
+  
+    "specs": {
+      "os": "Windows 11 Home",
+      "processor": "AMD Ryzen 3 7320U (up to 4.1 GHz, 4 cores / 8 threads)",
+      "display": "15.6 inch Full HD (1920 x 1080), 60 Hz",
+      "memory": "8 GB LPDDR5 RAM",
+      "storage": "512 GB M.2 NVMe PCIe SSD",
+      "graphics": "Integrated AMD Radeon Graphics",
+      "battery": "42 Wh, 3-cell Li-ion",
+      "audio": "Built-in speakers",
+      "warranty": "1 Year Manufacturer Warranty",
+      "ports": [
+        "USB 2.0 Type-A",
+        "USB 3.2 Gen 1 Type-A",
+        "USB 3.2 Gen 1 Type-C",
+        "HDMI 1.4",
+        "3.5 mm Audio Jack"
+      ]
+    },
+    "colors": ["Cool Silver","Black","Ash"],
+    "price": "",
+    "expandable ram": "Up to 16GB (board soldered LPDDR5, non-user upgradable)", 
+    "expandable storage": "Yes (M.2 slot)",
+    "ram frequency": "LPDDR5",
+    "others": [
+      "Chiclet keyboard",
+      "Precision touchpad",
+      "Wi-Fi 6E, Bluetooth 5.3"
+    ],
+    "photos": [
+      "/assets/asus/go2.png",
+      "/assets/asus/go153.png ",
+      "/assets/asus/go154.png ",
+      "/assets/asus/go155.png "
+    ]
+  },
+  {
+    "brand": "ASUS",
+    "modelName": "ASUS Vivobook Go 15",
+    "modelNumber": "E1504FA-BQ2321WS",
+    "category": "laptop",
+  
+    "specs": {
+      "os": "Windows 11 Home",
+      "processor": "AMD Ryzen 3 7320U (up to 4.1 GHz, 4 cores / 8 threads)",
+      "display": "15.6 inch Full HD (1920 x 1080), 60 Hz",
+      "memory": "8 GB LPDDR5 RAM",
+      "storage": "512 GB M.2 NVMe PCIe SSD",
+      "graphics": "Integrated AMD Radeon Graphics",
+      "battery": "42 Wh, 3-cell Li-ion",
+      "audio": "Built-in speakers",
+      "warranty": "1 Year Manufacturer Warranty",
+      "ports": [
+        "USB 2.0 Type-A",
+        "USB 3.2 Gen 1 Type-A",
+        "USB 3.2 Gen 1 Type-C",
+        "HDMI 1.4",
+        "3.5 mm Audio Jack"
+      ]
+    },
+    "colors": ["Cool Silver","Black","Ash"],
+    "price": "",
+    "expandable ram": "Up to 16GB (board soldered LPDDR5, non-user upgradable)", 
+    "expandable storage": "Yes (M.2 slot)",
+    "ram frequency": "LPDDR5",
+    "others": [
+      "Chiclet keyboard",
+      "Precision touchpad",
+      "Wi-Fi 6E, Bluetooth 5.3"
+    ],
+    "photos": [
+      "/assets/asus/go2.png",
+      "/assets/asus/go153.png ",
+      "/assets/asus/go154.png ",
+      "/assets/asus/go155.png "
+    ]
+  },
+    {
+      "brand": "ASUS",
+      "modelName": "ASUS Vivobook 16",
+      "modelNumber": "X1605VA-SH1952WS",
+      "category": "laptop",
+     
+      "specs": {
+        "os": "Windows 11 Home",
+        "processor": "Intel Core i7-13620H (13th Gen)",
+        "display": "16 inch WUXGA (1920 x 1200), 60 Hz",
+        "memory": "16 GB DDR4 RAM",
+        "storage": "1 TB PCIe NVMe SSD",
+        "graphics": "Intel UHD Graphics",
+        "battery": "50 Wh, 3-cell Li-Ion",
+        "audio": "SonicMaster audio",
+        "warranty": "1 year standard warranty",
+        "ports": [
+          "USB Type-C",
+          "USB Type-A",
+          "HDMI",
+          "3.5 mm Audio Jack"
+        ]
+      },
+    
+      "colors": ["Cool Silver"],
+      "price": "78000",
+      "expandable ram": "Up to 24GB",
+      "expandable storage": "1TB NVMe",
+      "ram frequency": "3200 MHz",
+      "others": [
+        "Brightness : 300 NITS",
+        "High-performance processor",
+        "Weight : 1.9 kg"
+      ],
+      "photos": [
+        "/assets/asus/vivo16.png",
+        "/assets/asus/vivo162.jpg",
+        "/assets/asus/vivo163.jpg",
+        "/assets/asus/vivo164.jpg"
+      ]
+    },
+  {
+    "brand": "ASUS",
+    "modelName": "ASUS Vivobook Go 15",
+    "modelNumber": "E1504FA-BQ2322WS",
+    "category": "laptop",
+  
+    "specs": {
+      "os": "Windows 11 Home",
+      "processor": "AMD Ryzen 3 7320U (up to 4.1 GHz, 4 cores / 8 threads)",
+      "display": "15.6 inch Full HD (1920 x 1080), 60 Hz",
+      "memory": "8 GB LPDDR5 RAM",
+      "storage": "512 GB M.2 NVMe PCIe SSD",
+      "graphics": "Integrated AMD Radeon Graphics",
+      "battery": "42 Wh, 3-cell Li-ion",
+      "audio": "Built-in speakers",
+      "warranty": "1 Year Manufacturer Warranty",
+      "ports": [
+        "USB 2.0 Type-A",
+        "USB 3.2 Gen 1 Type-A",
+        "USB 3.2 Gen 1 Type-C",
+        "HDMI 1.4",
+        "3.5 mm Audio Jack"
+      ]
+    },
+    "colors": ["Mixed Black"],
+    "price": "",
+    "expandable ram": "Up to 16GB (board soldered LPDDR5, non-user upgradable)",
+    "expandable storage": "Yes (M.2 slot)",
+    "ram frequency": "LPDDR5",
+    "others": [
+      "Chiclet keyboard",
+      "Precision touchpad",
+      "Wi-Fi 6E, Bluetooth 5.3"
+    ],
+    "photos": [
+      "/assets/asus/go2.png",
+      "/assets/asus/go153.png ",
+      "/assets/asus/go154.png ",
+      "/assets/asus/go155.png "
+    ]
+  },
+  {
+    "brand": "ASUS",
+    "modelName": "ASUS Vivobook Go 15 (16GB)",
+    "modelNumber": "E1504FA-BQ2414WS",
+    "category": "laptop",
+  
+    "specs": {
+      "os": "Windows 11 Home",
+      "processor": "AMD Ryzen 5 7520U (up to 4.3 GHz, 4 cores / 8 threads)",
+      "display": "15.6 inch Full HD (1920 x 1080), 60 Hz",
+      "memory": "16 GB LPDDR5 RAM",
+      "storage": "512 GB M.2 NVMe PCIe SSD",
+      "graphics": "Integrated AMD Radeon Graphics",
+      "battery": "42 Wh, 3-cell Li-ion",
+      "audio": "Built-in speakers",
+      "warranty": "1 Year Manufacturer Warranty",
+      "ports": [
+        "USB 2.0 Type-A",
+        "USB 3.2 Gen 1 Type-A",
+        "USB 3.2 Gen 1 Type-C",
+        "HDMI 1.4",
+        "3.5 mm Audio Jack"
+      ]
+    },
+    "colors": ["Mixed Black"],
+    "price": "",
+    "expandable ram": "Up to 16GB (board soldered LPDDR5)",
+    "expandable storage": "Yes (M.2 slot)",
+    "ram frequency": "LPDDR5",
+    "others": [
+      "Backlit chiclet keyboard",
+      "Precision touchpad",
+      "Wi-Fi 6E, Bluetooth 5.3"
+    ],
+    "photos": [
+      "/assets/asus/go2.png",
+      "/assets/asus/go153.png ",
+      "/assets/asus/go154.png ",
+      "/assets/asus/go155.png "
+    ]
+  },
+  {
+    "brand": "ASUS",
+    "modelName": "ASUS Vivobook Go 15",
+    "modelNumber": "E1504FA-BQ2522WS",
+    "category": "laptop",
+  
+    "specs": {
+      "os": "Windows 11 Home",
+      "processor": "AMD Ryzen 5 7520U (up to 4.3 GHz, 4 cores / 8 threads)",
+      "display": "15.6 inch Full HD (1920 x 1080), 60 Hz",
+      "memory": "8 GB or 16 GB LPDDR5 RAM",
+      "storage": "512 GB M.2 NVMe PCIe SSD",
+      "graphics": "Integrated AMD Radeon Graphics",
+      "battery": "42 Wh, 3-cell Li-ion",
+      "audio": "Built-in speakers",
+      "warranty": "1 Year Manufacturer Warranty",
+      "ports": [
+        "USB 2.0 Type-A",
+        "USB 3.2 Gen 1 Type-A",
+        "USB 3.2 Gen 1 Type-C",
+        "HDMI 1.4",
+        "3.5 mm Audio Jack"
+      ]
+    },
+    "colors": ["Cool Silver or Mixed Black"],
+    "price": "",
+    "expandable ram": "Up to 16GB (LPDDR5 onboard)",
+    "expandable storage": "Yes (M.2 slot)",
+    "ram frequency": "LPDDR5",
+    "others": [
+      "Chiclet keyboard",
+      "Precision touchpad",
+      "Wi-Fi 6E, Bluetooth 5.3"
+    ],
+    "photos": [
+      "/assets/asus/go2.png",
+      "/assets/asus/go153.png ",
+      "/assets/asus/go154.png ",
+      "/assets/asus/go155.png "
+    ]
+  },
+  {
+    "brand": "ASUS",
+    "modelName": "ASUS Vivobook Go 15",
+    "modelNumber": "E1504FA-BQ2541WS",
+    "category": "laptop",
+    "specs": {
+      "os": "Windows 11 Home",
+      "processor": "AMD Ryzen 5 7520U (Quad Core, up to 4.3 GHz)",
+      "display": "15.6 inch Full HD (1920 x 1080), 60Hz, anti-glare",
+      "memory": "16 GB LPDDR5 RAM",
+      "storage": "512 GB PCIe NVMe SSD",
+      "graphics": "Integrated AMD Radeon Graphics",
+      "battery": "42 Wh 3-cell Li-Ion",
+      "connectivity": ["Wi-Fi 6", "Bluetooth 5.3"],
+      "ports": [
+        "1× USB 2.0 Type-A",
+        "1× USB 3.2 Gen 1 Type-A",
+        "1× USB 3.2 Gen 1 Type-C",
+        "1× HDMI 1.4",
+        "3.5 mm Audio Jack"
+      ],
+      "laptopType": "Thin & Light / Everyday Use"
+    },
+    "colors": ["Cool Silver"],
+    "price": "41990",
+    "others": [
+      "180° lay-flat hinge",
+      "Privacy shutter webcam"
+    ],
+    "photos": [
+      "/assets/asus/go2.png",
+      "/assets/asus/go153.png ",
+      "/assets/asus/go154.png ",
+      "/assets/asus/go155.png "
+    ]
+  },
+  {
+    "brand": "ASUS",
+    "modelName": "ASUS Vivobook Go 15",
+    "modelNumber": "E1504FA-BQ2543WS",
+    "category": "laptop",
+    "specs": {
+      "os": "Windows 11 Home",
+      "processor": "AMD Ryzen 5 7520U (Quad Core, up to 4.3 GHz)",
+      "display": "15.6 inch Full HD (1920 x 1080), 60Hz, 250 nits",
+      "memory": "16 GB LPDDR5 RAM",
+      "storage": "512 GB PCIe NVMe SSD",
+      "graphics": "Integrated AMD Radeon Graphics",
+      "battery": "42 Wh 3-cell Li-Ion",
+      "connectivity": ["Wi-Fi 6", "Bluetooth 5.3"],
+      "ports": [
+        "1× USB 2.0 Type-A",
+        "1× USB 3.2 Gen 1 Type-A",
+        "1× USB 3.2 Gen 1 Type-C",
+        "1× HDMI 1.4",
+        "3.5 mm Audio Jack"
+      ],
+      "laptopType": "Thin & Light / Student Laptop"
+    },
+    "colors": ["Green Grey"],
+    "price": "41990",
+    "others": [
+      "Microsoft 365 Basic + Office Home 2024 included",
+      "180° lay-flat hinge"
+    ],
+    "photos": [
+      "/assets/asus/go2.png",
+      "/assets/asus/go153.png ",
+      "/assets/asus/go154.png ",
+      "/assets/asus/go155.png "
+    ]
+  },
+  {
+    "brand": "ASUS",
+    "modelName": "ASUS Vivobook Go 15",
+    "modelNumber": "E1504FA-NJ133WS",
+    "category": "laptop",
+    "specs": {
+      "os": "Windows 11 Home",
+      "processor": "AMD Ryzen 5 7520U (Quad Core, up to 4.3 GHz)",
+      "display": "15.6 inch Full HD (1920 x 1080)",
+      "memory": "8 GB LPDDR5 RAM",
+      "storage": "512 GB PCIe NVMe SSD",
+      "graphics": "Integrated AMD Radeon Graphics",
+      "battery": "42 Wh 3-cell Li-Ion",
+      "connectivity": ["Wi-Fi 6", "Bluetooth 5.3"],
+      "ports": [
+        "1× USB 2.0 Type-A",
+        "1× USB 3.2 Gen 1 Type-A",
+        "1× USB 3.2 Gen 1 Type-C",
+        "1× HDMI 1.4",
+        "3.5 mm Audio Jack"
+      ],
+      "laptopType": "Thin & Light / Everyday Use"
+    },
+    "colors": ["Mixed Black"],
+    "price": "34990",
+    "others": [
+      "US MIL-STD 810H durability standards"
+    ],
+    "photos": [
+      "/assets/asus/go2.png",
+      "/assets/asus/go153.png ",
+      "/assets/asus/go154.png ",
+      "/assets/asus/go155.png "
+    ]
+  },
+  {
+    "brand": "ASUS",
+    "modelName": "ASUS Vivobook Go 15",
+    "modelNumber": "E1504FA-NJ1505WS",
+    "category": "laptop",
+    "specs": {
+      "os": "Windows 11 Home",
+      "processor": "AMD Ryzen 5 7520U (Quad Core, up to 4.3 GHz)",
+      "display": "15.6 inch Full HD (1920 x 1080), anti-glare",
+      "memory": "16 GB LPDDR5 RAM",
+      "storage": "512 GB PCIe NVMe SSD",
+      "graphics": "Integrated AMD Radeon Graphics",
+      "battery": "42 Wh 3-cell Li-Ion",
+      "connectivity": ["Wi-Fi 6", "Bluetooth 5.3"],
+      "ports": [
+        "1× USB 2.0 Type-A",
+        "1× USB 3.2 Gen 1 Type-A",
+        "1× USB 3.2 Gen 1 Type-C",
+        "1× HDMI 1.4",
+        "3.5 mm Audio Jack"
+      ],
+      "laptopType": "Thin & Light / Everyday Use"
+    },
+    "colors": ["Mixed Black"],
+    "price": "39990",
+    "others": [
+      "MIL-STD 810H tested chassis"
+    ],
+    "photos": [
+      "assets/asus_vivobook_go15_nj1505ws_1.jpg"
+    ]
+  },
+  {
+    "brand": "ASUS",
+    "modelName": "ASUS Vivobook Go 15",
+    "modelNumber": "E1504GA-NJ3322WS",
+    "category": "laptop",
+    "specs": {
+      "os": "Windows 11 Home",
+      "processor": "Intel Core i3-N305 (8 cores / up to 3.8 GHz)",
+      "display": "15.6 inch Full HD (1920 x 1080), LED-backlit",
+      "memory": "8 GB DDR4 RAM",
+      "storage": "512 GB PCIe NVMe SSD",
+      "graphics": "Integrated Intel UHD Graphics",
+      "battery": "42 Wh 3-cell Li-Ion",
+      "connectivity": ["Wi-Fi 6", "Bluetooth 5.1"],
+      "ports": [
+        "1× USB-C 3.2 Gen 1",
+        "2× USB-A 3.2 Gen 1",
+        "1× USB-A 2.0",
+        "1× HDMI 1.4",
+        "3.5 mm Audio Jack"
+      ],
+      "laptopType": "Thin & Light / Everyday Use"
+    },
+    "colors": ["Mixed Black"],
+    "price": "32990",
+    "others": [
+      "Precision touchpad",
+      "180° lay-flat hinge"
+    ],
+    "photos": [
+      "assets/asus_vivobook_go15_nj3322ws_1.jpg"
+    ]
+  },
+  {
+    "brand": "ASUS",
+    "modelName": "ASUS Vivobook 14",
+    "modelNumber": "X1404VA-NK761WS",
+    "category": "laptop",
+    "laptopType": "everyday use",
+    "specs": {
+      "os": "Windows 11 Home",
+      "processor": "Intel Core i3-1315U (13th Gen)",
+      "display": "14 inch FHD (1920x1080), 60Hz",
+      "memory": "8 GB DDR4 RAM",
+      "storage": "512 GB NVMe SSD",
+      "graphics": "Intel UHD Graphics",
+      "battery": "42 Wh, 3-cell Li-Ion",
+      "connectivity": ["Wi-Fi 6E", "Bluetooth"],
+      "ports": ["USB Type-C", "USB Type-A", "HDMI", "3.5 mm Audio Jack"]
+    },
+    "colors": ["Cool Silver"],
+    "price": "₹32,000-₹38,000",
+    "expandable ram": "Up to 24GB",
+    "expandable storage": "Supports additional SSD expansion",
+    "others": [
+      "Lightweight and portable", 
+      "Included Microsoft Office 365 Basic 1 Year"
+    ],
+    "photos": [
+      "/assets/asus/go2.png",
+      "/assets/asus/go153.png ",
+      "/assets/asus/go154.png ",
+      "/assets/asus/go155.png "
+    ]
+  },
+  {
+    "brand": "ASUS",
+    "modelName": "ASUS Vivobook 15",
+    "modelNumber": "X1504VA-BQ321WS",
+    "category": "laptop",
+    "laptopType": "everyday use",
+    "specs": {
+      "os": "Windows 11 Home",
+      "processor": "Intel Core i3-1315U (13th Gen)",
+      "display": "15.6 inch FHD (1920x1080), 60Hz",
+      "memory": "8 GB DDR4 RAM",
+      "storage": "512 GB NVMe SSD",
+      "graphics": "Intel UHD Graphics",
+      "battery": "42 Wh, 3-cell Li-Ion",
+      "connectivity": ["Wi-Fi 6E", "Bluetooth"],
+      "ports": ["USB Type-C", "USB Type-A", "HDMI", "3.5 mm Audio Jack"]
+    },
+    "colors": ["Cool Silver"],
+    "price": "₹32,000-₹38,000",
+    "expandable ram": "Up to 24GB",
+    "expandable storage": "Supports additional SSD expansion",
+    "others": [
+      "Large 15.6″ display for productivity",
+      "Everyday performance"
+    ],
+    "photos": [
+      "/assets/laptops/asus_x1504va_bq321ws_1.jpg",
+      "/assets/laptops/asus_x1504va_bq321ws_2.jpg"
+    ]
+  },
+  {
+    "brand": "ASUS",
+    "modelName": "ASUS Vivobook 15",
+    "modelNumber": "X1504VA-BQ323WS",
+    "category": "laptop",
+    "laptopType": "everyday use",
+    "specs": {
+      "os": "Windows 11 Home",
+      "processor": "Intel Core i3-1315U (13th Gen)",
+      "display": "15.6 inch FHD (1920x1080), 60Hz",
+      "memory": "8 GB DDR4 RAM",
+      "storage": "512 GB NVMe SSD",
+      "graphics": "Intel UHD Graphics",
+      "battery": "42 Wh, 3-cell Li-Ion",
+      "connectivity": ["Wi-Fi 6E", "Bluetooth"],
+      "ports": ["USB Type-C", "USB Type-A", "HDMI", "3.5 mm Audio Jack"]
+    },
+    "colors": ["Cool Silver"],
+    "price": "₹32,000-₹38,000",
+    "expandable ram": "Up to 24GB",
+    "expandable storage": "Supports additional SSD expansion",
+    "others": [
+      "Office & study ready",
+      "Slim portable chassis"
+    ],
+    "photos": [
+      "/assets/laptops/asus_x1504va_bq323ws_1.jpg",
+      "/assets/laptops/asus_x1504va_bq323ws_2.jpg"
+    ]
+  },
+  {
+    "brand": "ASUS",
+    "modelName": "ASUS Vivobook 15",
+    "modelNumber": "X1504VA-BQ342WS",
+    "category": "laptop",
+    "laptopType": "everyday use",
+    "specs": {
+      "os": "Windows 11 Home",
+      "processor": "Intel Core i3-1315U (13th Gen)",
+      "display": "15.6 inch FHD (1920x1080), 60Hz",
+      "memory": "8 GB DDR4 RAM",
+      "storage": "512 GB NVMe SSD",
+      "graphics": "Intel UHD Graphics",
+      "battery": "42 Wh, 3-cell Li-Ion",
+      "connectivity": ["Wi-Fi 6E", "Bluetooth"],
+      "ports": ["USB Type-C", "USB Type-A", "HDMI", "3.5 mm Audio Jack"]
+    },
+    "colors": ["Cool Silver"],
+    "price": "₹34,000-₹40,000",
+    "expandable ram": "Up to 24GB",
+    "expandable storage": "Supports additional SSD expansion",
+    "others": [
+      "Everyday multitasking",
+      "Full-size keyboard"
+    ],
+    "photos": [
+      "/assets/laptops/asus_x1504va_bq342ws_1.jpg",
+      "/assets/laptops/asus_x1504va_bq342ws_2.jpg"
+    ]
+  },
+  {
+    "brand": "ASUS",
+    "modelName": "ASUS Vivobook 15",
+    "modelNumber": "X1504VA-NJ320WS",
+    "category": "laptop",
+    "laptopType": "everyday use",
+    "specs": {
+      "os": "Windows 11 Home",
+      "processor": "Intel Core i3-1315U (13th Gen)",
+      "display": "15.6 inch FHD (1920x1080), 60Hz",
+      "memory": "8 GB DDR4 RAM",
+      "storage": "512 GB NVMe SSD",
+      "graphics": "Intel UHD Graphics",
+      "battery": "42 Wh, 3-cell Li-Ion",
+      "connectivity": ["Wi-Fi 6E", "Bluetooth"],
+      "ports": ["USB Type-C", "USB Type-A", "HDMI", "3.5 mm Audio Jack"]
+    },
+    "colors": ["Cool Silver"],
+    "price": "₹35,000-₹42,000",
+    "expandable ram": "Up to 24GB",
+    "expandable storage": "Supports additional SSD expansion",
+    "others": [
+      "Standard productivity laptop",
+      "Good battery life"
+    ],
+    "photos": [
+
+      "/assets/laptops/asus_x1504va_nj320ws_2.jpg"
+    ]
+  },
+  {
+    "brand": "ASUS",
+    "modelName": "ASUS Vivobook 15",
+    "modelNumber": "X1504VA-NJ322WS",
+    "category": "laptop",
+    "laptopType": "everyday use",
+    "specs": {
+      "os": "Windows 11 Home",
+      "processor": "Intel Core i3-1315U (13th Gen)",
+      "display": "15.6 inch FHD (1920x1080), 60Hz",
+      "memory": "8 GB DDR4 RAM",
+      "storage": "512 GB NVMe SSD",
+      "graphics": "Intel UHD Graphics",
+      "battery": "42 Wh, 3-cell Li-Ion",
+      "connectivity": ["Wi-Fi 6E", "Bluetooth"],
+      "ports": ["USB Type-C", "USB Type-A", "HDMI", "3.5 mm Audio Jack"]
+    },
+    "colors": ["Cool Silver"],
+    "price": "₹35,000-₹42,000",
+    "expandable ram": "Up to 24GB",
+    "expandable storage": "Supports additional SSD expansion",
+    "others": [
+      "Solid everyday performer",
+      "Reliable storage and RAM"
+    ],
+    "photos": [
+      "/assets/laptops/asus_x1504va_nj322ws_1.jpg",
+      "/assets/laptops/asus_x1504va_nj322ws_2.jpg"
+    ]
+  },
+  {
+    "brand": "ASUS",
+    "modelName": "ASUS Vivobook 15",
+    "modelNumber": "X1504VA-NJ3320WS",
+    "category": "laptop",
+    "laptopType": "everyday use",
+    "specs": {
+      "os": "Windows 11 Home",
+      "processor": "Intel Core i3-1315U (13th Gen)",
+      "display": "15.6 inch FHD (1920x1080), 60Hz",
+      "memory": "8 GB DDR4 RAM",
+      "storage": "512 GB NVMe SSD",
+      "graphics": "Intel UHD Graphics",
+      "battery": "42 Wh, 3-cell Li-Ion",
+      "connectivity": ["Wi-Fi 6E", "Bluetooth"],
+      "ports": ["USB Type-C", "USB Type-A", "HDMI", "3.5 mm Audio Jack"]
+    },
+    "colors": ["Cool Silver"],
+    "price": "₹36,000-₹43,000",
+    "expandable ram": "Up to 24GB",
+    "expandable storage": "Supports additional SSD expansion",
+    "others": [
+      "Balanced everyday laptop",
+      "Office and media ready"
+    ],
+    "photos": [
+      "/assets/laptops/asus_x1504va_nj3320ws_1.jpg",
+      "/assets/laptops/asus_x1504va_nj3320ws_2.jpg"
+    ]
+  },
+  {
+    "brand": "ASUS",
+    "modelName": "ASUS Vivobook 15",
+    "modelNumber": "X1504VAP-NJ2861WS",
+    "category": "laptop",
+    "laptopType": "everyday use",
+  
+    "specs": {
+      "os": "Windows 11 Home",
+      "processor": "Intel Core i5-13420H (13th Gen)",
+      "display": "15.6 inch Full HD (1920 x 1080), 60 Hz",
+      "memory": "16 GB DDR4 RAM",
+      "storage": "512 GB PCIe NVMe SSD",
+      "graphics": "Intel UHD Graphics",
+      "battery": "42 Wh, 3-cell Li-Ion",
+      "audio": "SonicMaster audio",
+      "warranty": "1 year standard warranty",
+      "ports": [
+        "USB Type-C",
+        "USB Type-A",
+        "HDMI",
+        "3.5 mm Audio Jack"
+      ]
+    },
+  
+    "colors": ["Cool Silver"],
+    "price": "65000",
+    "expandable ram": "Up to 24GB",
+    "expandable storage": "1TB NVMe",
+    "ram frequency": "3200 MHz",
+    "others": [
+      "Brightness : 250 NITS",
+      "Full size keyboard",
+      "Weight : 1.7 kg"
+    ],
+    "photos": [
+      "assets/laptops/x1504vap_nj2861ws.jpg",
+      "assets/laptops/x1504vap_box.jpg"
+    ]
+  },
+    {
+      "brand": "ASUS",
+      "modelName": "ASUS Vivobook 16",
+      "modelNumber": "X1605VA-MB1627WS",
+      "category": "laptop",
+      "laptopType": "ultrabook",
+    
+      "specs": {
+        "os": "Windows 11 Home",
+        "processor": "Intel Core i5-13420H (13th Gen)",
+        "display": "16 inch WUXGA (1920 x 1200), 60 Hz",
+        "memory": "16 GB DDR4 RAM",
+        "storage": "512 GB PCIe NVMe SSD",
+        "graphics": "Intel UHD Graphics",
+        "battery": "50 Wh, 3-cell Li-Ion",
+        "audio": "SonicMaster audio",
+        "warranty": "1 year standard warranty",
+        "ports": [
+          "USB Type-C",
+          "USB Type-A",
+          "HDMI",
+          "3.5 mm Audio Jack"
+        ]
+      },
+    
+      "colors": ["Cool Silver"],
+      "price": "67000",
+      "expandable ram": "Up to 24GB",
+      "expandable storage": "1TB NVMe",
+      "ram frequency": "3200 MHz",
+      "others": [
+        "Brightness : 300 NITS",
+        "16:10 productivity display",
+        "Weight : 1.9 kg"
+      ],
+      "photos": [
+        "assets/laptops/x1605va_mb1627ws.jpg",
+        "assets/laptops/x1605va_box.jpg"
+      ]
+    },
+    {
+      "brand": "ASUS",
+      "modelName": "ASUS Zenbook OLED",
+      "modelNumber": "UX3405CA-PZ345WS",
+      "category": "laptop",
+      "specs": {
+        "os": "Windows 11 Home",
+        "processor": "Intel Core Ultra 7 155H",
+        "display": "14 inch 3K OLED (2880 x 1800), 120 Hz",
+        "memory": "16 GB LPDDR5X RAM",
+        "storage": "1 TB PCIe NVMe SSD",
+        "graphics": "Intel Arc Graphics",
+        "battery": "75 Wh, 4-cell Li-Ion",
+        "audio": "Harman Kardon Audio",
+        "warranty": "1 year standard warranty",
+        "ports": [
+          "Thunderbolt 4",
+          "USB Type-A",
+          "HDMI",
+          "3.5 mm Audio Jack"
+        ]
+      },
+      "colors": ["Ponder Blue"],
+      "price": "120000",
+      "expandable ram": "Not Expandable",
+      "expandable storage": "1TB NVMe",
+      "ram frequency": "7467MHz",
+      "others": [
+        "OLED Display",
+        "Ultra Thin & Premium",
+        "Weight: 1.28 kg"
+      ],
+      "photos": [
+        "/assets/asus/zenbook.png",
+        "/assets/asus/zenbook3.png",
+        "/assets/asus/zenbook2.png",
+        "assets/asus/zenbook4.png"
+      ]
+    },
+    {
+      "brand": "ASUS",
+      "modelName": "ASUS Vivobook Pro 16",
+      "modelNumber": "K3605VC-RP412WS",
+      "category": "laptop",
+      "specs": {
+        "os": "Windows 11 Home",
+        "processor": "Intel Core i5-13500H",
+        "display": "16 inch WUXGA (1920 x 1200), 120 Hz",
+        "memory": "16 GB DDR5 RAM",
+        "storage": "1 TB PCIe NVMe SSD",
+        "graphics": "NVIDIA GeForce RTX 3050 6GB",
+        "battery": "70 Wh, 4-cell Li-Ion",
+        "audio": "Harman Kardon Audio",
+        "warranty": "1 year standard warranty",
+        "ports": [
+          "Thunderbolt 4",
+          "USB Type-A",
+          "HDMI",
+          "3.5 mm Audio Jack"
+        ]
+      },
+      "colors": ["Quiet Blue"],
+      "price": "95000",
+      "expandable ram": "Up to 32GB",
+      "expandable storage": "2TB NVMe",
+      "ram frequency": "4800MHz",
+      "others": [
+        "Creator Laptop",
+        "RTX Studio Ready",
+        "Weight: 1.95 kg"
+      ],
+      "photos": [
+        "/assets/asus/vivo16x.png",
+        "/assets/asus/vivo16x2.png",
+        "/assets/asus/vivo15.png",
+        "/assets/asus/vivo16x4.png"
+
+      ]
+    },
+    {
+      "brand": "ASUS",
+      "modelName": "ASUS Vivobook 16",
+      "modelNumber": "X1605VA-SH1952WS",
+      "category": "laptop",
+      "specs": {
+        "os": "Windows 11 Home",
+        "processor": "Intel Core i7-13700H (13th Gen)",
+        "display": "16 inch WUXGA (1920 x 1200), 60 Hz",
+        "memory": "16 GB DDR4 RAM",
+        "storage": "512 GB PCIe NVMe SSD",
+        "graphics": "Intel Iris Xe Graphics",
+        "battery": "50 Wh, 3-cell Li-Ion",
+        "audio": "SonicMaster Audio",
+        "warranty": "1 year standard warranty",
+        "ports": [
+          "USB Type-C",
+          "USB Type-A",
+          "HDMI",
+          "3.5 mm Audio Jack"
+        ]
+      },
+      "colors": ["Indie Black"],
+      "price": "68000",
+      "expandable ram": "Up to 24GB",
+      "expandable storage": "1TB NVMe",
+      "ram frequency": "3200MHz",
+      "others": [
+        "High Performance CPU",
+        "Weight: 1.88 kg"
+      ],
+      "photos": [
+        "assets/x1605va_i7.jpg",
+        "assets/x1605va_i7_2.jpg"
+      ]
+    },
+    {
+      "brand": "ASUS",
+      "modelName": "ASUS Vivobook 15",
+      "modelNumber": "X1504ZA-NJ520WS",
+      "category": "laptop",
+      "specs": {
+        "os": "Windows 11 Home",
+        "processor": "Intel Core i3-1215U (12th Gen)",
+        "display": "15.6 inch Full HD (1920 x 1080), 60 Hz",
+        "memory": "8 GB DDR4 RAM",
+        "storage": "512 GB PCIe NVMe SSD",
+        "graphics": "Intel UHD Graphics",
+        "battery": "42 Wh, 3-cell Li-Ion",
+        "audio": "SonicMaster Audio",
+        "warranty": "1 year standard warranty",
+        "ports": [
+          "USB Type-C",
+          "USB Type-A",
+          "HDMI",
+          "3.5 mm Audio Jack"
+        ]
+      },
+      "colors": ["Cool Silver"],
+      "price": "42000",
+      "expandable ram": "Up to 24GB",
+      "expandable storage": "1TB NVMe",
+      "ram frequency": "3200MHz",
+      "others": [
+        "Office & Study Laptop",
+        "Weight: 1.70 kg"
+      ],
+      "photos": [
+        "assets/x1504za.jpg",
+        "assets/x1504za_2.jpg"
+      ]
+    },
+    {
+      "brand": "ASUS",
+      "modelName": "ASUS Vivobook 15",
+      "modelNumber": "X1504VAP-NJ2861WS",
+      "category": "laptop",
+      "specs": {
+        "os": "Windows 11 Home",
+        "processor": "Intel Core i5-1335U (13th Gen)",
+        "display": "15.6 inch Full HD (1920 x 1080), 60 Hz",
+        "memory": "16 GB DDR4 RAM",
+        "storage": "512 GB PCIe NVMe SSD",
+        "graphics": "Intel Iris Xe Graphics",
+        "battery": "42 Wh, 3-cell Li-Ion",
+        "audio": "SonicMaster Audio",
+        "warranty": "1 year standard warranty",
+        "ports": [
+          "USB Type-C",
+          "USB Type-A",
+          "HDMI",
+          "3.5 mm Audio Jack"
+        ]
+      },
+      "colors": ["Cool Silver"],
+      "price": "52000",
+      "expandable ram": "Up to 24GB",
+      "expandable storage": "1TB NVMe",
+      "ram frequency": "3200MHz",
+      "others": [
+        "Brightness: 250 NITS",
+        "Backlit Keyboard",
+        "Weight: 1.70 kg"
+      ],
+      "photos": [
+        "assets/x1504vap.jpg",
+        "assets/x1504vap_2.jpg"
+      ]
+    },                                                          
+    {
+      "brand": "ASUS",
+      "modelName": "ASUS Vivobook Gaming – V3607VU-RP550WS",
+      "modelNumber": "V3607VU-RP550WS",
+      "category": "laptop",
+      "specs": {
+        "os": "Windows 11 Home",
+        "processor": "Intel Core i5-13420H",
+        "display": "15.6 inch Full HD 144Hz",
+        "memory": "8 GB DDR4 RAM",
+        "storage": "512 GB NVMe SSD",
+        "graphics": "NVIDIA GeForce GTX 1650 4GB",
+        "battery": "48 Wh",
+        "audio": "Built-in stereo speakers",
+        "ports": [
+          "USB Type-C",
+          "USB Type-A",
+          "HDMI 2.0",
+          "RJ-45 Ethernet",
+          "3.5 mm Audio Jack"
+        ]
+      },
+      "colors": ["Black"],
+      "price": "",
+      "expandable ram": "Up to 32GB",
+      "expandable storage": "Yes",
+      "ram frequency": "",
+      "others": ["Gaming keyboard", "High refresh rate display"],
+      "photos": [
+        "/assets/asus/vgam.png",
+        "/assets/asus/vgam2.png",
+        "/assets/asus/vgam3.png",
+        "/assets/asus/vgam4.png"
+      ]
+    } ,
+    {
+      "brand": "ASUS",
+      "modelName": "ASUS TUF Gaming – FA506NCG-HN200WS",
+      "modelNumber": "FA506NCG-HN200WS",
+      "category": "laptop",
+      "specs": {
+        "os": "Windows 11 Home",
+        "processor": "AMD Ryzen 5 6600H",
+        "display": "15.6 inch Full HD 144Hz",
+        "memory": "8 GB DDR5 RAM",
+        "storage": "512 GB NVMe SSD",
+        "graphics": "NVIDIA GeForce RTX 3050 6GB",
+        "battery": "90 Wh",
+        "audio": "DTS:X Ultra",
+        "ports": [
+          "USB Type-C",
+          "USB Type-A",
+          "HDMI 2.1",
+          "RJ-45 Ethernet",
+          "3.5 mm Audio Jack"
+        ]
+      },
+      "colors": ["Black"],
+      "price": "",
+      "expandable ram": "Up to 32GB",
+      "expandable storage": "Yes",
+      "ram frequency": "DDR5",
+      "others": ["Military Grade durability", "RGB backlit keyboard"],
+      "photos": [
+        "/assets/asus/tuf1.png",
+        "/assets/asus/tuf2.png",
+        "/assets/asus/tuf3.png",
+        "/assets/asus/tuf4.png"
+    
+    ]
+    },
+    {
+      "brand": "ASUS",
+      "modelName": "ASUS TUF Gaming – FA566NCR-HN254WS",
+      "modelNumber": "FA566NCR-HN254WS",
+      "category": "laptop",
+      "specs": {
+        "os": "Windows 11 Home",
+        "processor": "AMD Ryzen 7 7735HS",
+        "display": "15.6 inch Full HD 144Hz",
+        "memory": "16 GB DDR5 RAM",
+        "storage": "1 TB NVMe SSD",
+        "graphics": "NVIDIA GeForce RTX 4050 6GB",
+        "battery": "90 Wh",
+        "audio": "DTS:X Ultra",
+        "ports": [
+          "USB Type-C",
+          "USB Type-A",
+          "HDMI 2.1",
+          "RJ-45 Ethernet",
+          "3.5 mm Audio Jack"
+        ]
+      },
+      "colors": ["Black"],
+      "price": "",
+      "expandable ram": "Up to 32GB",
+      "expandable storage": "Yes",
+      "ram frequency": "DDR5",
+      "others": ["TUF durable, RGB keyboard"],
+      "photos": [
+        "/assets/asus/tuf5.png",
+        "/assets/asus/tuf6.png",
+        "/assets/asus/tuf7.png",
+        "/assets/asus/tuf8.png"
+    ]
+    },
+    {
+      "brand": "ASUS",
+      "modelName": "ASUS TUF Gaming – FA607NUG-RL189WS",
+      "modelNumber": "FA607NUG-RL189WS",
+      "category": "laptop",
+      "specs": {
+        "os": "Windows 11 Home",
+        "processor": "AMD Ryzen 7 7840HS",
+        "display": "16 inch WQXGA 165Hz",
+        "memory": "16 GB DDR5 RAM",
+        "storage": "1 TB NVMe SSD",
+        "graphics": "NVIDIA GeForce RTX 4060 8GB",
+        "battery": "90 Wh",
+        "audio": "DTS:X Ultra",
+        "ports": [
+          "USB Type-C",
+          "USB Type-A",
+          "HDMI 2.1",
+          "RJ-45 Ethernet",
+          "3.5 mm Audio Jack"
+        ]
+      },
+      "colors": ["Black"],
+      "price": "",
+      "expandable ram": "Up to 32GB",
+      "expandable storage": "Yes",
+      "ram frequency": "DDR5",
+      "others": ["High performance gaming", "RGB backlit keyboard"],
+      "photos": [
+        "/assets/asus/tuf9.png",
+        "/assets/asus/tuf10.png",
+        "/assets/asus/tuf11.png",
+        "/assets/asus/tuf12.png"
+    ]
+    },
+    {
+      "brand": "ASUS",
+      "modelName": "ASUS TUF Gaming – FX607VB-RL087WS",
+      "modelNumber": "FX607VB-RL087WS",
+      "category": "laptop",
+      "specs": {
+        "os": "Windows 11 Home",
+        "processor": "AMD Ryzen 7 7735HS",
+        "display": "16 inch WQXGA 165Hz",
+        "memory": "16 GB DDR5 RAM",
+        "storage": "1 TB NVMe SSD",
+        "graphics": "NVIDIA GeForce RTX 4050 6GB",
+        "battery": "90 Wh",
+        "audio": "DTS:X Ultra",
+        "ports": [
+          "USB Type-C",
+          "USB Type-A",
+          "HDMI 2.1",
+          "RJ-45 Ethernet",
+          "3.5 mm Audio Jack"
+        ]
+      },
+      "colors": ["Black"],
+      "price": "",
+      "expandable ram": "Up to 32GB",
+      "expandable storage": "Yes",
+      "ram frequency": "DDR5",
+      "others": ["High performance gaming", "RGB backlit keyboard"],
+      "photos": [
+        "/assets/asus/tuf13.png",
+        "/assets/asus/tuf14.png",
+        "/assets/asus/tuf15.png",
+        "/assets/asus/tuf16.png"
+      ]
+    },
+    {
+      "brand": "ASUS",
+      "modelName": "ASUS TUF Gaming – FX677VB-RL097WS",
+      "modelNumber": "FX677VB-RL097WS",
+      "category": "laptop",
+      "specs": {
+        "os": "Windows 11 Home",
+        "processor": "Intel Core i7-13650HX",
+        "display": "16 inch WQXGA 165Hz",
+        "memory": "16 GB DDR5 RAM",
+        "storage": "1 TB NVMe SSD",
+        "graphics": "NVIDIA GeForce RTX 4050 6GB",
+        "battery": "90 Wh",
+        "audio": "DTS:X Ultra",
+        "ports": [
+          "USB Type-C",
+          "USB Type-A",
+          "HDMI 2.1",
+          "RJ-45 Ethernet",
+          "3.5 mm Audio Jack"
+        ]
+      },
+      "colors": ["Black"],
+      "price": "",
+      "expandable ram": "Up to 64GB",
+      "expandable storage": "Yes",
+      "ram frequency": "DDR5",
+      "others": ["High performance gaming", "RGB backlit keyboard"],
+      "photos": [
+        "/assets/asus/tuf14.png",
+        "/assets/asus/tuf13.png",
+        "/assets/asus/tuf15.png",
+        "/assets/asus/tuf17.png"
+    
+    ]
+    },
+    {
+      "brand": "ASUS",
+      "modelName": "ASUS TUF Gaming – FX607VJB-RL179WS",
+      "modelNumber": "FX607VJB-RL179WS",
+      "category": "laptop",
+      "specs": {
+        "os": "Windows 11 Home",
+        "processor": "Intel Core i5-13420H",
+        "display": "16 inch Full HD 144Hz",
+        "memory": "8 GB DDR5 RAM",
+        "storage": "512 GB NVMe SSD",
+        "graphics": "NVIDIA GeForce RTX 3050 6GB",
+        "battery": "90 Wh",
+        "audio": "DTS:X Ultra",
+        "ports": [
+          "USB Type-C",
+          "USB Type-A",
+          "HDMI 2.1",
+          "RJ-45 Ethernet",
+          "3.5 mm Audio Jack"
+        ]
+      },
+      "colors": ["Black"],
+      "price": "",
+      "expandable ram": "Up to 32GB",
+      "expandable storage": "Yes",
+      "ram frequency": "DDR5",
+      "others": ["Gaming-ready", "RGB backlit keyboard"],
+      "photos": ["/assets/asus/tuf19.png"
+    ]
+    } 
+  
+  ]

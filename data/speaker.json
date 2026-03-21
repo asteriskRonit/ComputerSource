@@ -1,0 +1,364 @@
+[
+    {
+      "brand": "Portronics",
+      "modelName": "SoundDrum",
+      "modelNumber": "POR-1579",
+      "category": "speaker",
+    
+      "specs": {
+        "powerOutput": "20W",
+        "connectivity": "Bluetooth 5.0",
+        "drivers": "Dual 10W dynamic drivers",
+        "playbackModes": [
+          "Bluetooth",
+          "AUX",
+          "USB",
+          "TF Card"
+        ],
+        "twsSupport": "Yes (True Wireless Stereo)",
+        "microphone": "Built-in mic for hands-free calling",
+        "lighting": "RGB LED lights",
+        "waterResistance": "IPX6 water resistant",
+        "battery": "4000mAh",
+        "charging": "USB Type-C",
+        "compatibility": [
+          "Android",
+          "iOS",
+          "Windows",
+          "Laptops"
+        ],
+        "portability": "Portable cylindrical design with carry strap"
+      },
+      "color": null,
+      "weight": null,
+      "warranty": "1 Year",
+      "price": 2000,
+    
+      "photos": [
+        "/assets/sound_drum.jpg"
+      ]
+    },
+      {
+        "brand": "Portronics",
+        "modelName": "Sound Drum Plus",
+        "modelNumber": "POR-1040",
+        "category": "speaker",
+        "specs": {
+          "powerOutput": "20W",
+          "connectivity": "Bluetooth",
+          "drivers": "Dynamic drivers",
+          "playbackModes": ["Bluetooth", "AUX", "USB"],
+          "twsSupport": "Yes",
+          "microphone": "Built-in mic",
+          "lighting": "LED lights",
+          "waterResistance": null,
+          "battery": "Rechargeable battery",
+          "charging": "USB",
+          "compatibility": ["Android", "iOS", "Laptop"],
+          "portability": "Portable design"
+        },
+        "color": null,
+        "weight": null,
+        "warranty": "1 Year",
+        "price": null,
+        "photos": ["/assets/sound_drum_plus.jpg"]
+      },
+    
+      {
+        "brand": "Portronics",
+        "modelName": "Sound Drum 20W",
+        "modelNumber": "POR-1578",
+        "category": "speaker",
+        "specs": {
+          "powerOutput": "20W",
+          "connectivity": "Bluetooth",
+          "drivers": "Dual dynamic drivers",
+          "playbackModes": ["Bluetooth", "AUX", "USB"],
+          "twsSupport": "Yes",
+          "microphone": "Built-in mic",
+          "lighting": "RGB LED",
+          "waterResistance": "IPX6",
+          "battery": "Rechargeable battery",
+          "charging": "USB Type-C",
+          "compatibility": ["Android", "iOS", "Laptop"],
+          "portability": "Portable cylindrical design"
+        },
+        "color": null,
+        "weight": null,
+        "warranty": "1 Year",
+        "price": null,
+        "photos": ["/assets/sound_drum_20w.jpg"]
+      },
+    
+      {
+        "brand": "Portronics",
+        "modelName": "Sound Drum 1",
+        "modelNumber": "POR-1288",
+        "category": "speaker",
+        "specs": {
+          "powerOutput": "10W",
+          "connectivity": "Bluetooth",
+          "drivers": "Dynamic driver",
+          "playbackModes": ["Bluetooth", "AUX"],
+          "twsSupport": "No",
+          "microphone": "Built-in mic",
+          "lighting": null,
+          "waterResistance": null,
+          "battery": "Rechargeable battery",
+          "charging": "USB",
+          "compatibility": ["Android", "iOS"],
+          "portability": "Compact portable design"
+        },
+        "color": null,
+        "weight": null,
+        "warranty": "1 Year",
+        "price": null,
+        "photos": ["/assets/sound_drum_1.jpg"]
+      },
+    
+      {
+        "brand": "Portronics",
+        "modelName": "Sound Pot",
+        "modelNumber": null,
+        "category": "speaker",
+        "specs": {
+          "powerOutput": "5W",
+          "connectivity": "Bluetooth",
+          "drivers": "Single dynamic driver",
+          "playbackModes": ["Bluetooth"],
+          "twsSupport": "No",
+          "microphone": "Built-in mic",
+          "lighting": null,
+          "waterResistance": null,
+          "battery": "Rechargeable battery",
+          "charging": "USB",
+          "compatibility": ["Android", "iOS"],
+          "portability": "Compact portable design"
+        },
+        "color": null,
+        "weight": null,
+        "warranty": "1 Year",
+        "price": null,
+        "photos": ["/assets/sound_pot.jpg"]
+      },
+    
+      {
+        "brand": "Portronics",
+        "modelName": "Dynamo Bluetooth Speaker",
+        "modelNumber": "POR-737",
+        "category": "speaker",
+        "specs": {
+          "powerOutput": "10W",
+          "connectivity": "Bluetooth",
+          "drivers": "Dynamic driver",
+          "playbackModes": ["Bluetooth", "AUX"],
+          "twsSupport": "No",
+          "microphone": "Built-in mic",
+          "lighting": null,
+          "waterResistance": null,
+          "battery": "Rechargeable battery",
+          "charging": "USB",
+          "compatibility": ["Android", "iOS"],
+          "portability": "Portable design"
+        },
+        "color": null,
+        "weight": null,
+        "warranty": "1 Year",
+        "price": null,
+        "photos": ["/assets/dynamo.jpg"]
+      },
+    
+      {
+        "brand": "Portronics",
+        "modelName": "Bounce Speaker",
+        "modelNumber": "POR-1710",
+        "category": "speaker",
+        "specs": {
+          "powerOutput": "10W",
+          "connectivity": "Bluetooth",
+          "drivers": "Dynamic driver",
+          "playbackModes": ["Bluetooth"],
+          "twsSupport": "No",
+          "microphone": "Built-in mic",
+          "lighting": "LED",
+          "waterResistance": null,
+          "battery": "Rechargeable battery",
+          "charging": "USB",
+          "compatibility": ["Android", "iOS"],
+          "portability": "Portable design"
+        },
+        "color": null,
+        "weight": null,
+        "warranty": "1 Year",
+        "price": null,
+        "photos": ["/assets/bounce.jpg"]
+      },
+    
+      {
+        "brand": "Portronics",
+        "modelName": "Decibel 25",
+        "modelNumber": "POR-3212",
+        "category": "speaker",
+        "specs": {
+          "powerOutput": "16W",
+          "connectivity": "Bluetooth",
+          "drivers": "Dual dynamic drivers",
+          "playbackModes": ["Bluetooth", "AUX"],
+          "twsSupport": "Yes",
+          "microphone": "Built-in mic",
+          "lighting": "RGB LED",
+          "waterResistance": null,
+          "battery": "Rechargeable battery",
+          "charging": "USB Type-C",
+          "compatibility": ["Android", "iOS", "Laptop"],
+          "portability": "Portable design"
+        },
+        "color": null,
+        "weight": null,
+        "warranty": "1 Year",
+        "price": null,
+        "photos": ["/assets/decibel25.jpg"]
+      },
+    
+      {
+        "brand": "Portronics",
+        "modelName": "Sound Bar 101",
+        "modelNumber": "POR-1272",
+        "category": "speaker",
+        "specs": {
+          "powerOutput": "30W",
+          "connectivity": "Bluetooth",
+          "drivers": "Dual speaker drivers",
+          "playbackModes": ["Bluetooth", "AUX"],
+          "twsSupport": "No",
+          "microphone": "No",
+          "lighting": null,
+          "waterResistance": null,
+          "battery": "Built-in battery",
+          "charging": "USB",
+          "compatibility": ["TV", "Laptop", "Mobile"],
+          "portability": "Desktop soundbar"
+        },
+        "color": null,
+        "weight": null,
+        "warranty": "1 Year",
+        "price": null,
+        "photos": ["/assets/soundbar101.jpg"]
+      },
+    {
+      "brand": "Portronics",
+      "modelName": "SoundPot",
+      "modelNumber": "POR-871",
+      "category": "speaker",
+    
+      "specs": {
+        "powerOutput": "5W",
+        "connectivity": "Bluetooth 5.0",
+        "drivers": "Single dynamic driver",
+        "playbackModes": [
+          "Bluetooth",
+          "AUX"
+        ],
+        "twsSupport": "No",
+        "microphone": "Built-in microphone",
+        "lighting": "No",
+        "waterResistance": "IPX5 water resistant",
+        "battery": "1200mAh",
+        "charging": "Micro USB",
+        "compatibility": [
+          "Android",
+          "iOS",
+          "Windows",
+          "Laptops"
+        ],
+        "portability": "Compact portable design"
+      },
+    
+      "color": "Black",
+      "weight": "430 g",
+      "warranty": "1 Year",
+      "price": 1299,
+    
+      "photos": [
+        "/assets/sound_pot.jpg"
+      ]
+    },    
+    {
+      "brand": "Portronics",
+      "modelName": "SoundDrum",
+      "modelNumber": "POR-1579",
+      "category": "speaker",
+    
+      "specs": {
+        "powerOutput": "20W",
+        "connectivity": "Bluetooth 5.0",
+        "drivers": "Dual 10W dynamic drivers",
+        "playbackModes": [
+          "Bluetooth",
+          "AUX",
+          "USB",
+          "TF Card"
+        ],
+        "twsSupport": "Yes (True Wireless Stereo)",
+        "microphone": "Built-in microphone for hands-free calling",
+        "lighting": "RGB LED lights",
+        "waterResistance": "IPX6 water resistant",
+        "battery": "4000mAh",
+        "charging": "USB Type-C",
+        "compatibility": [
+          "Android",
+          "iOS",
+          "Windows",
+          "Laptops"
+        ],
+        "portability": "Portable cylindrical design with carry strap"
+      },
+    
+      "color": "Black",
+      "weight": "1.2 kg",
+      "warranty": "1 Year",
+      "price": 2000,
+    
+      "photos": [
+        "/assets/sound_drum.jpg"
+      ]
+    },
+    {
+      "brand": "Portronics",
+      "modelName": "SoundDrum 1",
+      "modelNumber": "SoundDrum1",
+      "category": "speaker",
+    
+      "specs": {
+        "powerOutput": "10W",
+        "connectivity": "Bluetooth 5.0",
+        "drivers": "Single dynamic driver",
+        "playbackModes": [
+          "Bluetooth",
+          "AUX",
+          "USB",
+          "TF Card"
+        ],
+        "twsSupport": "No",
+        "microphone": "Built-in mic",
+        "lighting": "No",
+        "waterResistance": "Splash resistant",
+        "battery": "2000mAh",
+        "charging": "Micro USB",
+        "compatibility": [
+          "Android",
+          "iOS",
+          "Windows"
+        ],
+        "portability": "Compact portable design"
+      },
+      "color": null,
+      "weight": null,
+      "warranty": "1 Year",
+      "price": 1200,
+    
+      "photos": [
+        "/assets/box.jpg"
+      ]
+    }
+  ]

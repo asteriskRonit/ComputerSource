@@ -1,0 +1,254 @@
+[
+    {
+        "brand": "Portronics",
+        "modelName": "TOAD 11 Wireless Mouse",
+        "modelNumber": "TOAD 11",
+        "category": "mouse",
+        "specs": {
+            "sensor": "Optical",
+            "dpi": "1200 DPI",
+            "buttons": "3 Buttons",
+            "connection": "Wireless",
+            "lighting": "No"
+        },
+        "price": 699,
+        "warranty": "1 Year",
+        "others": [
+            "Ergonomic design"
+        ],
+        "photos": [
+            "/assets/mouse/toad11.jpg"
+        ]
+    },
+    {
+        "brand": "Portronics",
+        "modelName": "TOAD 21 Mouse",
+        "modelNumber": "POR 1479",
+        "category": "mouse",
+        "specs": {
+            "sensor": "Optical",
+            "dpi": "1000 DPI",
+            "buttons": "3 Buttons",
+            "connection": "USB Wired",
+            "lighting": "No"
+        },
+        "price": 499,
+        "warranty": "1 Year",
+        "others": [
+            "Smooth tracking"
+        ],
+        "photos": [
+            "/assets/mouse/toad21.jpg"
+        ]
+    },
+    {
+        "brand": "Portronics",
+        "modelName": "TOAD 22 Wireless Mouse",
+        "modelNumber": "TOAD 22",
+        "category": "mouse",
+        "specs": {
+            "sensor": "Optical",
+            "dpi": "1200 DPI",
+            "buttons": "3 Buttons",
+            "connection": "Wireless",
+            "lighting": "No"
+        },
+        "price": 649,
+        "warranty": "1 Year",
+        "others": [
+            "Silent clicks"
+        ],
+        "photos": [
+            "/assets/mouse/toad22.jpg"
+        ]
+    },
+    {
+        "brand": "Portronics",
+        "modelName": "TOAD 25 Wireless Mouse",
+        "modelNumber": "TOAD 25",
+        "category": "mouse",
+        "specs": {
+            "sensor": "Optical",
+            "dpi": "1600 DPI",
+            "buttons": "4 Buttons",
+            "connection": "Wireless",
+            "lighting": "No"
+        },
+        "price": 799,
+        "warranty": "1 Year",
+        "others": [
+            "High precision"
+        ],
+        "photos": [
+            "/assets/mouse/toad25.jpg"
+        ]
+    },
+    {
+        "brand": "Portronics",
+        "modelName": "TOAD 26 Mouse",
+        "modelNumber": "TOAD 26",
+        "category": "mouse",
+        "specs": {
+            "sensor": "Optical",
+            "dpi": "1000 DPI",
+            "buttons": "3 Buttons",
+            "connection": "USB Wired",
+            "lighting": "No"
+        },
+        "price": 449,
+        "warranty": "1 Year",
+        "others": [
+            "Compact design"
+        ],
+        "photos": [
+            "/assets/mouse/toad26.jpg"
+        ]
+    },
+    {
+        "brand": "ASUS",
+        "modelName": "ASUS MW103",
+        "modelNumber": "MW103",
+        "category": "mouse",
+        "specs": {
+            "sensor": "Optical",
+            "dpi": "1200 DPI",
+            "buttons": "3 Buttons",
+            "connection": "2.4GHz Wireless (USB Receiver)",
+            "lighting": "No"
+        },
+        "price": 899,
+        "warranty": "1 Year",
+        "others": [
+            "Compact and lightweight design",
+            "Energy-efficient wireless mouse"
+        ],
+        "photos": [
+            "/assets/mouse/asus_mw103.jpg"
+        ]
+    },
+    {
+        "brand": "ASUS",
+        "modelName": "ASUS WT200",
+        "modelNumber": "WT200",
+        "category": "mouse",
+        "specs": {
+            "sensor": "Optical",
+            "dpi": "1600 DPI",
+            "buttons": "3 Buttons",
+            "connection": "2.4GHz Wireless (USB Receiver)",
+            "lighting": "No"
+        },
+        "price": 1099,
+        "warranty": "1 Year",
+        "others": [
+            "Silent click technology",
+            "Long battery life"
+        ],
+        "photos": [
+            "/assets/mouse/asus_wt200.jpg"
+        ]
+    },
+    {
+        "brand": "ASUS",
+        "modelName": "ASUS MW105",
+        "modelNumber": "MW105",
+        "category": "mouse",
+        "specs": {
+            "sensor": "Optical",
+            "dpi": "1600 DPI",
+            "buttons": "3 Buttons",
+            "connection": "2.4GHz Wireless (USB Receiver)",
+            "lighting": "No"
+        },
+        "price": 999,
+        "warranty": "1 Year",
+        "others": [
+            "Silent click buttons",
+            "Comfortable ergonomic grip"
+        ],
+        "photos": [
+            "/assets/mouse/asus_mw105.jpg"
+        ]
+    },
+    {
+        "brand": "Portronics",
+        "modelName": "TOAD 34 Wireless Mouse",
+        "modelNumber": "TOAD 34",
+        "category": "mouse",
+        "specs": {
+            "sensor": "Optical",
+            "dpi": "1600 DPI",
+            "buttons": "4 Buttons",
+            "connection": "Wireless",
+            "lighting": "No"
+        },
+        "price": 899,
+        "warranty": "1 Year",
+        "others": [
+            "Long battery life"
+        ],
+        "photos": [
+            "/assets/mouse/toad34.jpg"
+        ]
+    },
+    {
+        "brand": "Portronics",
+        "modelName": "TOAD 6 Wireless Mouse",
+        "modelNumber": "POR 2484",
+        "category": "mouse",
+        "specs": {
+            "sensor": "Optical",
+            "dpi": "1200 DPI",
+            "buttons": "3 Buttons",
+            "connection": "Wireless",
+            "lighting": "No"
+        },
+        "price": 699,
+        "warranty": "1 Year",
+        "others": [
+            "Portable design"
+        ],
+        "photos": [
+            "/assets/mouse/toad6.jpg"
+        ]
+    },
+    {
+        "brand": "Portronics",
+        "modelName": "Gaming Mouse",
+        "modelNumber": "POR 3107",
+        "category": "mouse",
+        "specs": {
+            "sensor": "Optical",
+            "dpi": "6400 DPI",
+            "buttons": "6 Buttons",
+            "connection": "USB Wired",
+            "lighting": "RGB"
+        },
+        "price": 1299,
+        "warranty": "1 Year",
+        "others": [
+            "Gaming-grade performance"
+        ],
+        "photos": [
+            "/assets/mouse/gaming3107.jpg"
+        ]
+    },
+    {
+        "brand": "HP",
+        "modelName": "HP M190 Wireless Mouse",
+        "modelNumber": "M190",
+        "category": "mouse",
+        "specs": {
+          "sensor": "Optical",
+          "dpi": "6400 DPI",
+          "buttons": "6 Buttons",
+          "connection": "USB Wired",
+          "lighting": "RGB"
+        },
+        "price": 500,
+        "warranty": "1 Year",
+        "others": ["Ergonomic design"],
+        "photos": ["/assets/mouse/gaming3107.jpg"]
+      }
+      
+]

@@ -1,0 +1,31 @@
+[
+    {
+      "brand": "NVIDIA",
+      "modelName": "ZOTAC GeForce RTX 3060 Twin Edge",
+      "modelNumber": "RTX3060-12GB",
+      "category": "graphics card",
+    
+      "specs": {
+        "gpu chipset": "NVIDIA RTX 3060",
+        "vram": "12GB GDDR6",
+        "memory interface": "192-bit",
+        "boost clock": "1777 MHz",
+        "ports": [
+          "3 x DisplayPort",
+          "1 x HDMI"
+        ],
+        "power requirement": "550W PSU"
+      },
+    
+      "price": "27999",
+      "warranty": "3 Years",
+      "others": [
+        "Ray tracing support",
+        "DLSS technology",
+        "High-end gaming performance"
+      ],
+      "photos": [
+        "/assets/gpu/rtx3060.jpg"
+      ]
+    }    
+  ]

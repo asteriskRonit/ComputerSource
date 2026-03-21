@@ -1,0 +1,1760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- SEO Title -->
+  <title>Computer Source | Laptop, Printer, Networking & Audio Products in Agartala</title>
+  
+  <!-- SEO Description -->
+  <meta name="description"
+  content="Browse laptops, desktops, routers, modems, printers, audio devices and IT accessories at Computer Source — trusted dealer in Agartala, Tripura." />
+  
+  <!-- Keywords (optional but ok) -->
+  <meta name="keywords"
+  content="laptop dealer agartala, printer shop tripura, router modem supplier, audio accessories, desktop computer store, computer source" />
+  
+  <!-- Author -->
+  <meta name="author" content="Computer Source" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/logo5.png" />
+  <link rel="apple-touch-icon" href="assets/logo5.png" />
+  
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  
+  <style>
+    /* =========================
+      THEME (MATCH PREVIOUS PAGES)
+    ========================= */
+    :root{
+      --bg:#101c2c;
+      --text:#ffffff;
+      --muted: rgba(255,255,255,0.78);
+      --muted2:#cfd8e3;
+
+      --accent:#00d1ff;
+      --accent2:#0288d1;
+
+      --panel: rgba(10,17,40,0.55);
+      --panel-strong: rgba(10,17,40,0.9);
+
+      --border: rgba(255,255,255,0.10);
+      --border2: rgba(0,209,255,0.22);
+
+      --shadow: 0 18px 45px rgba(0,0,0,0.30);
+      --shadow2: 0 12px 30px rgba(0,0,0,0.22);
+
+      --radius: 18px;
+      --radius2: 14px;
+
+      --container: 1300px;
+      --containerWide: 1400px;
+    }
+
+    *{ margin:0; padding:0; box-sizing:border-box; }
+    html{ scroll-behavior:smooth; }
+    body{
+      font-family: "Poppins", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(900px 500px at 20% 0%, rgba(0,209,255,0.08), transparent 60%),
+        radial-gradient(900px 500px at 80% 10%, rgba(2,136,209,0.08), transparent 60%),
+        var(--bg);
+      overflow-x:hidden;
+
+      opacity:0;
+      transform: translateY(14px);
+      transition: opacity .55s ease, transform .55s ease;
+    }
+    body.show{ opacity:1; transform: translateY(0); }
+
+    a{ color:inherit; text-decoration:none; }
+    img{ max-width:100%; display:block; }
+
+    .container{
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+    .container-wide{
+      max-width: var(--containerWide);
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    /* =========================
+      NAVBAR (SAME PATTERN)
+    ========================= */
+    .navbar{
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(10,17,40,0.45);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      transition: background .25s ease, box-shadow .25s ease, border-color .25s ease;
+    }
+    .navbar.scrolled{
+      background: rgba(10,17,40,0.78);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+      border-bottom-color: rgba(0,209,255,0.18);
+    }
+
+    .nav-container{
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: .9rem 1.25rem;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 1rem;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      min-width: 210px;
+    }
+    .brand img{
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      border-radius: 12px;
+      padding: 7px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.10);
+    }
+    .brand h1{
+      font-size: clamp(1.25rem, 1.1vw + 1rem, 1.75rem);
+      font-weight: 900;
+      letter-spacing: 0.35px;
+      line-height: 1.05;
+      white-space: nowrap;
+      text-shadow: 0 10px 26px rgba(0,0,0,0.35);
+    }
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap: .35rem;
+      padding: .3rem;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .nav-links a{
+      padding: .55rem .95rem;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: .95rem;
+      color: rgba(255,255,255,0.86);
+      transition: background .2s ease, color .2s ease, transform .18s ease;
+      white-space: nowrap;
+    }
+    .nav-links a:hover{
+      background: rgba(0,209,255,0.10);
+      color: #e9fbff;
+      transform: translateY(-1px);
+    }
+    .nav-links a.active{
+      background: linear-gradient(90deg, rgba(2,136,209,0.35), rgba(0,209,255,0.18));
+      border: 1px solid rgba(0,209,255,0.22);
+      color: #ffffff;
+    }
+
+    .menu-toggle{
+      display:none;
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.04);
+      cursor:pointer;
+      align-items:center;
+      justify-content:center;
+      gap: 6px;
+      flex-direction:column;
+      transition: transform .15s ease, background .2s ease, border-color .2s ease;
+    }
+    .menu-toggle:hover{
+      background: rgba(255,255,255,0.07);
+      border-color: rgba(0,209,255,0.20);
+    }
+    .menu-toggle span{
+      width: 22px;
+      height: 2.5px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.95);
+      transition: transform .25s ease, opacity .2s ease;
+    }
+    .menu-toggle.active span:nth-child(1){ transform: translateY(7px) rotate(45deg); }
+    .menu-toggle.active span:nth-child(2){ opacity: 0; }
+    .menu-toggle.active span:nth-child(3){ transform: translateY(-7px) rotate(-45deg); }
+
+    @media (max-width: 900px){
+      .nav-links{ display:none; }
+      .menu-toggle{ display:flex; }
+      .brand{ min-width:auto; }
+      .brand img{ width: 40px; height: 40px; }
+      .brand h1{ font-size: 1.25rem; }
+    }
+
+    /* =========================
+      MOBILE OVERLAY + SIDE MENU
+    ========================= */
+    .menu-overlay{
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.55);
+      z-index: 998;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .25s ease;
+    }
+    .menu-overlay.active{
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .side-menu{
+      position: fixed;
+      top:0;
+      right:-320px;
+      width: 320px;
+      height: 100svh;
+      z-index: 999;
+      background: linear-gradient(180deg, #001b3a, #000c22);
+      border-left: 1px solid rgba(255,255,255,0.10);
+      box-shadow: -18px 0 40px rgba(0,0,0,0.35);
+      padding: 5rem 1.35rem 1.35rem;
+      display:flex;
+      flex-direction:column;
+      gap: 1rem;
+      transition: right .30s ease;
+      overflow-y:auto;
+    }
+    .side-menu.active{ right:0; }
+
+    .side-menu a{
+      color: #e6f0ff;
+      font-size: 1.05rem;
+      font-weight: 600;
+      padding: .85rem .85rem;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.03);
+      transition: background .2s ease, border-color .2s ease, transform .2s ease;
+    }
+    .side-menu a:hover{
+      border-color: rgba(0,209,255,0.35);
+      background: rgba(0,209,255,0.07);
+      transform: translateY(-1px);
+    }
+    .side-menu a.active{
+      border-color: rgba(0,209,255,0.35);
+      background: rgba(0,209,255,0.10);
+      color:#fff;
+    }
+
+    .mobile-close{
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.04);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      cursor:pointer;
+      color: rgba(255,255,255,0.95);
+      font-size: 18px;
+    }
+    .mobile-close:hover{
+      border-color: rgba(0,209,255,0.25);
+      background: rgba(255,255,255,0.07);
+    }
+    body.menu-open{ overflow:hidden; touch-action:none; }
+
+    /* =========================
+      PAGE LOADER
+    ========================= */
+    #pageLoader{
+      position: fixed;
+      inset: 0;
+      background: var(--bg);
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      z-index: 99999;
+    }
+    .loader{
+      width: 60px;
+      height: 60px;
+      border: 6px solid rgba(0,209,255,0.20);
+      border-top: 6px solid var(--accent);
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin{ to{ transform: rotate(360deg);} }
+    #pageLoader.hide{
+      opacity: 0;
+      pointer-events:none;
+      transition: opacity .5s ease;
+    }
+
+    /* =========================
+      SMALL UI HELPERS
+    ========================= */
+    .card{
+      border-radius: 22px;
+      background:
+        radial-gradient(900px 360px at 20% 0%, rgba(0,209,255,0.10), transparent 60%),
+        radial-gradient(900px 360px at 80% 10%, rgba(2,136,209,0.08), transparent 60%),
+        rgba(10,17,40,0.50);
+      border: 1px solid rgba(255,255,255,0.12);
+      box-shadow: 0 22px 60px rgba(0,0,0,0.32);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      overflow:hidden;
+    }
+
+    .reveal{
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+    .reveal.show{
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .section-title{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 12px;
+      margin: 1.25rem 0 .75rem;
+    }
+    .section-title h2{
+      font-size: clamp(1.2rem, 1.4vw + .9rem, 1.8rem);
+      font-weight: 900;
+      color: #eaf7ff;
+      letter-spacing: .2px;
+    }
+    .section-title p{
+      color: rgba(207,216,227,0.85);
+      font-size: .95rem;
+    }
+
+    /* =========================
+      SIMILAR SLIDER (TOP)
+    ========================= */
+    .similar-slider{
+      max-width: var(--containerWide);
+      margin: 1.25rem auto 0;
+      padding: 14px 14px 12px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.10);
+      box-shadow: var(--shadow2);
+      display:none;
+      opacity:0;
+      transition: opacity .6s ease;
+    }
+    .similar-slider.show{ opacity: 1; }
+
+    .similar-title{
+      font-size: 1.1rem;
+      font-weight: 900;
+      color: #eaf7ff;
+      letter-spacing: .2px;
+      margin-bottom: 10px;
+      padding-left: 4px;
+    }
+    .similar-title span{
+      color: var(--accent);
+      font-weight: 900;
+    }
+
+    .similar-list{
+      display:flex;
+      gap: 14px;
+      overflow-x:auto;
+      padding: 6px 2px 10px;
+      scrollbar-width: thin;
+      scrollbar-color: var(--accent) rgba(255,255,255,0.08);
+      overscroll-behavior-x: contain;
+    }
+    .similar-list::-webkit-scrollbar{ height: 6px; }
+    .similar-list::-webkit-scrollbar-thumb{ background: var(--accent); border-radius: 99px; }
+    .similar-list::-webkit-scrollbar-track{ background: rgba(255,255,255,0.08); border-radius: 99px; }
+
+    .similar-item{
+      min-width: 160px;
+      border-radius: 18px;
+      padding: 12px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+      border: 1px solid rgba(255,255,255,0.10);
+      box-shadow: 0 18px 45px rgba(0,0,0,0.35);
+      cursor:pointer;
+      transition: transform .2s ease, border-color .2s ease, background .2s ease;
+    }
+    .similar-item:hover{
+      transform: translateY(-3px);
+      border-color: rgba(0,209,255,0.28);
+      background: rgba(0,209,255,0.06);
+    }
+    .similar-item img{
+      width:100%;
+      height: 92px;
+      object-fit: contain;
+      background: rgba(255,255,255,0.94);
+      border-radius: 14px;
+      padding: 6px;
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+    .similar-item p{
+      margin-top: 10px;
+      font-size: .88rem;
+      color: rgba(235,245,255,0.92);
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    /* =========================
+      PRODUCT LAYOUT
+    ========================= */
+    .detail-layout{
+      max-width: var(--containerWide);
+      margin: 1rem auto 0;
+      display:grid;
+      grid-template-columns: 110px 1.05fr .95fr 340px;
+      gap: 14px;
+      padding: 0 1.25rem;
+    }
+
+    /* Thumbnails */
+    .thumbnail-column{
+      padding: 12px;
+      border-radius: 22px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.10);
+      box-shadow: var(--shadow2);
+      height: fit-content;
+      display:flex;
+      flex-direction:column;
+      gap: 10px;
+      position: sticky;
+      top: 92px;
+      align-self: start;
+    }
+    .thumbnail-column img{
+      width:100%;
+      height: 70px;
+      object-fit: contain;
+      background: rgba(255,255,255,0.96);
+      border-radius: 14px;
+      padding: 6px;
+      cursor:pointer;
+      border: 2px solid transparent;
+      transition: transform .18s ease, border-color .2s ease, box-shadow .2s ease;
+    }
+    .thumbnail-column img:hover{
+      transform: translateY(-1px) scale(1.02);
+      border-color: rgba(0,209,255,0.40);
+    }
+    .thumbnail-column img.active-thumb{
+      border-color: rgba(0,209,255,0.75);
+      box-shadow: 0 0 0 4px rgba(0,209,255,0.12);
+    }
+
+    /* Gallery */
+    .gallery-box{
+      padding: 14px;
+      border-radius: 22px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.10);
+      box-shadow: var(--shadow2);
+      text-align:center;
+    }
+    .gallery-frame{
+      border-radius: 20px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      padding: 14px;
+    }
+    #mainImage{
+      width: 100%;
+      max-height: 460px;
+      object-fit: contain;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.92);
+      padding: 10px;
+    }
+
+    /* Colors */
+    .color-title{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 10px;
+      margin: 12px 2px 8px;
+      color: rgba(235,245,255,0.92);
+      font-weight: 900;
+      letter-spacing: .2px;
+    }
+    .color-tab{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 8px;
+    }
+    .color-chip{
+      padding: 10px 8px;
+      width: 100%;
+      text-align:center;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.14);
+      color: rgba(235,245,255,0.92);
+      font-size: .88rem;
+      font-weight: 700;
+      cursor:pointer;
+      user-select:none;
+      transition: background .18s ease, border-color .2s ease, transform .18s ease;
+    }
+    .color-chip:hover{
+      background: rgba(0,209,255,0.08);
+      border-color: rgba(0,209,255,0.25);
+      transform: translateY(-1px);
+    }
+    .color-chip.active{
+      background: rgba(0,209,255,0.14);
+      border-color: rgba(0,209,255,0.45);
+      color:#fff;
+    }
+
+    /* Details */
+    .details-box{
+      padding: 18px 18px;
+      border-radius: 22px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
+      border: 1px solid rgba(255,255,255,0.12);
+      box-shadow: var(--shadow2);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .details-top{
+      display:flex;
+      flex-direction:column;
+      gap: 6px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(255,255,255,0.10);
+      margin-bottom: 12px;
+    }
+    .details-box h2{
+      font-size: 1.35rem;
+      font-weight: 900;
+      letter-spacing: .2px;
+      color: #ffffff;
+      line-height: 1.25;
+    }
+    .meta{
+      color: rgba(207,216,227,0.92);
+      font-weight: 700;
+      font-size: .95rem;
+    }
+
+    .price{
+      font-size: 1.65rem;
+      font-weight: 900;
+      color: #bcff97;
+      margin-top: 6px;
+    }
+    .specs{
+      margin-top: 10px;
+      display:flex;
+      flex-direction:column;
+      gap: 8px;
+    }
+    .spec-line{
+      display:flex;
+      gap: 10px;
+      padding: 10px 12px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.10);
+    }
+    .spec-line b{
+      color: rgba(235,245,255,0.92);
+      min-width: 140px;
+      font-weight: 900;
+    }
+    .spec-line span{
+      color: rgba(207,216,227,0.92);
+      font-weight: 600;
+      line-height: 1.4;
+      word-break: break-word;
+    }
+
+    /* Right Column Cards */
+    .side-stack{
+      display:flex;
+      flex-direction:column;
+      gap: 14px;
+      align-self: start;
+    }
+
+    .buy-card,
+    .availability-card,
+    .tabs-card{
+      padding: 16px;
+      border-radius: 22px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.10);
+      box-shadow: var(--shadow2);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .availability-card h3,
+    .buy-card h3{
+      font-size: 1.12rem;
+      font-weight: 900;
+      color: #eaf7ff;
+      letter-spacing: .2px;
+      margin-bottom: 8px;
+    }
+    .price-subtext{
+      color: rgba(207,216,227,0.86);
+      font-size: .92rem;
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+    .price-points{
+      list-style:none;
+      padding:0;
+      margin:0 0 14px;
+      display:flex;
+      flex-direction:column;
+      gap: 8px;
+    }
+    .price-points li{
+      padding: 10px 12px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.10);
+      color: rgba(235,245,255,0.92);
+      font-weight: 700;
+      font-size: .92rem;
+      line-height: 1.4;
+    }
+
+    .primary-btn{
+      width: 100%;
+      padding: 13px 14px;
+      border: none;
+      border-radius: 14px;
+      cursor:pointer;
+      font-weight: 900;
+      font-size: .98rem;
+      color: #001634;
+      background: linear-gradient(135deg, var(--accent), #00a3cc);
+      box-shadow: 0 10px 28px rgba(0,209,255,0.35);
+      transition: transform .18s ease, box-shadow .2s ease, filter .2s ease;
+    }
+    .primary-btn:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 16px 36px rgba(0,209,255,0.45);
+      filter: brightness(1.03);
+    }
+    .primary-btn:active{
+      transform: translateY(0);
+      box-shadow: 0 10px 24px rgba(0,209,255,0.30);
+    }
+
+    .grid2{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .pay-chip{
+      padding: 10px 12px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.10);
+      color: rgba(235,245,255,0.92);
+      font-weight: 800;
+      text-align:center;
+      font-size: .92rem;
+    }
+
+    /* Tabs (Full width below on desktop for readability) */
+    .tabs-wrap{
+      max-width: var(--containerWide);
+      margin: 14px auto 0;
+      padding: 0 1.25rem;
+    }
+    .tabs-card{
+      padding: 16px;
+    }
+    .tab-header{
+      display:flex;
+      gap: 10px;
+      overflow-x:auto;
+      padding-bottom: 8px;
+      scrollbar-width: thin;
+      scrollbar-color: var(--accent) rgba(255,255,255,0.08);
+    }
+    .tab-header::-webkit-scrollbar{ height: 6px; }
+    .tab-header::-webkit-scrollbar-thumb{ background: var(--accent); border-radius: 99px; }
+    .tab-header::-webkit-scrollbar-track{ background: rgba(255,255,255,0.08); border-radius: 99px; }
+
+    .tab-header button{
+      border:none;
+      cursor:pointer;
+      padding: 10px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: rgba(235,245,255,0.92);
+      font-weight: 900;
+      letter-spacing: .15px;
+      white-space: nowrap;
+      transition: background .18s ease, border-color .2s ease, transform .18s ease;
+    }
+    .tab-header button:hover{
+      transform: translateY(-1px);
+      border-color: rgba(0,209,255,0.25);
+      background: rgba(0,209,255,0.08);
+    }
+    .tab-header button.active{
+      background: rgba(0,209,255,0.14);
+      border-color: rgba(0,209,255,0.45);
+      color:#fff;
+    }
+
+    .tab-content{
+      margin-top: 12px;
+      padding: 14px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.10);
+      color: rgba(207,216,227,0.92);
+      line-height: 1.7;
+      font-weight: 600;
+      min-height: 110px;
+    }
+    .tab-content ul{ padding-left: 18px; }
+    .tab-content li{ margin: 6px 0; }
+
+    /* =========================
+      FEEDBACK + SUGGEST SECTION
+    ========================= */
+    .section{
+      max-width: var(--containerWide);
+      margin: 28px auto 0;
+      padding: 0 1.25rem;
+    }
+
+    .slider-container{
+      position: relative;
+      overflow:hidden;
+    }
+    .slider{
+      display:flex;
+      gap: 14px;
+      overflow-x:auto;
+      scroll-behavior:smooth;
+      padding: 8px 0 10px;
+      overscroll-behavior-x: contain;
+    }
+    .slider::-webkit-scrollbar{ display:none; }
+
+    .slider-arrow{
+      position:absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 42px;
+      height: 42px;
+      border-radius: 999px;
+      border: 1px solid rgba(0,209,255,0.35);
+      background: rgba(0,209,255,0.14);
+      color: rgba(255,255,255,0.95);
+      font-size: 20px;
+      cursor:pointer;
+      z-index: 10;
+      user-select:none;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      transition: transform .18s ease, background .2s ease;
+    }
+    .slider-arrow:hover{
+      background: rgba(0,209,255,0.28);
+      transform: translateY(-50%) scale(1.05);
+    }
+    .slider-arrow.left{ left: 6px; }
+    .slider-arrow.right{ right: 6px; }
+
+    .feedback-card{
+      min-width: calc(33.333% - 10px);
+      border-radius: 22px;
+      padding: 16px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.12);
+      box-shadow: var(--shadow2);
+    }
+    .feedback-card .name{
+      font-weight: 900;
+      color: #eaf7ff;
+      margin-bottom: 6px;
+    }
+    .feedback-card .rating{
+      color: gold;
+      font-size: 16px;
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+    }
+    .feedback-card .comment{
+      color: rgba(207,216,227,0.92);
+      font-weight: 600;
+      line-height: 1.6;
+      font-size: .95rem;
+    }
+
+    .suggest-card{
+      min-width: 240px;
+      border-radius: 22px;
+      padding: 14px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.12);
+      box-shadow: var(--shadow2);
+      cursor:pointer;
+      transition: transform .2s ease, border-color .2s ease, background .2s ease;
+    }
+    .suggest-card:hover{
+      transform: translateY(-4px);
+      border-color: rgba(0,209,255,0.28);
+      background: rgba(0,209,255,0.06);
+    }
+    .suggest-card img{
+      width:100%;
+      height: 170px;
+      object-fit: contain;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.94);
+      padding: 10px;
+      border: 1px solid rgba(0,0,0,0.06);
+      margin-bottom: 10px;
+    }
+    .suggest-card h3{
+      font-size: 1.02rem;
+      font-weight: 900;
+      color: rgba(235,245,255,0.95);
+      line-height: 1.25;
+      margin: 6px 0 2px;
+    }
+    .suggest-card .price{
+      font-size: 1.02rem;
+      font-weight: 900;
+      color: var(--accent);
+      margin: 8px 0 10px;
+    }
+    .ghost-btn{
+      width:100%;
+      padding: 11px 12px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.20);
+      background: rgba(255,255,255,0.08);
+      color:#fff;
+      font-weight: 900;
+      cursor:pointer;
+      transition: background .2s ease, transform .18s ease, border-color .2s ease;
+    }
+    .ghost-btn:hover{
+      background: rgba(255,255,255,0.14);
+      border-color: rgba(0,209,255,0.22);
+      transform: translateY(-1px);
+    }
+
+    /* =========================
+      FOOTER (MATCH PREVIOUS)
+    ========================= */
+    .footer{
+      position: relative;
+      background:
+        radial-gradient(900px 520px at 20% 0%, rgba(0,209,255,0.14), transparent 60%),
+        radial-gradient(900px 520px at 80% 10%, rgba(2,136,209,0.12), transparent 60%),
+        linear-gradient(180deg, #070d1f 0%, #050b1a 55%, #040815 100%);
+      color: rgba(207,216,227,0.92);
+      border-top: 1px solid rgba(0,209,255,0.22);
+      overflow: hidden;
+      margin-top: 2.25rem;
+    }
+    .footer::before{
+      content:"";
+      position:absolute;
+      left:0; right:0; top:0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(0,209,255,0.55), transparent);
+      opacity: .7;
+    }
+
+    .footer-container{
+      max-width: 1200px;
+      margin: auto;
+      padding: 4rem 1.25rem 2.25rem;
+    }
+    .footer-brand{
+      display:flex;
+      align-items:center;
+      gap: 14px;
+    }
+    .footer-brand img{
+      height: 46px;
+      width: 46px;
+      object-fit: contain;
+      border-radius: 14px;
+      padding: 8px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.14);
+      box-shadow: 0 10px 26px rgba(0,0,0,0.35);
+    }
+    .footer-brand h2{
+      font-size: 1.9rem;
+      font-weight: 900;
+      color: #ffffff;
+      letter-spacing: .35px;
+      margin:0;
+      line-height: 1.1;
+    }
+    .footer-desc{
+      max-width: 820px;
+      margin: 1.05rem 0 2.2rem;
+      font-size: 1rem;
+      line-height: 1.7;
+      color: rgba(207,216,227,0.86);
+    }
+    .footer-grid{
+      display:grid;
+      grid-template-columns: 1.2fr 1fr 1.1fr .9fr;
+      gap: 1.25rem;
+    }
+    .footer-col{
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 20px;
+      padding: 1.35rem 1.2rem;
+      box-shadow: 0 18px 45px rgba(0,0,0,0.35);
+    }
+    .footer-col h4{
+      color: #eaf7ff;
+      font-weight: 900;
+      letter-spacing: .25px;
+      margin-bottom: 0.95rem;
+      font-size: 1.05rem;
+    }
+    .footer-col ul{ list-style:none; padding:0; margin:0; }
+    .footer-col li, .footer-col p{
+      font-size: 0.95rem;
+      margin-bottom: 0.6rem;
+      color: rgba(207,216,227,0.92);
+      line-height: 1.55;
+    }
+    .footer-socials{
+      display:flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 0.25rem;
+      font-size: 1.2rem;
+    }
+    .footer-socials a{
+      width: 44px;
+      height: 44px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.14);
+      color: #eaf7ff;
+      box-shadow: 0 10px 26px rgba(0,0,0,0.30);
+      transition: transform .2s ease, background .2s ease, border-color .2s ease, box-shadow .2s ease;
+    }
+    .footer-socials a:hover{
+      transform: translateY(-3px);
+      background: rgba(0,209,255,0.10);
+      border-color: rgba(0,209,255,0.30);
+      box-shadow: 0 16px 34px rgba(0,0,0,0.35);
+    }
+    .footer-bottom{
+      text-align:center;
+      padding: 16px 10px;
+      font-size: 0.9rem;
+      color: rgba(207,216,227,0.84);
+      border-top: 1px solid rgba(255,255,255,0.10);
+      background: rgba(0,0,0,0.18);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .footer-mobile{
+      display:none;
+      padding: 3rem 1.25rem 2rem;
+      text-align:center;
+    }
+    .mbrand{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap: 12px;
+      margin-bottom: .75rem;
+    }
+    .mbrand img{
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      padding: 8px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.14);
+      object-fit: contain;
+    }
+    .mbrand h3{
+      color:#fff;
+      font-size: 1.35rem;
+      font-weight: 900;
+      margin:0;
+    }
+    .mobile-desc{
+      max-width: 520px;
+      margin: .65rem auto 1.25rem;
+      color: rgba(207,216,227,0.88);
+      line-height: 1.65;
+    }
+    .mobile-points,
+    .mobile-contact{
+      max-width: 560px;
+      margin: 0.75rem auto;
+      padding: 1rem 1rem;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+    .mobile-points p,
+    .mobile-contact p{
+      margin: .55rem 0;
+      color: rgba(207,216,227,0.92);
+      font-size: .95rem;
+    }
+    .mobile-social{
+      display:flex;
+      justify-content:center;
+      gap: 12px;
+      margin-top: 1.2rem;
+      font-size: 1.2rem;
+    }
+    .mobile-social a{
+      width: 44px;
+      height: 44px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.14);
+      color: #eaf7ff;
+    }
+
+    @media (max-width: 900px){
+      .footer-container{ display:none; }
+      .footer-mobile{ display:block; }
+    }
+
+    /* =========================
+      FLOATING WHATSAPP BUTTON
+    ========================= */
+    .whatsapp-float{
+      position: fixed;
+      bottom: 22px;
+      right: 22px;
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #25d366, #1ebe5d);
+      border-radius: 50%;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      cursor:pointer;
+      z-index: 9999;
+      box-shadow: 0 10px 30px rgba(37,211,102,0.45);
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .whatsapp-float img{ width: 34px; height: 34px; }
+    .whatsapp-float:hover{
+      transform: scale(1.08) translateY(-3px);
+      box-shadow: 0 16px 40px rgba(37,211,102,0.65);
+    }
+    @media (max-width: 600px){
+      .whatsapp-float{
+        width: 54px; height: 54px;
+        bottom: 18px; right: 18px;
+      }
+      .whatsapp-float img{ width: 30px; height: 30px; }
+    }
+
+    /* =========================
+      RESPONSIVE PRODUCT LAYOUT
+    ========================= */
+    @media (max-width: 1200px){
+      .detail-layout{
+        grid-template-columns: 110px 1.1fr .9fr;
+      }
+      .side-stack{ grid-column: 1 / -1; flex-direction: row; }
+      .availability-card, .buy-card{ flex: 1; }
+    }
+
+    @media (max-width: 900px){
+      .detail-layout{
+        display:flex;
+        flex-direction: column;
+        gap: 14px;
+        margin-top: 10px;
+      }
+      .thumbnail-column{
+        position: static;
+        flex-direction: row;
+        overflow-x:auto;
+        gap: 12px;
+      }
+      .thumbnail-column img{
+        width: 70px;
+        height: 70px;
+        flex-shrink:0;
+      }
+      .side-stack{ flex-direction: column; }
+      .feedback-card{ min-width: 100%; }
+      .suggest-card{
+        min-width: 85vw;
+        max-width: 85vw;
+      }
+      #mainImage{ max-height: 360px; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Page Loader -->
+  <div id="pageLoader">
+    <div class="loader"></div>
+  </div>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <div class="whatsapp-float" onclick="contactOnWhatsApp()" title="Contact on WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+  </div>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="brand">
+        <img src="assets/logo5.png" alt="Logo" />
+        <h1>Computer Source</h1>
+      </div>
+
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a class="active" href="product.html">Products</a>
+        <a href="service.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MOBILE OVERLAY + SIDE MENU -->
+  <div class="menu-overlay" id="menuOverlay"></div>
+  <aside class="side-menu" id="sideMenu" aria-label="Mobile navigation">
+    <div class="mobile-close" id="mobileClose">✕</div>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a class="active" href="product.html">Products</a>
+    <a href="service.html">Services</a>
+    <a href="contact.html">Contact</a>
+  </aside>
+
+  <!-- Similar Products -->
+  <div class="similar-slider reveal" id="similarProductsBox">
+    <div class="similar-title">Similar <span>Products</span></div>
+    <div id="similarList" class="similar-list"></div>
+  </div>
+
+  <!-- MAIN PRODUCT CONTENT -->
+  <div class="detail-layout reveal" id="detailContainer">Loading...</div>
+
+  <!-- Tabs Section -->
+  <div class="tabs-wrap reveal" id="tabsWrap" style="display:none;">
+    <div class="tabs-card">
+      <div class="tab-header" id="dynamicTabs"></div>
+      <div class="tab-content" id="tabContent"></div>
+    </div>
+  </div>
+
+  <!-- Feedback Section -->
+  <section class="section reveal">
+    <div class="section-title">
+      <h2>Top Customer Feedback</h2>
+      <p>What customers say about our products & service</p>
+    </div>
+
+    <div class="slider-container card" style="padding:14px;">
+      <button class="slider-arrow left" onclick="slideFeedbackLeft()" aria-label="Scroll left">&#10094;</button>
+      <div class="slider" id="feedbackSlider"></div>
+      <button class="slider-arrow right" onclick="slideFeedbackRight()" aria-label="Scroll right">&#10095;</button>
+    </div>
+  </section>
+
+  <!-- Suggested Products Section -->
+  <section class="section reveal">
+    <div class="section-title">
+      <h2>You May Also Like</h2>
+      <p>Curated suggestions from other categories</p>
+    </div>
+
+    <div class="slider-container card" style="padding:14px;">
+      <button class="slider-arrow left" onclick="slideLeft()" aria-label="Scroll left">&#10094;</button>
+      <div class="slider" id="suggestSlider"></div>
+      <button class="slider-arrow right" onclick="slideRight()" aria-label="Scroll right">&#10095;</button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container container">
+      <div class="footer-brand">
+        <img src="assets/logo5.png" alt="Computer Source Logo" />
+        <h2>Computer Source</h2>
+      </div>
+
+      <p class="footer-desc">
+        Trusted electronics retailer and distributor delivering genuine laptops,
+        desktops, accessories, and audio solutions for gaming, office, and students.
+      </p>
+
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>What We Offer</h4>
+          <ul>
+            <li>Laptops &amp; Desktops</li>
+            <li>Gaming Systems</li>
+            <li>Computer Accessories</li>
+            <li>Speakers &amp; Audio</li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Why Choose Us</h4>
+          <ul>
+            <li>✔ Genuine Products</li>
+            <li>✔ Competitive Pricing</li>
+            <li>✔ Expert Guidance</li>
+            <li>✔ Trusted Local Store</li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <p>📍 Tripura, India</p>
+          <p>📞 +91 8787625423</p>
+          <p>📞 +91 9436125176</p>
+          <p>🕒 Mon – Sat • 10AM – 8PM</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <div class="footer-socials">
+            <a href="#" aria-label="Website">🌐</a>
+            <a href="#" aria-label="Facebook">📘</a>
+            <a href="#" aria-label="Instagram">📸</a>
+            <a href="#" aria-label="YouTube">▶️</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MOBILE FOOTER -->
+    <div class="footer-mobile">
+      <div class="mbrand">
+        <img src="assets/logo5.png" alt="Computer Source Logo" />
+        <h3>Computer Source</h3>
+      </div>
+
+      <p class="mobile-desc">Trusted electronics retailer and distributor.</p>
+
+      <div class="mobile-points">
+        <p>✔ Genuine products with official warranty</p>
+        <p>✔ Expert guidance &amp; after-sales support</p>
+      </div>
+
+      <div class="mobile-contact">
+        <p>📍 Agartala, Tripura</p>
+        <p>📞 +91 8787625423</p>
+        <p>📞 +91 9436125176</p>
+      </div>
+
+      <div class="mobile-social">
+        <a href="#" aria-label="Website">🌐</a>
+        <a href="#" aria-label="Facebook">📘</a>
+        <a href="#" aria-label="Instagram">📸</a>
+        <a href="#" aria-label="YouTube">▶️</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © <span id="year"></span> Computer Source • All Rights Reserved
+    </div>
+  </footer>
+
+  <script>
+    // year
+    document.getElementById("year").innerText = new Date().getFullYear();
+
+    // navbar shadow
+    const navbar = document.getElementById("navbar");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 10) navbar.classList.add("scrolled");
+      else navbar.classList.remove("scrolled");
+    });
+
+    // mobile menu
+    const menuToggle = document.getElementById("menuToggle");
+    const sideMenu = document.getElementById("sideMenu");
+    const menuOverlay = document.getElementById("menuOverlay");
+    const mobileClose = document.getElementById("mobileClose");
+
+    function openMenu(){
+      sideMenu.classList.add("active");
+      menuOverlay.classList.add("active");
+      menuToggle.classList.add("active");
+      menuToggle.setAttribute("aria-expanded", "true");
+      document.body.classList.add("menu-open");
+    }
+    function closeMenu(){
+      sideMenu.classList.remove("active");
+      menuOverlay.classList.remove("active");
+      menuToggle.classList.remove("active");
+      menuToggle.setAttribute("aria-expanded", "false");
+      document.body.classList.remove("menu-open");
+    }
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = sideMenu.classList.contains("active");
+      isOpen ? closeMenu() : openMenu();
+    });
+    menuOverlay.addEventListener("click", closeMenu);
+    mobileClose.addEventListener("click", closeMenu);
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && sideMenu.classList.contains("active")) closeMenu();
+    });
+
+    // reveal on scroll
+    const reveals = document.querySelectorAll(".reveal");
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting){
+          entry.target.classList.add("show");
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach(el => io.observe(el));
+
+    // fade in page
+    window.addEventListener("load", () => {
+      document.body.classList.add("show");
+      const loader = document.getElementById("pageLoader");
+      loader.classList.add("hide");
+      setTimeout(() => loader.style.display = "none", 600);
+    });
+
+    /* =========================
+      YOUR EXISTING LOGIC (UNCHANGED)
+      only minor fixes:
+      - switch break for headset & graphic
+      - safe load suggested products if a category file missing
+    ========================= */
+
+    let products = {}; // global store
+
+    async function loadAllProducts() {
+      const categoryFiles = {
+        laptop: "data/laptop.json",
+        projector: "data/projector.json",
+        mouse: "data/mouse.json",
+        motherboard: "data/motherboard.json",
+        monitor: "data/monitor.json",
+        keyboard: "data/keyboard.json",
+        printer: "data/printer.json",
+        headset: "data/headset.json",
+        speaker: "data/speaker.json",
+        graphic: "data/graphics.json",
+      };
+
+      for (let category in categoryFiles) {
+        try{
+          const res = await fetch(categoryFiles[category]);
+          if(!res.ok) continue;
+          products[category] = await res.json();
+        }catch(e){
+          // ignore missing files
+        }
+      }
+    }
+
+    async function loadProductDetail() {
+      const params = new URLSearchParams(window.location.search);
+      const category = params.get("category");
+      const id = params.get("id");
+
+      if (!category || !id) {
+        document.getElementById("detailContainer").innerHTML =
+          `<div class="card" style="padding:18px;">Missing category or id in URL.</div>`;
+        return;
+      }
+
+      let jsonFile = "";
+
+      switch (category.toLowerCase()) {
+        case "laptop": jsonFile = "data/laptop.json"; break;
+        case "monitor": jsonFile = "data/monitor.json"; break;
+        case "projector": jsonFile = "data/projector.json"; break;
+        case "mouse": jsonFile = "data/mouse.json"; break;
+        case "motherboard": jsonFile = "data/motherboard.json"; break;
+        case "keyboard": jsonFile = "data/keyboard.json"; break;
+        case "printer": jsonFile = "data/printer.json"; break;
+        case "headset": jsonFile = "data/headset.json"; break;  // ✅ FIX
+        case "speaker": jsonFile = "data/speaker.json"; break;
+        case "graphic": jsonFile = "data/graphics.json"; break; // ✅ FIX
+        default:
+          document.getElementById("detailContainer").innerHTML =
+            `<div class="card" style="padding:18px;">Unknown category: ${category}</div>`;
+          return;
+      }
+
+      // Load category data
+      const res = await fetch(jsonFile);
+      const categoryProducts = await res.json();
+
+      // Save globally for suggestions
+      products[category] = categoryProducts;
+
+      // Find product
+      const product = categoryProducts.find(
+        (p) => String(p.modelNumber) === String(id)
+      );
+
+      if (!product) {
+        document.getElementById("detailContainer").innerHTML =
+          `<div class="card" style="padding:18px;">Product not found.</div>`;
+        return;
+      }
+
+      window.productData = product;
+
+      /* ---------- SIMILAR PRODUCTS ---------- */
+      const similarProducts = categoryProducts
+        .filter((p) => p.modelNumber !== product.modelNumber)
+        .slice(0, 10);
+
+      const similarList = document.getElementById("similarList");
+      similarList.innerHTML = similarProducts.map((p) => `
+        <div class="similar-item" onclick="openProduct('${category}','${p.modelNumber}')">
+          <img src="${getFirstImage(p)}" alt="${(p.modelName||'Product').replaceAll('"','')}" />
+          <p>${(p.modelName || "").length > 28 ? p.modelName.substring(0, 28) + "..." : (p.modelName || "")}</p>
+        </div>
+      `).join("");
+
+      const slider = document.getElementById("similarProductsBox");
+      if (similarProducts.length){
+        slider.style.display = "block";
+        setTimeout(() => slider.classList.add("show"), 80);
+      }
+
+      /* MAIN PRODUCT INFO */
+      const photos = product.photos && product.photos.length ? product.photos : [product.photo].filter(Boolean);
+
+      document.getElementById("detailContainer").innerHTML = `
+        <div class="thumbnail-column"></div>
+
+        <div class="gallery-box">
+          <div class="gallery-frame">
+            <img id="mainImage" src="" alt="Product Image" />
+          </div>
+
+          <div class="color-title">
+            <span>Available Colors</span>
+            <span style="color: rgba(207,216,227,0.85); font-weight:800; font-size:.9rem;">(if applicable)</span>
+          </div>
+          <div class="color-tab" id="colorTab"></div>
+        </div>
+
+        <div class="details-box">
+          <div class="details-top">
+            <h2>${escapeHtml(product.modelName || "Product")}</h2>
+            <div class="meta"><b>${escapeHtml(product.brand || "")}</b> — ${escapeHtml(String(product.modelNumber || ""))}</div>
+            <div class="price">₹${escapeHtml(String(product.price || "N/A"))}</div>
+          </div>
+          <div class="specs"></div>
+        </div>
+
+        <div class="side-stack">
+          <div class="availability-card">
+            <h3>Price &amp; Availability</h3>
+            <p class="price-subtext">Final pricing depends on stock and current offers.</p>
+            <ul class="price-points">
+              <li>✔ Prices are flexible &amp; negotiable</li>
+              <li>✔ Student / bulk discounts available</li>
+              <li>✔ Genuine products with warranty</li>
+              <li>✔ Best local pricing (as per store)</li>
+            </ul>
+            <button class="primary-btn" onclick="contactOnWhatsApp()">Contact to Buy</button>
+          </div>
+
+          <div class="buy-card">
+            <h3>Payment Options</h3>
+            <p class="price-subtext">Choose convenient payment methods available at the store.</p>
+            <div class="grid2">
+              <div class="pay-chip">Card Payment</div>
+              <div class="pay-chip">UPI</div>
+              <div class="pay-chip">EMI Options</div>
+              <div class="pay-chip">Cash / COD</div>
+            </div>
+          </div>
+        </div>
+      `;
+
+      // Colors
+      const colorTab = document.getElementById("colorTab");
+      colorTab.innerHTML = "";
+      if (product.colors && product.colors.length) {
+        product.colors.forEach((color, index) => {
+          const btn = document.createElement("div");
+          btn.className = "color-chip" + (index === 0 ? " active" : "");
+          btn.textContent = color;
+
+          btn.onclick = () => {
+            document.querySelectorAll(".color-chip").forEach((c) => c.classList.remove("active"));
+            btn.classList.add("active");
+          };
+          colorTab.appendChild(btn);
+        });
+      } else {
+        colorTab.innerHTML = `<div class="color-chip" style="grid-column: 1 / -1; cursor:default; opacity:.85;">Not specified</div>`;
+      }
+
+      // Thumbnails
+      const thumbContainer = document.querySelector(".thumbnail-column");
+      if (photos.length){
+        thumbContainer.innerHTML = photos.map((img, index) => `
+          <img src="${img}" class="${index === 0 ? "active-thumb" : ""}" alt="Thumbnail ${index+1}"
+               onclick="changeImage('${img}', this)">
+        `).join("");
+        document.getElementById("mainImage").src = photos[0];
+      } else {
+        thumbContainer.innerHTML = `<div style="color: rgba(207,216,227,0.85); font-weight:800;">No images</div>`;
+      }
+
+      // Specs
+      const specsContainer = document.querySelector(".specs");
+      specsContainer.innerHTML = "";
+      if (product.specs) {
+        for (let key in product.specs) {
+          let value = product.specs[key];
+          if (!value) continue;
+          if (Array.isArray(value)) value = value.join(", ");
+
+          let displayKey = key.replace(/([A-Z])/g, " $1");
+          displayKey = displayKey.charAt(0).toUpperCase() + displayKey.slice(1);
+
+          specsContainer.innerHTML += `
+            <div class="spec-line">
+              <b>${escapeHtml(displayKey)}:</b>
+              <span>${escapeHtml(String(value))}</span>
+            </div>
+          `;
+        }
+      } else {
+        specsContainer.innerHTML = `<div class="spec-line"><span>No specifications available.</span></div>`;
+      }
+
+      renderDynamicTabs(product);
+      loadSuggestedProducts(category);
+    }
+
+    function escapeHtml(str){
+      return String(str ?? "").replace(/[&<>"']/g, (m) => ({
+        "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"
+      }[m]));
+    }
+
+    function changeImage(src, el) {
+      const main = document.getElementById("mainImage");
+      if (main) main.src = src;
+
+      document.querySelectorAll(".thumbnail-column img").forEach((img) => img.classList.remove("active-thumb"));
+      if (el) el.classList.add("active-thumb");
+    }
+
+    function openProduct(category, id) {
+      window.location.href = `product-detail.html?category=${category}&id=${id}`;
+    }
+
+    function loadSuggestedProducts(currentCategory) {
+      const slider = document.getElementById("suggestSlider");
+      let suggestions = [];
+
+      for (let cat in products) {
+        if (cat !== currentCategory && Array.isArray(products[cat])) {
+          products[cat].forEach((p) => suggestions.push({ ...p, category: cat }));
+        }
+      }
+
+      suggestions = suggestions.sort(() => Math.random() - 0.5).slice(0, 10);
+
+      slider.innerHTML = suggestions.map((p) => `
+        <div class="suggest-card" onclick="openProduct('${p.category}','${p.modelNumber}')">
+          <img src="${getFirstImage(p)}" alt="${(p.modelName||'Product').replaceAll('"','')}" />
+          <h3>${escapeHtml(p.modelName || "")}</h3>
+          <div class="price">₹${escapeHtml(String(p.price || "N/A"))}</div>
+          <button class="ghost-btn" type="button">View Product</button>
+        </div>
+      `).join("");
+    }
+
+    function slideLeft() {
+      document.getElementById("suggestSlider").scrollBy({ left: -320, behavior: "smooth" });
+    }
+    function slideRight() {
+      document.getElementById("suggestSlider").scrollBy({ left: 320, behavior: "smooth" });
+    }
+
+    function loadTopFeedbacks() {
+      const feedbacks = [
+        { name: "Amit Sharma", rating: 5, comment: "Excellent product quality and very smooth performance. Totally worth the price." },
+        { name: "Riya Das", rating: 4, comment: "Good build and fast delivery. Store staff was very helpful." },
+        { name: "Sourav Paul", rating: 5, comment: "Best deal I found locally. Works perfectly for my daily use." },
+        { name: "Neha Roy", rating: 4, comment: "Value for money. Packaging and service were great." },
+      ];
+
+      const slider = document.getElementById("feedbackSlider");
+      slider.innerHTML = feedbacks.map((f) => `
+        <div class="feedback-card">
+          <div class="name">${escapeHtml(f.name)}</div>
+          <div class="rating">${"★".repeat(f.rating)}${"☆".repeat(5 - f.rating)}</div>
+          <div class="comment">${escapeHtml(f.comment)}</div>
+        </div>
+      `).join("");
+    }
+
+    function slideFeedbackLeft() {
+      document.getElementById("feedbackSlider").scrollBy({ left: -360, behavior: "smooth" });
+    }
+    function slideFeedbackRight() {
+      document.getElementById("feedbackSlider").scrollBy({ left: 360, behavior: "smooth" });
+    }
+
+    function getFirstImage(product) {
+      return (product?.photos?.length ? product.photos[0] : product.photo) || "assets/logo5.png";
+    }
+
+    function renderDynamicTabs(product) {
+      const tabHeader = document.getElementById("dynamicTabs");
+      const tabContent = document.getElementById("tabContent");
+      const tabsWrap = document.getElementById("tabsWrap");
+      if (!tabHeader || !tabContent || !tabsWrap) return;
+
+      tabHeader.innerHTML = "";
+      tabContent.innerHTML = "";
+
+      const excludedKeys = ["brand","modelName","modelNumber","category","specs","colors","price","photos","photo"];
+
+      const tabKeys = Object.keys(product).filter((key) => !excludedKeys.includes(key));
+
+      if (!tabKeys.length) {
+        tabsWrap.style.display = "none";
+        return;
+      }
+
+      tabsWrap.style.display = "block";
+
+      tabKeys.forEach((key, index) => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = index === 0 ? "active" : "";
+        btn.textContent = key.replace(/_/g, " ").toUpperCase();
+
+        btn.onclick = () => {
+          document.querySelectorAll(".tab-header button").forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+
+          let value = product[key];
+          tabContent.innerHTML = Array.isArray(value)
+            ? `<ul>${value.map((v) => `<li>${escapeHtml(v)}</li>`).join("")}</ul>`
+            : escapeHtml(value || "Not Available");
+        };
+
+        tabHeader.appendChild(btn);
+
+        if (index === 0) {
+          let value = product[key];
+          tabContent.innerHTML = Array.isArray(value)
+            ? `<ul>${value.map((v) => `<li>${escapeHtml(v)}</li>`).join("")}</ul>`
+            : escapeHtml(value || "Not Available");
+        }
+      });
+    }
+
+    function contactOnWhatsApp() {
+      const p = window.productData;
+      if (!p) return;
+
+      const phoneNumber = "918416093281"; // no +, no spaces
+      const message = `
+Hello Computer Source 👋
+
+I would like to place an order.
+
+📦 Product: ${p.modelName}
+🏷️ Brand: ${p.brand}
+🔢 Model No: ${p.modelNumber}
+💰 Price: ₹${p.price || "Please confirm"}
+
+Please let me know availability and final price.
+      `.trim();
+
+      const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+      window.open(url, "_blank");
+    }
+
+    (async () => {
+      await loadAllProducts();
+      loadTopFeedbacks();
+      loadProductDetail();
+    })();
+  </script>
+</body>
+</html>

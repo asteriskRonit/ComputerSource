@@ -1,0 +1,1765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Computer Source is an authorized dealer of Asus, HP, Canon, Epson, D-Link, Samsung and Portronics in Tripura. We supply laptops, printers, networking devices and IT accessories in Agartala.">
+  <title>Computer Source - Product Page</title>
+
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="assets/logo5.png" />
+  <link rel="apple-touch-icon" href="assets/logo5.png" />
+
+  <!-- FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <style>
+    /* =========================
+      THEME (MATCH INDEX)
+    ========================= */
+    :root{
+      --bg: #101c2c;
+      --panel: rgba(10, 17, 40, 0.55);
+      --panel-strong: rgba(10, 17, 40, 0.9);
+      --card: #1a263a;
+      --card2:#1e2c47;
+
+      --text: #ffffff;
+      --muted: rgba(255,255,255,0.78);
+      --muted2:#cfd8e3;
+
+      --accent:#00d1ff;
+      --accent2:#0288d1;
+
+      --border: rgba(255,255,255,0.10);
+      --border2: rgba(0, 209, 255, 0.25);
+
+      --shadow: 0 12px 30px rgba(0,0,0,0.28);
+      --shadow2: 0 8px 20px rgba(0,0,0,0.22);
+
+      --radius: 16px;
+      --radius2: 12px;
+
+      --container: 1300px;
+    }
+
+    *{ box-sizing:border-box; margin:0; padding:0; }
+    html{ scroll-behavior:smooth; }
+    body{
+      font-family: "Poppins", sans-serif;
+      background:
+        radial-gradient(900px 500px at 20% 0%, rgba(0,209,255,0.08), transparent 60%),
+        radial-gradient(900px 500px at 80% 10%, rgba(2,136,209,0.08), transparent 60%),
+        var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+
+      /* fade up */
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity .55s ease, transform .55s ease;
+    }
+    body.show{ opacity:1; transform: translateY(0); }
+    a{ color: inherit; text-decoration: none; }
+    img{ max-width:100%; display:block; }
+
+    .container{
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    /* =========================
+      SPINNER
+    ========================= */
+    .spinner-wrapper{
+      position: fixed;
+      inset: 0;
+      background: #0a1128;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      z-index: 999999;
+    }
+    .spinner{
+      width: 60px;
+      height: 60px;
+      border: 6px solid var(--accent);
+      border-top-color: transparent;
+      border-radius: 999px;
+      animation: spin 1s linear infinite;
+      filter: drop-shadow(0 10px 18px rgba(0,209,255,0.18));
+    }
+    @keyframes spin{ to{ transform: rotate(360deg); } }
+
+    /* =========================
+      NAVBAR (STANDARD / MATCH INDEX)
+    ========================= */
+    .navbar{
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(10, 17, 40, 0.45);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      transition: background .25s ease, box-shadow .25s ease, border-color .25s ease;
+    }
+    .navbar.scrolled{
+      background: rgba(10, 17, 40, 0.78);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+      border-bottom-color: rgba(0, 209, 255, 0.18);
+    }
+    .nav-container{
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: .9rem 1.25rem;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 1rem;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap: 2px;
+      min-width: 210px;
+    }
+    .brand img{
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      border-radius: 12px;
+      padding: 7px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.10);
+    }
+    .brand h1{
+      font-size: clamp(1.25rem, 1.1vw + 1rem, 1.75rem);
+      font-weight: 900;
+      letter-spacing: 0.35px;
+      line-height: 1.05;
+      margin: 0;
+      color: #fff;
+      text-shadow: 0 10px 26px rgba(0,0,0,0.35);
+      white-space: nowrap;
+    }
+
+    .nav-right{
+      display:flex;
+      align-items:center;
+      gap: .7rem;
+    }
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap: .35rem;
+      padding: .3rem;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .nav-links a{
+      padding: .55rem .95rem;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: .95rem;
+      color: rgba(255,255,255,0.86);
+      transition: background .2s ease, color .2s ease, transform .18s ease;
+      white-space: nowrap;
+    }
+    .nav-links a:hover{
+      background: rgba(0,209,255,0.10);
+      color: #e9fbff;
+      transform: translateY(-1px);
+    }
+    .nav-links a.active{
+      background: linear-gradient(90deg, rgba(2,136,209,0.35), rgba(0,209,255,0.18));
+      border: 1px solid rgba(0,209,255,0.22);
+      color: #ffffff;
+    }
+
+    /* search icon */
+    .nav-search-icon{
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.04);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      cursor:pointer;
+      transition: transform .15s ease, background .2s ease, border-color .2s ease;
+    }
+    .nav-search-icon:hover{
+      background: rgba(255,255,255,0.07);
+      border-color: rgba(0,209,255,0.20);
+      transform: translateY(-1px);
+    }
+    .nav-search-icon svg{
+      width: 21px;
+      height: 21px;
+      stroke: rgba(255,255,255,0.88);
+      stroke-width: 2.2;
+      fill: none;
+      transition: .2s ease;
+    }
+    .nav-search-icon:hover svg{ stroke: var(--accent); }
+
+    /* hamburger */
+    .menu-toggle{
+      display:none;
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.04);
+      cursor:pointer;
+      align-items:center;
+      justify-content:center;
+      gap: 6px;
+      flex-direction:column;
+      transition: transform .15s ease, background .2s ease, border-color .2s ease;
+    }
+    .menu-toggle:hover{
+      background: rgba(255,255,255,0.07);
+      border-color: rgba(0,209,255,0.20);
+    }
+    .menu-toggle span{
+      width: 22px;
+      height: 2.5px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.95);
+      transition: transform .25s ease, opacity .2s ease;
+    }
+    .menu-toggle.active span:nth-child(1){ transform: translateY(7px) rotate(45deg); }
+    .menu-toggle.active span:nth-child(2){ opacity: 0; }
+    .menu-toggle.active span:nth-child(3){ transform: translateY(-7px) rotate(-45deg); }
+
+    @media (max-width: 900px){
+      .nav-links{ display:none; }
+      .menu-toggle{ display:flex; }
+      .brand{ min-width:auto; }
+      .brand img{ width: 40px; height: 40px; }
+      .brand h1{ font-size: 1.25rem; }
+    }
+
+    /* =========================
+      MOBILE OVERLAY + SIDE MENU
+    ========================= */
+    .menu-overlay{
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.55);
+      z-index: 998;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .25s ease;
+    }
+    .menu-overlay.active{
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .side-menu{
+      position: fixed;
+      top:0;
+      right:-320px;
+      width: 320px;
+      height: 100svh;
+      z-index: 999;
+      background: linear-gradient(180deg, #001b3a, #000c22);
+      border-left: 1px solid rgba(255,255,255,0.10);
+      box-shadow: -18px 0 40px rgba(0,0,0,0.35);
+      padding: 5rem 1.35rem 1.35rem;
+      display:flex;
+      flex-direction:column;
+      gap: 1rem;
+      transition: right .30s ease;
+      overflow-y:auto;
+    }
+    .side-menu.active{ right:0; }
+
+    .side-menu a{
+      color: #e6f0ff;
+      font-size: 1.05rem;
+      font-weight: 600;
+      padding: .85rem .85rem;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.03);
+      transition: background .2s ease, color .2s ease, border-color .2s ease, transform .2s ease;
+    }
+    .side-menu a:hover{
+      color: #ffffff;
+      border-color: rgba(0,209,255,0.35);
+      background: rgba(0,209,255,0.07);
+      transform: translateY(-1px);
+    }
+    .side-menu a.active{
+      border-color: rgba(0,209,255,0.35);
+      background: rgba(0,209,255,0.10);
+      color:#fff;
+    }
+
+    .mobile-sidebar{
+      margin-top: .5rem;
+      padding-top: .5rem;
+      border-top: 1px solid rgba(255,255,255,0.10);
+    }
+    .side-menu h3{
+      color: #eaf7ff;
+      font-size: 1.05rem;
+      font-weight: 900;
+      letter-spacing: .25px;
+      margin: .35rem 0 .75rem;
+    }
+
+    .mobile-close{
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.04);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      cursor:pointer;
+      color: rgba(255,255,255,0.95);
+      font-size: 18px;
+    }
+    .mobile-close:hover{
+      border-color: rgba(0,209,255,0.25);
+      background: rgba(255,255,255,0.07);
+    }
+
+    body.menu-open{ overflow:hidden; touch-action:none; }
+
+    /* =========================
+      CATEGORY STRIP (BOLD + BIG)
+    ========================= */
+    .category-strip{
+      background:
+        linear-gradient(180deg, rgba(0,0,0,0.10), rgba(0,0,0,0.20)),
+        radial-gradient(900px 260px at 20% 0%, rgba(0,209,255,0.12), transparent 60%),
+        radial-gradient(900px 260px at 80% 10%, rgba(2,136,209,0.10), transparent 60%),
+        #0a1128;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .category-slider{
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 10px 1.25rem;
+      display:flex;
+      align-items:center;
+      gap: 10px;
+      overflow-x:auto;
+      scrollbar-width:none;
+      -webkit-overflow-scrolling: touch;
+    }
+    .category-slider::-webkit-scrollbar{ display:none; }
+
+    .category-tile{
+      flex: 0 0 auto;
+      display:flex;
+      align-items:center;
+      gap: 12px;
+      padding: 12px 18px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.10);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.20);
+      cursor:pointer;
+      transition: transform .18s ease, border-color .2s ease, background .2s ease;
+      white-space: nowrap;
+    }
+    .category-tile img{
+      width: 30px;
+      height: 30px;
+      object-fit: contain;
+      filter: drop-shadow(0 8px 12px rgba(0,0,0,0.25));
+      opacity: .95;
+    }
+    .category-tile span{
+      font-weight: 900;
+      letter-spacing: .2px;
+      font-size: 1.02rem;
+      color: rgba(255,255,255,0.92);
+      text-transform: capitalize;
+    }
+    .category-tile:hover{
+      transform: translateY(-2px);
+      border-color: rgba(0,209,255,0.25);
+      background: rgba(0,209,255,0.06);
+    }
+    .category-tile.active{
+      border-color: rgba(0,209,255,0.38);
+      background: linear-gradient(90deg, rgba(2,136,209,0.30), rgba(0,209,255,0.14));
+    }
+    .category-tile.active span{ color:#ffffff; }
+
+    @media (max-width: 768px){
+      .category-slider{ padding: 10px .9rem; }
+      .category-tile{ padding: 10px 14px; border-radius: 14px; }
+      .category-tile img{ width: 24px; height: 24px; }
+      .category-tile span{ font-size: .92rem; }
+    }
+
+    /* =========================
+      LAYOUT
+    ========================= */
+    .main-layout{
+      display:grid;
+      grid-template-columns: 300px 1fr;
+      gap: 0;
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 1.25rem;
+    }
+    @media (max-width: 900px){
+      .main-layout{
+        grid-template-columns: 1fr;
+        padding: 1rem;
+      }
+    }
+
+    /* =========================
+      SIDEBAR (PREMIUM)
+    ========================= */
+    .sidebar{
+      position: sticky;
+      top: 88px;
+      height: calc(100vh - 88px);
+      overflow-y:auto;
+      padding: 1.1rem;
+      border-radius: 20px;
+      background: rgba(10, 17, 40, 0.55);
+      border: 1px solid rgba(255,255,255,0.10);
+      box-shadow: 0 18px 45px rgba(0,0,0,0.30);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .sidebar h3{
+      font-size: 1.05rem;
+      color: #eaf7ff;
+      font-weight: 900;
+      letter-spacing: .25px;
+      margin-bottom: 1rem;
+    }
+    @media (max-width: 900px){
+      .sidebar{ display:none; }
+    }
+
+    .category-block{
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 16px;
+      padding: 14px;
+      margin-bottom: 1rem;
+    }
+    .category-block h4{
+      font-size: .95rem;
+      font-weight: 900;
+      letter-spacing: .4px;
+      color: rgba(255,255,255,0.92);
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    .brand-list{
+      list-style:none;
+      padding: 0;
+      display:flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .brand-list li{
+      padding: 7px 12px;
+      font-size: .85rem;
+      background: rgba(0,209,255,0.10);
+      border: 1px solid rgba(0,209,255,0.25);
+      border-radius: 999px;
+      cursor:pointer;
+      transition: .2s ease;
+      color: rgba(255,255,255,0.92);
+      user-select:none;
+    }
+    .brand-list li:hover{
+      background: rgba(0,209,255,0.18);
+      border-color: rgba(0,209,255,0.35);
+      transform: translateY(-1px);
+    }
+    .brand-list li.active{
+      background: var(--accent);
+      border-color: rgba(0,209,255,0.65);
+      color: #08131f;
+      font-weight: 900;
+    }
+
+    input[type="range"]{
+      width:100%;
+      accent-color: var(--accent);
+      cursor:pointer;
+    }
+    .range-row{
+      margin-top: 8px;
+      font-size: .9rem;
+      color: rgba(207,216,227,0.92);
+    }
+
+    /* =========================
+      FILTERS
+    ========================= */
+    .filter-section{
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 16px;
+      padding: 14px;
+    }
+    .filter-block{ display:none; }
+    .filter-group{ margin-bottom: 12px; }
+    .filter-group:last-child{ margin-bottom:0; }
+    .filter-label{
+      display:block;
+      font-size: .85rem;
+      color: rgba(255,255,255,0.78);
+      margin-bottom: 8px;
+      font-weight: 700;
+      letter-spacing: .2px;
+    }
+    .filter-options{
+      display:flex;
+      gap: 8px;
+      flex-wrap:wrap;
+    }
+    .filter-btn{
+      padding: 7px 12px;
+      font-size: .82rem;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: rgba(255,255,255,0.88);
+      cursor:pointer;
+      transition: .2s ease;
+      user-select:none;
+    }
+    .filter-btn:hover{
+      background: rgba(0,209,255,0.12);
+      border-color: rgba(0,209,255,0.22);
+    }
+    .filter-btn.active{
+      background: var(--accent);
+      border-color: rgba(0,209,255,0.65);
+      color: #08131f;
+      font-weight: 900;
+      box-shadow: 0 0 12px rgba(0,209,255,0.35);
+    }
+
+    /* =========================
+      MAIN CONTENT / SEARCH
+    ========================= */
+    main{ min-width: 0; } /* grid overflow fix */
+
+    .search-wrapper{
+      position: relative;
+      margin-bottom: 1rem;
+      display:none;
+    }
+    .search-wrapper.active{ display:block; }
+
+    #productSearch{
+      width:100%;
+      padding: 14px 16px;
+      border-radius: 14px;
+      border: 1px solid rgba(0,209,255,0.35);
+      background: rgba(10, 17, 40, 0.55);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      color:#fff;
+      font-size: 1rem;
+      outline:none;
+      box-shadow: 0 18px 45px rgba(0,0,0,0.25);
+    }
+    #productSearch::placeholder{ color: rgba(207,216,227,0.72); }
+
+    .search-suggestions{
+      position:absolute;
+      top: calc(100% + 10px);
+      left: 0;
+      right: 0;
+      background: rgba(10, 17, 40, 0.92);
+      border: 1px solid rgba(0,209,255,0.25);
+      border-radius: 14px;
+      overflow:hidden;
+      max-height: 320px;
+      overflow-y:auto;
+      display:none;
+      z-index: 50;
+      box-shadow: 0 18px 45px rgba(0,0,0,0.35);
+    }
+    .search-suggestions div{
+      padding: 12px 14px;
+      cursor:pointer;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .search-suggestions div:hover{
+      background: rgba(0,209,255,0.12);
+    }
+    .search-suggestions small{ color: rgba(207,216,227,0.82); }
+
+    /* =========================
+      PRODUCT CONTENT
+    ========================= */
+    .product-content{
+      background: rgba(10, 17, 40, 0.45);
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 20px;
+      padding: 1.25rem;
+      box-shadow: 0 22px 60px rgba(0,0,0,0.32);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      min-height: 420px;
+    }
+    .product-content h2{
+      font-size: 1.35rem;
+      font-weight: 900;
+      letter-spacing: .2px;
+      color: #eaf7ff;
+      margin-bottom: 1rem;
+      text-transform: capitalize;
+    }
+
+    .product-grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 14px;
+    }
+
+    .product-card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 18px;
+      padding: 14px;
+      cursor:pointer;
+      display:flex;
+      flex-direction:column;
+      transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease, background .2s ease;
+      box-shadow: 0 14px 34px rgba(0,0,0,0.28);
+      overflow:hidden;
+    }
+    .product-card:hover{
+      transform: translateY(-5px);
+      border-color: rgba(0,209,255,0.25);
+      background: linear-gradient(180deg, rgba(0,209,255,0.10), rgba(255,255,255,0.03));
+      box-shadow: 0 18px 45px rgba(0,0,0,0.35);
+    }
+
+    .product-card img{
+      width:100%;
+      height: 190px;
+      object-fit: contain;
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 10px;
+    }
+    .product-card h4{
+      margin-top: 12px;
+      font-size: 1.05rem;
+      font-weight: 900;
+      color:#ffffff;
+      line-height: 1.2;
+    }
+    .product-card .model{
+      font-size: .82rem;
+      color: rgba(207,216,227,0.84);
+      margin: 6px 0 10px;
+    }
+
+    .product-specs{
+      font-size: .86rem;
+      color: rgba(207,216,227,0.92);
+      line-height: 1.45;
+      margin-bottom: 10px;
+    }
+    .product-specs p{ margin: 3px 0; }
+
+    .product-card .price{
+      margin-top:auto;
+      padding-top: 10px;
+      border-top: 1px dashed rgba(0,209,255,0.25);
+      font-size: 1.15rem;
+      font-weight: 900;
+      color: #bcff97;
+      width: fit-content;
+    }
+
+    /* =========================
+      MOBILE PRODUCT CARD (COMPACT)
+    ========================= */
+    @media (max-width: 768px){
+      .main-layout{ padding: 1rem .8rem; }
+      .product-content{ padding: 1rem; border-radius: 18px; }
+
+      .product-grid{ gap: 10px; }
+
+      .product-card{
+        display:grid;
+        grid-template-columns: 108px 1fr;
+        gap: 8px 10px;
+        padding: 10px;
+        border-radius: 16px;
+      }
+
+      .product-card img{
+        grid-row: 1 / span 4;
+        width: 108px;
+        height: 118px;
+        border-radius: 14px;
+        padding: 6px;
+      }
+
+      .product-card h4,
+      .product-card .model,
+      .product-specs,
+      .product-card .price{
+        grid-column: 2;
+        margin: 0;
+        padding: 0;
+      }
+
+      .product-card h4{ font-size: .95rem; }
+      .product-card .model{ font-size: .75rem; }
+
+      .product-specs{
+        font-size: .75rem;
+        display:-webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow:hidden;
+      }
+
+      .product-card .price{
+        border-top: none;
+        padding-top: 0;
+        font-size: 1rem;
+        justify-self: start;
+      }
+
+      .product-card:hover{ transform:none; }
+      .product-card:active{ transform: scale(0.98); }
+    }
+
+    /* =========================
+      FOOTER (PREMIUM)
+    ========================= */
+    .footer{
+      position: relative;
+      background:
+        radial-gradient(900px 520px at 20% 0%, rgba(0,209,255,0.14), transparent 60%),
+        radial-gradient(900px 520px at 80% 10%, rgba(2,136,209,0.12), transparent 60%),
+        linear-gradient(180deg, #070d1f 0%, #050b1a 55%, #040815 100%);
+      color: rgba(207,216,227,0.92);
+      border-top: 1px solid rgba(0,209,255,0.22);
+      overflow: hidden;
+      margin-top: 2.25rem;
+    }
+    .footer::before{
+      content:"";
+      position:absolute;
+      left:0; right:0; top:0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(0,209,255,0.55), transparent);
+      opacity: .7;
+    }
+    .footer-container{
+      max-width: 1200px;
+      margin: auto;
+      padding: 4rem 1.25rem 2.25rem;
+    }
+    .footer-brand{
+      display:flex;
+      align-items:center;
+      gap: 14px;
+    }
+    .footer-brand img{
+      height: 46px;
+      width: 46px;
+      object-fit: contain;
+      border-radius: 14px;
+      padding: 8px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.14);
+      box-shadow: 0 10px 26px rgba(0,0,0,0.35);
+    }
+    .footer-brand h2{
+      font-size: 1.9rem;
+      font-weight: 900;
+      color: #ffffff;
+      letter-spacing: .35px;
+      margin:0;
+      line-height: 1.1;
+    }
+    .footer-desc{
+      max-width: 820px;
+      margin: 1.05rem 0 2.2rem;
+      font-size: 1rem;
+      line-height: 1.7;
+      color: rgba(207,216,227,0.86);
+    }
+    .footer-grid{
+      display:grid;
+      grid-template-columns: 1.2fr 1fr 1.1fr .9fr;
+      gap: 1.25rem;
+    }
+    .footer-col{
+      position: relative;
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 20px;
+      padding: 1.35rem 1.2rem;
+      box-shadow: 0 18px 45px rgba(0,0,0,0.35);
+      overflow: hidden;
+    }
+    .footer-col h4{
+      position: relative;
+      color: #eaf7ff;
+      font-weight: 900;
+      letter-spacing: .25px;
+      margin-bottom: 0.95rem;
+      font-size: 1.05rem;
+    }
+    .footer-col ul{ list-style:none; padding:0; margin:0; }
+    .footer-col li, .footer-col p{
+      position: relative;
+      font-size: 0.95rem;
+      margin-bottom: 0.6rem;
+      color: rgba(207,216,227,0.92);
+      line-height: 1.55;
+    }
+    .footer-socials{
+      position: relative;
+      display:flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 0.25rem;
+      font-size: 1.2rem;
+    }
+    .footer-socials a{
+      width: 44px;
+      height: 44px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.14);
+      color: #eaf7ff;
+      box-shadow: 0 10px 26px rgba(0,0,0,0.30);
+      transition: transform .2s ease, background .2s ease, border-color .2s ease, box-shadow .2s ease;
+    }
+    .footer-socials a:hover{
+      transform: translateY(-3px);
+      background: rgba(0,209,255,0.10);
+      border-color: rgba(0,209,255,0.30);
+      box-shadow: 0 16px 34px rgba(0,0,0,0.35);
+    }
+    .footer-bottom{
+      text-align:center;
+      padding: 16px 10px;
+      font-size: 0.9rem;
+      color: rgba(207,216,227,0.84);
+      border-top: 1px solid rgba(255,255,255,0.10);
+      background: rgba(0,0,0,0.18);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    /* mobile footer */
+    .footer-mobile{
+      display:none;
+      padding: 3rem 1.25rem 2rem;
+      text-align:center;
+    }
+    .mbrand{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap: 12px;
+      margin-bottom: .75rem;
+    }
+    .mbrand img{
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      padding: 8px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.14);
+      object-fit: contain;
+    }
+    .mbrand h3{
+      color:#fff;
+      font-size: 1.35rem;
+      font-weight: 900;
+      margin:0;
+    }
+    .mobile-desc{
+      max-width: 520px;
+      margin: .65rem auto 1.25rem;
+      color: rgba(207,216,227,0.88);
+      line-height: 1.65;
+    }
+    .mobile-points,
+    .mobile-contact{
+      max-width: 560px;
+      margin: 0.75rem auto;
+      padding: 1rem 1rem;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+    .mobile-points p,
+    .mobile-contact p{
+      margin: .55rem 0;
+      color: rgba(207,216,227,0.92);
+      font-size: .95rem;
+    }
+    .mobile-social{
+      display:flex;
+      justify-content:center;
+      gap: 12px;
+      margin-top: 1.2rem;
+      font-size: 1.2rem;
+    }
+    .mobile-social a{
+      width: 44px;
+      height: 44px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.14);
+      color: #eaf7ff;
+    }
+    @media (max-width: 900px){
+      .footer-container{ display:none; }
+      .footer-mobile{ display:block; }
+    }
+  </style>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ElectronicsStore",
+      "name": "Computer Source",
+      "image": "https://yourdomain.com/assets/logo5.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "S.M Electronics Market,Akhura Road",
+        "addressLocality": "Agartala",
+        "addressRegion": "Tripura",
+        "addressCountry": "IN"
+      },
+      "telephone": "+91-8787625423",
+      "url": "https://yourdomain.com"
+    }
+    </script>
+</head>
+
+<body>
+  <!-- LOADING SPINNER -->
+  <div class="spinner-wrapper" id="spinner">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="brand">
+        <img src="assets/logo5.png" alt="Logo" />
+        <h1>Computer Source</h1>
+      </div>
+
+      <div class="nav-right">
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a class="active" href="product.html">Products</a>
+          <a href="service.html">Services</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <button class="nav-search-icon" type="button" aria-label="Search" onclick="toggleSearch()">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="11" cy="11" r="7"></circle>
+            <line x1="16.5" y1="16.5" x2="22" y2="22"></line>
+          </svg>
+        </button>
+
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE OVERLAY + SIDE MENU -->
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <aside class="side-menu" id="sideMenu" aria-label="Mobile navigation">
+    <div class="mobile-close" id="mobileClose">✕</div>
+
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a class="active" href="product.html">Products</a>
+    <a href="service.html">Services</a>
+    <a href="contact.html">Contact</a>
+
+    <div class="mobile-sidebar">
+      <h3>Brands</h3>
+      <div id="mobileBrandList"></div>
+
+      <div class="category-block">
+        <h4>Price Range</h4>
+        <input type="range" id="mobilePriceRange" min="0" max="200000" step="1000" value="200000" />
+        <div class="range-row">Up to ₹<span id="mobilePriceValue">200000</span></div>
+      </div>
+
+      <div class="filter-section" id="mobileFilterSection">
+        <div class="filter-block" id="mobileLaptopFilters">
+          <div class="filter-group">
+            <span class="filter-label">RAM</span>
+            <div class="filter-options"></div>
+          </div>
+          <div class="filter-group">
+            <span class="filter-label">Storage</span>
+            <div class="filter-options"></div>
+          </div>
+        </div>
+
+        <div class="filter-block" id="mobileSpeakerFilters">
+          <div class="filter-group">
+            <span class="filter-label">Power Output</span>
+            <div class="filter-options"></div>
+          </div>
+        </div>
+
+        <div class="filter-block" id="mobilePrinterFilters">
+          <div class="filter-group">
+            <span class="filter-label">Printer Type</span>
+            <div class="filter-options"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- CATEGORY STRIP -->
+  <section class="category-strip" aria-label="Categories">
+    <div class="category-slider" id="category-strip"></div>
+  </section>
+
+  <!-- MAIN LAYOUT -->
+  <div class="main-layout">
+    <!-- DESKTOP SIDEBAR -->
+    <aside class="sidebar" aria-label="Filters">
+      <h3>Brands</h3>
+      <div id="categoryBrandList"></div>
+
+      <div class="category-block">
+        <h4>Price Range</h4>
+        <input type="range" id="priceRange" min="0" max="200000" step="1000" value="200000" />
+        <div class="range-row">Up to ₹<span id="priceValue">200000</span></div>
+      </div>
+
+      <div class="filter-section" id="filterSection">
+        <div class="filter-block" id="laptopFilters">
+          <div class="filter-group">
+            <span class="filter-label">RAM</span>
+            <div class="filter-options"></div>
+          </div>
+          <div class="filter-group">
+            <span class="filter-label">Storage</span>
+            <div class="filter-options"></div>
+          </div>
+        </div>
+
+        <div class="filter-block" id="speakerFilters">
+          <div class="filter-group">
+            <span class="filter-label">Power Output</span>
+            <div class="filter-options"></div>
+          </div>
+        </div>
+
+        <div class="filter-block" id="printerFilters">
+          <div class="filter-group">
+            <span class="filter-label">Printer Type</span>
+            <div class="filter-options"></div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- PRODUCT AREA -->
+    <main>
+      <!-- SEARCH -->
+      <div class="search-wrapper" id="searchWrapper">
+        <input
+          type="text"
+          id="productSearch"
+          placeholder="Search by model, brand, category..."
+          oninput="handleSearch(this.value)"
+          autocomplete="off"
+        />
+        <div id="searchSuggestions" class="search-suggestions"></div>
+      </div>
+
+      <div class="product-content" id="product-details"></div>
+    </main>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container container">
+      <div class="footer-brand">
+        <img src="assets/logo5.png" alt="Computer Source Logo" />
+        <h2>Computer Source</h2>
+      </div>
+
+      <p class="footer-desc">
+        Trusted electronics retailer and distributor delivering genuine laptops,
+        desktops, accessories, and audio solutions for gaming, office, and students.
+      </p>
+
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>What We Offer</h4>
+          <ul>
+            <li>Laptops &amp; Desktops</li>
+            <li>Gaming Systems</li>
+            <li>Computer Accessories</li>
+            <li>Speakers &amp; Audio</li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Why Choose Us</h4>
+          <ul>
+            <li>✔ Genuine Products</li>
+            <li>✔ Competitive Pricing</li>
+            <li>✔ Expert Guidance</li>
+            <li>✔ Trusted Local Store</li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <p>📍 Agartala, Tripura</p>
+          <p>📞 +91 8787625423</p>
+          <p>📞 +91 9436125176</p>
+          <p>🕒 Mon – Sat • 10AM – 8PM</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <div class="footer-socials">
+            <a href="#" aria-label="Website">🌐</a>
+            <a href="#" aria-label="Facebook">📘</a>
+            <a href="#" aria-label="Instagram">📸</a>
+            <a href="#" aria-label="YouTube">▶️</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-mobile">
+      <div class="mbrand">
+        <img src="assets/logo5.png" alt="Computer Source Logo" />
+        <h3>Computer Source</h3>
+      </div>
+
+      <p class="mobile-desc">Trusted electronics retailer and distributor.</p>
+
+      <div class="mobile-points">
+        <p>✔ Genuine products with official warranty</p>
+        <p>✔ Expert guidance &amp; after-sales support</p>
+      </div>
+
+      <div class="mobile-contact">
+        <p>📍 Agartala, Tripura</p>
+        <p>📞 +91 8787625423</p>
+        <p>📞 +91 9436125176</p>
+      </div>
+
+      <div class="mobile-social">
+        <a href="#" aria-label="Website">🌐</a>
+        <a href="#" aria-label="Facebook">📘</a>
+        <a href="#" aria-label="Instagram">📸</a>
+        <a href="#" aria-label="YouTube">▶️</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © <span id="year"></span> Computer Source • All Rights Reserved
+    </div>
+  </footer>
+
+  <script>
+    // ---------------------------
+    // CONFIG
+    // ---------------------------
+    const HOST = window.location.origin;
+
+    // Keep keys unique + consistent
+    const categoryFiles = {
+      laptop: "data/laptop.json",
+      monitor: "data/monitor.json",
+      speaker: "data/speaker.json",
+      headset: "data/headset.json",
+      printer: "data/printer.json",
+      motherboard: "data/motherboard.json",
+      keyboard: "data/keyboard.json",
+      mouse: "data/mouse.json",
+      graphics: "data/graphics.json",
+      projector: "data/projector.json",
+    };
+
+    const categoryIcons = {
+      laptop: "assets/categories/laptop.png",
+      monitor: "assets/categories/monitor.png",
+      motherboard: "assets/categories/motherboard.png",
+      printer: "assets/categories/printer.png",
+      speaker: "assets/categories/speaker.png",
+      headset: "assets/categories/headphone.png",
+      keyboard: "assets/categories/keyboard.png",
+      mouse: "assets/categories/mouse.png",
+      graphics: "assets/categories/graphics.png",
+      projector: "assets/categories/projector.png",
+    };
+
+    let maxPrice = 200000;
+    let productData = {};
+    let currentCategory = "";
+    let currentBrand = "";
+
+    // active filters by category
+    let activeFilters = {
+      memory: null,
+      storage: null,
+      powerOutput: null,
+      printerType: null,
+    };
+
+    // ---------------------------
+    // UI helpers
+    // ---------------------------
+    function capitalize(str){
+      return str ? str.charAt(0).toUpperCase() + str.slice(1) : "";
+    }
+
+    function getFirstImage(product){
+      const FALLBACK = "/assets/no.png";
+      if (!product?.photos?.length) return `${HOST}${FALLBACK}`;
+      const path = product.photos[0];
+      return path.startsWith("http") ? path : `${HOST}${path}`;
+    }
+
+    // ---------------------------
+    // NAVBAR scroll
+    // ---------------------------
+    const navbar = document.getElementById("navbar");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 10) navbar.classList.add("scrolled");
+      else navbar.classList.remove("scrolled");
+    });
+
+    // ---------------------------
+    // Mobile menu (drawer)
+    // ---------------------------
+    const menuToggle = document.getElementById("menuToggle");
+    const sideMenu = document.getElementById("sideMenu");
+    const menuOverlay = document.getElementById("menuOverlay");
+    const mobileClose = document.getElementById("mobileClose");
+
+    function openMenu(){
+      sideMenu.classList.add("active");
+      menuOverlay.classList.add("active");
+      menuToggle.classList.add("active");
+      menuToggle.setAttribute("aria-expanded", "true");
+      document.body.classList.add("menu-open");
+    }
+    function closeMenu(){
+      sideMenu.classList.remove("active");
+      menuOverlay.classList.remove("active");
+      menuToggle.classList.remove("active");
+      menuToggle.setAttribute("aria-expanded", "false");
+      document.body.classList.remove("menu-open");
+    }
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = sideMenu.classList.contains("active");
+      isOpen ? closeMenu() : openMenu();
+    });
+    menuOverlay.addEventListener("click", closeMenu);
+    mobileClose.addEventListener("click", closeMenu);
+
+    // ESC close
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && sideMenu.classList.contains("active")) closeMenu();
+    });
+
+    // ---------------------------
+    // Search
+    // ---------------------------
+    function toggleSearch(){
+      const wrap = document.getElementById("searchWrapper");
+      wrap.classList.toggle("active");
+      if (wrap.classList.contains("active")){
+        document.getElementById("productSearch").focus();
+        wrap.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+
+    function handleSearch(query){
+      const suggestionBox = document.getElementById("searchSuggestions");
+      query = (query || "").toLowerCase().trim();
+
+      if (!query){
+        suggestionBox.style.display = "none";
+        return;
+      }
+
+      let results = [];
+
+      Object.keys(productData).forEach((category) => {
+        (productData[category] || []).forEach((product) => {
+          const searchableText = `
+            ${product.modelName || ""}
+            ${product.modelNumber || ""}
+            ${product.brand || ""}
+            ${category}
+          `.toLowerCase();
+
+          if (searchableText.includes(query)){
+            results.push({ ...product, category });
+          }
+        });
+      });
+
+      if (!results.length){
+        suggestionBox.innerHTML = `<div>No results found</div>`;
+        suggestionBox.style.display = "block";
+        return;
+      }
+
+      suggestionBox.innerHTML = results.slice(0, 10).map((p) => `
+        <div onclick="openFromSearch('${p.category}', '${p.modelNumber}')">
+          <b>${p.modelName || "Unnamed Product"}</b><br />
+          <small>${p.brand || "Brand"} • ${capitalize(p.category)} • ${p.modelNumber || ""}</small>
+        </div>
+      `).join("");
+
+      suggestionBox.style.display = "block";
+    }
+
+    function openFromSearch(category, modelNumber){
+      document.getElementById("searchSuggestions").style.display = "none";
+      document.getElementById("productSearch").value = "";
+      window.location.href = `product-detail.html?category=${encodeURIComponent(category)}&id=${encodeURIComponent(modelNumber)}`;
+    }
+
+    document.addEventListener("click", (e) => {
+      if (!e.target.closest("#searchWrapper")){
+        document.getElementById("searchSuggestions").style.display = "none";
+      }
+    });
+
+    // ---------------------------
+    // Data loading
+    // ---------------------------
+    async function fetchProducts(){
+      productData = {};
+
+      for (const category of Object.keys(categoryFiles)){
+        try{
+          const res = await fetch(categoryFiles[category]);
+          productData[category] = await res.json();
+        }catch(err){
+          console.warn(`Failed to load ${category}:`, err);
+          productData[category] = [];
+        }
+      }
+
+      generateTabs(Object.keys(productData));
+      loadCategoryFromURL();
+    }
+
+    function loadCategoryFromURL(){
+      const params = new URLSearchParams(window.location.search);
+      let category = params.get("category");
+
+      if (!category || !productData[category]){
+        category = Object.keys(productData)[0] || "laptop";
+      }
+
+      switchCategory(category);
+      history.replaceState(null, "", `product.html?category=${encodeURIComponent(category)}`);
+    }
+
+    // ---------------------------
+    // Category strip
+    // ---------------------------
+    function generateTabs(categories){
+      const strip = document.getElementById("category-strip");
+      strip.innerHTML = categories.map((cat) => `
+        <div class="category-tile" data-category="${cat}">
+          <img src="${categoryIcons[cat] || "assets/categories/default.png"}" alt="${cat}">
+          <span>${capitalize(cat)}</span>
+        </div>
+      `).join("");
+
+      document.querySelectorAll(".category-tile").forEach((tile) => {
+        tile.addEventListener("click", () => {
+          const category = tile.dataset.category;
+          switchCategory(category);
+          history.replaceState(null, "", `product.html?category=${encodeURIComponent(category)}`);
+        });
+      });
+    }
+
+    function activateTab(category){
+      document.querySelectorAll(".category-tile").forEach((tile) => {
+        tile.classList.toggle("active", tile.dataset.category === category);
+      });
+    }
+
+    // ---------------------------
+    // Sidebar brand list (desktop + mobile)
+    // ---------------------------
+    function updateSidebar(category){
+      const container = document.getElementById("categoryBrandList");
+      const brands = [...new Set((productData[category] || []).map((p) => p.brand).filter(Boolean))].sort();
+
+      container.innerHTML = `
+        <div class="category-block">
+          <h4>${capitalize(category)}</h4>
+          <ul class="brand-list">
+            <li class="${currentBrand === "" ? "active" : ""}" onclick="filterByBrand('')">All</li>
+            ${brands.map((b) => `
+              <li class="${currentBrand === b ? "active" : ""}" onclick="filterByBrand('${escapeQuotes(b)}')">${b}</li>
+            `).join("")}
+          </ul>
+        </div>
+      `;
+    }
+
+    function updateMobileSidebar(category){
+      const container = document.getElementById("mobileBrandList");
+      const brands = [...new Set((productData[category] || []).map((p) => p.brand).filter(Boolean))].sort();
+
+      container.innerHTML = `
+        <div class="category-block">
+          <h4>${capitalize(category)}</h4>
+          <ul class="brand-list">
+            <li class="${currentBrand === "" ? "active" : ""}" onclick="filterByBrand(''); closeMenu();">All</li>
+            ${brands.map((b) => `
+              <li class="${currentBrand === b ? "active" : ""}" onclick="filterByBrand('${escapeQuotes(b)}'); closeMenu();">${b}</li>
+            `).join("")}
+          </ul>
+        </div>
+      `;
+    }
+
+    function escapeQuotes(str){
+      return String(str).replace(/'/g, "\\'");
+    }
+
+    function filterByBrand(brand){
+      currentBrand = brand || "";
+      updateSidebar(currentCategory);
+      updateMobileSidebar(currentCategory);
+      renderProducts();
+    }
+
+    // ---------------------------
+    // Price range sync
+    // ---------------------------
+    function updatePriceFilter(value, fromMobile=false){
+      maxPrice = Number(value);
+
+      document.getElementById("priceValue").innerText = value;
+      document.getElementById("mobilePriceValue").innerText = value;
+
+      if (fromMobile){
+        document.getElementById("priceRange").value = value;
+      }else{
+        document.getElementById("mobilePriceRange").value = value;
+      }
+
+      renderProducts();
+    }
+
+    document.getElementById("priceRange").addEventListener("input", (e) => updatePriceFilter(e.target.value, false));
+    document.getElementById("mobilePriceRange").addEventListener("input", (e) => updatePriceFilter(e.target.value, true));
+
+    // ---------------------------
+    // Dynamic filters
+    // ---------------------------
+    function clearActiveFilters(){
+      Object.keys(activeFilters).forEach((k) => activeFilters[k] = null);
+    }
+
+    function showFilters(category){
+      const laptop = document.getElementById("laptopFilters");
+      const speaker = document.getElementById("speakerFilters");
+      const printer = document.getElementById("printerFilters");
+
+      const mlaptop = document.getElementById("mobileLaptopFilters");
+      const mspeaker = document.getElementById("mobileSpeakerFilters");
+      const mprinter = document.getElementById("mobilePrinterFilters");
+
+      [laptop, speaker, printer, mlaptop, mspeaker, mprinter].forEach(el => el.style.display = "none");
+
+      const c = (category || "").toLowerCase();
+
+      if (c === "laptop"){
+        laptop.style.display = "block";
+        mlaptop.style.display = "block";
+        generateLaptopFilters(productData[category] || []);
+      }
+      if (c === "speaker"){
+        speaker.style.display = "block";
+        mspeaker.style.display = "block";
+        generateSpeakerFilters(productData[category] || []);
+      }
+      if (c === "printer"){
+        printer.style.display = "block";
+        mprinter.style.display = "block";
+        generatePrinterFilters(productData[category] || []);
+      }
+    }
+
+    function bindFilterButtons(scopeEl){
+      scopeEl.querySelectorAll(".filter-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const key = btn.dataset.key;
+          const value = btn.dataset.value;
+
+          if (!key) return;
+
+          // toggle
+          const isActive = activeFilters[key] === value;
+          activeFilters[key] = isActive ? null : value;
+
+          // update button states (both desktop + mobile)
+          document.querySelectorAll(`.filter-btn[data-key="${key}"]`).forEach((b) => {
+            b.classList.toggle("active", activeFilters[key] === b.dataset.value);
+          });
+
+          renderProducts();
+        });
+      });
+    }
+
+    function generateLaptopFilters(products){
+      const ramSet = new Set();
+      const storageSet = new Set();
+
+      products.forEach((p) => {
+        if (p?.specs?.memory) ramSet.add(p.specs.memory);
+        if (p?.specs?.storage) storageSet.add(p.specs.storage);
+      });
+
+      const ramHTML = [...ramSet].sort().map((ram) => `
+        <button class="filter-btn" data-key="memory" data-value="${ram}">${ram}</button>
+      `).join("");
+
+      const storageHTML = [...storageSet].sort().map((s) => `
+        <button class="filter-btn" data-key="storage" data-value="${s}">${s}</button>
+      `).join("");
+
+      // desktop
+      document.querySelector("#laptopFilters .filter-group:nth-child(1) .filter-options").innerHTML = ramHTML;
+      document.querySelector("#laptopFilters .filter-group:nth-child(2) .filter-options").innerHTML = storageHTML;
+
+      // mobile
+      document.querySelector("#mobileLaptopFilters .filter-group:nth-child(1) .filter-options").innerHTML = ramHTML;
+      document.querySelector("#mobileLaptopFilters .filter-group:nth-child(2) .filter-options").innerHTML = storageHTML;
+
+      bindFilterButtons(document.getElementById("laptopFilters"));
+      bindFilterButtons(document.getElementById("mobileLaptopFilters"));
+    }
+
+    function generateSpeakerFilters(products){
+      const set = new Set();
+      products.forEach((p) => {
+        if (p?.specs?.powerOutput) set.add(p.specs.powerOutput);
+      });
+
+      const html = [...set].sort().map((v) => `
+        <button class="filter-btn" data-key="powerOutput" data-value="${v}">${v}</button>
+      `).join("");
+
+      document.querySelector("#speakerFilters .filter-options").innerHTML = html;
+      document.querySelector("#mobileSpeakerFilters .filter-options").innerHTML = html;
+
+      bindFilterButtons(document.getElementById("speakerFilters"));
+      bindFilterButtons(document.getElementById("mobileSpeakerFilters"));
+    }
+
+    function generatePrinterFilters(products){
+      const set = new Set();
+      products.forEach((p) => {
+        // NOTE: normalize possible keys in JSON
+        const t = p?.specs?.printerType || p?.specs?.printertype;
+        if (t) set.add(t);
+      });
+
+      const html = [...set].sort().map((v) => `
+        <button class="filter-btn" data-key="printerType" data-value="${v}">${v}</button>
+      `).join("");
+
+      document.querySelector("#printerFilters .filter-options").innerHTML = html;
+      document.querySelector("#mobilePrinterFilters .filter-options").innerHTML = html;
+
+      bindFilterButtons(document.getElementById("printerFilters"));
+      bindFilterButtons(document.getElementById("mobilePrinterFilters"));
+    }
+
+    // ---------------------------
+    // Category switching + render
+    // ---------------------------
+    function switchCategory(category){
+      currentCategory = category;
+      currentBrand = "";
+      clearActiveFilters();
+
+      activateTab(category);
+      updateSidebar(category);
+      updateMobileSidebar(category);
+      showFilters(category);
+      renderProducts();
+    }
+
+    function openProductDetail(category, id){
+      window.location.href = `product-detail.html?category=${encodeURIComponent(category)}&id=${encodeURIComponent(id)}`;
+    }
+
+    function renderProducts(){
+      let items = productData[currentCategory] || [];
+
+      // brand filter
+      if (currentBrand) items = items.filter((p) => p.brand === currentBrand);
+
+      // price filter
+      items = items.filter((p) => Number(p.price) <= maxPrice);
+
+      // apply active filters
+      Object.entries(activeFilters).forEach(([key, val]) => {
+        if (!val) return;
+
+        if (key === "printerType"){
+          items = items.filter((p) => {
+            const t = p?.specs?.printerType || p?.specs?.printertype;
+            return t === val;
+          });
+          return;
+        }
+
+        items = items.filter((p) => p?.specs?.[key] === val);
+      });
+
+      const container = document.getElementById("product-details");
+
+      container.innerHTML = `
+        <h2>${capitalize(currentCategory)}${currentBrand ? " • " + currentBrand : ""}</h2>
+        <div class="product-grid">
+          ${items.map((p) => {
+            const category = currentCategory;
+            let extraInfo = "";
+
+            if (category === "laptop"){
+              extraInfo = `
+                <p><b>RAM:</b> ${p?.specs?.memory || "N/A"}</p>
+                <p><b>Storage:</b> ${p?.specs?.storage || "N/A"}</p>
+                <p><b>Graphics:</b> ${p?.specs?.graphics || "N/A"}</p>
+              `;
+            } else if (category === "monitor"){
+              extraInfo = `
+                <p><b>Display:</b> ${p?.specs?.displaySize || "N/A"}</p>
+                <p><b>Resolution:</b> ${p?.specs?.resolution || "N/A"}</p>
+                <p><b>Refresh:</b> ${p?.specs?.refreshRate || "N/A"}</p>
+              `;
+            } else if (category === "speaker"){
+              extraInfo = `
+                <p><b>Output:</b> ${p?.specs?.powerOutput || "N/A"}</p>
+                <p><b>Battery:</b> ${p?.specs?.battery || "N/A"}</p>
+                <p><b>Connect:</b> ${p?.specs?.connectivity || "N/A"}</p>
+              `;
+            } else if (category === "printer"){
+              const type = p?.specs?.printerType || p?.specs?.printertype;
+              extraInfo = `
+                <p><b>Type:</b> ${type || "N/A"}</p>
+                <p><b>Functions:</b> ${p?.specs?.functions || "N/A"}</p>
+              `;
+            } else if (category === "headset"){
+              extraInfo = `
+                <p><b>Type:</b> ${p?.specs?.type || p?.headsetType || "N/A"}</p>
+                <p><b>Mic:</b> ${p?.specs?.microphone || "N/A"}</p>
+              `;
+            } else if (category === "mouse"){
+              extraInfo = `
+                <p><b>Connection:</b> ${p?.specs?.connection || "N/A"}</p>
+                <p><b>DPI:</b> ${p?.specs?.dpi || "N/A"}</p>
+              `;
+            } else if (category === "keyboard"){
+              extraInfo = `
+                <p><b>Connection:</b> ${p?.specs?.connection || "N/A"}</p>
+                <p><b>Layout:</b> ${p?.specs?.layout || "N/A"}</p>
+              `;
+            } else if (category === "projector"){
+              extraInfo = `
+                <p><b>Brightness:</b> ${p?.specs?.brightness || "N/A"}</p>
+                <p><b>Type:</b> ${p?.specs?.projectionType || "N/A"}</p>
+              `;
+            } else if (category === "motherboard"){
+              extraInfo = `
+                <p><b>Chipset:</b> ${p?.specs?.chipset || "N/A"}</p>
+                <p><b>Socket:</b> ${p?.specs?.socket || "N/A"}</p>
+              `;
+            }
+
+            return `
+              <div class="product-card" onclick="openProductDetail('${category}', '${String(p.modelNumber || "").replace(/'/g, "\\'")}')">
+                <img src="${getFirstImage(p)}" alt="${(p.modelName || "Product").replace(/"/g, "&quot;")}" />
+                <h4>${p.modelName || "Unnamed Product"}</h4>
+                <p class="model">Model: ${p.modelNumber || "N/A"}</p>
+                <div class="product-specs">${extraInfo}</div>
+                <div class="price">₹${p.price ?? "N/A"}</div>
+              </div>
+            `;
+          }).join("")}
+        </div>
+      `;
+    }
+
+    // ---------------------------
+    // INIT
+    // ---------------------------
+    window.addEventListener("load", async () => {
+      document.getElementById("year").innerText = new Date().getFullYear();
+
+      // spinner + fade
+      const spinner = document.getElementById("spinner");
+      spinner.style.display = "none";
+      document.body.classList.add("show");
+
+      await fetchProducts();
+    });
+  </script>
+</body>
+</html>

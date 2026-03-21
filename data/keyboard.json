@@ -1,0 +1,123 @@
+[
+    {
+      "brand": "Portronics",
+      "modelName": "Keyboard Key 5 Combo",
+      "modelNumber": "POR 1407",
+      "category": "keyboard",
+      "specs": {
+        "keyboard type": "Membrane",
+        "keyboard layout": "Full Size",
+        "keyboard backlight": "No",
+        "mouse sensor": "Optical",
+        "mouse dpi": "1000 DPI",
+        "connection": "USB Wired",
+        "combo usage": "Office and Home Use"
+      },
+      "price": "1299",
+      "warranty": "1 Year",
+      "others": ["Keyboard and mouse combo"],
+      "photos": ["/assets/keyboard/key5combo.jpg"]
+    },
+    {
+      "brand": "Portronics",
+      "modelName": "Keyboard Key 6 Combo",
+      "modelNumber": "POR 1887",
+      "category": "keyboard",
+      "specs": {
+        "keyboard type": "Membrane",
+        "keyboard layout": "Full Size",
+        "keyboard backlight": "No",
+        "mouse sensor": "Optical",
+        "mouse dpi": "1200 DPI",
+        "connection": "USB Wired",
+        "combo usage": "Office and Daily Work"
+      },
+      "price": "1499",
+      "warranty": "1 Year",
+      "others": ["Office use combo"],
+      "photos": ["/assets/keyboard/key6combo.jpg"]
+    },
+    {
+      "brand": "Portronics",
+      "modelName": "Keyboard Key 7 Combo",
+      "modelNumber": "POR 1933",
+      "category": "keyboard",
+      "specs": {
+        "keyboard type": "Membrane",
+        "keyboard layout": "Full Size",
+        "keyboard backlight": "No",
+        "mouse sensor": "Optical",
+        "mouse dpi": "1600 DPI",
+        "connection": "USB Wired",
+        "combo usage": "Long-hour usage"
+      },
+      "price": "1699",
+      "warranty": "1 Year",
+      "others": ["Durable keys"],
+      "photos": ["/assets/keyboard/key7combo.jpg"]
+    },            
+    {
+      "brand": "Portronics",
+      "modelName": "Kipad 2 Keyboard",
+      "modelNumber": "POR 1935",
+      "category": "keyboard",
+      "specs": {
+        "keyboard type": "Membrane",
+        "backlight": "No",
+        "connection": "USB Wired",
+        "layout": "Full Size"
+      },
+      "price": "799",
+      "warranty": "1 Year",
+      "others": ["Spill-resistant"],
+      "photos": ["/assets/keyboard/kipad2.jpg"]
+    },
+    {
+      "brand": "Portronics",
+      "modelName": "Kipad 4 Keyboard",
+      "modelNumber": "POR 2753",
+      "category": "keyboard",
+      "specs": {
+        "keyboard type": "Membrane",
+        "backlight": "No",
+        "connection": "USB Wired",
+        "layout": "Full Size"
+      },
+      "price": "999",
+      "warranty": "1 Year",
+      "others": ["Comfort typing"],
+      "photos": ["/assets/keyboard/kipad4.jpg"]
+    },
+    {
+      "brand": "Portronics",
+      "modelName": "Bubble Dock Keyboard",
+      "modelNumber": "POR 2192",
+      "category": "keyboard",
+      "specs": {
+        "keyboard type": "Wireless",
+        "backlight": "No",
+        "connection": "Bluetooth",
+        "layout": "Compact"
+      },
+      "price": "1799",
+      "warranty": "1 Year",
+      "others": ["Tablet compatible"],
+      "photos": ["/assets/keyboard/bubbledock.jpg"]
+    },
+    {
+      "brand": "Portronics",
+      "modelName": "Bubble Wireless Keyboard",
+      "modelNumber": "POR 3253",
+      "category": "keyboard",
+      "specs": {
+        "keyboard type": "Wireless",
+        "backlight": "No",
+        "connection": "Bluetooth",
+        "layout": "Compact"
+      },
+      "price": "1999",
+      "warranty": "1 Year",
+      "others": ["Multi-device support"],
+      "photos": ["/assets/keyboard/bubblewireless.jpg"]
+    }
+  ]

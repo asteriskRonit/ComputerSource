@@ -1,0 +1,252 @@
+[
+    {
+      "brand": "Portronics",
+      "modelName": "Harmonic Z9",
+      "modelNumber": "POR-2543",
+      "headsetType": "Neckband",
+      "specs": {
+        "type": "Wired Headset",
+        "connectivity": "3.5 mm Audio Jack",
+        "microphone": "Yes",
+        "controls": "Inline controls",
+        "frequencyResponse": "20Hz – 20kHz",
+        "impedance": "32 Ohm",
+        "usage": "Calls and Music"
+      },
+      "color": "Black",
+      "weight": "220 g",
+      "warranty": "6 Months",
+      "price": 1299,
+      "photos": ["/assets/por_2543_z9.jpg"]
+    },
+
+    {
+      "brand": "Portronics",
+      "modelName": "Harmony 224",
+      "modelNumber": "POR-1156",
+      "headsetType": "headphone",
+      "specs": {
+        "type": "Wired Headphone",
+        "connectivity": "3.5 mm Audio Jack",
+        "microphone": "No",
+        "controls": "None",
+        "frequencyResponse": "20Hz – 20kHz",
+        "impedance": "32 Ohm"
+      },
+      "color": "Black",
+      "warranty": "6 Months",
+      "price": 899,
+      "photos": ["/assets/harmony224.jpg"]
+    },
+
+    {
+      "brand": "Portronics",
+      "modelName": "Genesis",
+      "modelNumber": null,
+      "headsetType": "headphone",
+      "specs": {
+        "type": "Wired Headphone",
+        "connectivity": "3.5 mm Audio Jack",
+        "microphone": "No",
+        "controls": "None",
+        "frequencyResponse": "20Hz – 20kHz",
+        "impedance": "32 Ohm"
+      },
+      "color": "Black",
+      "warranty": "6 Months",
+      "price": 849,
+      "photos": ["/assets/genesis.jpg"]
+    },
+
+    {
+      "brand": "Portronics",
+      "modelName": "Harmony 300",
+      "modelNumber": "POR-300",
+      "headsetType": "headphone",
+      "specs": {
+        "type": "Wired Headphone",
+        "connectivity": "3.5 mm Audio Jack",
+        "microphone": "No",
+        "controls": "None",
+        "frequencyResponse": "20Hz – 20kHz",
+        "impedance": "32 Ohm"
+      },
+      "color": "Black",
+      "warranty": "6 Months",
+      "price": 1099,
+      "photos": ["/assets/harmony300.jpg"]
+    },
+
+    {
+      "brand": "Portronics",
+      "modelName": "Harmony 250",
+      "modelNumber": "POR-1552",
+      "headsetType": "headphone",
+      "specs": {
+        "type": "Wired Headphone",
+        "connectivity": "3.5 mm Audio Jack",
+        "microphone": "No",
+        "controls": "None",
+        "frequencyResponse": "20Hz – 20kHz",
+        "impedance": "32 Ohm"
+      },
+      "color": "Black",
+      "warranty": "6 Months",
+      "price": 999,
+      "photos": ["/assets/harmony250.jpg"]
+    },
+
+    {
+      "brand": "Portronics",
+      "modelName": "Harmony One",
+      "modelNumber": "POR-1119",
+      "headsetType": "earphone",
+      "specs": {
+        "type": "Wired In-Ear",
+        "connectivity": "3.5 mm Audio Jack",
+        "microphone": "Yes",
+        "controls": "Inline controls",
+        "frequencyResponse": "20Hz – 20kHz",
+        "impedance": "16 Ohm"
+      },
+      "color": "Black",
+      "warranty": "6 Months",
+      "price": 599,
+      "photos": ["/assets/harmonyone1119.jpg"]
+    },
+
+    {
+      "brand": "Portronics",
+      "modelName": "Harmony Twins 33",
+      "modelNumber": "POR-2333",
+      "headsetType": "tws",
+      "specs": {
+        "type": "True Wireless Earbuds",
+        "connectivity": "Bluetooth 5.1",
+        "microphone": "Yes",
+        "controls": "Touch controls",
+        "battery": "Up to 20 Hours",
+        "charging": "USB Type-C"
+      },
+      "color": "White",
+      "warranty": "1 Year",
+      "price": 2199,
+      "photos": ["/assets/harmonytwins33.jpg"]
+    },
+    {
+      "brand": "Portronics",
+      "modelName": "MUFFS BT",
+      "modelNumber": null,
+      "headsetType": "neckband",
+      "specs": {
+        "type": "Wireless Headphone",
+        "connectivity": "Bluetooth",
+        "microphone": "Yes",
+        "controls": "Button controls",
+        "battery": "Up to 10 Hours"
+      },
+      "color": "Black",
+      "warranty": "6 Months",
+      "price": 1199,
+      "photos": ["/assets/muffsbt.jpg"]
+    },
+    {
+      "brand": "Portronics",
+      "modelName": "Conch 10",
+      "modelNumber": "POR-10",
+      "headsetType": "earphone",
+      "specs": {
+        "type": "Wired In-Ear",
+        "connectivity": "3.5 mm Audio Jack",
+        "microphone": "Yes",
+        "controls": "Inline controls"
+      },
+      "color": "Black",
+      "warranty": "6 Months",
+      "price": 499,
+      "photos": ["/assets/conch10.jpg"]
+    },
+    {
+      "brand": "Portronics",
+      "modelName": "Conch 60",
+      "modelNumber": "POR-60",
+      "headsetType": "earphone",
+      "specs": {
+        "type": "Wired In-Ear",
+        "connectivity": "3.5 mm Audio Jack",
+        "microphone": "Yes",
+        "controls": "Inline controls"
+      },
+      "color": "Black",
+      "warranty": "6 Months",
+      "price": 699,
+      "photos": ["/assets/conch60.jpg"]
+    },
+    {
+      "brand": "Portronics",
+      "modelName": "Conch 80",
+      "modelNumber": "POR-80",
+      "headsetType": "earphone",
+      "specs": {
+        "type": "Wired In-Ear",
+        "connectivity": "3.5 mm Audio Jack",
+        "microphone": "Yes",
+        "controls": "Inline controls"
+      },
+      "color": "Black",
+      "warranty": "6 Months",
+      "price": 799,
+      "photos": ["/assets/conch80.jpg"]
+    },
+
+    {
+      "brand": "Portronics",
+      "modelName": "Delta",
+      "modelNumber": "POR-1155",
+      "headsetType": "earphone",
+      "specs": {
+        "type": "Wired In-Ear",
+        "connectivity": "3.5 mm Audio Jack",
+        "microphone": "Yes",
+        "controls": "Inline controls"
+      },
+      "color": "Black",
+      "warranty": "6 Months",
+      "price": 549,
+      "photos": ["/assets/delta1155.jpg"]
+    },
+
+    {
+      "brand": "Portronics",
+      "modelName": "Beta",
+      "modelNumber": "POR-678",
+      "headsetType": "earphone",
+      "specs": {
+        "type": "Wired In-Ear",
+        "connectivity": "3.5 mm Audio Jack",
+        "microphone": "Yes",
+        "controls": "Inline controls"
+      },
+      "color": "Black",
+      "warranty": "6 Months",
+      "price": 449,
+      "photos": ["/assets/beta678.jpg"]
+    },
+
+    {
+      "brand": "Portronics",
+      "modelName": "Harmonics 222",
+      "modelNumber": "POR-1318",
+      "headsetType": "earphone",
+      "specs": {
+        "type": "Wired In-Ear",
+        "connectivity": "3.5 mm Audio Jack",
+        "microphone": "Yes",
+        "controls": "Inline controls"
+      },
+      "color": "Black",
+      "warranty": "6 Months",
+      "price": 649,
+      "photos": ["/assets/harmonics222.jpg"]
+    }
+  ]

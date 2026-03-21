@@ -1,0 +1,96 @@
+[
+    {
+    "brand": "Samsung",
+    "modelName": "Samsung 24 Inch Full HD Monitor",
+    "modelNumber": "LS24D304GAWXXL",
+    "category": "monitor",
+  
+    "specs": {
+      "displaySize": "24 Inch",
+      "panelType": "IPS",
+      "resolution": "Full HD (1920 x 1080)",
+      "refreshRate": "75Hz",
+      "responseTime": "5ms",
+      "aspectRatio": "16:9",
+      "brightness": "250 nits",
+      "connectivity": [
+        "HDMI",
+        "VGA"
+      ],
+      "features": [
+        "Eye Saver Mode",
+        "Flicker Free",
+        "Slim Design"
+      ]
+    },
+  
+    "color": "Black",
+    "warranty": "3 Years",
+    "price": 9799,
+    "photos": ["/assets/monitors/samsung-ls24d304gawxxl.jpg"]
+  },
+  {
+    "brand": "Samsung",
+    "modelName": "Samsung Odyssey G3 24 Inch Gaming Monitor",
+    "modelNumber": "LS24DG302EWXXL",
+    "category": "monitor",
+  
+    "specs": {
+      "displaySize": "24 Inch",
+      "panelType": "VA",
+      "resolution": "Full HD (1920 x 1080)",
+      "refreshRate": "180Hz",
+      "responseTime": "1ms (MPRT)",
+      "aspectRatio": "16:9",
+      "brightness": "250 nits",
+      "contrastRatio": "3000:1",
+      "connectivity": [
+        "HDMI",
+        "DisplayPort"
+      ],
+      "features": [
+        "AMD FreeSync",
+        "Eye Saver Mode",
+        "Flicker Free",
+        "Gaming Optimized Display"
+      ]
+    },
+  
+    "color": "Black",
+    "warranty": "3 Years",
+    "price": 12999,
+    "photos": ["/assets/monitors/samsung-odyssey-g3-24.jpg"]
+  },
+  {
+    "brand": "Samsung",
+    "modelName": "Samsung 18.5 Inch LED Monitor",
+    "modelNumber": "LS19A330NHWXXL",
+    "category": "monitor",
+  
+    "specs": {
+      "displaySize": "18.5 Inch",
+      "panelType": "TN",
+      "resolution": "HD (1366 x 768)",
+      "refreshRate": "60Hz",
+      "responseTime": "5ms",
+      "aspectRatio": "16:9",
+      "brightness": "200 nits",
+      "connectivity": [
+        "HDMI",
+        "VGA"
+      ],
+      "features": [
+        "Eye Saver Mode",
+        "Flicker Free",
+        "Energy Efficient"
+      ]
+    },
+  
+    "color": "Black",
+    "warranty": "3 Years",
+    "price": 6499,
+    "photos": ["/assets/monitors/samsung-18-5-inch.jpg"]
+  }
+  
+  
+]

@@ -1,0 +1,109 @@
+[
+    {
+      "brand": "ASUS",
+      "modelName": "ASUS TUF Gaming B550-PLUS",
+      "modelNumber": "B550-PLUS",
+      "category": "motherboard",
+    
+      "specs": {
+        "chipset": "AMD B550",
+        "socket": "AM4",
+        "form factor": "ATX",
+        "memory support": "DDR4 up to 128GB",
+        "memory speed": "Up to 4400 MHz (OC)",
+        "pci slots": [
+          "PCIe 4.0 x16",
+          "PCIe 3.0 x1"
+        ],
+        "storage support": [
+          "2 x M.2",
+          "6 x SATA 6Gb/s"
+        ],
+        "networking": "Realtek 2.5Gb Ethernet",
+        "usb ports": "USB 3.2 Gen 2"
+      },
+    
+      "price": "14999",
+      "warranty": "3 Years",
+      "others": [
+        "Military-grade components",
+        "Enhanced power delivery",
+        "Gaming optimized"
+      ],
+      "photos": [
+        "/assets/motherboard/b550_1.jpg",
+        "/assets/motherboard/b550_2.jpg"
+      ]
+    },
+    {
+      "brand": "ASUS",
+      "modelName": "ASUS PRIME H310M",
+      "modelNumber": "H310",
+      "category": "motherboard",
+    
+      "specs": {
+        "chipset": "Intel H310",
+        "socket": "LGA 1151",
+        "form factor": "Micro-ATX",
+        "memory support": "DDR4 up to 32GB",
+        "memory speed": "Up to 2666 MHz",
+        "pci slots": [
+          "PCIe 3.0 x16",
+          "PCIe 3.0 x1"
+        ],
+        "storage support": [
+          "4 x SATA 6Gb/s"
+        ],
+        "networking": "Realtek Gigabit Ethernet",
+        "usb ports": "USB 3.1 Gen 1, USB 2.0"
+      },
+    
+      "price": "5499",
+      "warranty": "3 Years",
+      "others": [
+        "Supports 8th & 9th Gen Intel Core processors",
+        "Entry-level chipset",
+        "Stable performance for office & home use"
+      ],
+      "photos": [
+        "/assets/motherboard/h310_1.jpg",
+        "/assets/motherboard/h310_2.jpg"
+      ]
+    },
+    {
+      "brand": "ASUS",
+      "modelName": "ASUS PRIME H610M",
+      "modelNumber": "H610",
+      "category": "motherboard",
+    
+      "specs": {
+        "chipset": "Intel H610",
+        "socket": "LGA 1700",
+        "form factor": "Micro-ATX",
+        "memorysupport": "DDR4 up to 64GB",
+        "memory speed": "Up to 3200 MHz",
+        "pci slots": [
+          "PCIe 4.0 x16",
+          "PCIe 3.0 x1"
+        ],
+        "storage support": [
+          "1 x M.2",
+          "4 x SATA 6Gb/s"
+        ],
+        "networking": "Realtek Gigabit Ethernet",
+        "usb ports": "USB 3.2 Gen 1, USB 2.0"
+      },
+    
+      "price": "7499",
+      "warranty": "3 Years",
+      "others": [
+        "Supports 12th & 13th Gen Intel Core processors",
+        "PCIe 4.0 support",
+        "Efficient power delivery design"
+      ],
+      "photos": [
+        "/assets/motherboard/h610_1.jpg",
+        "/assets/motherboard/h610_2.jpg"
+      ]
+    }        
+  ]

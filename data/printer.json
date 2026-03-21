@@ -1,0 +1,105 @@
+[
+    {
+      "brand": "HP",
+      "modelName": "HP LaserJet Pro MFP M126nw Printer",
+      "modelNumber": "M126nw",
+      "category": "printer",
+    
+      "specs": {
+        "printertype": "Monochrome Laser Printer",
+        "functions": "Print, Scan, Copy",
+        "print speed": "Up to 20 ppm",
+        "print resolution": "600 x 600 dpi",
+        "scan type": "Flatbed",
+        "connectivity": [
+          "USB 2.0",
+          "Ethernet",
+          "Wi-Fi"
+        ],
+        "supported paper sizes": [
+          "A4",
+          "A5",
+          "A6",
+          "B5"
+        ],
+        "dutycycle": "Up to 8,000 pages per month",
+        "compatible os": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "warranty": "1 year onsite warranty"
+      },
+    
+      "colors": ["White"],
+      "price": "21999",
+      "toner type": "HP 88A Black Toner",
+      "print technology": "Laser",
+      "others": [
+        "Compact design",
+        "Energy efficient",
+        "Easy wireless setup",
+        "Ideal for home and small office"
+      ],
+      "photos": [
+        "/assets/laserjet.jpg",
+        "/assets/laserjet2.jpg",
+        "/assets/laserjet3.jpg"
+      ]
+    },
+    {
+      "brand": "Epson",
+      "modelName": "Epson EcoTank L3250 All-in-One Inkjet Printer",
+      "modelNumber": "L3250",
+      "category": "printer",
+    
+      "specs": {
+        "printertype": "Ink Tank Printer",
+        "functions": "Print, Scan, Copy",
+        "print technology": "Inkjet",
+        "print speed": "Up to 10 ipm (black), 5 ipm (color)",
+        "print resolution": "5760 x 1440 dpi",
+        "scan type": "Flatbed Color Image Scanner",
+        "connectivity": [
+          "USB",
+          "Wi-Fi",
+          "Wi-Fi Direct"
+        ],
+        "supported paper sizes": [
+          "A4",
+          "A5",
+          "A6",
+          "B5",
+          "Legal"
+        ],
+        "ink bottles": [
+          "Black 003",
+          "Cyan 003",
+          "Magenta 003",
+          "Yellow 003"
+        ],
+        "compatible os": [
+          "Windows",
+          "macOS"
+        ],
+        "warranty": "1 year onsite warranty"
+      },
+    
+      "colors": ["Black"],
+      "price": "15499",
+      "ink type": "Epson 003 Ink Bottle",
+      "paper input capacity": "100 sheets",
+      "others": [
+        "Ultra-low-cost printing",
+        "High yield ink bottles",
+        "Ideal for home and office use",
+        "Compact and lightweight design"
+      ],
+      "photos": [
+        "/assets/epson.jpg",
+        "/assets/epson2.jpg",
+        "/assets/epson3.jpg"
+      ]
+    }
+    
+]

@@ -1,0 +1,126 @@
+<!-- ===== NAVBAR COMPONENT ===== -->
+
+<style>
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+  
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+  
+    .nav-container {
+      max-width: 1400px;
+      margin: auto;
+      padding: 14px 24px;
+  
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+  
+    .brand img {
+      height: 36px;
+    }
+  
+    .brand h1 {
+      font-size: 1.2rem;
+      color: #fff;
+    }
+  
+    .nav-links {
+      display: flex;
+      gap: 24px;
+    }
+  
+    .nav-links a {
+      color: #cbd5e1;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+  
+    .nav-links a:hover {
+      color: #ffffff;
+    }
+  
+    .hamburger {
+      display: none;
+      font-size: 1.8rem;
+      color: #fff;
+      cursor: pointer;
+    }
+  
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: #0f172a;
+      padding: 2rem;
+      z-index: 2000;
+    }
+  
+    .mobile-menu a {
+      display: block;
+      margin: 14px 0;
+      font-size: 1.1rem;
+      color: #fff;
+      text-decoration: none;
+    }
+  
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+  
+      .hamburger {
+        display: block;
+      }
+    }
+  </style>
+  
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="brand">
+        <img src="assets/logo5.png" alt="Logo">
+        <h1>Computer Source</h1>
+      </div>
+  
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="product.html">Products</a>
+        <a href="service.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+  
+      <div class="hamburger" onclick="openMenu()">☰</div>
+    </div>
+  </header>
+  
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#" onclick="closeMenu()">✕ Close</a>
+    <a href="index.html">Home</a>
+    <a href="product.html">Products</a>
+    <a href="service.html">Services</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  
+  <script>
+    function openMenu() {
+      document.getElementById("mobileMenu").style.display = "block";
+    }
+  
+    function closeMenu() {
+      document.getElementById("mobileMenu").style.display = "none";
+    }
+  </script>
+  
+  <!-- ===== END NAVBAR COMPONENT ===== -->
+  
