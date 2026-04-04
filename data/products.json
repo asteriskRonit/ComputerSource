@@ -1,0 +1,233 @@
+{
+ 
+  "desktop": [
+    {
+      "brand": "Lenovo",
+      "modelName": "IdeaCentre 3",
+      "modelNumber": "90SM003DIN",
+      "processor": "AMD Ryzen 5 5600G",
+      "generation": "5000 Series",
+      "ram": "8GB DDR4",
+      "storage": "512GB SSD",
+      "gpu": "Integrated Radeon Graphics",
+      "warranty": "1 Year",
+      "others": "Compact tower, Wireless Keyboard & Mouse",
+      "photo": "https://via.placeholder.com/300x180?text=Lenovo+Desktop"
+    }
+  ],
+  "RAM": [
+    {
+      "brand": "Corsair",
+      "modelName": "Corsair Vengeance LPX DDR4 Desktop RAM",
+      "modelNumber": "CMK16GX4M2B3200C16",
+      "category": "ram",
+    
+      "specs": {
+        "ram type": "Desktop RAM",
+        "memory type": "DDR4",
+        "capacity": "16 GB",
+        "configuration": "2 x 8 GB",
+        "speed": "3200 MHz",
+        "latency": "CL16",
+        "voltage": "1.35 V",
+        "form factor": "DIMM",
+        "pin count": "288-pin",
+        "ecc support": "No",
+        "buffered": "Unbuffered",
+        "compatibility": [
+          "Intel Core i5/i7/i9",
+          "Intel 300 / 400 / 500 Series",
+          "AMD Ryzen 3000 / 5000"
+        ],
+        "warranty": "Limited Lifetime Warranty"
+      },
+    
+      "colors": ["Black"],
+      "price": "4899",
+      "others": [
+        "XMP 2.0 Support",
+        "Low-profile heat spreader",
+        "Optimized for high performance",
+        "Ideal for gaming and professional use"
+      ],
+      "photos": [
+        "/assets/ram/corsair_lpx_1.jpg",
+        "/assets/ram/corsair_lpx_2.jpg"
+      ]
+    }
+  ],
+  "Monitor": [
+    {
+      "brand": "LG",
+      "modelName": "LG UltraGear Gaming Monitor",
+      "modelNumber": "24GN650-B",
+      "category": "monitor",
+    
+      "specs": {
+        "screen size": "24 inch",
+        "panel type": "IPS",
+        "resolution": "1920 x 1080 (Full HD)",
+        "aspect ratio": "16:9",
+        "refresh rate": "144 Hz",
+        "brightness": "400 nits",
+        "contrast ratio": "1000:1",
+        "viewing angle": "178° / 178°",
+        "color gamut": "99% sRGB",
+        "hdr support": "HDR10",
+        "ports": [
+          "2 x HDMI",
+          "1 x DisplayPort",
+          "1 x Headphone Out"
+        ],
+        "mount type": "VESA 100 x 100",
+        "power consumption": "32 W"
+      },
+     
+      "colors": ["Black"],
+      "price": "14999",
+      "warranty": "3 Years",
+    
+      "others": [
+        "response time : 1 ms (MBR)",
+        "AMD FreeSync Premium",
+        "NVIDIA G-Sync Compatible",
+        "Gaming optimized display",
+        "Ultra-smooth motion",
+        "Borderless design",
+        "Eye comfort mode"
+      ],
+    
+      "photos": [
+        "/assets/monitor/lg_ultragear_1.jpg",
+        "/assets/monitor/lg_ultragear_2.jpg"
+      ]
+    }
+    
+  ],
+  "Power Supply":[
+    {
+      "brand": "Corsair",
+      "modelName": "Corsair CV550 Power Supply",
+      "modelNumber": "CV550",
+      "category": "power supply",
+    
+      "specs": {
+        "wattage": "550W",
+        "certification": "80 Plus Bronze",
+        "modular": "Non-Modular",
+        "input voltage": "100-240V",
+        "fan size": "120mm",
+        "protection": [
+          "OVP",
+          "UVP",
+          "OPP",
+          "SCP"
+        ]
+      },
+    
+      "price": "3999",
+      "warranty": "3 Years",
+      "others": [
+        "Stable power delivery",
+        "Quiet operation"
+      ],
+      "photos": [
+        "/assets/psu/cv550.jpg"
+      ]
+    }
+    
+  ],
+  "Storage":[
+    {
+      "brand": "Samsung",
+      "modelName": "Samsung 980 NVMe SSD",
+      "modelNumber": "MZ-V8V500",
+      "category": "storage",
+    
+      "specs": {
+        "capacity": "500GB",
+        "interface": "PCIe 3.0 x4",
+        "form factor": "M.2 2280",
+        "read speed": "3500 MB/s",
+        "write speed": "3000 MB/s"
+      },
+    
+      "price": "4999",
+      "warranty": "5 Years",
+      "others": [
+        "High-speed performance",
+        "Reliable storage"
+      ],
+      "photos": [
+        "/assets/storage/samsung_980.jpg"
+      ]
+    },
+    {
+      "brand": "Portronics",
+      "modelName": "SoundDrum",
+      "modelNumber": "POR-1579",
+      "category": "speaker",
+    
+      "specs": {
+        "powerOutput": "20W",
+        "connectivity": "Bluetooth 5.0",
+        "drivers": "Dual 10W dynamic drivers",
+        "playbackModes": [
+          "Bluetooth",
+          "AUX",
+          "USB",
+          "TF Card"
+        ],
+        "twsSupport": "Yes (True Wireless Stereo)",
+        "microphone": "Built-in mic for hands-free calling",
+        "lighting": "RGB LED lights",
+        "waterResistance": "IPX6 water resistant",
+        "battery": "4000mAh",
+        "charging": "USB Type-C",
+        "compatibility": [
+          "Android",
+          "iOS",
+          "Windows",
+          "Laptops"
+        ],
+        "portability": "Portable cylindrical design with carry strap"
+      },
+      "color": null,
+      "weight": null,
+      "warranty": "1 Year",
+      "price": 2000,
+    
+      "photos": [
+        "/assets/sound_drum.jpg"
+      ]
+    }   
+  ],
+  "Cabinet fan":[
+    {
+      "brand": "Cooler Master",
+      "modelName": "Cooler Master SickleFlow 120",
+      "modelNumber": "MFX-B2DN-18NPA-R1",
+      "category": "cabinet fan",
+    
+      "specs": {
+        "fan size": "120mm",
+        "speed": "1800 RPM",
+        "airflow": "62 CFM",
+        "noise level": "27 dBA",
+        "bearing type": "Rifle Bearing",
+        "lighting": "ARGB"
+      },
+    
+      "price": "1199",
+      "warranty": "2 Years",
+      "others": [
+        "High airflow",
+        "Low noise operation"
+      ],
+      "photos": [
+        "/assets/fan/sickleflow.jpg"
+      ]
+    }
+    
+  ]
+}

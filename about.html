@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Computer Source | IT Hardware Experts in Tripura</title>
+
+  <meta name="description" content="Learn about Computer Source, a reliable supplier of laptops, PCs and IT hardware in Tripura. We provide quality products, expert support and affordable solutions.">
+  <link rel="icon" type="image/png" href="assets/logo5.png" />
+  <link rel="apple-touch-icon" href="assets/logo5.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    /* =========================
+      THEME (MATCH INDEX)
+    ========================= */
+    :root{
+      --bg: #101c2c;
+      --panel: rgba(10, 17, 40, 0.55);
+      --panel-strong: rgba(10, 17, 40, 0.9);
+      --card: #1a263a;
+      --card2:#1e2c47;
+
+      --text: #ffffff;
+      --muted: rgba(255,255,255,0.78);
+      --muted2:#cfd8e3;
+
+      --accent:#00d1ff;
+      --accent2:#0288d1;
+
+      --border: rgba(255,255,255,0.10);
+      --border2: rgba(0, 209, 255, 0.25);
+
+      --shadow: 0 12px 30px rgba(0,0,0,0.28);
+      --shadow2: 0 8px 20px rgba(0,0,0,0.22);
+
+      --radius: 16px;
+      --radius2: 12px;
+
+      --container: 1200px;
+    }
+
+    *{ box-sizing:border-box; margin:0; padding:0; }
+    html { scroll-behavior:smooth; }
+    body{
+      font-family:'Poppins', sans-serif;
+      background:
+        radial-gradient(900px 500px at 20% 0%, rgba(0,209,255,0.08), transparent 60%),
+        radial-gradient(900px 500px at 80% 10%, rgba(2,136,209,0.08), transparent 60%),
+        var(--bg);
+      color:var(--text);
+      overflow-x:hidden;
+    }
+    a{ text-decoration:none; color:inherit; }
+    img{ max-width:100%; display:block; }
+    .container{
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    /* =========================
+      NAVBAR (MATCH INDEX)
+    ========================= */
+    .navbar{
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(10, 17, 40, 0.45);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      transition: background .25s ease, box-shadow .25s ease, border-color .25s ease;
+    }
+    .navbar.scrolled{
+      background: rgba(10, 17, 40, 0.78);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+      border-bottom-color: rgba(0, 209, 255, 0.18);
+    }
+    .nav-container{
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: .9rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap: 2px;
+      min-width: 200px;
+    }
+    .brand img{
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.10);
+      padding: 7px;
+    }
+    .brand h1{
+      font-size: clamp(1.25rem, 1.1vw + 1rem, 1.75rem);
+      font-weight: 900;
+      letter-spacing: 0.35px;
+      line-height: 1.05;
+      margin: 0;
+      color: #fff;
+      text-shadow: 0 10px 26px rgba(0,0,0,0.35);
+      white-space: nowrap;
+    }
+
+    .nav-links{
+      display: flex;
+      align-items: center;
+      gap: .35rem;
+      padding: .3rem;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .nav-links a{
+      padding: .55rem .95rem;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: .95rem;
+      color: rgba(255,255,255,0.86);
+      transition: background .2s ease, color .2s ease, transform .18s ease;
+    }
+    .nav-links a:hover{
+      background: rgba(0,209,255,0.10);
+      color: #e9fbff;
+      transform: translateY(-1px);
+    }
+    .nav-links a.active{
+      background: linear-gradient(90deg, rgba(2,136,209,0.35), rgba(0,209,255,0.18));
+      border: 1px solid rgba(0,209,255,0.22);
+      color: #ffffff;
+    }
+
+    .menu-toggle{
+      display: none;
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.04);
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      flex-direction: column;
+      transition: transform .15s ease, background .2s ease, border-color .2s ease;
+    }
+    .menu-toggle:hover{
+      background: rgba(255,255,255,0.07);
+      border-color: rgba(0,209,255,0.20);
+    }
+    .menu-toggle span{
+      width: 22px;
+      height: 2.5px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.95);
+      transition: transform .25s ease, opacity .2s ease;
+    }
+    .menu-toggle.active span:nth-child(1){ transform: translateY(7px) rotate(45deg); }
+    .menu-toggle.active span:nth-child(2){ opacity: 0; }
+    .menu-toggle.active span:nth-child(3){ transform: translateY(-7px) rotate(-45deg); }
+
+    @media (max-width: 850px){
+      .nav-links{ display:none; }
+      .menu-toggle{ display:flex; }
+      .brand{ min-width:auto; }
+      .brand img{ width: 40px; height: 40px; }
+      .brand h1{ font-size: 1.25rem; letter-spacing: .25px; }
+    }
+
+    /* Mobile overlay + side menu (MATCH INDEX) */
+    .menu-overlay{
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.55);
+      z-index: 998;
+      opacity: 0;
+      pointer-events:none;
+      transition: opacity .25s ease;
+    }
+    .menu-overlay.active{ opacity:1; pointer-events:auto; }
+
+    .side-menu{
+      position: fixed;
+      top:0;
+      right:-290px;
+      width: 290px;
+      height: 100svh;
+      z-index: 999;
+      background: linear-gradient(180deg, #001b3a, #000c22);
+      border-left: 1px solid rgba(255,255,255,0.10);
+      box-shadow: -18px 0 40px rgba(0,0,0,0.35);
+
+      padding: 5rem 1.35rem 1.35rem;
+      display:flex;
+      flex-direction:column;
+      gap: 1rem;
+      transition: right .30s ease;
+    }
+    .side-menu.active{ right:0; }
+    .side-menu a{
+      color: #e6f0ff;
+      font-size: 1.05rem;
+      font-weight: 600;
+      padding: .85rem .85rem;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.03);
+      transition: background .2s ease, color .2s ease, border-color .2s ease, transform .2s ease;
+    }
+    .side-menu a:hover{
+      color: #ffffff;
+      border-color: rgba(0,209,255,0.35);
+      background: rgba(0,209,255,0.07);
+      transform: translateY(-1px);
+    }
+    .side-menu a.active{
+      border-color: rgba(0,209,255,0.35);
+      background: rgba(0,209,255,0.10);
+      color:#fff;
+    }
+
+    /* =========================
+      PAGE HERO (ABOUT)
+    ========================= */
+    .page-hero{
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      background:
+        radial-gradient(900px 420px at 20% 10%, rgba(0,209,255,0.16), transparent 60%),
+        radial-gradient(900px 420px at 80% 20%, rgba(2,136,209,0.14), transparent 60%),
+        linear-gradient(180deg, rgba(10,17,40,0.70), rgba(10,17,40,0.25));
+    }
+    .page-hero-inner{
+      padding: clamp(2.5rem, 5vw, 4.25rem) 0;
+      display: grid;
+      gap: 1rem;
+      text-align: center;
+    }
+    .hero-badge{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap: .5rem;
+      padding: .6rem .95rem;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.14);
+      color: rgba(255,255,255,0.92);
+      font-size: .95rem;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      width: fit-content;
+      margin: 0 auto;
+    }
+    .page-hero h2{
+      font-size: clamp(1.8rem, 3.3vw, 3rem);
+      line-height: 1.08;
+      font-weight: 900;
+      letter-spacing: 0.2px;
+      color: #fff;
+      text-shadow: 0 14px 40px rgba(0,0,0,0.55);
+    }
+    .page-hero p{
+      max-width: 860px;
+      margin: 0 auto;
+      color: rgba(255,255,255,0.82);
+      line-height: 1.7;
+      font-size: 1.05rem;
+      padding: 0 1rem;
+    }
+
+    /* =========================
+      SECTION HEADER
+    ========================= */
+    .section-title{
+      text-align:center;
+      margin-bottom: 1.5rem;
+      font-size: clamp(1.5rem, 2vw + 1rem, 2.2rem);
+      color: var(--accent);
+      font-weight: 900;
+      letter-spacing: 0.2px;
+    }
+    .section-sub{
+      text-align:center;
+      max-width: 900px;
+      margin: -0.75rem auto 2.25rem;
+      color: rgba(255,255,255,0.78);
+      line-height: 1.7;
+    }
+
+    /* =========================
+      CONTENT WRAPPER
+    ========================= */
+    .about-wrap{
+      padding: 3.5rem 0 1.5rem;
+    }
+
+    /* =========================
+      ABOUT FEATURE CARDS
+    ========================= */
+    .about-features{
+      display:grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.1rem;
+      margin-top: 2rem;
+    }
+    .feature-card{
+      background: rgba(26, 38, 58, 0.86);
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 18px;
+      padding: 1.35rem 1.2rem;
+      box-shadow: var(--shadow2);
+      transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease;
+    }
+    .feature-card:hover{
+      transform: translateY(-6px);
+      border-color: rgba(0,209,255,0.22);
+      box-shadow: 0 16px 34px rgba(0,0,0,0.32);
+    }
+    .feature-top{
+      display:flex;
+      align-items:center;
+      gap: .75rem;
+      margin-bottom: .6rem;
+    }
+    .feature-ico{
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background: rgba(0,209,255,0.10);
+      border: 1px solid rgba(0,209,255,0.18);
+      font-size: 1.15rem;
+      flex: 0 0 auto;
+    }
+    .feature-card h4{
+      margin: 0;
+      font-size: 1.05rem;
+      font-weight: 900;
+      color: #eaf7ff;
+    }
+    .feature-card p{
+      margin: 0;
+      color: rgba(207,216,227,0.90);
+      line-height: 1.65;
+      font-size: .95rem;
+    }
+
+    @media (max-width: 900px){
+      .about-features{ grid-template-columns: 1fr; }
+    }
+
+    /* =========================
+      GALLERY (PREMIUM)
+    ========================= */
+    .gallery{
+      padding: 2.25rem 0 3.25rem;
+    }
+    .gallery-grid{
+      display:grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.1rem;
+    }
+    .gallery-card{
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.10);
+      box-shadow: 0 18px 45px rgba(0,0,0,0.35);
+      transform: translateZ(0);
+    }
+    .gallery-card img{
+      width:100%;
+      height: 280px;
+      object-fit: cover;
+      filter: saturate(1.05) contrast(1.05);
+      transform: scale(1.02);
+      transition: transform .45s ease;
+    }
+    .gallery-card::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.05), rgba(0,0,0,0.35));
+      pointer-events:none;
+    }
+    @media (hover:hover){
+      .gallery-card:hover img{ transform: scale(1.08); }
+    }
+    @media (max-width: 900px){
+      .gallery-grid{ grid-template-columns: 1fr; }
+      .gallery-card img{ height: 240px; }
+    }
+
+    /* =========================
+      FOUNDERS (PREMIUM)
+    ========================= */
+    .founders{
+      padding: 1rem 0 4rem;
+    }
+    .founders-shell{
+      background:
+        radial-gradient(800px 320px at 20% 0%, rgba(0,209,255,0.10), transparent 60%),
+        linear-gradient(180deg, rgba(26,38,58,0.88), rgba(10,17,40,0.72));
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 24px;
+      box-shadow: 0 22px 60px rgba(0,0,0,0.38);
+      padding: 2.25rem 1.25rem;
+      overflow: hidden;
+    }
+    .founders-grid{
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.25rem;
+      margin-top: 1.25rem;
+    }
+    .founder{
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 22px;
+      padding: 1.75rem 1.25rem;
+      text-align:center;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.28);
+      transition: transform .22s ease, border-color .22s ease, background .22s ease;
+    }
+    .founder:hover{
+      transform: translateY(-8px);
+      border-color: rgba(0,209,255,0.22);
+      background: rgba(0,209,255,0.07);
+    }
+    .founder img{
+      width: 150px;
+      height: 150px;
+      border-radius: 999px;
+      object-fit: cover;
+      border: 4px solid rgba(0,209,255,0.55);
+      box-shadow: 0 18px 45px rgba(0,0,0,0.35);
+      margin: 0 auto 1rem;
+    }
+    .founder strong{
+      display:block;
+      font-size: 1.2rem;
+      font-weight: 900;
+      letter-spacing: .2px;
+      margin-bottom: .35rem;
+      color: #ffffff;
+    }
+    .founder p{
+      color: rgba(207,216,227,0.90);
+      line-height: 1.65;
+      font-size: .95rem;
+      margin: 0;
+    }
+    @media (max-width: 900px){
+      .founders-grid{ grid-template-columns: 1fr; }
+    }
+
+    /* =========================
+      PREMIUM FOOTER (MATCH INDEX UPGRADE)
+    ========================= */
+    .footer{
+      position: relative;
+      background:
+        radial-gradient(900px 520px at 20% 0%, rgba(0,209,255,0.14), transparent 60%),
+        radial-gradient(900px 520px at 80% 10%, rgba(2,136,209,0.12), transparent 60%),
+        linear-gradient(180deg, #070d1f 0%, #050b1a 55%, #040815 100%);
+      color: rgba(207,216,227,0.92);
+      border-top: 1px solid rgba(0,209,255,0.22);
+      overflow: hidden;
+      margin-top: 2rem;
+    }
+    .footer::before{
+      content:"";
+      position:absolute;
+      left:0; right:0; top:0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(0,209,255,0.55), transparent);
+      opacity: .7;
+    }
+    .footer-container{
+      max-width: var(--container);
+      margin: auto;
+      padding: 4rem 1.25rem 2.25rem;
+    }
+    .footer-brand{
+      display:flex;
+      align-items:center;
+      gap: 14px;
+    }
+    .footer-brand img{
+      height: 46px;
+      width: 46px;
+      object-fit: contain;
+      border-radius: 14px;
+      padding: 8px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.14);
+      box-shadow: 0 10px 26px rgba(0,0,0,0.35);
+    }
+    .footer-brand h2{
+      font-size: clamp(1.45rem, 1vw + 1.1rem, 2rem);
+      font-weight: 900;
+      color: #ffffff;
+      letter-spacing: .35px;
+      margin:0;
+      line-height: 1.1;
+      text-shadow: 0 12px 30px rgba(0,0,0,0.45);
+    }
+    .footer-desc{
+      max-width: 820px;
+      margin: 1.05rem 0 2.2rem;
+      font-size: 1rem;
+      line-height: 1.7;
+      color: rgba(207,216,227,0.86);
+    }
+    .footer-grid{
+      display:grid;
+      grid-template-columns: 1.2fr 1fr 1.1fr .9fr;
+      gap: 1.25rem;
+    }
+    .footer-col{
+      position: relative;
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 20px;
+      padding: 1.35rem 1.2rem;
+      box-shadow: 0 18px 45px rgba(0,0,0,0.35);
+      overflow: hidden;
+    }
+    .footer-col::before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      background: radial-gradient(500px 220px at 20% 0%, rgba(0,209,255,0.18), transparent 60%);
+      opacity: .45;
+      pointer-events:none;
+    }
+    .footer-col h4{
+      position: relative;
+      color: #eaf7ff;
+      font-weight: 900;
+      letter-spacing: .25px;
+      margin-bottom: 0.95rem;
+      font-size: 1.05rem;
+    }
+    .footer-col ul{ list-style:none; padding:0; margin:0; }
+    .footer-col li, .footer-col p{
+      position: relative;
+      font-size: 0.95rem;
+      margin-bottom: 0.6rem;
+      color: rgba(207,216,227,0.92);
+      line-height: 1.55;
+    }
+    .footer-socials{
+      position: relative;
+      display:flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 0.25rem;
+      font-size: 1.2rem;
+    }
+    .footer-socials a{
+      width: 44px;
+      height: 44px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.14);
+      color: #eaf7ff;
+      box-shadow: 0 10px 26px rgba(0,0,0,0.30);
+      transition: transform .2s ease, background .2s ease, border-color .2s ease, box-shadow .2s ease;
+    }
+    .footer-socials a:hover{
+      transform: translateY(-3px);
+      background: rgba(0,209,255,0.10);
+      border-color: rgba(0,209,255,0.30);
+      box-shadow: 0 16px 34px rgba(0,0,0,0.35);
+    }
+    .footer-bottom{
+      text-align:center;
+      padding: 16px 10px;
+      font-size: 0.9rem;
+      color: rgba(207,216,227,0.84);
+      border-top: 1px solid rgba(255,255,255,0.10);
+      background: rgba(0,0,0,0.18);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    /* Mobile footer */
+    .footer-mobile{
+      display:none;
+      padding: 3rem 1.25rem 2rem;
+      text-align:center;
+    }
+    .mobile-brand{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap: 12px;
+      margin-bottom: .75rem;
+    }
+    .mobile-brand img{
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      padding: 8px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.14);
+      object-fit: contain;
+    }
+    .mobile-brand h3{
+      color:#fff;
+      font-size: 1.35rem;
+      font-weight: 900;
+      margin:0;
+    }
+    .mobile-desc{
+      max-width: 520px;
+      margin: .65rem auto 1.25rem;
+      color: rgba(207,216,227,0.88);
+      line-height: 1.65;
+    }
+    .mobile-points,
+    .mobile-contact{
+      max-width: 560px;
+      margin: 0.75rem auto;
+      padding: 1rem 1rem;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+    .mobile-points p,
+    .mobile-contact p{
+      margin: .55rem 0;
+      color: rgba(207,216,227,0.92);
+      font-size: .95rem;
+    }
+    .mobile-social{
+      display:flex;
+      justify-content:center;
+      gap: 12px;
+      margin-top: 1.2rem;
+      font-size: 1.2rem;
+    }
+    .mobile-social a{
+      width: 44px;
+      height: 44px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.14);
+      color: #eaf7ff;
+    }
+    @media (max-width: 900px){
+      .footer-container{ display:none; }
+      .footer-mobile{ display:block; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="brand">
+        <img src="assets/logo5.png" alt="Logo">
+        <h1>Computer Source</h1>
+      </div>
+
+      <!-- Desktop nav -->
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a class="active" href="about.html">About</a>
+        <a href="product.html">Products</a>
+        <a href="service.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <!-- Mobile toggle -->
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile overlay + side menu -->
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <aside class="side-menu" id="sideMenu" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a class="active" href="about.html">About</a>
+    <a href="product.html">Products</a>
+    <a href="service.html">Services</a>
+    <a href="contact.html">Contact</a>
+  </aside>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container page-hero-inner">
+      <div class="hero-badge">Trusted Store • Genuine Products • Best Support</div>
+      <h2>About Computer Source</h2>
+      <p>
+        Computer Source is a trusted IT hardware supplier based in Agartala, Tripura,
+        specializing in laptops, desktops, printers, networking devices, audio
+        equipment, and computer accessories. We serve students, offices,
+        institutions, and businesses across Tripura with genuine products,
+        competitive pricing, and expert support.
+        </p>
+        
+      <div class="about-features">
+        <div class="feature-card">
+          <div class="feature-top">
+            <div class="feature-ico">✔</div>
+            <h4>Genuine Products</h4>
+          </div>
+          <p>Official warranty and authentic brands you can rely on.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-top">
+            <div class="feature-ico">⚡</div>
+            <h4>Quick Service</h4>
+          </div>
+          <p>Fast support, installations, and troubleshooting by experts.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-top">
+            <div class="feature-ico">🏬</div>
+            <h4>Local Expertise</h4>
+          </div>
+          <p>Right recommendations for students, office, and gaming needs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery">
+    <div class="container">
+      <h3 class="section-title">Our Store</h3>
+      <p class="section-sub">A quick look at our store and service experience.</p>
+
+      <div class="gallery-grid">
+        <div class="gallery-card"><img src="assets/cs4.jpg" alt="Computer Source store photo 1"></div>
+        <div class="gallery-card"><img src="assets/cs5.jpg" alt="Computer Source store photo 2"></div>
+        <div class="gallery-card"><img src="assets/cs2.jpg" alt="Computer Source store photo 3"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOUNDERS -->
+  <section class="founders">
+    <div class="container">
+      <div class="founders-shell">
+        <h3 class="section-title" style="margin-bottom:.5rem;">Meet the Founders</h3>
+        <p class="section-sub" style="margin-bottom:1.25rem;">
+          The team behind Computer Source — focused on quality products and excellent support.
+        </p>
+
+        <div class="founders-grid">
+          <div class="founder">
+            <img src="assets/ronit.jpg" alt="Ronit Paul">
+            <strong>Ronit Paul</strong>
+            <p>Performance computing expert &amp; tech enthusiast.</p>
+          </div>
+
+          <div class="founder">
+            <img src="assets/owner2.jpg" alt="Rahul Sharma">
+            <strong>Rahul Sharma</strong>
+            <p>Customer experience &amp; operations specialist.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container" style="padding:2rem 0;">
+    <h3 class="section-title">Serving Customers Across India</h3>
+    <p class="section-sub">
+    Computer Source proudly serves customers in Agartala and across Tripura,
+    supplying laptops, desktops, printers, networking devices,
+    audio systems and computer accessories for homes,
+    offices, institutions and businesses.
+    </p>
+    </section>
+    
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container container">
+      <div class="footer-brand">
+        <img src="assets/logo5.png" alt="Computer Source Logo">
+        <h2>Computer Source</h2>
+      </div>
+
+      <p class="footer-desc">
+        Trusted electronics retailer and distributor delivering genuine laptops,
+        desktops, accessories, and audio solutions for gaming, office, and students.
+      </p>
+
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>What We Offer</h4>
+          <ul>
+            <li>Laptops &amp; Desktops</li>
+            <li>Gaming Systems</li>
+            <li>Computer Accessories</li>
+            <li>Speakers &amp; Audio</li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Why Choose Us</h4>
+          <ul>
+            <li>Genuine Products</li>
+            <li>Competitive Pricing</li>
+            <li>Expert Guidance</li>
+            <li>Trusted Local Store</li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <p>📍 Agartala, Tripura</p>
+          <p>📞 +91 8787625423</p>
+          <p>📞 +91 9436125176</p>
+          <p>🕒 Mon – Sat • 10AM – 8PM</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <div class="footer-socials">
+            <a href="#" aria-label="Website">🌐</a>
+            <a href="#" aria-label="Facebook">📘</a>
+            <a href="#" aria-label="Instagram">📸</a>
+            <a href="#" aria-label="YouTube">▶️</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MOBILE FOOTER -->
+    <div class="footer-mobile">
+      <div class="mobile-brand">
+        <img src="assets/logo5.png" alt="Computer Source Logo">
+        <h3>Computer Source</h3>
+      </div>
+
+      <p class="mobile-desc">Trusted electronics retailer and distributor.</p>
+
+      <div class="mobile-points">
+        <p>✔ Genuine products with official warranty</p>
+        <p>✔ Expert guidance &amp; after-sales support</p>
+      </div>
+
+      <div class="mobile-contact">
+        <p>📍 Agartala, Tripura</p>
+        <p>📞 +91 8787625423</p>
+        <p>📞 +91 9436125176</p>
+      </div>
+
+      <div class="mobile-social">
+        <a href="#" aria-label="Website">🌐</a>
+        <a href="#" aria-label="Facebook">📘</a>
+        <a href="#" aria-label="Instagram">📸</a>
+        <a href="#" aria-label="YouTube">▶️</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © <span id="year"></span> Computer Source • All Rights Reserved
+    </div>
+  </footer>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "ComputerStore",
+ "name": "Computer Source",
+ "image": "https://yourdomain.com/assets/logo5.png",
+ "address": {
+   "@type": "PostalAddress",
+   "addressLocality": "Agartala",
+   "addressRegion": "Tripura",
+   "addressCountry": "IN"
+ },
+ "telephone": "+918787625423",
+ "url": "https://yourdomain.com"
+}
+</script>
+
+  <script>
+    // Navbar shadow on scroll
+    const navbar = document.getElementById("navbar");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 10) navbar.classList.add("scrolled");
+      else navbar.classList.remove("scrolled");
+    });
+
+    // Mobile menu (side drawer)
+    const menuToggle = document.getElementById("menuToggle");
+    const sideMenu = document.getElementById("sideMenu");
+    const menuOverlay = document.getElementById("menuOverlay");
+
+    function openMenu() {
+      sideMenu.classList.add("active");
+      menuOverlay.classList.add("active");
+      menuToggle.classList.add("active");
+      menuToggle.setAttribute("aria-expanded", "true");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeMenu() {
+      sideMenu.classList.remove("active");
+      menuOverlay.classList.remove("active");
+      menuToggle.classList.remove("active");
+      menuToggle.setAttribute("aria-expanded", "false");
+      document.body.style.overflow = "";
+    }
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = sideMenu.classList.contains("active");
+      if (isOpen) closeMenu();
+      else openMenu();
+    });
+
+    menuOverlay.addEventListener("click", closeMenu);
+
+    document.querySelectorAll(".side-menu a").forEach(link => {
+      link.addEventListener("click", closeMenu);
+    });
+
+    // ESC to close menu
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && sideMenu.classList.contains("active")) closeMenu();
+    });
+
+    // Year
+    document.getElementById("year").innerText = new Date().getFullYear();
+  </script>
+</body>
+</html>

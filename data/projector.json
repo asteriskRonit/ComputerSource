@@ -1,0 +1,122 @@
+[
+    {
+        "brand": "Portronics",
+        "modelName": "Beem 410",
+        "modelNumber": "BEEM-410",
+        "category": "projector",
+        "color": "Black",
+        "warranty": "1 Year",
+        "price": 6999,
+        "photos": [
+            "/assets/beem410.jpg"
+        ],
+        "specs": {
+            "projectionType": "LED Projector",
+            "resolution": "HD Ready",
+            "brightness": "4000 Lumens",
+            "connectivity": [
+                "HDMI",
+                "USB",
+                "AV",
+                "Audio Out"
+            ],
+            "speaker": "Built-in speaker",
+            "compatibility": [
+                "Laptop",
+                "PC",
+                "Set-top Box",
+                "Gaming Console"
+            ]
+        }
+    },
+    {
+        "brand": "Portronics",
+        "modelName": "Beem 420",
+        "modelNumber": "BEEM-420",
+        "category": "projector",
+        "color": "Black",
+        "warranty": "1 Year",
+        "price": 8499,
+        "photos": [
+            "/assets/beem420.jpg"
+        ],
+        "specs": {
+            "projectionType": "LED Projector",
+            "resolution": "Full HD Supported",
+            "brightness": "4200 Lumens",
+            "connectivity": [
+                "HDMI",
+                "USB",
+                "AV",
+                "Audio Out"
+            ],
+            "speaker": "Built-in speaker",
+            "compatibility": [
+                "Laptop",
+                "PC",
+                "Set-top Box",
+                "Gaming Console"
+            ]
+        }
+    },
+    {
+        "brand": "Portronics",
+        "modelName": "Beem 490",
+        "modelNumber": "BEEM-490",
+        "category": "projector",
+        "color": "Black",
+        "warranty": "1 Year",
+        "price": 9999,
+        "photos": [
+            "/assets/beem490.jpg"
+        ],
+        "specs": {
+            "projectionType": "LED Projector",
+            "resolution": "Full HD Supported",
+            "brightness": "4900 Lumens",
+            "connectivity": [
+                "HDMI",
+                "USB",
+                "AV",
+                "Audio Out"
+            ],
+            "speaker": "Built-in stereo speakers",
+            "compatibility": [
+                "Laptop",
+                "PC",
+                "Set-top Box",
+                "Gaming Console"
+            ]
+        }
+    },
+    {
+        "brand": "Portronics",
+        "modelName": "Beem 690",
+        "modelNumber": "BEEM-990",
+        "category": "projector",
+        "color": "Black",
+        "warranty": "1 Year",
+        "price": 9999,
+        "photos": [
+            "/assets/beem490.jpg"
+        ],
+        "specs": {
+            "projectionType": "LED Projector",
+            "resolution": "Full HD Supported",
+            "brightness": "4900 Lumens",
+            "connectivity": [
+                "HDMI",
+                "USB",
+                "AV",
+                "Audio Out"
+            ],
+            "speaker": "Built-in stereo speakers",
+            "compatibility": [
+                "Laptop",
+                "PC",
+                "Set-top Box",
+                "Gaming Console"
+            ]
+        }
+    }
+]
