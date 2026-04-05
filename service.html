@@ -892,8 +892,7 @@
           <h3>Book Your Service</h3>
           <p>Fill in the details below and we will contact you shortly. You can upload a photo of the issue if required.</p>
         </div>
-
-        <form>
+       <form id="serviceForm">
           <div class="grid">
             <div class="field">
               <label for="name">Your Name</label>
@@ -928,10 +927,6 @@
               <textarea id="issue" placeholder="Explain the problem..." required></textarea>
             </div>
 
-            <div class="field full">
-              <label for="photo">Upload Photo (optional)</label>
-              <input id="photo" type="file" accept="image/*" />
-            </div>
           </div>
 
           <div class="submit-row">
@@ -970,19 +965,19 @@
         <div class="footer-col">
           <h4>Why Choose Us</h4>
           <ul>
-            <li>✔ Genuine Products</li>
-            <li>✔ Competitive Pricing</li>
-            <li>✔ Expert Guidance</li>
-            <li>✔ Trusted Local Store</li>
+            <li>Genuine Products</li>
+            <li>Competitive Pricing</li>
+            <li>Expert Guidance</li>
+            <li>Trusted Local Store</li>
           </ul>
         </div>
 
         <div class="footer-col">
           <h4>Contact Us</h4>
-          <p>📍 Agartala, Tripura</p>
-          <p>📞 +91 8787625423</p>
-          <p>📞 +91 9436125176</p>
-          <p>🕒 Mon – Sat • 10AM – 8PM</p>
+          <p>Agartala, Tripura</p>
+          <p>+91 8787625423</p>
+          <p>+91 9436125176</p>
+          <p>Mon – Sat • 10AM – 8PM</p>
         </div>
 
         <div class="footer-col">
@@ -1007,14 +1002,14 @@
       <p class="mobile-desc">Trusted electronics retailer and distributor.</p>
 
       <div class="mobile-points">
-        <p>✔ Genuine products with official warranty</p>
-        <p>✔ Expert guidance &amp; after-sales support</p>
+        <p>Genuine products with official warranty</p>
+        <p>Expert guidance &amp; after-sales support</p>
       </div>
 
       <div class="mobile-contact">
-        <p>📍 Agartala, Tripura</p>
-        <p>📞 +91 8787625423</p>
-        <p>📞 +91 9436125176</p>
+        <p>Agartala, Tripura</p>
+        <p>+91 8787625423</p>
+        <p>+91 9436125176</p>
       </div>
 
       <div class="mobile-social">
@@ -1089,6 +1084,41 @@
     window.addEventListener("load", () => {
       document.body.classList.add("show");
     });
+    const form = document.getElementById("serviceForm");
+
+form.addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const btn = document.querySelector(".btn.primary");
+  btn.innerText = "Submitting...";
+  btn.disabled = true;
+
+  const data = {
+    name: document.getElementById("name").value,
+    phone: document.getElementById("phone").value,
+    email: document.getElementById("email").value,
+    service: document.getElementById("service").value,
+    issue: document.getElementById("issue").value
+  };
+
+  fetch("https://script.google.com/macros/s/AKfycbyKAWsmGPMbU95hBm4wlm115n9OU65gVmChKPS8JHTXaXTBnz4fwsqzpr7vp-1NKZY/exec", {
+  method: "POST",
+  mode: "no-cors",   // ✅ ADD THIS
+  body: JSON.stringify(data)
+})
+  .then(res => res.text())
+  .then(() => {
+    alert("✅ Service request submitted successfully!");
+    form.reset();
+  })
+  .catch(() => {
+    alert("❌ Error submitting form");
+  })
+  .finally(() => {
+    btn.innerText = "Submit";
+    btn.disabled = false;
+  });
+});
   </script>
 </body>
 </html>
