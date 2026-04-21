@@ -5,45 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta
     name="description"
-    content="Computer Source is an authorized dealer of Asus, HP, Canon, Epson, D-Link, Samsung and Portronics in Tripura. We supply laptops, printers, networking devices and IT accessories in Agartala."
+    content="Computer Source is an authorized dealer of Asus, HP, Canon, Epson, D-Link, Samsung and Portronics in Tripura. Explore laptops, printers, networking devices and IT accessories in Agartala."
   />
-  <title>Computer Source - Products</title>
+  <title>Computer Source | Products</title>
 
   <link rel="icon" type="image/png" href="assets/logo5.png" />
   <link rel="apple-touch-icon" href="assets/logo5.png" />
-
   <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
     rel="stylesheet"
   />
 
   <style>
     :root {
-      --bg: #101c2c;
-      --panel: rgba(10, 17, 40, 0.55);
-      --panel-strong: rgba(10, 17, 40, 0.88);
-      --card: #1a263a;
-      --card2: #1e2c47;
-
-      --text: #ffffff;
-      --muted: rgba(255, 255, 255, 0.78);
-      --muted2: #cfd8e3;
-
-      --accent: #00d1ff;
-      --accent2: #0288d1;
-      --success: #b9ff8e;
-
-      --border: rgba(255, 255, 255, 0.1);
-      --border2: rgba(0, 209, 255, 0.25);
-
-      --shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
-      --shadow2: 0 8px 20px rgba(0, 0, 0, 0.22);
-
-      --radius: 18px;
-      --radius2: 14px;
-
-      --container: 1320px;
-      --nav-h: 84px;
+      --bg: #0b1220;
+      --bg-soft: #111a2d;
+      --surface: #121d32;
+      --surface-2: #17243d;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #64748b;
+      --white: #ffffff;
+      --line: rgba(148, 163, 184, 0.18);
+      --line-strong: rgba(59, 130, 246, 0.28);
+      --primary: #0ea5e9;
+      --primary-dark: #0284c7;
+      --accent: #22c55e;
+      --danger: #ef4444;
+      --chip: #eff6ff;
+      --shadow-sm: 0 10px 24px rgba(2, 6, 23, 0.08);
+      --shadow-md: 0 16px 40px rgba(2, 6, 23, 0.12);
+      --shadow-lg: 0 24px 80px rgba(2, 6, 23, 0.18);
+      --radius: 22px;
+      --radius-md: 16px;
+      --radius-sm: 12px;
+      --container: 1440px;
+      --nav-h: 78px;
+      --sidebar-w: 310px;
+      --hero-grad:
+        radial-gradient(circle at 10% 10%, rgba(14, 165, 233, 0.2), transparent 35%),
+        radial-gradient(circle at 90% 0%, rgba(59, 130, 246, 0.18), transparent 30%),
+        linear-gradient(180deg, #0b1220 0%, #0d1728 100%);
     }
 
     * {
@@ -54,39 +56,25 @@
 
     html {
       scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
     }
 
     body {
-      font-family: "Poppins", sans-serif;
-      background:
-        radial-gradient(900px 500px at 20% 0%, rgba(0, 209, 255, 0.08), transparent 60%),
-        radial-gradient(900px 500px at 80% 10%, rgba(2, 136, 209, 0.08), transparent 60%),
-        var(--bg);
+      font-family: "Inter", sans-serif;
+      background: #eef4fb;
       color: var(--text);
       overflow-x: hidden;
-      opacity: 0;
-      transform: translateY(14px);
-      transition: opacity 0.45s ease, transform 0.45s ease;
-    }
-
-    body.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    body.menu-open {
-      overflow: hidden;
-      touch-action: none;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
+      min-height: 100vh;
     }
 
     img {
       max-width: 100%;
       display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
     }
 
     button,
@@ -95,9 +83,9 @@
     }
 
     .container {
-      max-width: var(--container);
+      width: min(100%, var(--container));
       margin: 0 auto;
-      padding: 0 1.2rem;
+      padding-inline: 20px;
     }
 
     .sr-only {
@@ -105,1054 +93,1087 @@
       width: 1px;
       height: 1px;
       margin: -1px;
-      padding: 0;
       overflow: hidden;
       clip: rect(0, 0, 0, 0);
       white-space: nowrap;
       border: 0;
     }
 
-    /* Spinner */
+    /* Loader */
     .spinner-wrapper {
       position: fixed;
       inset: 0;
-      background: #0a1128;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 999999;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(180deg, #08101d, #0d1728);
+      z-index: 9999;
     }
 
     .spinner {
-      width: 62px;
-      height: 62px;
-      border: 6px solid var(--accent);
-      border-top-color: transparent;
+      width: 58px;
+      height: 58px;
       border-radius: 999px;
-      animation: spin 1s linear infinite;
-      filter: drop-shadow(0 10px 18px rgba(0, 209, 255, 0.18));
+      border: 5px solid rgba(255, 255, 255, 0.16);
+      border-top-color: var(--primary);
+      animation: spin 0.85s linear infinite;
     }
 
     @keyframes spin {
-      to {
-        transform: rotate(360deg);
-      }
+      to { transform: rotate(360deg); }
     }
 
-    /* Navbar */
-    .navbar {
+    /* Header */
+    .site-header {
       position: sticky;
       top: 0;
       z-index: 1000;
-      min-height: var(--nav-h);
-      background: rgba(10, 17, 40, 0.45);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      transition: background 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      height: var(--nav-h);
+      background: rgba(11, 18, 32, 0.86);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.07);
     }
 
-    .navbar.scrolled {
-      background: rgba(10, 17, 40, 0.78);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
-      border-bottom-color: rgba(0, 209, 255, 0.18);
-    }
-
-    .nav-container {
-      max-width: var(--container);
-      margin: 0 auto;
-      padding: 0.9rem 1.2rem;
+    .nav {
+      height: 100%;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 1rem;
-      min-height: var(--nav-h);
+      gap: 18px;
     }
 
     .brand {
       display: flex;
       align-items: center;
-      gap: 10px;
-      min-width: 220px;
-      flex: 0 0 auto;
+      gap: 12px;
+      min-width: 0;
     }
 
     .brand img {
-      width: 58px;
-      height: 58px;
-      object-fit: contain;
+      width: 48px;
+      height: 48px;
       border-radius: 14px;
-      padding: 8px;
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      object-fit: contain;
+      background: rgba(255,255,255,0.08);
+      padding: 6px;
+      border: 1px solid rgba(255,255,255,0.1);
     }
 
-    .brand h1 {
-      font-size: clamp(1.2rem, 1vw + 1rem, 1.7rem);
+    .brand-text {
+      min-width: 0;
+    }
+
+    .brand-text h1 {
+      font-size: 1.1rem;
+      line-height: 1.1;
       font-weight: 900;
-      line-height: 1.05;
       color: #fff;
-      text-shadow: 0 10px 26px rgba(0, 0, 0, 0.35);
-      white-space: nowrap;
     }
 
-    .nav-right {
-      display: flex;
-      align-items: center;
-      gap: 0.7rem;
+    .brand-text p {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.7);
+      margin-top: 2px;
     }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 0.35rem;
-      padding: 0.32rem;
+      gap: 6px;
+      padding: 6px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.09);
       border-radius: 999px;
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.08);
     }
 
     .nav-links a {
-      padding: 0.58rem 0.95rem;
+      padding: 10px 14px;
       border-radius: 999px;
+      color: rgba(255,255,255,0.82);
+      font-size: 0.94rem;
       font-weight: 600;
-      font-size: 0.95rem;
-      color: rgba(255, 255, 255, 0.86);
-      transition: background 0.2s ease, color 0.2s ease, transform 0.18s ease;
-      white-space: nowrap;
-    }
-
-    .nav-links a:hover {
-      background: rgba(0, 209, 255, 0.1);
-      color: #e9fbff;
-      transform: translateY(-1px);
-    }
-
-    .nav-links a.active {
-      background: linear-gradient(90deg, rgba(2, 136, 209, 0.35), rgba(0, 209, 255, 0.18));
-      border: 1px solid rgba(0, 209, 255, 0.22);
-      color: #fff;
-    }
-
-    .nav-search-icon,
-    .menu-toggle {
-      width: 46px;
-      height: 46px;
-      border-radius: 14px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      background: rgba(255, 255, 255, 0.04);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: transform 0.15s ease, background 0.2s ease, border-color 0.2s ease;
-      flex: 0 0 auto;
-    }
-
-    .nav-search-icon:hover,
-    .menu-toggle:hover {
-      background: rgba(255, 255, 255, 0.07);
-      border-color: rgba(0, 209, 255, 0.2);
-      transform: translateY(-1px);
-    }
-
-    .nav-search-icon svg {
-      width: 21px;
-      height: 21px;
-      stroke: rgba(255, 255, 255, 0.88);
-      stroke-width: 2.2;
-      fill: none;
       transition: 0.2s ease;
     }
 
-    .nav-search-icon:hover svg {
-      stroke: var(--accent);
-    }
-
-    .menu-toggle {
-      display: none;
-      gap: 6px;
-      flex-direction: column;
-    }
-
-    .menu-toggle span {
-      width: 22px;
-      height: 2.5px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.95);
-      transition: transform 0.25s ease, opacity 0.2s ease;
-    }
-
-    .menu-toggle.active span:nth-child(1) {
-      transform: translateY(8px) rotate(45deg);
-    }
-
-    .menu-toggle.active span:nth-child(2) {
-      opacity: 0;
-    }
-
-    .menu-toggle.active span:nth-child(3) {
-      transform: translateY(-8px) rotate(-45deg);
-    }
-
-    @media (max-width: 900px) {
-      .nav-links {
-        display: none;
-      }
-
-      .menu-toggle {
-        display: flex;
-      }
-
-      .brand {
-        min-width: auto;
-      }
-
-      .brand img {
-        width: 42px;
-        height: 42px;
-        padding: 6px;
-      }
-
-      .brand h1 {
-        font-size: 1.18rem;
-        white-space: normal;
-      }
-    }
-
-    /* Mobile drawer */
-    .menu-overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.55);
-      z-index: 998;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.25s ease;
-    }
-
-    .menu-overlay.active {
-      opacity: 1;
-      pointer-events: auto;
-    }
-
-    .side-menu {
-      position: fixed;
-      top: 0;
-      right: -340px;
-      width: 320px;
-      max-width: calc(100vw - 24px);
-      height: 100svh;
-      z-index: 999;
-      background: linear-gradient(180deg, #001b3a, #000c22);
-      border-left: 1px solid rgba(255, 255, 255, 0.1);
-      box-shadow: -18px 0 40px rgba(0, 0, 0, 0.35);
-      padding: 5rem 1.2rem 1.3rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.95rem;
-      transition: right 0.3s ease;
-      overflow-y: auto;
-    }
-
-    .side-menu.active {
-      right: 0;
-    }
-
-    .side-menu a {
-      color: #e6f0ff;
-      font-size: 1rem;
-      font-weight: 600;
-      padding: 0.85rem;
-      border-radius: 12px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      background: rgba(255, 255, 255, 0.03);
-      transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
-    }
-
-    .side-menu a:hover {
-      color: #fff;
-      border-color: rgba(0, 209, 255, 0.35);
-      background: rgba(0, 209, 255, 0.07);
-      transform: translateY(-1px);
-    }
-
-    .side-menu a.active {
-      border-color: rgba(0, 209, 255, 0.35);
-      background: rgba(0, 209, 255, 0.1);
+    .nav-links a:hover,
+    .nav-links a.active {
+      background: rgba(14, 165, 233, 0.16);
       color: #fff;
     }
 
-    .mobile-sidebar {
-      margin-top: 0.35rem;
-      padding-top: 0.7rem;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .side-menu h3 {
-      color: #eaf7ff;
-      font-size: 1.02rem;
-      font-weight: 900;
-      margin-bottom: 0.8rem;
-    }
-
-    .mobile-close {
-      position: absolute;
-      top: 14px;
-      right: 14px;
-      width: 42px;
-      height: 42px;
-      border-radius: 14px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      background: rgba(255, 255, 255, 0.04);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      color: rgba(255, 255, 255, 0.95);
-      font-size: 18px;
-    }
-
-    .mobile-close:hover {
-      border-color: rgba(0, 209, 255, 0.25);
-      background: rgba(255, 255, 255, 0.07);
-    }
-
-    /* Category strip */
-    .category-strip {
-      background:
-        linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)),
-        radial-gradient(900px 260px at 20% 0%, rgba(0, 209, 255, 0.12), transparent 60%),
-        radial-gradient(900px 260px at 80% 10%, rgba(2, 136, 209, 0.1), transparent 60%),
-        #0a1128;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    }
-
-    .category-slider {
-      max-width: var(--container);
-      margin: 0 auto;
-      padding: 12px 1.2rem;
+    .nav-actions {
       display: flex;
       align-items: center;
       gap: 10px;
-      overflow-x: auto;
-      scrollbar-width: none;
-      -webkit-overflow-scrolling: touch;
     }
 
-    .category-slider::-webkit-scrollbar {
+    .icon-btn,
+    .menu-btn {
+      width: 46px;
+      height: 46px;
+      border: 0;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.09);
+      color: #fff;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .icon-btn:hover,
+    .menu-btn:hover {
+      background: rgba(14, 165, 233, 0.12);
+      border-color: rgba(14, 165, 233, 0.25);
+    }
+
+    .menu-btn {
+      display: none;
+      gap: 4px;
+    }
+
+    .menu-btn span {
+      width: 20px;
+      height: 2px;
+      background: #fff;
+      border-radius: 999px;
+      display: block;
+    }
+
+    /* Hero */
+    .hero {
+      background: var(--hero-grad);
+      color: #fff;
+      border-bottom-left-radius: 28px;
+      border-bottom-right-radius: 28px;
+      overflow: hidden;
+    }
+
+    .hero-wrap {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 20px;
+      align-items: center;
+      padding: 34px 20px 28px;
+      width: min(100%, var(--container));
+      margin: 0 auto;
+    }
+
+    .hero-copy h2 {
+      font-size: clamp(1.8rem, 3vw, 3.2rem);
+      line-height: 1.05;
+      font-weight: 900;
+      max-width: 720px;
+    }
+
+    .hero-copy p {
+      margin-top: 14px;
+      font-size: 1rem;
+      line-height: 1.7;
+      max-width: 760px;
+      color: rgba(255,255,255,0.8);
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 22px;
+    }
+
+    .stat {
+      min-width: 130px;
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.15rem;
+      font-weight: 900;
+    }
+
+    .stat span {
+      display: block;
+      margin-top: 4px;
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.75);
+    }
+
+    .hero-panel {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 24px;
+      padding: 18px;
+    }
+
+    .hero-panel-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .hero-box {
+      background: rgba(255,255,255,0.08);
+      border-radius: 18px;
+      padding: 16px;
+      min-height: 120px;
+    }
+
+    .hero-box h3 {
+      font-size: 0.98rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .hero-box p {
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.78);
+    }
+
+    /* Controls */
+    .controls-wrap {
+      width: min(100%, var(--container));
+      margin: -16px auto 0;
+      padding-inline: 20px;
+      position: relative;
+      z-index: 5;
+    }
+
+    .controls-card {
+      background: #fff;
+      border: 1px solid rgba(148,163,184,0.18);
+      box-shadow: var(--shadow-md);
+      border-radius: 24px;
+      padding: 16px;
+      display: grid;
+      grid-template-columns: 1fr auto auto;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .search-shell {
+      position: relative;
+    }
+
+    .search-shell input {
+      width: 100%;
+      height: 52px;
+      border-radius: 16px;
+      border: 1px solid #d7e3f3;
+      outline: none;
+      padding: 0 16px 0 46px;
+      font-size: 0.98rem;
+      background: #f8fbff;
+      transition: 0.2s ease;
+    }
+
+    .search-shell input:focus {
+      border-color: var(--primary);
+      background: #fff;
+      box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.08);
+    }
+
+    .search-shell svg {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 19px;
+      height: 19px;
+      stroke: #64748b;
+      stroke-width: 2;
+      fill: none;
+    }
+
+    .action-btn {
+      height: 52px;
+      border-radius: 16px;
+      border: 1px solid #d7e3f3;
+      background: #fff;
+      padding: 0 16px;
+      cursor: pointer;
+      font-weight: 700;
+      color: #0f172a;
+      transition: 0.2s ease;
+    }
+
+    .action-btn.primary {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: #fff;
+      border-color: transparent;
+    }
+
+    .action-btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .search-suggestions {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: calc(100% + 10px);
+      background: #fff;
+      border: 1px solid #dbe7f5;
+      border-radius: 16px;
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+      display: none;
+      max-height: 320px;
+      overflow-y: auto;
+    }
+
+    .search-suggestions button {
+      width: 100%;
+      text-align: left;
+      border: 0;
+      background: #fff;
+      padding: 14px 16px;
+      cursor: pointer;
+      border-bottom: 1px solid #edf2f8;
+    }
+
+    .search-suggestions button:last-child {
+      border-bottom: 0;
+    }
+
+    .search-suggestions button:hover {
+      background: #f8fbff;
+    }
+
+    .search-suggestions small {
+      color: #64748b;
+      display: block;
+      margin-top: 4px;
+    }
+
+    /* Category strip */
+    .category-strip-wrap {
+      width: min(100%, var(--container));
+      margin: 18px auto 0;
+      padding-inline: 20px;
+    }
+
+    .category-strip {
+      display: flex;
+      gap: 12px;
+      overflow-x: auto;
+      padding-bottom: 6px;
+      scrollbar-width: none;
+    }
+
+    .category-strip::-webkit-scrollbar {
       display: none;
     }
 
     .category-tile {
       flex: 0 0 auto;
+      min-width: 152px;
       display: flex;
       align-items: center;
       gap: 12px;
-      padding: 12px 18px;
-      border-radius: 16px;
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+      padding: 14px 16px;
+      border-radius: 18px;
+      background: #fff;
+      border: 1px solid #dbe7f5;
+      box-shadow: var(--shadow-sm);
       cursor: pointer;
-      transition: transform 0.18s ease, border-color 0.2s ease, background 0.2s ease;
-      white-space: nowrap;
-    }
-
-    .category-tile img {
-      width: 28px;
-      height: 28px;
-      object-fit: contain;
-      filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.25));
-      opacity: 0.95;
-    }
-
-    .category-tile span {
-      font-weight: 900;
-      font-size: 1rem;
-      color: rgba(255, 255, 255, 0.92);
-      text-transform: capitalize;
+      transition: 0.22s ease;
     }
 
     .category-tile:hover {
       transform: translateY(-2px);
-      border-color: rgba(0, 209, 255, 0.25);
-      background: rgba(0, 209, 255, 0.06);
+      border-color: var(--line-strong);
     }
 
     .category-tile.active {
-      border-color: rgba(0, 209, 255, 0.38);
-      background: linear-gradient(90deg, rgba(2, 136, 209, 0.3), rgba(0, 209, 255, 0.14));
+      background: linear-gradient(135deg, #e0f2fe, #f0f9ff);
+      border-color: rgba(14, 165, 233, 0.35);
     }
 
-    .category-tile.active span {
-      color: #fff;
+    .category-tile img {
+      width: 34px;
+      height: 34px;
+      object-fit: contain;
     }
 
-    @media (max-width: 768px) {
-      .category-slider {
-        padding: 10px 0.9rem;
-      }
-
-      .category-tile {
-        padding: 10px 14px;
-        border-radius: 14px;
-      }
-
-      .category-tile img {
-        width: 22px;
-        height: 22px;
-      }
-
-      .category-tile span {
-        font-size: 0.9rem;
-      }
+    .category-tile span {
+      font-size: 0.96rem;
+      font-weight: 800;
+      color: #0f172a;
+      text-transform: capitalize;
     }
 
     /* Layout */
     .main-layout {
+      width: min(100%, var(--container));
+      margin: 18px auto 0;
+      padding: 0 20px 34px;
       display: grid;
-      grid-template-columns: 300px minmax(0, 1fr);
-      gap: 1rem;
-      max-width: var(--container);
-      margin: 0 auto;
-      padding: 1.2rem;
+      grid-template-columns: var(--sidebar-w) minmax(0, 1fr);
+      gap: 20px;
       align-items: start;
     }
 
-    @media (max-width: 900px) {
-      .main-layout {
-        grid-template-columns: 1fr;
-        padding: 1rem 0.8rem;
-      }
-    }
-
-    /* Sidebar */
     .sidebar {
       position: sticky;
-      top: calc(var(--nav-h) + 12px);
-      max-height: calc(100vh - var(--nav-h) - 24px);
-      overflow-y: auto;
-      padding: 1rem;
-      border-radius: 20px;
-      background: rgba(10, 17, 40, 0.55);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.3);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+      top: calc(var(--nav-h) + 18px);
+      background: #fff;
+      border: 1px solid #dbe7f5;
+      border-radius: 24px;
+      box-shadow: var(--shadow-sm);
+      padding: 18px;
     }
 
-    .sidebar h3 {
-      font-size: 1.05rem;
-      color: #eaf7ff;
+    .sidebar-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .sidebar-head h3 {
+      font-size: 1.02rem;
       font-weight: 900;
-      margin-bottom: 1rem;
+      color: #0f172a;
     }
 
-    @media (max-width: 900px) {
-      .sidebar {
-        display: none;
-      }
+    .clear-btn {
+      border: 0;
+      background: transparent;
+      color: var(--primary-dark);
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 0.9rem;
     }
 
-    .category-block,
-    .filter-section {
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 16px;
+    .filter-card {
+      border: 1px solid #e7eef7;
+      border-radius: 18px;
       padding: 14px;
-      margin-bottom: 1rem;
+      margin-bottom: 14px;
+      background: #fbfdff;
     }
 
-    .category-block:last-child,
-    .filter-section:last-child {
+    .filter-card:last-child {
       margin-bottom: 0;
     }
 
-    .category-block h4 {
-      font-size: 0.94rem;
+    .filter-card h4 {
+      font-size: 0.9rem;
       font-weight: 900;
-      color: rgba(255, 255, 255, 0.92);
-      margin-bottom: 10px;
+      color: #0f172a;
+      margin-bottom: 12px;
       text-transform: uppercase;
-      letter-spacing: 0.4px;
+      letter-spacing: 0.04em;
     }
 
-    .brand-list {
-      list-style: none;
+    .brand-list,
+    .filter-options {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
+      list-style: none;
     }
 
-    .brand-list li {
-      padding: 7px 12px;
-      font-size: 0.84rem;
-      background: rgba(0, 209, 255, 0.1);
-      border: 1px solid rgba(0, 209, 255, 0.25);
+    .chip,
+    .brand-list li,
+    .filter-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 36px;
+      padding: 8px 12px;
       border-radius: 999px;
+      border: 1px solid #dbe7f5;
+      background: #fff;
+      color: #334155;
       cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 700;
       transition: 0.2s ease;
-      color: rgba(255, 255, 255, 0.92);
       user-select: none;
     }
 
-    .brand-list li:hover {
-      background: rgba(0, 209, 255, 0.18);
-      border-color: rgba(0, 209, 255, 0.35);
-      transform: translateY(-1px);
+    .brand-list li:hover,
+    .filter-btn:hover {
+      border-color: rgba(14, 165, 233, 0.26);
+      color: #0f172a;
+      background: #f0f9ff;
     }
 
-    .brand-list li.active {
-      background: var(--accent);
-      border-color: rgba(0, 209, 255, 0.65);
-      color: #08131f;
-      font-weight: 900;
+    .brand-list li.active,
+    .filter-btn.active {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: #fff;
+      border-color: transparent;
+      box-shadow: 0 8px 20px rgba(14, 165, 233, 0.2);
+    }
+
+    .range-wrap {
+      display: grid;
+      gap: 10px;
     }
 
     input[type="range"] {
       width: 100%;
-      accent-color: var(--accent);
+      accent-color: var(--primary);
       cursor: pointer;
     }
 
     .range-row {
-      margin-top: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #475569;
       font-size: 0.9rem;
-      color: rgba(207, 216, 227, 0.92);
+      font-weight: 600;
     }
 
     .filter-block {
       display: none;
     }
 
-    .filter-group {
-      margin-bottom: 12px;
-    }
-
-    .filter-group:last-child {
-      margin-bottom: 0;
-    }
-
-    .filter-label {
-      display: block;
-      font-size: 0.84rem;
-      color: rgba(255, 255, 255, 0.78);
-      margin-bottom: 8px;
-      font-weight: 700;
-      letter-spacing: 0.2px;
-    }
-
-    .filter-options {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-
-    .filter-btn {
-      padding: 7px 12px;
-      font-size: 0.82rem;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      color: rgba(255, 255, 255, 0.88);
-      cursor: pointer;
-      transition: 0.2s ease;
-      user-select: none;
-    }
-
-    .filter-btn:hover {
-      background: rgba(0, 209, 255, 0.12);
-      border-color: rgba(0, 209, 255, 0.22);
-    }
-
-    .filter-btn.active {
-      background: var(--accent);
-      border-color: rgba(0, 209, 255, 0.65);
-      color: #08131f;
-      font-weight: 900;
-      box-shadow: 0 0 12px rgba(0, 209, 255, 0.35);
-    }
-
-    /* Main area */
-    main {
-      min-width: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .search-wrapper {
-      position: relative;
-      display: none;
-    }
-
-    .search-wrapper.active {
-      display: block;
-    }
-
-    #productSearch {
-      width: 100%;
-      padding: 14px 16px;
-      border-radius: 14px;
-      border: 1px solid rgba(0, 209, 255, 0.35);
-      background: rgba(10, 17, 40, 0.55);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      color: #fff;
-      font-size: 1rem;
-      outline: none;
-      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
-    }
-
-    #productSearch::placeholder {
-      color: rgba(207, 216, 227, 0.72);
-    }
-
-    .search-suggestions {
-      position: absolute;
-      top: calc(100% + 10px);
-      left: 0;
-      right: 0;
-      background: rgba(10, 17, 40, 0.95);
-      border: 1px solid rgba(0, 209, 255, 0.25);
-      border-radius: 14px;
-      overflow: hidden;
-      max-height: 320px;
-      overflow-y: auto;
-      display: none;
-      z-index: 50;
-      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
-    }
-
-    .search-suggestions button {
-      width: 100%;
-      text-align: left;
-      padding: 12px 14px;
-      cursor: pointer;
-      border: 0;
-      background: transparent;
-      color: #fff;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    }
-
-    .search-suggestions button:hover {
-      background: rgba(0, 209, 255, 0.12);
-    }
-
-    .search-suggestions small {
-      color: rgba(207, 216, 227, 0.82);
-    }
-
     /* Product content */
-    .product-content {
-      background: rgba(10, 17, 40, 0.45);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 20px;
-      padding: 1.2rem;
-      box-shadow: 0 22px 60px rgba(0, 0, 0, 0.32);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      min-height: 420px;
+    .content {
+      min-width: 0;
     }
 
-    .product-head {
+    .toolbar {
       display: flex;
       justify-content: space-between;
+      gap: 12px;
       align-items: center;
-      gap: 1rem;
+      background: #fff;
+      border: 1px solid #dbe7f5;
+      border-radius: 24px;
+      padding: 16px 18px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 16px;
       flex-wrap: wrap;
-      margin-bottom: 1rem;
-      padding-bottom: 0.9rem;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
 
-    .product-head h2 {
-      font-size: 1.35rem;
+    .toolbar-title h2 {
+      font-size: 1.3rem;
       font-weight: 900;
-      color: #eaf7ff;
+      color: #0f172a;
       text-transform: capitalize;
     }
 
-    .product-count {
-      color: rgba(207, 216, 227, 0.86);
+    .toolbar-title p {
       font-size: 0.92rem;
-      font-weight: 600;
+      color: #64748b;
+      margin-top: 4px;
+    }
+
+    .toolbar-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .mobile-filter-btn {
+      display: none;
     }
 
     .product-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 14px;
+      grid-template-columns: repeat(auto-fill, minmax(245px, 1fr));
+      gap: 16px;
     }
 
     .product-card {
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.03));
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 18px;
-      padding: 14px;
+      background: #fff;
+      border: 1px solid #dbe7f5;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: 0.24s ease;
       cursor: pointer;
       display: flex;
       flex-direction: column;
-      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-      box-shadow: 0 14px 34px rgba(0, 0, 0, 0.28);
-      overflow: hidden;
       min-height: 100%;
     }
 
     .product-card:hover {
-      transform: translateY(-5px);
-      border-color: rgba(0, 209, 255, 0.25);
-      background: linear-gradient(180deg, rgba(0, 209, 255, 0.1), rgba(255, 255, 255, 0.03));
-      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: rgba(14, 165, 233, 0.3);
     }
 
-    .product-card img {
-      width: 100%;
-      height: 200px;
-      object-fit: contain;
-      background: #fff;
-      border-radius: 14px;
-      padding: 10px;
-    }
-
-    .product-card h4 {
-      margin-top: 12px;
-      font-size: 1rem;
-      font-weight: 800;
-      color: #fff;
-      line-height: 1.3;
-      min-height: 2.6em;
-    }
-
-    .product-card .model {
-      font-size: 0.82rem;
-      color: rgba(207, 216, 227, 0.84);
-      margin: 6px 0 10px;
-    }
-
-    .product-specs {
-      font-size: 0.85rem;
-      color: rgba(207, 216, 227, 0.92);
-      line-height: 1.48;
-      margin-bottom: 10px;
+    .product-thumb {
+      position: relative;
+      background: linear-gradient(180deg, #f8fbff 0%, #eef6ff 100%);
+      padding: 16px;
+      min-height: 220px;
       display: grid;
-      gap: 3px;
+      place-items: center;
     }
 
-    .product-specs p {
-      margin: 0;
+    .product-thumb img {
+      width: 100%;
+      max-width: 210px;
+      height: 190px;
+      object-fit: contain;
+      mix-blend-mode: multiply;
     }
 
-    .product-card .price {
+    .badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      height: 30px;
+      padding: 0 10px;
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      background: #e0f2fe;
+      color: #0369a1;
+      font-size: 0.74rem;
+      font-weight: 800;
+      border: 1px solid rgba(14, 165, 233, 0.18);
+      text-transform: capitalize;
+    }
+
+    .product-body {
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .product-title {
+      font-size: 1rem;
+      line-height: 1.45;
+      font-weight: 800;
+      color: #0f172a;
+      min-height: 2.9em;
+    }
+
+    .product-model {
+      margin-top: 6px;
+      font-size: 0.8rem;
+      color: #64748b;
+    }
+
+    .spec-list {
+      display: grid;
+      gap: 7px;
+      margin-top: 12px;
+      font-size: 0.84rem;
+      color: #334155;
+    }
+
+    .spec-list p {
+      display: flex;
+      gap: 6px;
+      line-height: 1.45;
+    }
+
+    .spec-list b {
+      color: #0f172a;
+      min-width: 76px;
+      font-weight: 800;
+    }
+
+    .price-row {
       margin-top: auto;
-      padding-top: 10px;
-      border-top: 1px dashed rgba(0, 209, 255, 0.25);
-      font-size: 1.12rem;
+      padding-top: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 10px;
+    }
+
+    .price {
+      color: #16a34a;
+      font-size: 1.2rem;
       font-weight: 900;
-      color: var(--success);
-      width: fit-content;
+      line-height: 1;
+    }
+
+    .view-btn {
+      min-height: 38px;
+      padding: 0 12px;
+      border-radius: 12px;
+      background: #eff6ff;
+      color: #0369a1;
+      font-size: 0.84rem;
+      font-weight: 800;
+      border: 1px solid #dbeafe;
+      display: inline-flex;
+      align-items: center;
     }
 
     .empty-state {
+      background: #fff;
+      border: 1px dashed #cbd5e1;
+      border-radius: 24px;
+      padding: 54px 22px;
       text-align: center;
-      padding: 3rem 1rem;
-      color: rgba(207, 216, 227, 0.88);
-      border: 1px dashed rgba(255, 255, 255, 0.15);
-      border-radius: 18px;
-      background: rgba(255, 255, 255, 0.03);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .empty-state h3 {
+      font-size: 1.1rem;
+      font-weight: 900;
+      color: #0f172a;
+      margin-bottom: 8px;
+    }
+
+    .empty-state p {
+      color: #64748b;
+      line-height: 1.6;
+    }
+
+    /* Drawer */
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(2, 6, 23, 0.48);
+      z-index: 1300;
+      opacity: 0;
+      pointer-events: none;
+      transition: 0.22s ease;
+    }
+
+    .overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .drawer {
+      position: fixed;
+      top: 0;
+      right: -380px;
+      width: min(380px, calc(100vw - 16px));
+      height: 100dvh;
+      background: #fff;
+      z-index: 1400;
+      box-shadow: -24px 0 60px rgba(2, 6, 23, 0.2);
+      transition: 0.28s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .drawer.active {
+      right: 0;
+    }
+
+    .drawer-head {
+      padding: 18px 18px 12px;
+      border-bottom: 1px solid #e7eef7;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .drawer-head h3 {
+      font-size: 1rem;
+      font-weight: 900;
+      color: #0f172a;
+    }
+
+    .drawer-close {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      border: 1px solid #dbe7f5;
+      background: #fff;
+      cursor: pointer;
+    }
+
+    .drawer-body {
+      padding: 16px 18px 24px;
+      overflow-y: auto;
+      flex: 1;
+    }
+
+    /* Footer */
+    .footer {
+      background:
+        radial-gradient(circle at top left, rgba(14,165,233,0.16), transparent 30%),
+        linear-gradient(180deg, #0b1220 0%, #0c1423 100%);
+      color: rgba(255,255,255,0.85);
+      margin-top: 28px;
+    }
+
+    .footer-wrap {
+      width: min(100%, var(--container));
+      margin: 0 auto;
+      padding: 40px 20px 22px;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr 1fr 1fr;
+      gap: 18px;
+    }
+
+    .footer-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 20px;
+      padding: 18px;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .footer-brand img {
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      object-fit: contain;
+      background: rgba(255,255,255,0.08);
+      padding: 7px;
+    }
+
+    .footer-brand h3 {
+      font-size: 1.4rem;
+      font-weight: 900;
+      color: #fff;
+    }
+
+    .footer-card h4 {
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+
+    .footer-card p,
+    .footer-card li {
+      color: rgba(255,255,255,0.75);
+      font-size: 0.94rem;
+      line-height: 1.65;
+    }
+
+    .footer-card ul {
+      list-style: none;
+      display: grid;
+      gap: 8px;
+    }
+
+    .socials {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .socials a {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .footer-bottom {
+      margin-top: 18px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      text-align: center;
+      color: rgba(255,255,255,0.6);
+      font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 1180px) {
+      .hero-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-top {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 980px) {
+      .nav-links {
+        display: none;
+      }
+
+      .menu-btn {
+        display: grid;
+      }
+
+      .main-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        display: none;
+      }
+
+      .mobile-filter-btn {
+        display: inline-flex;
+      }
+
+      .controls-card {
+        grid-template-columns: 1fr;
+      }
+
+      .controls-card .action-btn {
+        width: 100%;
+      }
     }
 
     @media (max-width: 768px) {
-      .product-content {
-        padding: 1rem;
+      .container,
+      .hero-wrap,
+      .controls-wrap,
+      .category-strip-wrap,
+      .main-layout,
+      .footer-wrap {
+        padding-inline: 14px;
+      }
+
+      .site-header {
+        height: 72px;
+      }
+
+      .brand img {
+        width: 42px;
+        height: 42px;
+      }
+
+      .brand-text h1 {
+        font-size: 1rem;
+      }
+
+      .brand-text p {
+        display: none;
+      }
+
+      .hero {
+        border-bottom-left-radius: 22px;
+        border-bottom-right-radius: 22px;
+      }
+
+      .hero-wrap {
+        padding-top: 24px;
+        padding-bottom: 24px;
+      }
+
+      .hero-panel-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .toolbar {
+        padding: 14px;
         border-radius: 18px;
       }
 
+      .toolbar-title h2 {
+        font-size: 1.08rem;
+      }
+
       .product-grid {
-        gap: 10px;
+        grid-template-columns: 1fr;
       }
 
       .product-card {
-        display: grid;
-        grid-template-columns: 108px 1fr;
-        gap: 8px 10px;
-        padding: 10px;
-        border-radius: 16px;
-      }
-
-      .product-card img {
-        grid-row: 1 / span 4;
-        width: 108px;
-        height: 118px;
-        border-radius: 14px;
-        padding: 6px;
-      }
-
-      .product-card h4,
-      .product-card .model,
-      .product-specs,
-      .product-card .price {
-        grid-column: 2;
-        margin: 0;
-        padding: 0;
-      }
-
-      .product-card h4 {
-        font-size: 0.94rem;
-        min-height: auto;
-      }
-
-      .product-card .model {
-        font-size: 0.75rem;
-        margin-top: 4px;
-      }
-
-      .product-specs {
-        font-size: 0.75rem;
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        margin-top: 6px;
-      }
-
-      .product-card .price {
-        border-top: none;
-        padding-top: 0;
-        margin-top: 8px;
-        font-size: 1rem;
+        border-radius: 18px;
       }
 
       .product-card:hover {
         transform: none;
       }
 
-      .product-card:active {
-        transform: scale(0.985);
+      .product-card {
+        display: grid;
+        grid-template-columns: 104px minmax(0, 1fr);
+        align-items: start;
+      }
+
+      .product-thumb {
+        min-height: auto;
+        height: 100%;
+        padding: 12px;
+      }
+
+      .product-thumb img {
+        width: 100%;
+        max-width: 92px;
+        height: 92px;
+      }
+
+      .badge {
+        top: 8px;
+        left: 8px;
+        height: 24px;
+        font-size: 0.66rem;
+      }
+
+      .product-body {
+        padding: 12px 12px 12px 0;
+      }
+
+      .product-title {
+        min-height: auto;
+        font-size: 0.95rem;
+      }
+
+      .spec-list {
+        font-size: 0.76rem;
+        gap: 5px;
+      }
+
+      .spec-list b {
+        min-width: 64px;
+      }
+
+      .price {
+        font-size: 1rem;
+      }
+
+      .view-btn {
+        min-height: 34px;
+        font-size: 0.76rem;
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr;
       }
     }
 
-    /* Footer */
-    .footer {
-      position: relative;
-      background:
-        radial-gradient(900px 520px at 20% 0%, rgba(0, 209, 255, 0.14), transparent 60%),
-        radial-gradient(900px 520px at 80% 10%, rgba(2, 136, 209, 0.12), transparent 60%),
-        linear-gradient(180deg, #070d1f 0%, #050b1a 55%, #040815 100%);
-      color: rgba(207, 216, 227, 0.92);
-      border-top: 1px solid rgba(0, 209, 255, 0.22);
-      overflow: hidden;
-      margin-top: 2.25rem;
-    }
-
-    .footer::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(0, 209, 255, 0.55), transparent);
-      opacity: 0.7;
-    }
-
-    .footer-container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 4rem 1.25rem 2.25rem;
-    }
-
-    .footer-brand {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-
-    .footer-brand img {
-      height: 46px;
-      width: 46px;
-      object-fit: contain;
-      border-radius: 14px;
-      padding: 8px;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.35);
-    }
-
-    .footer-brand h2 {
-      font-size: 1.9rem;
-      font-weight: 900;
-      color: #fff;
-      margin: 0;
-      line-height: 1.1;
-    }
-
-    .footer-desc {
-      max-width: 820px;
-      margin: 1.05rem 0 2.2rem;
-      font-size: 1rem;
-      line-height: 1.7;
-      color: rgba(207, 216, 227, 0.86);
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 1fr 1.1fr 0.9fr;
-      gap: 1.25rem;
-    }
-
-    .footer-col {
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.03));
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 20px;
-      padding: 1.35rem 1.2rem;
-      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
-    }
-
-    .footer-col h4 {
-      color: #eaf7ff;
-      font-weight: 900;
-      margin-bottom: 0.95rem;
-      font-size: 1.05rem;
-    }
-
-    .footer-col ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .footer-col li,
-    .footer-col p {
-      font-size: 0.95rem;
-      margin-bottom: 0.6rem;
-      color: rgba(207, 216, 227, 0.92);
-      line-height: 1.55;
-    }
-
-    .footer-socials {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-top: 0.25rem;
-      font-size: 1.2rem;
-    }
-
-    .footer-socials a {
-      width: 44px;
-      height: 44px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      color: #eaf7ff;
-      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.3);
-      transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .footer-socials a:hover {
-      transform: translateY(-3px);
-      background: rgba(0, 209, 255, 0.1);
-      border-color: rgba(0, 209, 255, 0.3);
-      box-shadow: 0 16px 34px rgba(0, 0, 0, 0.35);
-    }
-
-    .footer-bottom {
-      text-align: center;
-      padding: 16px 10px;
-      font-size: 0.9rem;
-      color: rgba(207, 216, 227, 0.84);
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      background: rgba(0, 0, 0, 0.18);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-    }
-
-    .footer-mobile {
-      display: none;
-      padding: 3rem 1.25rem 2rem;
-      text-align: center;
-    }
-
-    .mbrand {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 0.75rem;
-    }
-
-    .mbrand img {
-      width: 44px;
-      height: 44px;
-      border-radius: 14px;
-      padding: 8px;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      object-fit: contain;
-    }
-
-    .mbrand h3 {
-      color: #fff;
-      font-size: 1.35rem;
-      font-weight: 900;
-      margin: 0;
-    }
-
-    .mobile-desc {
-      max-width: 520px;
-      margin: 0.65rem auto 1.25rem;
-      color: rgba(207, 216, 227, 0.88);
-      line-height: 1.65;
-    }
-
-    .mobile-points,
-    .mobile-contact {
-      max-width: 560px;
-      margin: 0.75rem auto;
-      padding: 1rem;
-      border-radius: 18px;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-    }
-
-    .mobile-points p,
-    .mobile-contact p {
-      margin: 0.55rem 0;
-      color: rgba(207, 216, 227, 0.92);
-      font-size: 0.95rem;
-    }
-
-    .mobile-social {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      margin-top: 1.2rem;
-      font-size: 1.2rem;
-    }
-
-    .mobile-social a {
-      width: 44px;
-      height: 44px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      color: #eaf7ff;
-    }
-
-    @media (max-width: 900px) {
-      .footer-container {
-        display: none;
+    @media (max-width: 520px) {
+      .category-tile {
+        min-width: 138px;
+        padding: 12px 14px;
       }
 
-      .footer-mobile {
-        display: block;
+      .controls-card,
+      .toolbar,
+      .empty-state {
+        border-radius: 18px;
+      }
+
+      .drawer {
+        width: 100%;
+        right: -100%;
+      }
+
+      .product-card {
+        grid-template-columns: 92px minmax(0, 1fr);
+      }
+
+      .product-thumb img {
+        max-width: 82px;
+        height: 82px;
       }
     }
   </style>
@@ -1181,846 +1202,1211 @@
     <div class="spinner"></div>
   </div>
 
-  <header class="navbar" id="navbar">
-    <div class="nav-container">
-      <div class="brand">
-        <img src="assets/logo5.png" alt="Computer Source Logo" />
-        <h1>Computer Source</h1>
-      </div>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Computer Source home">
+        <img src="assets/logo5.png" alt="Computer Source logo" />
+        <div class="brand-text">
+          <h1>Computer Source</h1>
+        </div>
+      </a>
 
-      <div class="nav-right">
-        <nav class="nav-links" aria-label="Primary navigation">
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a class="active" href="product.html">Products</a>
-          <a href="service.html">Services</a>
-          <a href="contact.html">Contact</a>
-        </nav>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="product.html" class="active">Products</a>
+        <a href="service.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </nav>
 
-        <button class="nav-search-icon" type="button" aria-label="Toggle search" onclick="toggleSearch()">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <circle cx="11" cy="11" r="7"></circle>
-            <line x1="16.5" y1="16.5" x2="22" y2="22"></line>
-          </svg>
+      <div class="nav-actions">
+        <button class="icon-btn" type="button" onclick="focusSearch()" aria-label="Search products">
+          🔍
         </button>
-
-        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <button class="menu-btn" type="button" onclick="openNavDrawer()" aria-label="Open menu">
           <span></span><span></span><span></span>
         </button>
       </div>
     </div>
   </header>
 
-  <div class="menu-overlay" id="menuOverlay"></div>
+  <section class="hero">
+    <div class="hero-wrap">
+      <div class="hero-copy">
+        <h2>Find laptops, printers, accessories and IT gear in one place.</h2>
+        <p>
+          Browse genuine products from trusted brands with a cleaner shopping experience,
+          faster browsing, better mobile layout and responsive filtering.
+        </p>
 
-  <aside class="side-menu" id="sideMenu" aria-label="Mobile navigation">
-    <button class="mobile-close" id="mobileClose" type="button" aria-label="Close menu">✕</button>
-
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a class="active" href="product.html">Products</a>
-    <a href="service.html">Services</a>
-    <a href="contact.html">Contact</a>
-
-    <div class="mobile-sidebar">
-      <h3>Brands</h3>
-      <div id="mobileBrandList"></div>
-
-      <div class="category-block">
-        <h4>Price Range</h4>
-        <input type="range" id="mobilePriceRange" min="0" max="200000" step="1000" value="200000" />
-        <div class="range-row">Up to ₹<span id="mobilePriceValue">200000</span></div>
+        <div class="hero-stats">
+          <div class="stat">
+            <strong>Genuine</strong>
+            <span>Official products</span>
+          </div>
+          <div class="stat">
+            <strong>Local</strong>
+            <span>Agartala support</span>
+          </div>
+          <div class="stat">
+            <strong>Fast</strong>
+            <span>Responsive catalogue</span>
+          </div>
+        </div>
       </div>
 
-      <div class="filter-section" id="mobileFilterSection">
-        <div class="filter-block" id="mobileLaptopFilters">
-          <div class="filter-group">
-            <span class="filter-label">RAM</span>
-            <div class="filter-options"></div>
+      <div class="hero-panel">
+        <div class="hero-panel-grid">
+          <div class="hero-box">
+            <h3>Laptops & Desktops</h3>
+            <p>For students, office users, creators and gamers.</p>
           </div>
-          <div class="filter-group">
-            <span class="filter-label">Storage</span>
-            <div class="filter-options"></div>
+          <div class="hero-box">
+            <h3>Printers & Monitors</h3>
+            <p>Home, office and professional display solutions.</p>
+          </div>
+          <div class="hero-box">
+            <h3>Accessories</h3>
+            <p>Keyboards, mice, headsets, speakers and more.</p>
+          </div>
+          <div class="hero-box">
+            <h3>Trusted Support</h3>
+            <p>Local guidance, warranty-backed products and store assistance.</p>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <div class="filter-block" id="mobileSpeakerFilters">
-          <div class="filter-group">
-            <span class="filter-label">Power Output</span>
-            <div class="filter-options"></div>
-          </div>
+  <section class="controls-wrap">
+    <div class="controls-card">
+      <div class="search-shell">
+        <label class="sr-only" for="productSearch">Search products</label>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"></circle>
+          <line x1="16.5" y1="16.5" x2="22" y2="22"></line>
+        </svg>
+        <input
+          id="productSearch"
+          type="text"
+          placeholder="Search by model, brand or category..."
+          autocomplete="off"
+          oninput="handleSearch(this.value)"
+        />
+        <div id="searchSuggestions" class="search-suggestions"></div>
+      </div>
+
+      <button class="action-btn" type="button" onclick="clearAllFilters()">
+        Clear Filters
+      </button>
+
+      <button class="action-btn primary mobile-filter-btn" type="button" onclick="openFilterDrawer()">
+        Filters
+      </button>
+    </div>
+  </section>
+
+  <section class="category-strip-wrap" aria-label="Categories">
+    <div class="category-strip" id="category-strip"></div>
+  </section>
+
+  <section class="main-layout">
+    <aside class="sidebar" aria-label="Product filters">
+      <div class="sidebar-head">
+        <h3>Filters</h3>
+        <button class="clear-btn" type="button" onclick="clearAllFilters()">Reset</button>
+      </div>
+
+      <div id="desktopFilterContent"></div>
+    </aside>
+
+    <main class="content">
+      <div class="toolbar" id="toolbar">
+        <div class="toolbar-title">
+          <h2>Products</h2>
+          <p>Browse the latest catalogue</p>
         </div>
 
-        <div class="filter-block" id="mobilePrinterFilters">
-          <div class="filter-group">
-            <span class="filter-label">Printer Type</span>
-            <div class="filter-options"></div>
-          </div>
+        <div class="toolbar-actions">
+          <button class="action-btn mobile-filter-btn" type="button" onclick="openFilterDrawer()">
+            Open Filters
+          </button>
+        </div>
+      </div>
+
+      <div id="product-details"></div>
+    </main>
+  </section>
+
+  <div class="overlay" id="overlay" onclick="closeAllDrawers()"></div>
+
+  <aside class="drawer" id="navDrawer" aria-label="Mobile menu">
+    <div class="drawer-head">
+      <h3>Menu</h3>
+      <button class="drawer-close" type="button" onclick="closeAllDrawers()">✕</button>
+    </div>
+    <div class="drawer-body">
+      <div class="filter-card">
+        <div class="brand-list" style="display:grid; gap:10px;">
+          <a class="chip" href="index.html">Home</a>
+          <a class="chip" href="about.html">About</a>
+          <a class="chip" href="product.html">Products</a>
+          <a class="chip" href="service.html">Services</a>
+          <a class="chip" href="contact.html">Contact</a>
         </div>
       </div>
     </div>
   </aside>
 
-  <section class="category-strip" aria-label="Categories">
-    <div class="category-slider" id="category-strip"></div>
-  </section>
-
-  <div class="main-layout">
-    <aside class="sidebar" aria-label="Filters">
-      <h3>Brands</h3>
-      <div id="categoryBrandList"></div>
-
-      <div class="category-block">
-        <h4>Price Range</h4>
-        <input type="range" id="priceRange" min="0" max="200000" step="1000" value="200000" />
-        <div class="range-row">Up to ₹<span id="priceValue">200000</span></div>
-      </div>
-
-      <div class="filter-section" id="filterSection">
-        <div class="filter-block" id="laptopFilters">
-          <div class="filter-group">
-            <span class="filter-label">RAM</span>
-            <div class="filter-options"></div>
-          </div>
-          <div class="filter-group">
-            <span class="filter-label">Storage</span>
-            <div class="filter-options"></div>
-          </div>
-        </div>
-
-        <div class="filter-block" id="speakerFilters">
-          <div class="filter-group">
-            <span class="filter-label">Power Output</span>
-            <div class="filter-options"></div>
-          </div>
-        </div>
-
-        <div class="filter-block" id="printerFilters">
-          <div class="filter-group">
-            <span class="filter-label">Printer Type</span>
-            <div class="filter-options"></div>
-          </div>
-        </div>
-      </div>
-    </aside>
-
-    <main>
-      <div class="search-wrapper" id="searchWrapper">
-        <label class="sr-only" for="productSearch">Search products</label>
-        <input
-          type="text"
-          id="productSearch"
-          placeholder="Search by model, brand, category..."
-          oninput="handleSearch(this.value)"
-          autocomplete="off"
-        />
-        <div id="searchSuggestions" class="search-suggestions"></div>
-      </div>
-
-      <div class="product-content" id="product-details"></div>
-    </main>
-  </div>
+  <aside class="drawer" id="filterDrawer" aria-label="Mobile filters">
+    <div class="drawer-head">
+      <h3>Filter Products</h3>
+      <button class="drawer-close" type="button" onclick="closeAllDrawers()">✕</button>
+    </div>
+    <div class="drawer-body">
+      <div id="mobileFilterContent"></div>
+    </div>
+  </aside>
 
   <footer class="footer">
-    <div class="footer-container container">
-      <div class="footer-brand">
-        <img src="assets/logo5.png" alt="Computer Source Logo" />
-        <h2>Computer Source</h2>
-      </div>
-
-      <p class="footer-desc">
-        Trusted electronics retailer and distributor delivering genuine laptops,
-        desktops, printers, accessories, and audio solutions for students,
-        professionals, offices, and gaming users.
-      </p>
-
-      <div class="footer-grid">
-        <div class="footer-col">
-          <h4>What We Offer</h4>
-          <ul>
-            <li>Laptops &amp; Desktops</li>
-            <li>Printers &amp; Monitors</li>
-            <li>Computer Accessories</li>
-            <li>Speakers &amp; Audio</li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Why Choose Us</h4>
-          <ul>
-            <li>Genuine Products</li>
-            <li>Competitive Pricing</li>
-            <li>Expert Guidance</li>
-            <li>Trusted Local Store</li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Contact Us</h4>
-          <p>Agartala, Tripura</p>
-          <p>+91 8787625423</p>
-          <p>+91 9436125176</p>
-          <p>Mon – Sat • 10AM – 8PM</p>
-        </div>
-
-        <div class="footer-col">
-          <h4>Follow Us</h4>
-          <div class="footer-socials">
+    <div class="footer-wrap">
+      <div class="footer-top">
+        <div class="footer-card">
+          <div class="footer-brand">
+            <img src="assets/logo5.png" alt="Computer Source logo" />
+            <h3>Computer Source</h3>
+          </div>
+          <p>
+            Trusted electronics retailer and distributor delivering genuine laptops,
+            desktops, printers, accessories and audio solutions in Agartala, Tripura.
+          </p>
+          <div class="socials">
             <a href="#" aria-label="Website">🌐</a>
             <a href="#" aria-label="Facebook">📘</a>
             <a href="#" aria-label="Instagram">📸</a>
             <a href="#" aria-label="YouTube">▶️</a>
           </div>
         </div>
+
+        <div class="footer-card">
+          <h4>What We Offer</h4>
+          <ul>
+            <li>Laptops & Desktops</li>
+            <li>Printers & Monitors</li>
+            <li>Accessories & Components</li>
+            <li>Speakers & Headsets</li>
+          </ul>
+        </div>
+
+        <div class="footer-card">
+          <h4>Why Choose Us</h4>
+          <ul>
+            <li>Genuine products</li>
+            <li>Competitive pricing</li>
+            <li>Local store guidance</li>
+            <li>After-sales support</li>
+          </ul>
+        </div>
+
+        <div class="footer-card">
+          <h4>Contact</h4>
+          <ul>
+            <li>Agartala, Tripura</li>
+            <li>+91 8787625423</li>
+            <li>+91 9436125176</li>
+            <li>Mon – Sat • 10AM – 8PM</li>
+          </ul>
+        </div>
       </div>
-    </div>
 
-    <div class="footer-mobile">
-      <div class="mbrand">
-        <img src="assets/logo5.png" alt="Computer Source Logo" />
-        <h3>Computer Source</h3>
+      <div class="footer-bottom">
+        © <span id="year"></span> Computer Source • All Rights Reserved
       </div>
-
-      <p class="mobile-desc">Trusted electronics retailer and distributor.</p>
-
-      <div class="mobile-points">
-        <p>Genuine products with official warranty</p>
-        <p>Expert guidance and after-sales support</p>
-      </div>
-
-      <div class="mobile-contact">
-        <p>Agartala, Tripura</p>
-        <p>+91 8787625423</p>
-        <p>+91 9436125176</p>
-      </div>
-
-      <div class="mobile-social">
-        <a href="#" aria-label="Website">🌐</a>
-        <a href="#" aria-label="Facebook">📘</a>
-        <a href="#" aria-label="Instagram">📸</a>
-        <a href="#" aria-label="YouTube">▶️</a>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      © <span id="year"></span> Computer Source • All Rights Reserved
     </div>
   </footer>
 
-  <script>
-    const categoryFiles = {
-      laptop: "data/laptop.json",
-      monitor: "data/monitor.json",
-      speaker: "data/speaker.json",
-      headset: "data/headset.json",
-      printer: "data/printer.json",
-      motherboard: "data/motherboard.json",
-      keyboard: "data/keyboard.json",
-      mouse: "data/mouse.json",
-      graphics: "data/graphics.json"
-    };
+<script>
+  const SHEET_ID = "1b_9WtaXuIQgrGBx5LtwKB03xpsP8JhOzbNhRVrezWC0";
 
-    const categoryIcons = {
-      laptop: "assets/categories/laptop.png",
-      monitor: "assets/categories/monitor.png",
-      motherboard: "assets/categories/motherboard.png",
-      printer: "assets/categories/printer.png",
-      speaker: "assets/categories/speaker.png",
-      headset: "assets/categories/headphone.png",
-      keyboard: "assets/categories/keyboard.png",
-      mouse: "assets/categories/mouse.png",
-      graphics: "assets/categories/graphics.png"
-    };
-
-    let maxPrice = 200000;
-    let productData = {};
-    let currentCategory = "";
-    let currentBrand = "";
-
-    let activeFilters = {
-      memory: null,
-      storage: null,
-      powerOutput: null,
-      printerType: null
-    };
-
-    function capitalize(str) {
-      return str ? str.charAt(0).toUpperCase() + str.slice(1) : "";
+  const sheetConfig = {
+    projector: {
+      gid: "0",
+      icon: "assets/categories/projector.png"
+    },
+    laptop: {
+      gid: "91733040",
+      icon: "assets/categories/laptop.png"
+    },
+    monitor: {
+      gid: "1213918291",
+      icon: "assets/categories/monitor.png"
+    },
+    speaker: {
+      gid: "316377659",
+      icon: "assets/categories/speaker.png"
+    },
+    headset: {
+      gid: "420940539",
+      icon: "assets/categories/headphone.png"
+    },
+    printer: {
+      gid: "107059277",
+      icon: "assets/categories/printer.png"
+    },
+    keyboard: {
+      gid: "1553115159",
+      icon: "assets/categories/keyboard.png"
+    },
+    mouse: {
+      gid: "523307883",
+      icon: "assets/categories/mouse.png"
     }
+  };
 
-    function formatPrice(value) {
-      const num = Number(value);
-      return Number.isFinite(num) ? num.toLocaleString("en-IN") : "N/A";
+  const categoryIcons = Object.fromEntries(
+    Object.entries(sheetConfig).map(([key, value]) => [key, value.icon])
+  );
+
+  let productData = {};
+  let currentCategory = "";
+  let currentBrand = "";
+  let maxPrice = 200000;
+
+  let activeFilters = {
+    memory: null,
+    storage: null,
+    powerOutput: null,
+    printerType: null
+  };
+
+  const spinner = document.getElementById("spinner");
+  const searchInput = document.getElementById("productSearch");
+  const searchSuggestions = document.getElementById("searchSuggestions");
+  const overlay = document.getElementById("overlay");
+  const navDrawer = document.getElementById("navDrawer");
+  const filterDrawer = document.getElementById("filterDrawer");
+
+  function capitalize(str = "") {
+    return str ? str.charAt(0).toUpperCase() + str.slice(1) : "";
+  }
+
+  function formatPrice(value) {
+    const num = Number(value);
+    return Number.isFinite(num) ? num.toLocaleString("en-IN") : "N/A";
+  }
+
+  function escapeHtml(str = "") {
+    return String(str)
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#39;");
+  }
+
+  function escapeJsString(str = "") {
+    return String(str)
+      .replaceAll("\\", "\\\\")
+      .replaceAll("'", "\\'");
+  }
+
+  function normalizePath(path = "") {
+    const clean = String(path || "").trim();
+    if (!clean) return "assets/no.png";
+    if (clean.startsWith("http://") || clean.startsWith("https://")) return clean;
+    return clean.replace(/^\/+/, "");
+  }
+
+  function parsePhotos(value = "") {
+    if (!value) return [];
+    return String(value)
+      .split(",")
+      .map(item => normalizePath(item.trim()))
+      .filter(Boolean);
+  }
+
+  function parsePrice(value = "") {
+    const clean = String(value).trim();
+    if (!clean) return null;
+
+    const matches = clean.match(/[\d,]+(?:\.\d+)?/g);
+    if (!matches || !matches.length) return null;
+
+    const first = Number(matches[0].replace(/,/g, ""));
+    return Number.isFinite(first) ? first : null;
+  }
+
+  function normalizeHeader(header = "") {
+    return String(header)
+      .trim()
+      .toLowerCase()
+      .replace(/\s+/g, " ")
+      .replace(/[_-]+/g, " ");
+  }
+
+  function getValueByAliases(rowObj, aliases = []) {
+    for (const alias of aliases) {
+      const key = normalizeHeader(alias);
+      if (rowObj[key]) return rowObj[key];
     }
+    return "";
+  }
 
-    function escapeHtml(str = "") {
-      return String(str)
-        .replaceAll("&", "&amp;")
-        .replaceAll("<", "&lt;")
-        .replaceAll(">", "&gt;")
-        .replaceAll('"', "&quot;")
-        .replaceAll("'", "&#39;");
-    }
+  function parseCSV(text = "") {
+    const rows = [];
+    let row = [];
+    let cell = "";
+    let inQuotes = false;
 
-    function escapeJsString(str = "") {
-      return String(str)
-        .replaceAll("\\", "\\\\")
-        .replaceAll("'", "\\'");
-    }
+    for (let i = 0; i < text.length; i++) {
+      const char = text[i];
+      const next = text[i + 1];
 
-    function normalizePath(path = "") {
-      if (!path) return "assets/no.png";
-      if (path.startsWith("http://") || path.startsWith("https://")) return path;
-      return path.replace(/^\/+/, "");
-    }
-
-    function getFirstImage(product) {
-      if (!product || !Array.isArray(product.photos) || !product.photos.length) {
-        return "assets/no.png";
-      }
-      return normalizePath(product.photos[0]);
-    }
-
-    function getNumericPrice(product) {
-      const price = Number(product?.price);
-      return Number.isFinite(price) ? price : Number.MAX_SAFE_INTEGER;
-    }
-
-    const navbar = document.getElementById("navbar");
-    window.addEventListener("scroll", () => {
-      navbar.classList.toggle("scrolled", window.scrollY > 10);
-    });
-
-    const menuToggle = document.getElementById("menuToggle");
-    const sideMenu = document.getElementById("sideMenu");
-    const menuOverlay = document.getElementById("menuOverlay");
-    const mobileClose = document.getElementById("mobileClose");
-
-    function openMenu() {
-      sideMenu.classList.add("active");
-      menuOverlay.classList.add("active");
-      menuToggle.classList.add("active");
-      menuToggle.setAttribute("aria-expanded", "true");
-      document.body.classList.add("menu-open");
-    }
-
-    function closeMenu() {
-      sideMenu.classList.remove("active");
-      menuOverlay.classList.remove("active");
-      menuToggle.classList.remove("active");
-      menuToggle.setAttribute("aria-expanded", "false");
-      document.body.classList.remove("menu-open");
-    }
-
-    menuToggle.addEventListener("click", () => {
-      sideMenu.classList.contains("active") ? closeMenu() : openMenu();
-    });
-
-    menuOverlay.addEventListener("click", closeMenu);
-    mobileClose.addEventListener("click", closeMenu);
-
-    window.addEventListener("keydown", (e) => {
-      if (e.key === "Escape" && sideMenu.classList.contains("active")) {
-        closeMenu();
-      }
-    });
-
-    function toggleSearch() {
-      const wrap = document.getElementById("searchWrapper");
-      const input = document.getElementById("productSearch");
-      wrap.classList.toggle("active");
-
-      if (wrap.classList.contains("active")) {
-        input.focus();
-        wrap.scrollIntoView({ behavior: "smooth", block: "start" });
+      if (char === '"') {
+        if (inQuotes && next === '"') {
+          cell += '"';
+          i++;
+        } else {
+          inQuotes = !inQuotes;
+        }
+      } else if (char === "," && !inQuotes) {
+        row.push(cell);
+        cell = "";
+      } else if ((char === "\n" || char === "\r") && !inQuotes) {
+        if (char === "\r" && next === "\n") i++;
+        row.push(cell);
+        rows.push(row);
+        row = [];
+        cell = "";
       } else {
-        input.value = "";
-        document.getElementById("searchSuggestions").style.display = "none";
+        cell += char;
       }
     }
 
-    function handleSearch(query) {
-      const suggestionBox = document.getElementById("searchSuggestions");
-      const q = String(query || "").trim().toLowerCase();
+    if (cell.length || row.length) {
+      row.push(cell);
+      rows.push(row);
+    }
 
-      if (!q) {
-        suggestionBox.style.display = "none";
-        suggestionBox.innerHTML = "";
-        return;
-      }
+    return rows;
+  }
 
-      const results = [];
+  async function fetchSheetRows(gid) {
+    const url = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${gid}`;
+    const res = await fetch(url);
 
-      Object.keys(productData).forEach((category) => {
-        (productData[category] || []).forEach((product) => {
-          const searchableText = `
-            ${product.modelName || ""}
-            ${product.modelNumber || ""}
-            ${product.brand || ""}
-            ${category}
-          `.toLowerCase();
+    if (!res.ok) {
+      throw new Error(`Failed to fetch sheet gid=${gid}`);
+    }
 
-          if (searchableText.includes(q)) {
-            results.push({ ...product, category });
-          }
+    const csvText = await res.text();
+    const rows = parseCSV(csvText).filter(row => row.some(cell => String(cell).trim() !== ""));
+
+    if (!rows.length) return [];
+
+    const headers = rows[0].map(cell => normalizeHeader(cell));
+
+    return rows
+      .slice(1)
+      .map(row => {
+        const obj = {};
+        headers.forEach((header, index) => {
+          if (!header) return;
+          obj[header] = String(row[index] || "").trim();
         });
-      });
+        return obj;
+      })
+      .filter(row => Object.values(row).some(Boolean));
+  }
 
-      if (!results.length) {
-        suggestionBox.innerHTML = `<button type="button">No results found</button>`;
-        suggestionBox.style.display = "block";
-        return;
+  function mapLaptopRow(row) {
+    const brand = getValueByAliases(row, ["brand"]);
+    const modelName = getValueByAliases(row, ["model name", "modelname"]);
+    const modelNumber = getValueByAliases(row, ["model number", "modelnumber"]);
+    const category = getValueByAliases(row, ["category"]) || "laptop";
+    const color = getValueByAliases(row, ["color", "colors"]);
+    const warranty = getValueByAliases(row, ["warranty"]);
+    const price = parsePrice(getValueByAliases(row, ["price"]));
+    const photos = parsePhotos(getValueByAliases(row, ["photos", "photo"]));
+
+    return {
+      brand,
+      modelName,
+      modelNumber,
+      category: category.toLowerCase(),
+      color,
+      warranty,
+      price,
+      photos,
+      specs: {
+        memory: getValueByAliases(row, ["memory", "ram"]),
+        storage: getValueByAliases(row, ["storage"]),
+        processor: getValueByAliases(row, ["processor", "cpu"]),
+        graphics: getValueByAliases(row, ["graphics", "gpu"]),
+        display: getValueByAliases(row, ["display", "display size"]),
+        battery: getValueByAliases(row, ["battery"])
       }
+    };
+  }
 
-      suggestionBox.innerHTML = results.slice(0, 10).map((p) => {
-        const safeCategory = escapeJsString(p.category || "");
-        const safeId = escapeJsString(p.modelNumber || "");
-        return `
-          <button type="button" onclick="openFromSearch('${safeCategory}', '${safeId}')">
-            <b>${escapeHtml(p.modelName || "Unnamed Product")}</b><br />
-            <small>${escapeHtml(p.brand || "Brand")} • ${escapeHtml(capitalize(p.category || ""))} • ${escapeHtml(p.modelNumber || "")}</small>
-          </button>
-        `;
-      }).join("");
+  function mapProjectorRow(row) {
+    const brand = getValueByAliases(row, ["brand"]);
+    const modelName = getValueByAliases(row, ["model name", "modelname"]);
+    const modelNumber = getValueByAliases(row, ["model number", "modelnumber"]);
+    const category = getValueByAliases(row, ["category"]) || "projector";
+    const color = getValueByAliases(row, ["color", "colors"]);
+    const warranty = getValueByAliases(row, ["warranty"]);
+    const price = parsePrice(getValueByAliases(row, ["price"]));
+    const photos = parsePhotos(getValueByAliases(row, ["photos", "photo"]));
 
-      suggestionBox.style.display = "block";
-    }
-
-    function openFromSearch(category, modelNumber) {
-      document.getElementById("searchSuggestions").style.display = "none";
-      document.getElementById("productSearch").value = "";
-      window.location.href = `product-detail.html?category=${encodeURIComponent(category)}&id=${encodeURIComponent(modelNumber)}`;
-    }
-
-    document.addEventListener("click", (e) => {
-      if (!e.target.closest("#searchWrapper")) {
-        document.getElementById("searchSuggestions").style.display = "none";
+    return {
+      brand,
+      modelName,
+      modelNumber,
+      category: category.toLowerCase(),
+      color,
+      warranty,
+      price,
+      photos,
+      specs: {
+        projectionType: getValueByAliases(row, ["projection type"]),
+        resolution: getValueByAliases(row, ["resolution"]),
+        brightness: getValueByAliases(row, ["brightness"]),
+        connectivity: getValueByAliases(row, ["connectivity"]),
+        speaker: getValueByAliases(row, ["speaker"]),
+        compatibility: getValueByAliases(row, ["compatibility"])
       }
+    };
+  }
+
+  function mapMonitorRow(row) {
+    const brand = getValueByAliases(row, ["brand"]);
+    const modelName = getValueByAliases(row, ["model name", "modelname"]);
+    const modelNumber = getValueByAliases(row, ["model number", "modelnumber"]);
+    const category = getValueByAliases(row, ["category"]) || "monitor";
+    const color = getValueByAliases(row, ["color", "colors"]);
+    const warranty = getValueByAliases(row, ["warranty"]);
+    const price = parsePrice(getValueByAliases(row, ["price"]));
+    const photos = parsePhotos(getValueByAliases(row, ["photos", "photo"]));
+
+    return {
+      brand,
+      modelName,
+      modelNumber,
+      category: category.toLowerCase(),
+      color,
+      warranty,
+      price,
+      photos,
+      specs: {
+        displaySize: getValueByAliases(row, ["display size", "displaysize", "display"]),
+        resolution: getValueByAliases(row, ["resolution"]),
+        refreshRate: getValueByAliases(row, ["refresh rate", "refreshrate"]),
+        panelType: getValueByAliases(row, ["panel type", "paneltype"]),
+        connectivity: getValueByAliases(row, ["connectivity"])
+      }
+    };
+  }
+
+  function mapSpeakerRow(row) {
+    const brand = getValueByAliases(row, ["brand"]);
+    const modelName = getValueByAliases(row, ["model name", "modelname"]);
+    const modelNumber = getValueByAliases(row, ["model number", "modelnumber"]);
+    const category = getValueByAliases(row, ["category"]) || "speaker";
+    const color = getValueByAliases(row, ["color", "colors"]);
+    const warranty = getValueByAliases(row, ["warranty"]);
+    const price = parsePrice(getValueByAliases(row, ["price"]));
+    const photos = parsePhotos(getValueByAliases(row, ["photos", "photo"]));
+
+    return {
+      brand,
+      modelName,
+      modelNumber,
+      category: category.toLowerCase(),
+      color,
+      warranty,
+      price,
+      photos,
+      specs: {
+        powerOutput: getValueByAliases(row, ["power output", "poweroutput"]),
+        battery: getValueByAliases(row, ["battery"]),
+        connectivity: getValueByAliases(row, ["connectivity"])
+      }
+    };
+  }
+
+  function mapHeadsetRow(row) {
+    const brand = getValueByAliases(row, ["brand"]);
+    const modelName = getValueByAliases(row, ["model name", "modelname"]);
+    const modelNumber = getValueByAliases(row, ["model number", "modelnumber"]);
+    const category = getValueByAliases(row, ["category"]) || "headset";
+    const color = getValueByAliases(row, ["color", "colors"]);
+    const warranty = getValueByAliases(row, ["warranty"]);
+    const price = parsePrice(getValueByAliases(row, ["price"]));
+    const photos = parsePhotos(getValueByAliases(row, ["photos", "photo"]));
+
+    return {
+      brand,
+      modelName,
+      modelNumber,
+      category: category.toLowerCase(),
+      color,
+      warranty,
+      price,
+      photos,
+      specs: {
+        type: getValueByAliases(row, ["type", "headset type"]),
+        microphone: getValueByAliases(row, ["microphone", "mic"]),
+        connectivity: getValueByAliases(row, ["connectivity"]),
+        battery: getValueByAliases(row, ["battery"]),
+        features: getValueByAliases(row, ["features", "other features"])
+      }
+    };
+  }
+
+  function mapPrinterRow(row) {
+    const brand = getValueByAliases(row, ["brand"]);
+    const modelName = getValueByAliases(row, ["model name", "modelname"]);
+    const modelNumber = getValueByAliases(row, ["model number", "modelnumber"]);
+    const category = getValueByAliases(row, ["category"]) || "printer";
+    const color = getValueByAliases(row, ["color", "colors"]);
+    const warranty = getValueByAliases(row, ["warranty"]);
+    const price = parsePrice(getValueByAliases(row, ["price"]));
+    const photos = parsePhotos(getValueByAliases(row, ["photos", "photo"]));
+
+    return {
+      brand,
+      modelName,
+      modelNumber,
+      category: category.toLowerCase(),
+      color,
+      warranty,
+      price,
+      photos,
+      specs: {
+        printerType: getValueByAliases(row, ["printer type"]),
+        functions: getValueByAliases(row, ["functions"]),
+        printSpeed: getValueByAliases(row, ["print speed"]),
+        printResolution: getValueByAliases(row, ["print resolution"]),
+        scanType: getValueByAliases(row, ["scan type"]),
+        connectivity: getValueByAliases(row, ["connectivity"]),
+        supportedPaperSizes: getValueByAliases(row, ["supported paper sizes"]),
+        compatibleOS: getValueByAliases(row, ["compatible os"]),
+        tonerInkType: getValueByAliases(row, ["toner/ink type", "toner ink type"]),
+        otherFeatures: getValueByAliases(row, ["other features"])
+      }
+    };
+  }
+
+  function mapKeyboardRow(row) {
+    const brand = getValueByAliases(row, ["brand"]);
+    const modelName = getValueByAliases(row, ["model name", "modelname"]);
+    const modelNumber = getValueByAliases(row, ["model number", "modelnumber"]);
+    const category = getValueByAliases(row, ["category"]) || "keyboard";
+    const color = getValueByAliases(row, ["color", "colors"]);
+    const warranty = getValueByAliases(row, ["warranty"]);
+    const price = parsePrice(getValueByAliases(row, ["price"]));
+    const photos = parsePhotos(getValueByAliases(row, ["photos", "photo"]));
+
+    return {
+      brand,
+      modelName,
+      modelNumber,
+      category: category.toLowerCase(),
+      color,
+      warranty,
+      price,
+      photos,
+      specs: {
+        keyboardType: getValueByAliases(row, ["keyboard type"]),
+        layout: getValueByAliases(row, ["layout"]),
+        backlight: getValueByAliases(row, ["backlight"]),
+        connection: getValueByAliases(row, ["connection"]),
+        mouseSensor: getValueByAliases(row, ["mouse sensor", "sensor"]),
+        mouseDPI: getValueByAliases(row, ["mouse dpi", "dpi"]),
+        usage: getValueByAliases(row, ["usage"]),
+        otherFeatures: getValueByAliases(row, ["other features"])
+      }
+    };
+  }
+
+  function mapMouseRow(row) {
+    const brand = getValueByAliases(row, ["brand"]);
+    const modelName = getValueByAliases(row, ["model name", "modelname"]);
+    const modelNumber = getValueByAliases(row, ["model number", "modelnumber"]);
+    const category = getValueByAliases(row, ["category"]) || "mouse";
+    const color = getValueByAliases(row, ["color", "colors"]);
+    const warranty = getValueByAliases(row, ["warranty"]);
+    const price = parsePrice(getValueByAliases(row, ["price"]));
+    const photos = parsePhotos(getValueByAliases(row, ["photos", "photo"]));
+
+    return {
+      brand,
+      modelName,
+      modelNumber,
+      category: category.toLowerCase(),
+      color,
+      warranty,
+      price,
+      photos,
+      specs: {
+        sensor: getValueByAliases(row, ["sensor"]),
+        dpi: getValueByAliases(row, ["dpi"]),
+        buttons: getValueByAliases(row, ["buttons"]),
+        connection: getValueByAliases(row, ["connection"]),
+        lighting: getValueByAliases(row, ["lighting"]),
+        otherFeatures: getValueByAliases(row, ["other features"])
+      }
+    };
+  }
+
+  function mapRowByCategory(category, row) {
+    switch (category) {
+      case "laptop":
+        return mapLaptopRow(row);
+      case "projector":
+        return mapProjectorRow(row);
+      case "monitor":
+        return mapMonitorRow(row);
+      case "speaker":
+        return mapSpeakerRow(row);
+      case "headset":
+        return mapHeadsetRow(row);
+      case "printer":
+        return mapPrinterRow(row);
+      case "keyboard":
+        return mapKeyboardRow(row);
+      case "mouse":
+        return mapMouseRow(row);
+      default:
+        return {
+          brand: getValueByAliases(row, ["brand"]),
+          modelName: getValueByAliases(row, ["model name", "modelname"]),
+          modelNumber: getValueByAliases(row, ["model number", "modelnumber"]),
+          category,
+          color: getValueByAliases(row, ["color", "colors"]),
+          warranty: getValueByAliases(row, ["warranty"]),
+          price: parsePrice(getValueByAliases(row, ["price"])),
+          photos: parsePhotos(getValueByAliases(row, ["photos", "photo"])),
+          specs: {}
+        };
+    }
+  }
+
+  function isValidProduct(product) {
+    return Boolean(product && (product.modelName || product.modelNumber || product.brand));
+  }
+
+  function getFirstImage(product) {
+    if (!product || !Array.isArray(product.photos) || !product.photos.length) {
+      return "assets/no.png";
+    }
+    return normalizePath(product.photos[0]);
+  }
+
+  function getNumericPrice(product) {
+    const price = Number(product?.price);
+    return Number.isFinite(price) ? price : Number.MAX_SAFE_INTEGER;
+  }
+
+  function focusSearch() {
+    searchInput?.focus();
+    searchInput?.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+
+  function openNavDrawer() {
+    overlay.classList.add("active");
+    navDrawer.classList.add("active");
+    filterDrawer.classList.remove("active");
+    document.body.style.overflow = "hidden";
+  }
+
+  function openFilterDrawer() {
+    overlay.classList.add("active");
+    filterDrawer.classList.add("active");
+    navDrawer.classList.remove("active");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeAllDrawers() {
+    overlay.classList.remove("active");
+    navDrawer.classList.remove("active");
+    filterDrawer.classList.remove("active");
+    document.body.style.overflow = "";
+  }
+
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      closeAllDrawers();
+      searchSuggestions.style.display = "none";
+    }
+  });
+
+  function clearActiveFilters() {
+    Object.keys(activeFilters).forEach((key) => {
+      activeFilters[key] = null;
     });
+  }
 
-    async function fetchProducts() {
-      productData = {};
+  function clearAllFilters() {
+    currentBrand = "";
+    maxPrice = 200000;
+    clearActiveFilters();
 
-      const entries = Object.entries(categoryFiles);
+    renderFilterPanels(currentCategory);
+    renderProducts();
 
-      await Promise.all(entries.map(async ([category, file]) => {
+    if (searchInput) {
+      searchInput.value = "";
+    }
+
+    searchSuggestions.style.display = "none";
+    closeAllDrawers();
+  }
+
+  async function fetchProducts() {
+    const entries = Object.entries(sheetConfig);
+
+    await Promise.all(
+      entries.map(async ([category, config]) => {
         try {
-          const res = await fetch(file);
-          if (!res.ok) throw new Error(`Failed to load ${file}`);
-          const data = await res.json();
-          productData[category] = Array.isArray(data) ? data : [];
-        } catch (err) {
-          console.warn(`Failed to load ${category}:`, err);
+          const rows = await fetchSheetRows(config.gid);
+          const items = rows
+            .map(row => mapRowByCategory(category, row))
+            .filter(isValidProduct);
+
+          productData[category] = items;
+        } catch (error) {
+          console.warn(`Failed to load ${category}`, error);
           productData[category] = [];
         }
-      }));
+      })
+    );
 
-      const availableCategories = Object.keys(productData).filter(
-        (cat) => Array.isArray(productData[cat])
-      );
+    const categories = Object.keys(productData).filter(cat => Array.isArray(productData[cat]));
+    generateCategoryTabs(categories);
+    loadCategoryFromURL();
+  }
 
-      generateTabs(availableCategories);
-      loadCategoryFromURL();
+  function loadCategoryFromURL() {
+    const params = new URLSearchParams(window.location.search);
+    let category = params.get("category");
+
+    if (!category || !productData[category]) {
+      category = Object.keys(productData)[0] || "laptop";
     }
 
-    function loadCategoryFromURL() {
-      const params = new URLSearchParams(window.location.search);
-      let category = params.get("category");
+    switchCategory(category);
+    history.replaceState(null, "", `product.html?category=${encodeURIComponent(category)}`);
+  }
 
-      if (!category || !productData[category]) {
-        category = Object.keys(productData)[0] || "laptop";
-      }
+  function generateCategoryTabs(categories) {
+    const strip = document.getElementById("category-strip");
 
-      switchCategory(category);
-      history.replaceState(null, "", `product.html?category=${encodeURIComponent(category)}`);
-    }
+    strip.innerHTML = categories.map(cat => `
+      <div class="category-tile" data-category="${escapeHtml(cat)}" tabindex="0" role="button" aria-label="${escapeHtml(capitalize(cat))}">
+        <img src="${escapeHtml(categoryIcons[cat] || "assets/categories/default.png")}" alt="${escapeHtml(cat)} icon" loading="lazy" />
+        <span>${escapeHtml(capitalize(cat))}</span>
+      </div>
+    `).join("");
 
-    function generateTabs(categories) {
-      const strip = document.getElementById("category-strip");
-      strip.innerHTML = categories.map((cat) => `
-        <div class="category-tile" data-category="${escapeHtml(cat)}" tabindex="0" role="button" aria-label="${escapeHtml(capitalize(cat))}">
-          <img src="${escapeHtml(categoryIcons[cat] || "assets/categories/default.png")}" alt="${escapeHtml(cat)} icon">
-          <span>${escapeHtml(capitalize(cat))}</span>
-        </div>
-      `).join("");
-
-      document.querySelectorAll(".category-tile").forEach((tile) => {
-        tile.addEventListener("click", () => {
-          const category = tile.dataset.category;
-          switchCategory(category);
-          history.replaceState(null, "", `product.html?category=${encodeURIComponent(category)}`);
-        });
-
-        tile.addEventListener("keydown", (e) => {
-          if (e.key === "Enter" || e.key === " ") {
-            e.preventDefault();
-            tile.click();
-          }
-        });
-      });
-    }
-
-    function activateTab(category) {
-      document.querySelectorAll(".category-tile").forEach((tile) => {
-        tile.classList.toggle("active", tile.dataset.category === category);
-      });
-    }
-
-    function getBrandList(category) {
-      return [...new Set(
-        (productData[category] || [])
-          .map((p) => (p.brand || "").trim())
-          .filter(Boolean)
-      )].sort((a, b) => a.localeCompare(b));
-    }
-
-    function updateSidebar(category) {
-      const container = document.getElementById("categoryBrandList");
-      const brands = getBrandList(category);
-
-      container.innerHTML = `
-        <div class="category-block">
-          <h4>${escapeHtml(capitalize(category))}</h4>
-          <ul class="brand-list">
-            <li class="${currentBrand === "" ? "active" : ""}" onclick="filterByBrand('')">All</li>
-            ${brands.map((b) => `
-              <li class="${currentBrand === b ? "active" : ""}" onclick="filterByBrand('${escapeJsString(b)}')">${escapeHtml(b)}</li>
-            `).join("")}
-          </ul>
-        </div>
-      `;
-    }
-
-    function updateMobileSidebar(category) {
-      const container = document.getElementById("mobileBrandList");
-      const brands = getBrandList(category);
-
-      container.innerHTML = `
-        <div class="category-block">
-          <h4>${escapeHtml(capitalize(category))}</h4>
-          <ul class="brand-list">
-            <li class="${currentBrand === "" ? "active" : ""}" onclick="filterByBrand(''); closeMenu();">All</li>
-            ${brands.map((b) => `
-              <li class="${currentBrand === b ? "active" : ""}" onclick="filterByBrand('${escapeJsString(b)}'); closeMenu();">${escapeHtml(b)}</li>
-            `).join("")}
-          </ul>
-        </div>
-      `;
-    }
-
-    function filterByBrand(brand) {
-      currentBrand = brand || "";
-      updateSidebar(currentCategory);
-      updateMobileSidebar(currentCategory);
-      renderProducts();
-    }
-
-    function updatePriceFilter(value, fromMobile = false) {
-      maxPrice = Number(value);
-
-      document.getElementById("priceValue").innerText = formatPrice(value);
-      document.getElementById("mobilePriceValue").innerText = formatPrice(value);
-
-      if (fromMobile) {
-        document.getElementById("priceRange").value = value;
-      } else {
-        document.getElementById("mobilePriceRange").value = value;
-      }
-
-      renderProducts();
-    }
-
-    document.getElementById("priceRange").addEventListener("input", (e) => {
-      updatePriceFilter(e.target.value, false);
-    });
-
-    document.getElementById("mobilePriceRange").addEventListener("input", (e) => {
-      updatePriceFilter(e.target.value, true);
-    });
-
-    function clearActiveFilters() {
-      Object.keys(activeFilters).forEach((key) => {
-        activeFilters[key] = null;
-      });
-    }
-
-    function showFilters(category) {
-      const blocks = [
-        "laptopFilters",
-        "speakerFilters",
-        "printerFilters",
-        "mobileLaptopFilters",
-        "mobileSpeakerFilters",
-        "mobilePrinterFilters"
-      ];
-
-      blocks.forEach((id) => {
-        const el = document.getElementById(id);
-        if (el) el.style.display = "none";
+    document.querySelectorAll(".category-tile").forEach(tile => {
+      tile.addEventListener("click", () => {
+        const category = tile.dataset.category;
+        switchCategory(category);
+        history.replaceState(null, "", `product.html?category=${encodeURIComponent(category)}`);
+        tile.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
       });
 
-      const c = String(category || "").toLowerCase();
-
-      if (c === "laptop") {
-        document.getElementById("laptopFilters").style.display = "block";
-        document.getElementById("mobileLaptopFilters").style.display = "block";
-        generateLaptopFilters(productData[category] || []);
-      }
-
-      if (c === "speaker") {
-        document.getElementById("speakerFilters").style.display = "block";
-        document.getElementById("mobileSpeakerFilters").style.display = "block";
-        generateSpeakerFilters(productData[category] || []);
-      }
-
-      if (c === "printer") {
-        document.getElementById("printerFilters").style.display = "block";
-        document.getElementById("mobilePrinterFilters").style.display = "block";
-        generatePrinterFilters(productData[category] || []);
-      }
-    }
-
-    function bindFilterButtons(scopeEl) {
-      if (!scopeEl) return;
-
-      scopeEl.querySelectorAll(".filter-btn").forEach((btn) => {
-        btn.addEventListener("click", () => {
-          const key = btn.dataset.key;
-          const value = btn.dataset.value;
-          if (!key) return;
-
-          activeFilters[key] = activeFilters[key] === value ? null : value;
-
-          document.querySelectorAll(`.filter-btn[data-key="${key}"]`).forEach((b) => {
-            b.classList.toggle("active", activeFilters[key] === b.dataset.value);
-          });
-
-          renderProducts();
-        });
-      });
-    }
-
-    function generateLaptopFilters(products) {
-      const ramSet = new Set();
-      const storageSet = new Set();
-
-      products.forEach((p) => {
-        if (p?.specs?.memory) ramSet.add(String(p.specs.memory));
-        if (p?.specs?.storage) storageSet.add(String(p.specs.storage));
-      });
-
-      const ramHTML = [...ramSet].sort().map((ram) => `
-        <button class="filter-btn ${activeFilters.memory === ram ? "active" : ""}" data-key="memory" data-value="${escapeHtml(ram)}">${escapeHtml(ram)}</button>
-      `).join("");
-
-      const storageHTML = [...storageSet].sort().map((s) => `
-        <button class="filter-btn ${activeFilters.storage === s ? "active" : ""}" data-key="storage" data-value="${escapeHtml(s)}">${escapeHtml(s)}</button>
-      `).join("");
-
-      document.querySelector("#laptopFilters .filter-group:nth-child(1) .filter-options").innerHTML = ramHTML;
-      document.querySelector("#laptopFilters .filter-group:nth-child(2) .filter-options").innerHTML = storageHTML;
-      document.querySelector("#mobileLaptopFilters .filter-group:nth-child(1) .filter-options").innerHTML = ramHTML;
-      document.querySelector("#mobileLaptopFilters .filter-group:nth-child(2) .filter-options").innerHTML = storageHTML;
-
-      bindFilterButtons(document.getElementById("laptopFilters"));
-      bindFilterButtons(document.getElementById("mobileLaptopFilters"));
-    }
-
-    function generateSpeakerFilters(products) {
-      const set = new Set();
-      products.forEach((p) => {
-        if (p?.specs?.powerOutput) set.add(String(p.specs.powerOutput));
-      });
-
-      const html = [...set].sort().map((v) => `
-        <button class="filter-btn ${activeFilters.powerOutput === v ? "active" : ""}" data-key="powerOutput" data-value="${escapeHtml(v)}">${escapeHtml(v)}</button>
-      `).join("");
-
-      document.querySelector("#speakerFilters .filter-options").innerHTML = html;
-      document.querySelector("#mobileSpeakerFilters .filter-options").innerHTML = html;
-
-      bindFilterButtons(document.getElementById("speakerFilters"));
-      bindFilterButtons(document.getElementById("mobileSpeakerFilters"));
-    }
-
-    function generatePrinterFilters(products) {
-      const set = new Set();
-
-      products.forEach((p) => {
-        const t = p?.specs?.printerType || p?.specs?.printertype;
-        if (t) set.add(String(t));
-      });
-
-      const html = [...set].sort().map((v) => `
-        <button class="filter-btn ${activeFilters.printerType === v ? "active" : ""}" data-key="printerType" data-value="${escapeHtml(v)}">${escapeHtml(v)}</button>
-      `).join("");
-
-      document.querySelector("#printerFilters .filter-options").innerHTML = html;
-      document.querySelector("#mobilePrinterFilters .filter-options").innerHTML = html;
-
-      bindFilterButtons(document.getElementById("printerFilters"));
-      bindFilterButtons(document.getElementById("mobilePrinterFilters"));
-    }
-
-    function switchCategory(category) {
-      currentCategory = category;
-      currentBrand = "";
-      clearActiveFilters();
-
-      activateTab(category);
-      updateSidebar(category);
-      updateMobileSidebar(category);
-      showFilters(category);
-      renderProducts();
-    }
-
-    function openProductDetail(category, id) {
-      window.location.href = `product-detail.html?category=${encodeURIComponent(category)}&id=${encodeURIComponent(id)}`;
-    }
-
-    function applyCategorySpecificSpecs(category, p) {
-      if (category === "laptop") {
-        return `
-          <p><b>RAM:</b> ${escapeHtml(p?.specs?.memory || "N/A")}</p>
-          <p><b>Storage:</b> ${escapeHtml(p?.specs?.storage || "N/A")}</p>
-          <p><b>Graphics:</b> ${escapeHtml(p?.specs?.graphics || "N/A")}</p>
-        `;
-      }
-
-      if (category === "monitor") {
-        return `
-          <p><b>Display:</b> ${escapeHtml(p?.specs?.displaySize || "N/A")}</p>
-          <p><b>Resolution:</b> ${escapeHtml(p?.specs?.resolution || "N/A")}</p>
-          <p><b>Refresh:</b> ${escapeHtml(p?.specs?.refreshRate || "N/A")}</p>
-        `;
-      }
-
-      if (category === "speaker") {
-        return `
-          <p><b>Output:</b> ${escapeHtml(p?.specs?.powerOutput || "N/A")}</p>
-          <p><b>Battery:</b> ${escapeHtml(p?.specs?.battery || "N/A")}</p>
-          <p><b>Connect:</b> ${escapeHtml(p?.specs?.connectivity || "N/A")}</p>
-        `;
-      }
-
-      if (category === "printer") {
-        const type = p?.specs?.printerType || p?.specs?.printertype;
-        return `
-          <p><b>Type:</b> ${escapeHtml(type || "N/A")}</p>
-          <p><b>Functions:</b> ${escapeHtml(p?.specs?.functions || "N/A")}</p>
-        `;
-      }
-
-      if (category === "headset") {
-        return `
-          <p><b>Type:</b> ${escapeHtml(p?.specs?.type || p?.headsetType || "N/A")}</p>
-          <p><b>Mic:</b> ${escapeHtml(p?.specs?.microphone || "N/A")}</p>
-        `;
-      }
-
-      if (category === "mouse") {
-        return `
-          <p><b>Connection:</b> ${escapeHtml(p?.specs?.connection || "N/A")}</p>
-          <p><b>DPI:</b> ${escapeHtml(p?.specs?.dpi || "N/A")}</p>
-        `;
-      }
-
-      if (category === "keyboard") {
-        return `
-          <p><b>Connection:</b> ${escapeHtml(p?.specs?.connection || "N/A")}</p>
-          <p><b>Layout:</b> ${escapeHtml(p?.specs?.layout || "N/A")}</p>
-        `;
-      }
-
-      if (category === "motherboard") {
-        return `
-          <p><b>Chipset:</b> ${escapeHtml(p?.specs?.chipset || "N/A")}</p>
-          <p><b>Socket:</b> ${escapeHtml(p?.specs?.socket || "N/A")}</p>
-        `;
-      }
-
-      if (category === "graphics") {
-        return `
-          <p><b>Memory:</b> ${escapeHtml(p?.specs?.memory || "N/A")}</p>
-          <p><b>Bus:</b> ${escapeHtml(p?.specs?.bus || "N/A")}</p>
-          <p><b>Output:</b> ${escapeHtml(p?.specs?.output || "N/A")}</p>
-        `;
-      }
-
-      return `<p><b>Brand:</b> ${escapeHtml(p?.brand || "N/A")}</p>`;
-    }
-
-    function renderProducts() {
-      let items = productData[currentCategory] || [];
-
-      if (currentBrand) {
-        items = items.filter((p) => p.brand === currentBrand);
-      }
-
-      items = items.filter((p) => getNumericPrice(p) <= maxPrice);
-
-      Object.entries(activeFilters).forEach(([key, val]) => {
-        if (!val) return;
-
-        if (key === "printerType") {
-          items = items.filter((p) => {
-            const t = p?.specs?.printerType || p?.specs?.printertype;
-            return t === val;
-          });
-          return;
+      tile.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          tile.click();
         }
-
-        items = items.filter((p) => p?.specs?.[key] === val);
       });
+    });
+  }
 
-      const container = document.getElementById("product-details");
-      const heading = `${capitalize(currentCategory)}${currentBrand ? " • " + currentBrand : ""}`;
+  function activateTab(category) {
+    document.querySelectorAll(".category-tile").forEach(tile => {
+      tile.classList.toggle("active", tile.dataset.category === category);
+    });
+  }
 
-      if (!items.length) {
-        container.innerHTML = `
-          <div class="product-head">
-            <h2>${escapeHtml(heading)}</h2>
-            <div class="product-count">0 products</div>
+  function getBrandList(category) {
+    return [
+      ...new Set(
+        (productData[category] || [])
+          .map(p => (p.brand || "").trim())
+          .filter(Boolean)
+      )
+    ].sort((a, b) => a.localeCompare(b));
+  }
+
+  function createBrandFilterHTML(category) {
+    const brands = getBrandList(category);
+
+    return `
+      <div class="filter-card">
+        <h4>${escapeHtml(capitalize(category))} Brands</h4>
+        <ul class="brand-list">
+          <li class="${currentBrand === "" ? "active" : ""}" onclick="filterByBrand('')">All</li>
+          ${brands.map(b => `
+            <li class="${currentBrand === b ? "active" : ""}" onclick="filterByBrand('${escapeJsString(b)}')">
+              ${escapeHtml(b)}
+            </li>
+          `).join("")}
+        </ul>
+      </div>
+    `;
+  }
+
+  function createPriceFilterHTML() {
+    return `
+      <div class="filter-card">
+        <h4>Price Range</h4>
+        <div class="range-wrap">
+          <input type="range" min="0" max="200000" step="1000" value="${maxPrice}" oninput="updatePriceFilter(this.value)" />
+          <div class="range-row">
+            <span>Up to</span>
+            <strong>₹${formatPrice(maxPrice)}</strong>
           </div>
-          <div class="empty-state">
-            <p>No products found for the selected filters.</p>
-          </div>
-        `;
+        </div>
+      </div>
+    `;
+  }
+
+  function getUniqueSpecValues(category, key) {
+    const items = productData[category] || [];
+    const values = new Set();
+
+    items.forEach((p) => {
+      if (key === "printerType") {
+        const value = p?.specs?.printerType || p?.specs?.printertype;
+        if (value) values.add(String(value));
         return;
       }
 
-      container.innerHTML = `
-        <div class="product-head">
-          <h2>${escapeHtml(heading)}</h2>
-          <div class="product-count">${items.length} product${items.length > 1 ? "s" : ""}</div>
-        </div>
-        <div class="product-grid">
-          ${items.map((p) => `
-            <div class="product-card" onclick="openProductDetail('${escapeJsString(currentCategory)}', '${escapeJsString(p.modelNumber || "")}')">
-              <img src="${escapeHtml(getFirstImage(p))}" alt="${escapeHtml(p.modelName || "Product")}" />
-              <h4>${escapeHtml(p.modelName || "Unnamed Product")}</h4>
-              <p class="model">Model: ${escapeHtml(p.modelNumber || "N/A")}</p>
-              <div class="product-specs">
-                ${applyCategorySpecificSpecs(currentCategory, p)}
-              </div>
-              <div class="price">₹${formatPrice(p.price)}</div>
-            </div>
-          `).join("")}
+      const value = p?.specs?.[key];
+      if (value) values.add(String(value));
+    });
+
+    return [...values].sort();
+  }
+
+  function createFilterButtons(key, values) {
+    return values.map(value => `
+      <button
+        type="button"
+        class="filter-btn ${activeFilters[key] === value ? "active" : ""}"
+        onclick="toggleFilter('${escapeJsString(key)}', '${escapeJsString(value)}')"
+      >
+        ${escapeHtml(value)}
+      </button>
+    `).join("");
+  }
+
+  function createCategorySpecificFilterHTML(category) {
+    if (category === "laptop") {
+      const rams = getUniqueSpecValues(category, "memory");
+      const storage = getUniqueSpecValues(category, "storage");
+
+      return `
+        <div class="filter-card">
+          <h4>Laptop Filters</h4>
+          <div class="filter-group" style="margin-bottom:12px;">
+            <div style="font-size:0.84rem;font-weight:800;color:#475569;margin-bottom:8px;">RAM</div>
+            <div class="filter-options">${createFilterButtons("memory", rams)}</div>
+          </div>
+          <div class="filter-group">
+            <div style="font-size:0.84rem;font-weight:800;color:#475569;margin-bottom:8px;">Storage</div>
+            <div class="filter-options">${createFilterButtons("storage", storage)}</div>
+          </div>
         </div>
       `;
     }
 
-    window.addEventListener("load", async () => {
-      document.getElementById("year").innerText = new Date().getFullYear();
-      document.getElementById("priceValue").innerText = formatPrice(maxPrice);
-      document.getElementById("mobilePriceValue").innerText = formatPrice(maxPrice);
+    if (category === "speaker") {
+      const power = getUniqueSpecValues(category, "powerOutput");
+      return `
+        <div class="filter-card">
+          <h4>Speaker Filters</h4>
+          <div class="filter-group">
+            <div style="font-size:0.84rem;font-weight:800;color:#475569;margin-bottom:8px;">Power Output</div>
+            <div class="filter-options">${createFilterButtons("powerOutput", power)}</div>
+          </div>
+        </div>
+      `;
+    }
 
-      await fetchProducts();
+    if (category === "printer") {
+      const types = getUniqueSpecValues(category, "printerType");
+      return `
+        <div class="filter-card">
+          <h4>Printer Filters</h4>
+          <div class="filter-group">
+            <div style="font-size:0.84rem;font-weight:800;color:#475569;margin-bottom:8px;">Printer Type</div>
+            <div class="filter-options">${createFilterButtons("printerType", types)}</div>
+          </div>
+        </div>
+      `;
+    }
 
-      const spinner = document.getElementById("spinner");
-      spinner.style.display = "none";
-      document.body.classList.add("show");
+    return "";
+  }
+
+  function renderFilterPanels(category) {
+    const desktop = document.getElementById("desktopFilterContent");
+    const mobile = document.getElementById("mobileFilterContent");
+
+    const html = `
+      ${createBrandFilterHTML(category)}
+      ${createPriceFilterHTML()}
+      ${createCategorySpecificFilterHTML(category)}
+    `;
+
+    desktop.innerHTML = html;
+    mobile.innerHTML = html;
+  }
+
+  function updatePriceFilter(value) {
+    maxPrice = Number(value);
+    renderFilterPanels(currentCategory);
+    renderProducts();
+  }
+
+  function toggleFilter(key, value) {
+    activeFilters[key] = activeFilters[key] === value ? null : value;
+    renderFilterPanels(currentCategory);
+    renderProducts();
+  }
+
+  function filterByBrand(brand) {
+    currentBrand = brand || "";
+    renderFilterPanels(currentCategory);
+    renderProducts();
+  }
+
+  function switchCategory(category) {
+    currentCategory = category;
+    currentBrand = "";
+    maxPrice = 200000;
+    clearActiveFilters();
+
+    activateTab(category);
+    renderFilterPanels(category);
+    renderProducts();
+    closeAllDrawers();
+  }
+
+  function handleSearch(query) {
+    const q = String(query || "").trim().toLowerCase();
+
+    if (!q) {
+      searchSuggestions.style.display = "none";
+      searchSuggestions.innerHTML = "";
+      return;
+    }
+
+    const results = [];
+
+    Object.keys(productData).forEach((category) => {
+      (productData[category] || []).forEach((product) => {
+        const searchable = `
+          ${product.modelName || ""}
+          ${product.modelNumber || ""}
+          ${product.brand || ""}
+          ${category}
+        `.toLowerCase();
+
+        if (searchable.includes(q)) {
+          results.push({ ...product, category });
+        }
+      });
     });
-  </script>
+
+    if (!results.length) {
+      searchSuggestions.innerHTML = `<button type="button">No results found</button>`;
+      searchSuggestions.style.display = "block";
+      return;
+    }
+
+    searchSuggestions.innerHTML = results.slice(0, 10).map((p) => `
+      <button type="button" onclick="openFromSearch('${escapeJsString(p.category)}', '${escapeJsString(p.modelNumber || "")}')">
+        <b>${escapeHtml(p.modelName || "Unnamed Product")}</b>
+        <small>${escapeHtml(p.brand || "Brand")} • ${escapeHtml(capitalize(p.category || ""))} • ${escapeHtml(p.modelNumber || "")}</small>
+      </button>
+    `).join("");
+
+    searchSuggestions.style.display = "block";
+  }
+
+  function openFromSearch(category, modelNumber) {
+    searchSuggestions.style.display = "none";
+    searchInput.value = "";
+    window.location.href = `product-detail.html?category=${encodeURIComponent(category)}&id=${encodeURIComponent(modelNumber)}`;
+  }
+
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".search-shell")) {
+      searchSuggestions.style.display = "none";
+    }
+  });
+
+  function openProductDetail(category, id) {
+    window.location.href = `product-detail.html?category=${encodeURIComponent(category)}&id=${encodeURIComponent(id)}`;
+  }
+
+  function applyCategorySpecificSpecs(category, p) {
+    if (category === "laptop") {
+      return `
+        <p><b>RAM:</b> <span>${escapeHtml(p?.specs?.memory || "N/A")}</span></p>
+        <p><b>Storage:</b> <span>${escapeHtml(p?.specs?.storage || "N/A")}</span></p>
+        <p><b>Graphics:</b> <span>${escapeHtml(p?.specs?.graphics || "N/A")}</span></p>
+      `;
+    }
+
+    if (category === "projector") {
+      return `
+        <p><b>Type:</b> <span>${escapeHtml(p?.specs?.projectionType || "N/A")}</span></p>
+        <p><b>Resolution:</b> <span>${escapeHtml(p?.specs?.resolution || "N/A")}</span></p>
+        <p><b>Brightness:</b> <span>${escapeHtml(p?.specs?.brightness || "N/A")}</span></p>
+      `;
+    }
+
+    if (category === "monitor") {
+      return `
+        <p><b>Display:</b> <span>${escapeHtml(p?.specs?.displaySize || "N/A")}</span></p>
+        <p><b>Resolution:</b> <span>${escapeHtml(p?.specs?.resolution || "N/A")}</span></p>
+        <p><b>Refresh:</b> <span>${escapeHtml(p?.specs?.refreshRate || "N/A")}</span></p>
+      `;
+    }
+
+    if (category === "speaker") {
+      return `
+        <p><b>Output:</b> <span>${escapeHtml(p?.specs?.powerOutput || "N/A")}</span></p>
+        <p><b>Battery:</b> <span>${escapeHtml(p?.specs?.battery || "N/A")}</span></p>
+        <p><b>Connect:</b> <span>${escapeHtml(p?.specs?.connectivity || "N/A")}</span></p>
+      `;
+    }
+
+    if (category === "printer") {
+      const type = p?.specs?.printerType || p?.specs?.printertype;
+      return `
+        <p><b>Type:</b> <span>${escapeHtml(type || "N/A")}</span></p>
+        <p><b>Functions:</b> <span>${escapeHtml(p?.specs?.functions || "N/A")}</span></p>
+      `;
+    }
+
+    if (category === "headset") {
+      return `
+        <p><b>Type:</b> <span>${escapeHtml(p?.specs?.type || "N/A")}</span></p>
+        <p><b>Mic:</b> <span>${escapeHtml(p?.specs?.microphone || "N/A")}</span></p>
+        <p><b>Connect:</b> <span>${escapeHtml(p?.specs?.connectivity || "N/A")}</span></p>
+      `;
+    }
+
+    if (category === "mouse") {
+      return `
+        <p><b>Connection:</b> <span>${escapeHtml(p?.specs?.connection || "N/A")}</span></p>
+        <p><b>DPI:</b> <span>${escapeHtml(p?.specs?.dpi || "N/A")}</span></p>
+        <p><b>Buttons:</b> <span>${escapeHtml(p?.specs?.buttons || "N/A")}</span></p>
+      `;
+    }
+
+    if (category === "keyboard") {
+      return `
+        <p><b>Connection:</b> <span>${escapeHtml(p?.specs?.connection || "N/A")}</span></p>
+        <p><b>Layout:</b> <span>${escapeHtml(p?.specs?.layout || "N/A")}</span></p>
+        <p><b>Type:</b> <span>${escapeHtml(p?.specs?.keyboardType || "N/A")}</span></p>
+      `;
+    }
+
+    return `
+      <p><b>Brand:</b> <span>${escapeHtml(p?.brand || "N/A")}</span></p>
+    `;
+  }
+
+  function renderProducts() {
+    let items = productData[currentCategory] || [];
+
+    if (currentBrand) {
+      items = items.filter((p) => p.brand === currentBrand);
+    }
+
+    items = items.filter((p) => getNumericPrice(p) <= maxPrice);
+
+    Object.entries(activeFilters).forEach(([key, val]) => {
+      if (!val) return;
+
+      if (key === "printerType") {
+        items = items.filter((p) => {
+          const t = p?.specs?.printerType || p?.specs?.printertype;
+          return t === val;
+        });
+      } else {
+        items = items.filter((p) => p?.specs?.[key] === val);
+      }
+    });
+
+    const heading = `${capitalize(currentCategory)}${currentBrand ? " • " + currentBrand : ""}`;
+    const toolbar = document.getElementById("toolbar");
+    const productContainer = document.getElementById("product-details");
+
+    toolbar.querySelector(".toolbar-title").innerHTML = `
+      <h2>${escapeHtml(heading || "Products")}</h2>
+      <p>${items.length} product${items.length !== 1 ? "s" : ""} available</p>
+    `;
+
+    if (!items.length) {
+      productContainer.innerHTML = `
+        <div class="empty-state">
+          <h3>No products found</h3>
+          <p>Try changing brand, category, price range or spec filters.</p>
+        </div>
+      `;
+      return;
+    }
+
+    productContainer.innerHTML = `
+      <div class="product-grid">
+        ${items.map((p) => `
+          <article class="product-card" onclick="openProductDetail('${escapeJsString(currentCategory)}', '${escapeJsString(p.modelNumber || "")}')">
+            <div class="product-thumb">
+              <span class="badge">${escapeHtml(p.brand || currentCategory)}</span>
+              <img
+                src="${escapeHtml(getFirstImage(p))}"
+                alt="${escapeHtml(p.modelName || "Product")}"
+                loading="lazy"
+                decoding="async"
+                onerror="this.src='assets/no.png'"
+              />
+            </div>
+
+            <div class="product-body">
+              <h3 class="product-title">${escapeHtml(p.modelName || "Unnamed Product")}</h3>
+              <p class="product-model">Model: ${escapeHtml(p.modelNumber || "N/A")}</p>
+
+              <div class="spec-list">
+                ${applyCategorySpecificSpecs(currentCategory, p)}
+              </div>
+
+              <div class="price-row">
+                <div class="price">₹${formatPrice(p.price)}</div>
+                <span class="view-btn">View Details</span>
+              </div>
+            </div>
+          </article>
+        `).join("")}
+      </div>
+    `;
+  }
+
+  window.addEventListener("load", async () => {
+    document.getElementById("year").textContent = new Date().getFullYear();
+    await fetchProducts();
+    spinner.style.display = "none";
+  });
+</script>
 </body>
 </html>
